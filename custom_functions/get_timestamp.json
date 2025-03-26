@@ -1,0 +1,27 @@
+{
+    "create_time": "2024-06-14T14:04:50.520536+00:00",
+    "custom_function_id": "3281556b4b7ae051f9a75f5b3b75358dd029701c",
+    "description": "Return current date and time in format dd/mm/yyyy HH:MM:SS (i.e. 01/01/2024 08:05:01)",
+    "draft_mode": false,
+    "inputs": [],
+    "outputs": [
+        {
+            "contains_type": [],
+            "data_path": "success",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "data",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "error_msg",
+            "description": ""
+        }
+    ],
+    "outputs_type": "item",
+    "platform_version": "6.1.1.211",
+    "python_version": "3"
+}

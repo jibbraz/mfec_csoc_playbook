@@ -1,0 +1,28 @@
+{
+    "create_time": "2022-03-30T07:09:09.548737+00:00",
+    "custom_function_id": "a7855921cd1f01b33f58c2c3feb4449674fd31b1",
+    "description": "",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [
+                "*"
+            ],
+            "description": "",
+            "input_type": "list",
+            "name": "results",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [
+                "*"
+            ],
+            "data_path": "output",
+            "description": "output"
+        }
+    ],
+    "platform_version": "4.10.7.63984",
+    "python_version": "3"
+}

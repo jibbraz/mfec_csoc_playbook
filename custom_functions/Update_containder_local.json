@@ -1,0 +1,40 @@
+{
+    "create_time": "2022-04-20T13:11:39.028891+00:00",
+    "custom_function_id": "250771a5cdea1c08af5b860883fc52ed881279a6",
+    "description": "set custom field last_automated_action",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [
+                "phantom container id"
+            ],
+            "description": "",
+            "input_type": "list",
+            "name": "Container_id",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "list",
+            "name": "a_status",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "item",
+            "name": "Custom_fieldname",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [],
+            "data_path": "res",
+            "description": ""
+        }
+    ],
+    "platform_version": "4.10.7.63984",
+    "python_version": "3"
+}

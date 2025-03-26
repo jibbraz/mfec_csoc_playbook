@@ -1,0 +1,56 @@
+{
+    "create_time": "2024-06-14T14:00:07.831752+00:00",
+    "custom_function_id": "35c89c453c95290532f8908037d423a793ba5956",
+    "description": "compare processed case between Phantom and ServiceNow and send out the diff information",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "item",
+            "name": "processed_case",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "item",
+            "name": "phantom_based_field",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "item",
+            "name": "servicenow_based_field",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "item",
+            "name": "origin_based_field",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [],
+            "data_path": "success",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "data",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "error_msg",
+            "description": ""
+        }
+    ],
+    "outputs_type": "item",
+    "platform_version": "6.1.1.211",
+    "python_version": "3"
+}

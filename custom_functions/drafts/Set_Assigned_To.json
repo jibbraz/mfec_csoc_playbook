@@ -1,0 +1,20 @@
+{
+    "create_time": "2022-04-21T12:32:44.101625+00:00",
+    "custom_function_id": "2066e6f1c9f4069094c6410891c1e4304b95b4dc",
+    "description": "",
+    "draft_mode": true,
+    "inputs": [
+        {
+            "contains_type": [
+                "phantom container id"
+            ],
+            "description": "",
+            "input_type": "item",
+            "name": "container_id",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [],
+    "platform_version": "4.10.7.63984",
+    "python_version": "3"
+}

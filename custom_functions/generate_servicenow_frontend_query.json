@@ -1,0 +1,35 @@
+{
+    "create_time": "2024-06-14T14:02:26.814462+00:00",
+    "custom_function_id": "a5300de00c4a016bafec3ce47906bcb0fa8c7c83",
+    "description": "Add query statement for ServiceNow API to get information in front-end format",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "item",
+            "name": "servicenow_case_id",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [],
+            "data_path": "success",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "data",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "error_msg",
+            "description": ""
+        }
+    ],
+    "outputs_type": "item",
+    "platform_version": "4.10.7.63984",
+    "python_version": "3"
+}

@@ -1,0 +1,49 @@
+{
+    "create_time": "2024-06-14T14:00:31.645941+00:00",
+    "custom_function_id": "03f851af9e0236bf8ffb386c66cf7755071a64f7",
+    "description": "Filter out the old worknote and worknote from servicenow from worknote list",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "item",
+            "name": "note_list",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "get new work note from phantom or servicenow",
+            "input_type": "item",
+            "name": "filter_from",
+            "placeholder": "phantom"
+        },
+        {
+            "contains_type": [],
+            "description": "settings dict",
+            "input_type": "item",
+            "name": "settings",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [],
+            "data_path": "success",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "data",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "error_msg",
+            "description": ""
+        }
+    ],
+    "outputs_type": "item",
+    "platform_version": "4.10.7.63984",
+    "python_version": "3"
+}

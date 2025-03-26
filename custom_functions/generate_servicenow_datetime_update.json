@@ -1,0 +1,42 @@
+{
+    "create_time": "2024-06-14T14:02:12.029601+00:00",
+    "custom_function_id": "e74f9b1fc597c67f34dd8d40110578c5e988faa3",
+    "description": "Create update statement for ServiceNow API to update time in front-end datetime format",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "item",
+            "name": "servicenow_case_id",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "datetime string in correct format",
+            "input_type": "item",
+            "name": "datetime_str",
+            "placeholder": "dd/mm/yyyy HH:MM:SS"
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [],
+            "data_path": "success",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "data",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "error_msg",
+            "description": ""
+        }
+    ],
+    "outputs_type": "item",
+    "platform_version": "6.1.1.211",
+    "python_version": "3"
+}

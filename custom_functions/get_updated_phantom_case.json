@@ -1,0 +1,35 @@
+{
+    "create_time": "2024-09-11T09:19:59.279619+00:00",
+    "custom_function_id": "1db56369e329a8f44c912841b0addc103dd81921",
+    "description": "Return list of updated phantom cases.\n\nminute_ago = amount of minutes ago to determine whether the case is updated. Check with container_update_time",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [],
+            "description": "amount of minutes ago to determine whether the case is updated. Check with container_updated_time",
+            "input_type": "item",
+            "name": "minute_ago",
+            "placeholder": "60"
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [],
+            "data_path": "success",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "data",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "error_msg",
+            "description": ""
+        }
+    ],
+    "outputs_type": "item",
+    "platform_version": "6.1.1.211",
+    "python_version": "3"
+}

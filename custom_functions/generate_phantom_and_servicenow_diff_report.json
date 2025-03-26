@@ -1,0 +1,35 @@
+{
+    "create_time": "2024-06-14T14:01:03.840826+00:00",
+    "custom_function_id": "ff8033218172097713d2da09bfbec28fd74cdb98",
+    "description": "Return a summarization of mismatched field from both Phantom and ServiceNow\n(string)",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "item",
+            "name": "comparison_result",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [],
+            "data_path": "success",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "data",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "error_msg",
+            "description": ""
+        }
+    ],
+    "outputs_type": "item",
+    "platform_version": "6.1.1.211",
+    "python_version": "3"
+}

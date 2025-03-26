@@ -1,0 +1,42 @@
+{
+    "create_time": "2024-06-14T14:06:07.369147+00:00",
+    "custom_function_id": "45f542c20885a5096df8c4419f27357cff8865b4",
+    "description": "Extract and process Phantom work notes from Phantom API response to usable format",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [],
+            "description": "Phantom container note list in RAW format",
+            "input_type": "item",
+            "name": "raw_phantom_note",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "Text to add to note content which indicate that this note is from Phantom",
+            "input_type": "item",
+            "name": "add_text",
+            "placeholder": "From Phantom"
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [],
+            "data_path": "success",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "data",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "error_msg",
+            "description": ""
+        }
+    ],
+    "outputs_type": "item",
+    "platform_version": "6.1.1.211",
+    "python_version": "3"
+}

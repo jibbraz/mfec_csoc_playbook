@@ -1,0 +1,28 @@
+{
+    "create_time": "2022-09-08T07:46:37.475705+00:00",
+    "custom_function_id": "8a8bc55a8640f19534d31bba417bc177a28b5d98",
+    "description": "extract X-CSRF Token from cookie for Fortigate Session based authentication",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [
+                "*"
+            ],
+            "description": "",
+            "input_type": "list",
+            "name": "Cookies",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [
+                "*"
+            ],
+            "data_path": "header",
+            "description": ""
+        }
+    ],
+    "platform_version": "4.10.7.63984",
+    "python_version": "3"
+}

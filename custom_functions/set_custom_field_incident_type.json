@@ -1,0 +1,33 @@
+{
+    "create_time": "2022-09-20T10:01:11.316144+00:00",
+    "custom_function_id": "719f5a35be9660a5d5d4a89efab0f21157c06957",
+    "description": "set custom field \"Incident Type\"",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [
+                "phantom container id"
+            ],
+            "description": "",
+            "input_type": "list",
+            "name": "Container_id",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "list",
+            "name": "incident_type",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [],
+            "data_path": "res",
+            "description": ""
+        }
+    ],
+    "platform_version": "4.10.7.63984",
+    "python_version": "3"
+}

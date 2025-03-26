@@ -1,0 +1,79 @@
+{
+    "create_time": "2024-06-14T14:01:23.788701+00:00",
+    "custom_function_id": "c967893b238541fb65908ae9e58394d958588fcb",
+    "description": "Generate Parameters from artifact or REST API response for Phantom case updating",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [],
+            "description": "ServiceNow case object (dict) to generate Phantom information",
+            "input_type": "item",
+            "name": "servicenow_case",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "Mapping of field name between phantom and servicenow",
+            "input_type": "item",
+            "name": "container_key_mapping",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+                ""
+            ],
+            "description": "Is generating case information a new case? Default is yes",
+            "input_type": "item",
+            "name": "is_new_case",
+            "placeholder": "yes"
+        },
+        {
+            "contains_type": [],
+            "description": "List of ServiceNow-based field",
+            "input_type": "item",
+            "name": "servicenow_based_field",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "List of Origin-based field",
+            "input_type": "item",
+            "name": "origin_based_field",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "item",
+            "name": "assignment_group",
+            "placeholder": "only new case"
+        },
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "item",
+            "name": "cancel_case",
+            "placeholder": "False"
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [],
+            "data_path": "success",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "data",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "error_msg",
+            "description": ""
+        }
+    ],
+    "outputs_type": "item",
+    "platform_version": "6.1.1.211",
+    "python_version": "3"
+}

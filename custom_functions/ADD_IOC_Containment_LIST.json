@@ -1,0 +1,32 @@
+{
+    "create_time": "2022-05-10T08:41:53.111242+00:00",
+    "custom_function_id": "c877433a21cc86f41d956b18354bd0734dfcc960",
+    "description": "",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "list",
+            "name": "input_IOC",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "list",
+            "name": "IOC_Type",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "list",
+            "name": "Container_id",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [],
+    "platform_version": "4.10.7.63984",
+    "python_version": "3"
+}

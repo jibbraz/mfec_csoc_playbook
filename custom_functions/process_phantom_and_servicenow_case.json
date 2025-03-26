@@ -1,0 +1,51 @@
+{
+    "create_time": "2024-06-14T16:18:17.772999+00:00",
+    "custom_function_id": "f64f602f63a3bbcdc7c938818d0bec35acdbd3d1",
+    "description": "Normalize case information from ServiceNow and Phantom to be in the same format",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [],
+            "description": "Phantom container ID (integer) or Container object (dictionary)",
+            "input_type": "item",
+            "name": "container_input",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "ServiceNow case object (dict)",
+            "input_type": "item",
+            "name": "servicenow_case",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "Mapping of field name between phantom and servicenow",
+            "input_type": "item",
+            "name": "container_key_mapping",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [
+                ""
+            ],
+            "data_path": "success",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "data",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "error_msg",
+            "description": ""
+        }
+    ],
+    "outputs_type": "item",
+    "platform_version": "6.1.1.211",
+    "python_version": "3"
+}

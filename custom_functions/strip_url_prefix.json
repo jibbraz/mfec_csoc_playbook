@@ -1,0 +1,28 @@
+{
+    "create_time": "2022-05-30T07:57:44.896565+00:00",
+    "custom_function_id": "adb69a38d0dded8affac2d4cca0f5725f8c8a5d0",
+    "description": "Strip \"http://\" and \"https://\" from input string",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [
+                "*"
+            ],
+            "description": "",
+            "input_type": "item",
+            "name": "requestURLs",
+            "placeholder": "URL list"
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [
+                "*"
+            ],
+            "data_path": "processedURL",
+            "description": ""
+        }
+    ],
+    "platform_version": "4.10.7.63984",
+    "python_version": "3"
+}

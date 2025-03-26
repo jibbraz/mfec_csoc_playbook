@@ -1,0 +1,42 @@
+{
+    "create_time": "2024-06-14T14:03:52.052018+00:00",
+    "custom_function_id": "f393f78615443f31cf79db03f9e64d5d83a87928",
+    "description": "Return list of new phantom cases.\nstart_datetime = filter only the case created after this time\nminute_ago = amount of minutes ago to determine whether the case is new. Check with container_update_time",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [],
+            "description": "filter only the case created after this time",
+            "input_type": "item",
+            "name": "start_datetime",
+            "placeholder": "31/12/2023 09:00:00"
+        },
+        {
+            "contains_type": [],
+            "description": "amount of minutes ago to determine whether the case is new. Check with container_updated_time",
+            "input_type": "item",
+            "name": "minute_ago",
+            "placeholder": "60"
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [],
+            "data_path": "success",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "data",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "error_msg",
+            "description": ""
+        }
+    ],
+    "outputs_type": "item",
+    "platform_version": "6.1.1.211",
+    "python_version": "3"
+}

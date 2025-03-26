@@ -1,0 +1,20 @@
+{
+    "create_time": "2022-01-21T01:43:39.450406+00:00",
+    "custom_function_id": "e45fb48c7c394415fb2a512786c75fa700eee08f",
+    "description": "Set T0 default value - T3",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [
+                "phantom container id"
+            ],
+            "description": "",
+            "input_type": "item",
+            "name": "container_id_now",
+            "placeholder": "container:id"
+        }
+    ],
+    "outputs": [],
+    "platform_version": "4.10.7.63984",
+    "python_version": "3"
+}

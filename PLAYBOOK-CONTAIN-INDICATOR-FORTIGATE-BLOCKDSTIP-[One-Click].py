@@ -1,0 +1,155 @@
+"""
+"""
+
+import phantom.rules as phantom
+import json
+from datetime import datetime, timedelta
+def on_start(container):
+    phantom.debug('on_start() called')
+    
+    # call 'filter_1' block
+    filter_1(container=container)
+
+    return
+
+def playbook_local_PLAYBOOK_CONTAIN_INDICATOR_FORTIGATEACI_BLOCKDSTIP_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('playbook_local_PLAYBOOK_CONTAIN_INDICATOR_FORTIGATEACI_BLOCKDSTIP_1() called')
+    
+    # call playbook "local/PLAYBOOK-CONTAIN-INDICATOR-FORTIGATEACI-BLOCKDSTIP", returns the playbook_run_id
+    playbook_run_id = phantom.playbook(playbook="local/PLAYBOOK-CONTAIN-INDICATOR-FORTIGATEACI-BLOCKDSTIP", container=container)
+    playbook_local_PLAYBOOK_CONTAIN_INDICATOR_FORTIMANAGER_SRC_VAYUX_DSTIP_01_1(container=container)
+
+    return
+
+def playbook_local_PLAYBOOK_CONTAIN_INDICATOR_FORTIMANAGERVAYU_DSTIP_01_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('playbook_local_PLAYBOOK_CONTAIN_INDICATOR_FORTIMANAGERVAYU_DSTIP_01_1() called')
+    
+    # call playbook "local/PLAYBOOK-CONTAIN-INDICATOR-FORTIMANAGERVAYU-DSTIP-01", returns the playbook_run_id
+    playbook_run_id = phantom.playbook(playbook="local/PLAYBOOK-CONTAIN-INDICATOR-FORTIMANAGERVAYU-DSTIP-01", container=container)
+
+    return
+
+def playbook_local_PLAYBOOK_CONTAIN_INDICATOR_FORTIMANAGER_SRC_VAYUX_DSTIP_01_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('playbook_local_PLAYBOOK_CONTAIN_INDICATOR_FORTIMANAGER_SRC_VAYUX_DSTIP_01_1() called')
+    
+    # call playbook "local/PLAYBOOK-CONTAIN-INDICATOR-FORTIMANAGER-SRC-VAYUX-DSTIP-01", returns the playbook_run_id
+    playbook_run_id = phantom.playbook(playbook="local/PLAYBOOK-CONTAIN-INDICATOR-FORTIMANAGER-SRC-VAYUX-DSTIP-01", container=container)
+    playbook_local_PLAYBOOK_CONTAIN_INDICATOR_FORTIMANAGER_BBT_VAYUX_DSTIP_01_1(container=container)
+
+    return
+
+def playbook_local_PLAYBOOK_CONTAIN_INDICATOR_FORTIMANAGER_BBT_VAYUX_DSTIP_01_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('playbook_local_PLAYBOOK_CONTAIN_INDICATOR_FORTIMANAGER_BBT_VAYUX_DSTIP_01_1() called')
+    
+    # call playbook "local/PLAYBOOK-CONTAIN-INDICATOR-FORTIMANAGER-BBT-VAYUX-DSTIP-01", returns the playbook_run_id
+    playbook_run_id = phantom.playbook(playbook="local/PLAYBOOK-CONTAIN-INDICATOR-FORTIMANAGER-BBT-VAYUX-DSTIP-01", container=container)
+    playbook_local_PLAYBOOK_CONTAIN_INDICATOR_FORTIGATEINTERNET_BLOCKDSTIP_1(container=container)
+
+    return
+
+def playbook_local_PLAYBOOK_CONTAIN_INDICATOR_FORTIGATEINTERNET_BLOCKDSTIP_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('playbook_local_PLAYBOOK_CONTAIN_INDICATOR_FORTIGATEINTERNET_BLOCKDSTIP_1() called')
+    
+    # call playbook "local/PLAYBOOK-CONTAIN-INDICATOR-FORTIGATEINTERNET-BLOCKDSTIP", returns the playbook_run_id
+    playbook_run_id = phantom.playbook(playbook="local/PLAYBOOK-CONTAIN-INDICATOR-FORTIGATEINTERNET-BLOCKDSTIP", container=container)
+    playbook_local_PLAYBOOK_CONTAIN_INDICATOR_FORTIGATEINTERNET_DR_BLOCKDSTIP_1(container=container)
+
+    return
+
+def playbook_local_PLAYBOOK_CONTAIN_INDICATOR_FORTIGATEINTERNET_DR_BLOCKDSTIP_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('playbook_local_PLAYBOOK_CONTAIN_INDICATOR_FORTIGATEINTERNET_DR_BLOCKDSTIP_1() called')
+    
+    # call playbook "local/PLAYBOOK-CONTAIN-INDICATOR-FORTIGATEINTERNET-DR-BLOCKDSTIP", returns the playbook_run_id
+    playbook_run_id = phantom.playbook(playbook="local/PLAYBOOK-CONTAIN-INDICATOR-FORTIGATEINTERNET-DR-BLOCKDSTIP", container=container)
+    playbook_local_PLAYBOOK_CONTAIN_INDICATOR_FORTIGATEDEV_BLOCKDSTIP_1(container=container)
+
+    return
+
+def playbook_local_PLAYBOOK_CONTAIN_INDICATOR_FORTIGATEDEV_BLOCKDSTIP_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('playbook_local_PLAYBOOK_CONTAIN_INDICATOR_FORTIGATEDEV_BLOCKDSTIP_1() called')
+    
+    # call playbook "local/PLAYBOOK-CONTAIN-INDICATOR-FORTIGATEDEV-BLOCKDSTIP", returns the playbook_run_id
+    playbook_run_id = phantom.playbook(playbook="local/PLAYBOOK-CONTAIN-INDICATOR-FORTIGATEDEV-BLOCKDSTIP", container=container)
+
+    return
+
+def filter_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('filter_1() called')
+
+    # collect filtered artifact ids for 'if' condition 1
+    matched_artifacts_1, matched_results_1 = phantom.condition(
+        container=container,
+        conditions=[
+            ["artifact:*.cef.destinationAddress", "not in", "custom_list:KTB Public IP"],
+        ],
+        name="filter_1:condition_1")
+
+    # call connected blocks if filtered artifacts or results
+    if matched_artifacts_1 or matched_results_1:
+        playbook_local_PLAYBOOK_CONTAIN_INDICATOR_FORTIGATEACI_BLOCKDSTIP_1(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function, filtered_artifacts=matched_artifacts_1, filtered_results=matched_results_1)
+
+    # collect filtered artifact ids for 'if' condition 2
+    matched_artifacts_2, matched_results_2 = phantom.condition(
+        container=container,
+        conditions=[
+            ["artifact:*.cef.destinationAddress", "in", "custom_list:KTB Public IP"],
+        ],
+        name="filter_1:condition_2")
+
+    # call connected blocks if filtered artifacts or results
+    if matched_artifacts_2 or matched_results_2:
+        ip_reputation_1(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function, filtered_artifacts=matched_artifacts_2, filtered_results=matched_results_2)
+
+    return
+
+def ip_reputation_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('ip_reputation_1() called')
+
+    # collect data for 'ip_reputation_1' call
+    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.destinationAddress', 'artifact:*.id'])
+
+    parameters = []
+    
+    # build parameters list for 'ip_reputation_1' call
+    for container_item in container_data:
+        if container_item[0]:
+            parameters.append({
+                'ip': container_item[0],
+                # context (artifact id) is added to associate results with the artifact
+                'context': {'artifact_id': container_item[1]},
+            })
+
+    phantom.act(action="ip reputation", parameters=parameters, assets=['virustotal v3 asset'], callback=add_note_1, name="ip_reputation_1")
+
+    return
+
+def add_note_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('add_note_1() called')
+
+    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.destinationAddress', 'artifact:*.id'])
+
+    container_item_0 = [item[0] for item in container_data]
+
+    note_title = "[ALERT] : Please check ip address."
+    note_content = container_item_0
+    note_format = "markdown"
+    phantom.add_note(container=container, note_type="general", title=note_title, content=note_content, note_format=note_format)
+
+    container = phantom.get_container(container.get('id', None))
+
+    return
+
+def on_finish(container, summary):
+    phantom.debug('on_finish() called')
+    # This function is called after all actions are completed.
+    # summary of all the action and/or all details of actions
+    # can be collected here.
+
+    # summary_json = phantom.get_summary()
+    # if 'result' in summary_json:
+        # for action_result in summary_json['result']:
+            # if 'action_run_id' in action_result:
+                # action_results = phantom.get_action_results(action_run_id=action_result['action_run_id'], result_data=False, flatten=False)
+                # phantom.debug(action_results)
+
+    return

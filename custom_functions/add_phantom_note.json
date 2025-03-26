@@ -1,0 +1,51 @@
+{
+    "create_time": "2024-06-14T13:59:12.805532+00:00",
+    "custom_function_id": "66ee93cfdf9890d44ab191ad5a6fb1a0118fef7a",
+    "description": "Add note to Phantom container",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [
+                "phantom container id"
+            ],
+            "description": "",
+            "input_type": "item",
+            "name": "container_input",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "Title of note to add",
+            "input_type": "item",
+            "name": "title",
+            "placeholder": "Title 1"
+        },
+        {
+            "contains_type": [],
+            "description": "Content of note to add",
+            "input_type": "item",
+            "name": "content",
+            "placeholder": "New Note!"
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [],
+            "data_path": "success",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "data",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "error_msg",
+            "description": ""
+        }
+    ],
+    "outputs_type": "item",
+    "platform_version": "4.10.7.63984",
+    "python_version": "3"
+}

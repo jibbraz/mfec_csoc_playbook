@@ -1,0 +1,49 @@
+{
+    "create_time": "2024-06-14T16:17:28.721482+00:00",
+    "custom_function_id": "9b61a35e2858d0d43d998b52636f9e7a383370ee",
+    "description": "Generate HTTP Request and send for ServiceNow case Patching",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [],
+            "description": "Container ID to run this function",
+            "input_type": "item",
+            "name": "servicenow_case_id",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "item",
+            "name": "field_name",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "item",
+            "name": "value",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [],
+            "data_path": "success",
+            "description": "List of incident worknotes from ServiceNow (Dates arranged in ascending order)"
+        },
+        {
+            "contains_type": [],
+            "data_path": "data",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "error_msg",
+            "description": ""
+        }
+    ],
+    "outputs_type": "item",
+    "platform_version": "6.1.1.211",
+    "python_version": "3"
+}

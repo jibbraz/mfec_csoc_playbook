@@ -1,0 +1,35 @@
+{
+    "create_time": "2024-06-14T14:04:09.806755+00:00",
+    "custom_function_id": "2203ca2c3e1880c6ac7cb1fc8c4f60d961938e15",
+    "description": "Get Container notes and return container note list. container note sorted by note id",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [],
+            "description": "container id (integer) or container object (dictionary)",
+            "input_type": "item",
+            "name": "container_input",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [],
+            "data_path": "success",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "data",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "error_msg",
+            "description": ""
+        }
+    ],
+    "outputs_type": "item",
+    "platform_version": "6.1.1.211",
+    "python_version": "3"
+}

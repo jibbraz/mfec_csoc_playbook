@@ -1,0 +1,19 @@
+{
+    "create_time": "2024-06-14T14:05:38.381612+00:00",
+    "custom_function_id": "4c2f6f381946faf6928f317815233115a6b7f248",
+    "description": "print everything",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "item",
+            "name": "something",
+            "placeholder": "text to log"
+        }
+    ],
+    "outputs": [],
+    "outputs_type": "item",
+    "platform_version": "6.1.1.211",
+    "python_version": "3"
+}

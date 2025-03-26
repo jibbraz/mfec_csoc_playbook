@@ -1,0 +1,42 @@
+{
+    "create_time": "2024-06-14T14:06:27.975191+00:00",
+    "custom_function_id": "48997398477c8ea50e72eb59aa7bdad3a6e4d4ae",
+    "description": "Extract and process ServiceNow work notes from ServiceNow incident API response",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "item",
+            "name": "raw_servicenow_response",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "Note title to indicate this note is from ServiceNow",
+            "input_type": "item",
+            "name": "note_title",
+            "placeholder": "From ServiceNow"
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [],
+            "data_path": "success",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "data",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "error_msg",
+            "description": ""
+        }
+    ],
+    "outputs_type": "item",
+    "platform_version": "6.1.1.211",
+    "python_version": "3"
+}

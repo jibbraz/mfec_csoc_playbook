@@ -1,0 +1,28 @@
+{
+    "create_time": "2022-06-07T06:42:11.934903+00:00",
+    "custom_function_id": "579329d41cfead8366fcbced70b2359edfe4eb7b",
+    "description": "Strip \"http://\" and \"https://\" from input string  and generate body request for add web override category on fortigate",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [
+                "*"
+            ],
+            "description": "",
+            "input_type": "item",
+            "name": "requestURLs",
+            "placeholder": "URL list"
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [
+                "*"
+            ],
+            "data_path": "bodyFormat",
+            "description": "processed URL in json body format"
+        }
+    ],
+    "platform_version": "4.10.7.63984",
+    "python_version": "3"
+}

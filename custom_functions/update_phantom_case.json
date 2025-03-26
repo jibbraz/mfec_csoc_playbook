@@ -1,0 +1,44 @@
+{
+    "create_time": "2024-06-14T14:07:25.420455+00:00",
+    "custom_function_id": "59f0342d70346d52591bf854a9c927a75f7715c3",
+    "description": "Update Phantom case",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [],
+            "description": "Phantom container ID (integer) or Container object (dictionary)",
+            "input_type": "item",
+            "name": "container_input",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "updating field in dictionary from",
+            "input_type": "item",
+            "name": "updating_info",
+            "placeholder": "{\"name\": \"test\", \"severity\": \"low\"}"
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [
+                ""
+            ],
+            "data_path": "success",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "data",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "error_msg",
+            "description": ""
+        }
+    ],
+    "outputs_type": "item",
+    "platform_version": "4.10.7.63984",
+    "python_version": "3"
+}

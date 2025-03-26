@@ -1,0 +1,49 @@
+{
+    "create_time": "2024-06-14T14:05:23.717045+00:00",
+    "custom_function_id": "3bcbc30eb1a8dccd8e891c923fda76ae7c814df3",
+    "description": "Delete all artifacts except the latest N artifacts and return the remaining",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [],
+            "description": "Phantom container ID (integer) or Container object (dictionary)",
+            "input_type": "item",
+            "name": "container_input",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "Maximum amount of artifacts to be stored in the container",
+            "input_type": "item",
+            "name": "maximum_artifact",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "name of artifact to limit (use * to ignore artifact name)",
+            "input_type": "item",
+            "name": "artifact_name",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [],
+            "data_path": "success",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "data",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "error_msg",
+            "description": ""
+        }
+    ],
+    "outputs_type": "item",
+    "platform_version": "6.1.1.211",
+    "python_version": "3"
+}

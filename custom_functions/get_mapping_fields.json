@@ -1,0 +1,35 @@
+{
+    "create_time": "2024-06-14T14:03:09.646248+00:00",
+    "custom_function_id": "b6135696abfac7aa93866099d597ee7e53e2fa84",
+    "description": "Return a list of mapping between Phantom key name to ServiceNow key name with its value.",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "item",
+            "name": "key_mapping_list_name",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [],
+            "data_path": "success",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "data",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "error_msg",
+            "description": ""
+        }
+    ],
+    "outputs_type": "item",
+    "platform_version": "6.1.1.211",
+    "python_version": "3"
+}

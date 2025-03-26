@@ -1,0 +1,27 @@
+{
+    "create_time": "2024-06-14T14:04:29.096642+00:00",
+    "custom_function_id": "edb837c264703008b107de9fb75af043b7c64c6a",
+    "description": "",
+    "draft_mode": false,
+    "inputs": [],
+    "outputs": [
+        {
+            "contains_type": [],
+            "data_path": "success",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "data",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "error_msg",
+            "description": ""
+        }
+    ],
+    "outputs_type": "item",
+    "platform_version": "6.1.1.211",
+    "python_version": "3"
+}

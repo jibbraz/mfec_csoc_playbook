@@ -1,0 +1,20 @@
+{
+    "create_time": "2022-11-08T10:06:53.014166+00:00",
+    "custom_function_id": "b8bf2077bc38a5601877b0de3fec470e009936b1",
+    "description": "set incident type to unauthorized access",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [
+                "phantom container id"
+            ],
+            "description": "",
+            "input_type": "item",
+            "name": "container_id",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [],
+    "platform_version": "4.10.7.63984",
+    "python_version": "3"
+}

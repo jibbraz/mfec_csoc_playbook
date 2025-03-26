@@ -1,0 +1,29 @@
+{
+    "create_time": "2022-08-17T08:28:18.629803+00:00",
+    "custom_function_id": "e9df6a6d283a919e9bf06a03dd761eeae3458ef4",
+    "description": "Update CEF containResult=True/False",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [
+                "*"
+            ],
+            "description": "",
+            "input_type": "item",
+            "name": "resultList",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+                "*"
+            ],
+            "description": "",
+            "input_type": "item",
+            "name": "artifactInfo",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [],
+    "platform_version": "4.10.7.63984",
+    "python_version": "3"
+}

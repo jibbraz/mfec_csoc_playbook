@@ -1,0 +1,100 @@
+{
+    "create_time": "2024-07-19T08:13:53.479424+00:00",
+    "custom_function_id": "de0a962a2619322bfd6d2b9948dd57c34c0cc74d",
+    "description": "Generate Parameters for ServiceNow case creation/updating",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [],
+            "description": "Phantom container ID (integer) or Container object (dictionary)",
+            "input_type": "item",
+            "name": "container_input",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "Mapping of field name between phantom and servicenow",
+            "input_type": "item",
+            "name": "container_key_mapping",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "Is generating case information a new case? Default is yes",
+            "input_type": "item",
+            "name": "is_new_case",
+            "placeholder": "yes"
+        },
+        {
+            "contains_type": [],
+            "description": "List of Phantom-based field",
+            "input_type": "item",
+            "name": "phantom_based_field",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "List of Origin-based field",
+            "input_type": "item",
+            "name": "origin_based_field",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "item",
+            "name": "assignment_group_update",
+            "placeholder": "True"
+        },
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "item",
+            "name": "cancel_case",
+            "placeholder": "False"
+        },
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "item",
+            "name": "servicenow_settings",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "item",
+            "name": "incident_type_update",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "item",
+            "name": "new_case_assignment_group_allowed_list",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [
+                ""
+            ],
+            "data_path": "success",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "data",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "error_msg",
+            "description": ""
+        }
+    ],
+    "outputs_type": "item",
+    "platform_version": "6.1.1.211",
+    "python_version": "3"
+}

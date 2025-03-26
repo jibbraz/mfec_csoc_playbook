@@ -1,0 +1,63 @@
+{
+    "create_time": "2024-06-14T13:58:55.951987+00:00",
+    "custom_function_id": "0b2294ab92241830597b305c0a92b82640220a73",
+    "description": "Add artifact to container",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [],
+            "description": "Phantom container ID (integer) or Container object (dictionary)",
+            "input_type": "item",
+            "name": "container_input",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "artifact to add in JSON object or valid JSON string",
+            "input_type": "item",
+            "name": "artifact",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "Name of artifact (default: Update)",
+            "input_type": "item",
+            "name": "name",
+            "placeholder": "update"
+        },
+        {
+            "contains_type": [],
+            "description": "Label of artifact (default: events)",
+            "input_type": "item",
+            "name": "label",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "Label of artifact (default: Medium)",
+            "input_type": "item",
+            "name": "severity",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [],
+            "data_path": "success",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "data",
+            "description": ""
+        },
+        {
+            "contains_type": [],
+            "data_path": "error_msg",
+            "description": ""
+        }
+    ],
+    "outputs_type": "item",
+    "platform_version": "4.10.7.63984",
+    "python_version": "3"
+}

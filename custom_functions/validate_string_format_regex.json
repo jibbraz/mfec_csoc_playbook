@@ -1,0 +1,29 @@
+{
+    "create_time": "2022-03-16T16:16:12.199184+00:00",
+    "custom_function_id": "82f738dd0e8546f36e267fdfe7ccacdec51134f7",
+    "description": "Validate string format by a given regular expression.",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [
+                "*"
+            ],
+            "description": "",
+            "input_type": "list",
+            "name": "regex",
+            "placeholder": "regex"
+        },
+        {
+            "contains_type": [
+                "*"
+            ],
+            "description": "",
+            "input_type": "list",
+            "name": "txt",
+            "placeholder": "a string to be compared"
+        }
+    ],
+    "outputs": [],
+    "platform_version": "4.10.7.63984",
+    "python_version": "3"
+}

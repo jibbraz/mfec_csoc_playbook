@@ -1,0 +1,33 @@
+{
+    "create_time": "2022-03-14T09:22:48.497312+00:00",
+    "custom_function_id": "1a7e370383ebcf20a0c147d89341933ef0139ace",
+    "description": "set custom field last_automated_action",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [
+                "phantom container id"
+            ],
+            "description": "",
+            "input_type": "list",
+            "name": "Container_id",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "list",
+            "name": "a_status",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [],
+            "data_path": "res",
+            "description": ""
+        }
+    ],
+    "platform_version": "4.10.7.63984",
+    "python_version": "3"
+}

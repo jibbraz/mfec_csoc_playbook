@@ -1,0 +1,28 @@
+{
+    "create_time": "2022-12-06T09:25:53.997303+00:00",
+    "custom_function_id": "40124872424eef927b82272343f94f91ec45b913",
+    "description": "Check that object already created",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [
+                "url"
+            ],
+            "description": "",
+            "input_type": "item",
+            "name": "URL",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [
+                "*"
+            ],
+            "data_path": "status",
+            "description": ""
+        }
+    ],
+    "platform_version": "4.10.7.63984",
+    "python_version": "3"
+}

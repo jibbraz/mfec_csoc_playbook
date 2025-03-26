@@ -1,0 +1,29 @@
+{
+    "create_time": "2022-03-15T12:54:07.751405+00:00",
+    "custom_function_id": "0b8e31536a2e0c8ca173d7549827874ad4977537",
+    "description": "device_quarantined",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [
+                "phantom container id"
+            ],
+            "description": "",
+            "input_type": "item",
+            "name": "container_id_now",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+                "phantom artifact id"
+            ],
+            "description": "",
+            "input_type": "list",
+            "name": "artifact_id_now",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [],
+    "platform_version": "4.10.7.63984",
+    "python_version": "3"
+}
