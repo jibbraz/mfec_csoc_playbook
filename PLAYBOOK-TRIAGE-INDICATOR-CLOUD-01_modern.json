@@ -1,0 +1,320 @@
+{
+    "blockly": false,
+    "blockly_xml": "<xml></xml>",
+    "category": "Use Cases",
+    "coa": {
+        "data": {
+            "description": "An inactive user is defined as a user who had no activity in the last 30 days.",
+            "edges": [
+                {
+                    "id": "port_2_to_port_5",
+                    "sourceNode": "2",
+                    "sourcePort": "2_out",
+                    "targetNode": "5",
+                    "targetPort": "5_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_5_to_port_4",
+                    "sourceNode": "5",
+                    "sourcePort": "5_out",
+                    "targetNode": "4",
+                    "targetPort": "4_in"
+                },
+                {
+                    "id": "port_4_to_port_6",
+                    "sourceNode": "4",
+                    "sourcePort": "4_out",
+                    "targetNode": "6",
+                    "targetPort": "6_in"
+                },
+                {
+                    "id": "port_6_to_port_7",
+                    "sourceNode": "6",
+                    "sourcePort": "6_out",
+                    "targetNode": "7",
+                    "targetPort": "7_in"
+                },
+                {
+                    "id": "port_7_to_port_1",
+                    "sourceNode": "7",
+                    "sourcePort": "7_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_0_to_port_3",
+                    "sourceNode": "0",
+                    "sourcePort": "0_out",
+                    "targetNode": "3",
+                    "targetPort": "3_in"
+                },
+                {
+                    "id": "port_3_to_port_2",
+                    "sourceNode": "3",
+                    "sourcePort": "3_out",
+                    "targetNode": "2",
+                    "targetPort": "2_in"
+                }
+            ],
+            "hash": "41816ad359aa100db79f0e77e0a4470f1fd75c42",
+            "nodes": {
+                "0": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_start",
+                        "id": "0",
+                        "type": "start"
+                    },
+                    "errors": {},
+                    "id": "0",
+                    "type": "start",
+                    "warnings": {},
+                    "x": 560,
+                    "y": -240
+                },
+                "1": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_finish",
+                        "id": "1",
+                        "type": "end"
+                    },
+                    "errors": {},
+                    "id": "1",
+                    "type": "end",
+                    "warnings": {},
+                    "x": 560,
+                    "y": 1620
+                },
+                "2": {
+                    "data": {
+                        "action": "run query",
+                        "actionType": "investigate",
+                        "advanced": {
+                            "customName": "Query on Splunk to get active user",
+                            "customNameId": 0,
+                            "description": "List all AWS IAM accounts, which will include the PasswordLastUsed field for us to filter on.",
+                            "join": [],
+                            "note": "List all AWS IAM accounts, which will include the PasswordLastUsed field for us to filter on."
+                        },
+                        "connector": "Splunk",
+                        "connectorConfigs": [
+                            "splunk es asset"
+                        ],
+                        "connectorId": "91883aa8-9c81-470b-97a1-5d8f7995f560",
+                        "connectorVersion": "v1",
+                        "functionId": 1,
+                        "functionName": "query_on_splunk_to_get_active_user",
+                        "id": "2",
+                        "parameters": {
+                            "command": "search",
+                            "display": "",
+                            "group_name": "",
+                            "max_items": "1000",
+                            "page_token": "",
+                            "parse_only": "",
+                            "query": "format_query_to_splunk:formatted_data",
+                            "user_path": "/"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "query"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "2",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 520,
+                    "y": 280
+                },
+                "3": {
+                    "data": {
+                        "advanced": {
+                            "customName": "Format query to splunk",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 2,
+                        "functionName": "format_query_to_splunk",
+                        "id": "3",
+                        "parameters": [
+                            "test"
+                        ],
+                        "template": "index=GCPxxx earliest=-30d@d latest=now | dedup  username |  stats values(username) as active_users",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "3",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 520,
+                    "y": -40
+                },
+                "4": {
+                    "customCode": "def update_custom_list(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('update_custom_list() called')\n    \n    results_data_1 = phantom.collect2(container=container, datapath=['query_on_splunk_to_get_active_user:action_result.data.*._raw'], action_results=results)\n    results_item_1_0 = [item[0] for item in results_data_1]\n\n    update_custom_list__inactive_users = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    active_users =['from splunk result']\n    clist_full_users = [row[0] for row in phantom.get_list(list_name='GCP_Full_User_List')]\n    clist_inact_users = phantom.get_list(list_name='GCP_Inactive_User_List')    \n    inact_user_times_current={}\n    inact_user_index={row[0]:clist_inact_users.index(row) for row in clist_inact_users}\n    inact_users =[user for user in clist_full_users if user not in active_users]\n\n    for user in inact_users:\n        if user in inact_user_index.keys():\n            index_num = int(inact_user_index[user])\n            row_info = clist_inact_users[index_num]\n            times=int(row_info[1])+1\n            phantom.delete_from_list(list_name='GCP_Inactive_User_List',value=[row_info], remove_row=True)\n            phantom.add_list(list_name='GCP_Inactive_User_List',value=[[user,times]])\n            inact_user_times_current[user]=times\n        else :\n            phantom.add_list(list_name='GCP_Inactive_User_List',value=[[user,1]])\n            inact_user_times_current[user]=1\n\n    update_custom_list__inactive_users =  inact_user_times_current\n    ##################################################\n    ##################################################\n    ##################################################\n    ##################################################\n    ##################################################\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='update_custom_list:inactive_users', value=json.dumps(update_custom_list__inactive_users))\n    add_email_body(container=container)\n\n    return",
+                    "data": {
+                        "advanced": {
+                            "customName": "update  custom list",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "update_custom_list",
+                        "id": "4",
+                        "inputParameters": [
+                            "query_on_splunk_to_get_active_user:action_result.data.*._raw"
+                        ],
+                        "outputVariables": [
+                            "inactive_users"
+                        ],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "4",
+                    "type": "code",
+                    "userCode": "\n    # Write your custom code here...\n    active_users =['from splunk result']\n    clist_full_users = [row[0] for row in phantom.get_list(list_name='GCP_Full_User_List')]\n    clist_inact_users = phantom.get_list(list_name='GCP_Inactive_User_List')    \n    inact_user_times_current={}\n    inact_user_index={row[0]:clist_inact_users.index(row) for row in clist_inact_users}\n    inact_users =[user for user in clist_full_users if user not in active_users]\n\n    for user in inact_users:\n        if user in inact_user_index.keys():\n            index_num = int(inact_user_index[user])\n            row_info = clist_inact_users[index_num]\n            times=int(row_info[1])+1\n            phantom.delete_from_list(list_name='GCP_Inactive_User_List',value=[row_info], remove_row=True)\n            phantom.add_list(list_name='GCP_Inactive_User_List',value=[[user,times]])\n            inact_user_times_current[user]=times\n        else :\n            phantom.add_list(list_name='GCP_Inactive_User_List',value=[[user,1]])\n            inact_user_times_current[user]=1\n\n    update_custom_list__inactive_users =  inact_user_times_current\n    ##################################################\n    ##################################################\n    ##################################################\n    ##################################################\n    ##################################################",
+                    "warnings": {},
+                    "x": 520,
+                    "y": 740
+                },
+                "5": {
+                    "data": {
+                        "advanced": {
+                            "customName": "filter inactive",
+                            "customNameId": 0,
+                            "description": "Compare the PasswordLastUsed field to the calculated start time to find unused accounts. Ignore accounts with no value for PasswordLastUsed. This will ignore all accounts with no passwords, such as accounts that only use API access keys.",
+                            "join": [],
+                            "note": "Compare the PasswordLastUsed field to the calculated start time to find unused accounts. Ignore accounts with no value for PasswordLastUsed. This will ignore all accounts with no passwords, such as accounts that only use API access keys."
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "query_on_splunk_to_get_active_user:action_result.status",
+                                        "value": "SUCCESS"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "logic": "and"
+                            }
+                        ],
+                        "functionId": 1,
+                        "functionName": "filter_inactive",
+                        "id": "5",
+                        "type": "filter"
+                    },
+                    "errors": {},
+                    "id": "5",
+                    "type": "filter",
+                    "warnings": {},
+                    "x": 520,
+                    "y": 540
+                },
+                "6": {
+                    "customCode": "def add_email_body(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('add_email_body() called')\n    \n    template = \"\"\"Hello,\n\nThis is an automated message to inform you of the following investigation.\n\nInactive Users lists: {0}  \n\nPlease do not respond to this message.\"\"\"\n\n    # parameter list for template variable replacement\n    parameters = [\n        \"\",\n    ]\n\n    phantom.format(container=container, template=template, parameters=parameters, name=\"add_email_body\", separator=\", \")\n\n    send_email(container=container)\n\n    return",
+                    "data": {
+                        "advanced": {
+                            "customName": "Add email body",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 1,
+                        "functionName": "add_email_body",
+                        "id": "6",
+                        "template": "{0}",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "6",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 520,
+                    "y": 1020
+                },
+                "7": {
+                    "data": {
+                        "action": "send email",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "Send Email",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "connector": "SMTP",
+                        "connectorConfigs": [
+                            "smtp asset"
+                        ],
+                        "connectorId": "45bb6f37-4478-499b-b4a3-51ecfa62b78c",
+                        "connectorVersion": "v1",
+                        "functionId": 1,
+                        "functionName": "send_email",
+                        "id": "7",
+                        "parameters": {
+                            "attachments": "",
+                            "bcc": "",
+                            "body": "add_email_body:formatted_data",
+                            "cc": "",
+                            "from": "no-reply-phantom@ktbcs.co.th",
+                            "headers": "",
+                            "subject": "SOAR-Inactive users notifications",
+                            "to": "incidentmanagerxx@gmail.com"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "to"
+                            },
+                            {
+                                "data_type": "string",
+                                "field": "body"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "7",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 520,
+                    "y": 1340
+                }
+            },
+            "notes": "",
+            "origin": {
+                "playbook_id": 245,
+                "playbook_name": "PLAYBOOK-TRIAGE-INDICATOR-CLOUD-01",
+                "playbook_repo_id": 3,
+                "playbook_repo_name": "mfec_csoc_playbook"
+            }
+        },
+        "input_spec": null,
+        "output_spec": null,
+        "playbook_type": "automation",
+        "python_version": "3",
+        "schema": "5.0.10",
+        "version": "4.10.7.63984"
+    },
+    "create_time": "2025-03-27T15:21:06.421044+00:00",
+    "draft_mode": false,
+    "labels": [
+        "*"
+    ],
+    "tags": []
+}
