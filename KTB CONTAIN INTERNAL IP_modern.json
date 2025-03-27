@@ -1,0 +1,360 @@
+{
+    "blockly": false,
+    "blockly_xml": "<xml></xml>",
+    "category": "Uncategorized",
+    "coa": {
+        "data": {
+            "description": "",
+            "edges": [
+                {
+                    "conditions": [
+                        {
+                            "index": 2
+                        }
+                    ],
+                    "id": "port_3_to_port_1",
+                    "sourceNode": "3",
+                    "sourcePort": "3_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_0_to_port_2",
+                    "sourceNode": "0",
+                    "sourcePort": "0_out",
+                    "targetNode": "2",
+                    "targetPort": "2_in"
+                },
+                {
+                    "id": "port_2_to_port_3",
+                    "sourceNode": "2",
+                    "sourcePort": "2_out",
+                    "targetNode": "3",
+                    "targetPort": "3_in"
+                },
+                {
+                    "id": "port_4_to_port_1",
+                    "sourceNode": "4",
+                    "sourcePort": "4_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_7_to_port_1",
+                    "sourceNode": "7",
+                    "sourcePort": "7_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_3_to_port_6",
+                    "sourceNode": "3",
+                    "sourcePort": "3_out",
+                    "targetNode": "6",
+                    "targetPort": "6_in"
+                },
+                {
+                    "id": "port_6_to_port_4",
+                    "sourceNode": "6",
+                    "sourcePort": "6_out",
+                    "targetNode": "4",
+                    "targetPort": "4_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_3_to_port_5",
+                    "sourceNode": "3",
+                    "sourcePort": "3_out",
+                    "targetNode": "5",
+                    "targetPort": "5_in"
+                },
+                {
+                    "id": "port_5_to_port_7",
+                    "sourceNode": "5",
+                    "sourcePort": "5_out",
+                    "targetNode": "7",
+                    "targetPort": "7_in"
+                }
+            ],
+            "hash": "a3c38f6e798361abbef8863e6a032d77a71eac7c",
+            "nodes": {
+                "0": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_start",
+                        "id": "0",
+                        "type": "start"
+                    },
+                    "errors": {},
+                    "id": "0",
+                    "type": "start",
+                    "warnings": {},
+                    "x": 480,
+                    "y": 120
+                },
+                "1": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_finish",
+                        "id": "1",
+                        "type": "end"
+                    },
+                    "errors": {},
+                    "id": "1",
+                    "type": "end",
+                    "warnings": {},
+                    "x": 320,
+                    "y": 1480
+                },
+                "2": {
+                    "customCode": "def update_pre_contain_status(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('update_pre_contain_status() called')\n    \n    container_data = phantom.collect2(container=container, datapath=['artifact:*.id', 'artifact:*.id'])\n    container_item_0 = [item[0] for item in container_data]\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    parameters = []\n    \n    cef_json = {\"sourceAddress_ContainResult\" : \"False\" }\n                    \n    # build parameters list for 'update_result' call\n    parameters.append({\n    'artifact_id': container_item_0[0],\n    'name': \"\",\n    'label': \"\",\n    'severity': \"\",\n    'cef_json': cef_json,\n    'cef_types_json': \"\",\n    'tags': \"\",\n    'overwrite': \"\",\n    'artifact_json': \"\",\n    })\n    \n    phantom.act(action=\"update artifact\", parameters=parameters, assets=['phantom asset'], name=\"update_artifact_update_result\")    \n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n    decision_1(container=container)\n\n    return",
+                    "data": {
+                        "advanced": {
+                            "customName": "update pre contain status",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "update_pre_contain_status",
+                        "id": "2",
+                        "inputParameters": [
+                            "artifact:*.id"
+                        ],
+                        "outputVariables": [],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "2",
+                    "type": "code",
+                    "userCode": "\n    # Write your custom code here...\n    parameters = []\n    \n    cef_json = {\"sourceAddress_ContainResult\" : \"False\" }\n                    \n    # build parameters list for 'update_result' call\n    parameters.append({\n    'artifact_id': container_item_0[0],\n    'name': \"\",\n    'label': \"\",\n    'severity': \"\",\n    'cef_json': cef_json,\n    'cef_types_json': \"\",\n    'tags': \"\",\n    'overwrite': \"\",\n    'artifact_json': \"\",\n    })\n    \n    phantom.act(action=\"update artifact\", parameters=parameters, assets=['phantom asset'], name=\"update_artifact_update_result\")    \n\n",
+                    "warnings": {},
+                    "x": 440,
+                    "y": 280
+                },
+                "3": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "artifact:*.cef.sourceAddress_QueryFrom",
+                                        "value": "ISE"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "artifact:*.cef.sourceAddress_QueryFrom",
+                                        "value": "AMP"
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else If",
+                                "logic": "and",
+                                "type": "elif"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 2,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 2,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 1,
+                        "functionName": "decision_1",
+                        "id": "3",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "3",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 440,
+                    "y": 560
+                },
+                "4": {
+                    "customCode": "def update_ise_contain_status(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('update_ise_contain_status() called')\n    \n    container_data = phantom.collect2(container=container, datapath=['artifact:*.id', 'artifact:*.id'])\n    results_data_1 = phantom.collect2(container=container, datapath=['disable_macaddress_1:action_result.status'], action_results=results)\n    container_item_0 = [item[0] for item in container_data]\n    results_item_1_0 = [item[0] for item in results_data_1]\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    parameters = []\n    \n    phantom.debug(results_item_1_0)\n    \n    if results_item_1_0[0] == \"success\":\n        cef_json = {\"sourceAddress_ContainResult\" : \"True\" }\n    else:\n        cef_json = {\"sourceAddress_ContainResult\" : \"False\" }\n\n    # build parameters list for 'update_result' call\n    parameters.append({\n    'artifact_id': container_item_0[0],\n    'name': \"\",\n    'label': \"\",\n    'severity': \"\",\n    'cef_json': cef_json,\n    'cef_types_json': \"\",\n    'tags': \"\",\n    'overwrite': \"\",\n    'artifact_json': \"\",\n    })\n    \n    phantom.act(action=\"update artifact\", parameters=parameters, assets=['phantom asset'], name=\"update_artifact_update_result\")\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    return",
+                    "data": {
+                        "advanced": {
+                            "customName": "update ISE contain status",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "functionId": 2,
+                        "functionName": "update_ise_contain_status",
+                        "id": "4",
+                        "inputParameters": [
+                            "artifact:*.id",
+                            "disable_macaddress_1:action_result.status"
+                        ],
+                        "outputVariables": [],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "4",
+                    "type": "code",
+                    "userCode": "\n    # Write your custom code here...\n    parameters = []\n    \n    phantom.debug(results_item_1_0)\n    \n    if results_item_1_0[0] == \"success\":\n        cef_json = {\"sourceAddress_ContainResult\" : \"True\" }\n    else:\n        cef_json = {\"sourceAddress_ContainResult\" : \"False\" }\n\n    # build parameters list for 'update_result' call\n    parameters.append({\n    'artifact_id': container_item_0[0],\n    'name': \"\",\n    'label': \"\",\n    'severity': \"\",\n    'cef_json': cef_json,\n    'cef_types_json': \"\",\n    'tags': \"\",\n    'overwrite': \"\",\n    'artifact_json': \"\",\n    })\n    \n    phantom.act(action=\"update artifact\", parameters=parameters, assets=['phantom asset'], name=\"update_artifact_update_result\")\n\n",
+                    "warnings": {},
+                    "x": 440,
+                    "y": 1040
+                },
+                "5": {
+                    "data": {
+                        "action": "move_computer_to_group_by_hostname",
+                        "actionType": "contain",
+                        "advanced": {
+                            "join": []
+                        },
+                        "connector": "Cisco CX AMP",
+                        "connectorConfigs": [
+                            "amp-test"
+                        ],
+                        "connectorId": "2698ece9-3ada-479e-99cc-f93f74606467",
+                        "connectorVersion": "v1",
+                        "functionId": 2,
+                        "functionName": "move_computer_to_group_by_hostname_2",
+                        "id": "5",
+                        "parameters": {
+                            "groupName": "xxx_Protected",
+                            "hostName": "artifact:*.cef.sourceAddress_fullhostname"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "hostName"
+                            },
+                            {
+                                "data_type": "string",
+                                "field": "groupName"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "5",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 680,
+                    "y": 760
+                },
+                "6": {
+                    "data": {
+                        "action": "disable_macaddress",
+                        "actionType": "contain",
+                        "advanced": {
+                            "join": []
+                        },
+                        "connector": "Cisco CX ISE",
+                        "connectorConfigs": [
+                            "new-ise-test"
+                        ],
+                        "connectorId": "67ca6938-2834-49fe-83e0-8418e4916208",
+                        "connectorVersion": "v1",
+                        "functionId": 1,
+                        "functionName": "disable_macaddress_1",
+                        "id": "6",
+                        "parameters": {
+                            "macaddress": "artifact:*.cef.sourceAddress_MacAddress",
+                            "policyname": "xxx_Protected"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "macaddress"
+                            },
+                            {
+                                "data_type": "string",
+                                "field": "policyname"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "6",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 440,
+                    "y": 760
+                },
+                "7": {
+                    "customCode": "def update_amp_contain_status(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('update_amp_contain_status() called')\n    \n    container_data = phantom.collect2(container=container, datapath=['artifact:*.id', 'artifact:*.id'])\n    results_data_1 = phantom.collect2(container=container, datapath=['move_computer_to_group_by_hostname_2:action_result.status'], action_results=results)\n    container_item_0 = [item[0] for item in container_data]\n    results_item_1_0 = [item[0] for item in results_data_1]\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    parameters = []\n    \n    phantom.debug(results_item_1_0)\n    \n    if results_item_1_0[0] == \"success\":\n        cef_json = {\"sourceAddress_ContainResult\" : \"True\" }\n    else:\n        cef_json = {\"sourceAddress_ContainResult\" : \"False\" }\n\n    # build parameters list for 'update_result' call\n    parameters.append({\n    'artifact_id': container_item_0[0],\n    'name': \"\",\n    'label': \"\",\n    'severity': \"\",\n    'cef_json': cef_json,\n    'cef_types_json': \"\",\n    'tags': \"\",\n    'overwrite': \"\",\n    'artifact_json': \"\",\n    })\n    \n    phantom.act(action=\"update artifact\", parameters=parameters, assets=['phantom asset'], name=\"update_artifact_update_result\")\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    return",
+                    "data": {
+                        "advanced": {
+                            "customName": "update AMP contain status",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "functionId": 3,
+                        "functionName": "update_amp_contain_status",
+                        "id": "7",
+                        "inputParameters": [
+                            "artifact:*.id",
+                            "move_computer_to_group_by_hostname_2:action_result.status"
+                        ],
+                        "outputVariables": [],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "7",
+                    "type": "code",
+                    "userCode": "\n    # Write your custom code here...\n    parameters = []\n    \n    phantom.debug(results_item_1_0)\n    \n    if results_item_1_0[0] == \"success\":\n        cef_json = {\"sourceAddress_ContainResult\" : \"True\" }\n    else:\n        cef_json = {\"sourceAddress_ContainResult\" : \"False\" }\n\n    # build parameters list for 'update_result' call\n    parameters.append({\n    'artifact_id': container_item_0[0],\n    'name': \"\",\n    'label': \"\",\n    'severity': \"\",\n    'cef_json': cef_json,\n    'cef_types_json': \"\",\n    'tags': \"\",\n    'overwrite': \"\",\n    'artifact_json': \"\",\n    })\n    \n    phantom.act(action=\"update artifact\", parameters=parameters, assets=['phantom asset'], name=\"update_artifact_update_result\")\n\n",
+                    "warnings": {},
+                    "x": 680,
+                    "y": 1040
+                }
+            },
+            "notes": "",
+            "origin": {
+                "playbook_id": 160,
+                "playbook_name": "KTB CONTAIN INTERNAL IP",
+                "playbook_repo_id": 3,
+                "playbook_repo_name": "mfec_csoc_playbook"
+            }
+        },
+        "input_spec": null,
+        "output_spec": null,
+        "playbook_type": "automation",
+        "python_version": "3",
+        "schema": "5.0.10",
+        "version": "4.10.7.63984"
+    },
+    "create_time": "2025-03-27T15:21:02.683489+00:00",
+    "draft_mode": false,
+    "labels": [
+        "*"
+    ],
+    "tags": []
+}
