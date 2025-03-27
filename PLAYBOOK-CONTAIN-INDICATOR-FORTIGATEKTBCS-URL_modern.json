@@ -1,0 +1,908 @@
+{
+    "blockly": false,
+    "blockly_xml": "<xml></xml>",
+    "category": "Uncategorized",
+    "coa": {
+        "data": {
+            "description": "",
+            "edges": [
+                {
+                    "id": "port_0_to_port_2",
+                    "sourceNode": "0",
+                    "sourcePort": "0_out",
+                    "targetNode": "2",
+                    "targetPort": "2_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_2_to_port_13",
+                    "sourceNode": "2",
+                    "sourcePort": "2_out",
+                    "targetNode": "13",
+                    "targetPort": "13_in"
+                },
+                {
+                    "id": "port_5_to_port_6",
+                    "sourceNode": "5",
+                    "sourcePort": "5_out",
+                    "targetNode": "6",
+                    "targetPort": "6_in"
+                },
+                {
+                    "id": "port_3_to_port_1",
+                    "sourceNode": "3",
+                    "sourcePort": "3_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_13_to_port_14",
+                    "sourceNode": "13",
+                    "sourcePort": "13_out",
+                    "targetNode": "14",
+                    "targetPort": "14_in"
+                },
+                {
+                    "id": "port_12_to_port_9",
+                    "sourceNode": "12",
+                    "sourcePort": "12_out",
+                    "targetNode": "9",
+                    "targetPort": "9_in"
+                },
+                {
+                    "id": "port_14_to_port_15",
+                    "sourceNode": "14",
+                    "sourcePort": "14_out",
+                    "targetNode": "15",
+                    "targetPort": "15_in"
+                },
+                {
+                    "id": "port_15_to_port_16",
+                    "sourceNode": "15",
+                    "sourcePort": "15_out",
+                    "targetNode": "16",
+                    "targetPort": "16_in"
+                },
+                {
+                    "id": "port_16_to_port_11",
+                    "sourceNode": "16",
+                    "sourcePort": "16_out",
+                    "targetNode": "11",
+                    "targetPort": "11_in"
+                },
+                {
+                    "id": "port_11_to_port_12",
+                    "sourceNode": "11",
+                    "sourcePort": "11_out",
+                    "targetNode": "12",
+                    "targetPort": "12_in"
+                },
+                {
+                    "id": "port_9_to_port_8",
+                    "sourceNode": "9",
+                    "sourcePort": "9_out",
+                    "targetNode": "8",
+                    "targetPort": "8_in"
+                },
+                {
+                    "id": "port_6_to_port_7",
+                    "sourceNode": "6",
+                    "sourcePort": "6_out",
+                    "targetNode": "7",
+                    "targetPort": "7_in"
+                },
+                {
+                    "id": "port_8_to_port_5",
+                    "sourceNode": "8",
+                    "sourcePort": "8_out",
+                    "targetNode": "5",
+                    "targetPort": "5_in"
+                },
+                {
+                    "id": "port_4_to_port_3",
+                    "sourceNode": "4",
+                    "sourcePort": "4_out",
+                    "targetNode": "3",
+                    "targetPort": "3_in"
+                },
+                {
+                    "id": "port_7_to_port_4",
+                    "sourceNode": "7",
+                    "sourcePort": "7_out",
+                    "targetNode": "4",
+                    "targetPort": "4_in"
+                }
+            ],
+            "hash": "66a19fcd84ff28b8ae08f1d7f5e38643ba40c149",
+            "nodes": {
+                "0": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_start",
+                        "id": "0",
+                        "type": "start"
+                    },
+                    "errors": {},
+                    "id": "0",
+                    "type": "start",
+                    "warnings": {},
+                    "x": 320,
+                    "y": -1840
+                },
+                "1": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_finish",
+                        "id": "1",
+                        "type": "end"
+                    },
+                    "errors": {},
+                    "id": "1",
+                    "type": "end",
+                    "warnings": {},
+                    "x": 1160,
+                    "y": -260
+                },
+                "10": {
+                    "data": {
+                        "advanced": {
+                            "customName": "cf_local_debug_variable_1",
+                            "join": []
+                        },
+                        "customFunction": {
+                            "draftMode": false,
+                            "name": "debug_variable",
+                            "repoName": "local"
+                        },
+                        "functionId": 1,
+                        "functionName": "cf_local_debug_variable_1",
+                        "id": "10",
+                        "type": "utility",
+                        "utilities": {
+                            "debug_variable": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "item",
+                                        "label": "var1",
+                                        "name": "var1",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "list",
+                                        "label": "var2_list",
+                                        "name": "var2_list",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "debug_variable",
+                                "name": "debug_variable"
+                            }
+                        },
+                        "utilityType": "custom_function",
+                        "values": {
+                            "debug_variable": {
+                                "var1": "mergeresultformat:formatted_data",
+                                "var2_list": "mergeresultformat:formatted_data.*"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "10",
+                    "tab": "customFunctions",
+                    "type": "utility",
+                    "userCode": "    # Write your custom code here...",
+                    "warnings": {},
+                    "x": 1720,
+                    "y": -1180
+                },
+                "11": {
+                    "data": {
+                        "action": "post data",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "postDR2_ATP_Seg_1",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "connector": "HTTP",
+                        "connectorConfigs": [
+                            "fortigate-bbt-02"
+                        ],
+                        "connectorId": "290b7499-0374-4930-9cdc-5e9b05d65827",
+                        "connectorVersion": "v1",
+                        "functionId": 12,
+                        "functionName": "postdr2_atp_seg_1",
+                        "id": "11",
+                        "parameters": {
+                            "body": "cf_local_strip_url_prefix_n_generate_body_1:custom_function_result.data.bodyFormat.*",
+                            "headers": "",
+                            "location": "webfilter/ftgd-local-rating?vdom=ATP-Seg-1&access_token=7sjwb4s7m95kmQfjG58r3dkw0GH1hN",
+                            "verify_certificate": "False"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "body"
+                            },
+                            {
+                                "data_type": "string",
+                                "field": "location"
+                            },
+                            {
+                                "data_type": "boolean",
+                                "field": "verify_certificate"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "11",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 1120,
+                    "y": -1180
+                },
+                "12": {
+                    "data": {
+                        "action": "post data",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "postDR2_ATP_Seg_2",
+                            "customNameId": 0,
+                            "delayTime": 0.0,
+                            "join": []
+                        },
+                        "connector": "HTTP",
+                        "connectorConfigs": [
+                            "fortigate-bbt-02"
+                        ],
+                        "connectorId": "290b7499-0374-4930-9cdc-5e9b05d65827",
+                        "connectorVersion": "v1",
+                        "functionId": 13,
+                        "functionName": "postdr2_atp_seg_2",
+                        "id": "12",
+                        "parameters": {
+                            "body": "cf_local_strip_url_prefix_n_generate_body_1:custom_function_result.data.bodyFormat.*",
+                            "headers": "",
+                            "location": "webfilter/ftgd-local-rating?vdom=ATP-Seg-2&access_token=7sjwb4s7m95kmQfjG58r3dkw0GH1hN",
+                            "verify_certificate": "False"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "body"
+                            },
+                            {
+                                "data_type": "string",
+                                "field": "location"
+                            },
+                            {
+                                "data_type": "boolean",
+                                "field": "verify_certificate"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "12",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 1400,
+                    "y": -1180
+                },
+                "13": {
+                    "data": {
+                        "advanced": {
+                            "customName": "cf_local_strip_url_prefix_n_generate_body_1",
+                            "join": []
+                        },
+                        "customFunction": {
+                            "draftMode": false,
+                            "name": "strip_url_prefix_n_generate_body",
+                            "repoName": "local"
+                        },
+                        "functionId": 1,
+                        "functionName": "cf_local_strip_url_prefix_n_generate_body_1",
+                        "id": "13",
+                        "type": "utility",
+                        "utilities": {
+                            "strip_url_prefix_n_generate_body": {
+                                "description": "Strip \"http://\" and \"https://\" from input string  and generate body request for add web override category on fortigate",
+                                "fields": [
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "item",
+                                        "label": "requestURLs",
+                                        "name": "requestURLs",
+                                        "placeholder": "URL list",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "strip_url_prefix_n_generate_body",
+                                "name": "strip_url_prefix_n_generate_body"
+                            }
+                        },
+                        "utilityType": "custom_function",
+                        "values": {
+                            "strip_url_prefix_n_generate_body": {
+                                "requestURLs": "filtered-data:filtermaliciousurl:condition_1:artifact:*.cef.requestURL"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "13",
+                    "tab": "customFunctions",
+                    "type": "utility",
+                    "userCode": "    # Write your custom code here...",
+                    "warnings": {},
+                    "x": 280,
+                    "y": -1520
+                },
+                "14": {
+                    "data": {
+                        "action": "post data",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "postDC1_ATP_Seg_1",
+                            "customNameId": 0,
+                            "delayTime": 0.0,
+                            "join": []
+                        },
+                        "connector": "HTTP",
+                        "connectorConfigs": [
+                            "fortigate-pbs-01"
+                        ],
+                        "connectorId": "290b7499-0374-4930-9cdc-5e9b05d65827",
+                        "connectorVersion": "v1",
+                        "functionId": 9,
+                        "functionName": "postdc1_atp_seg_1",
+                        "id": "14",
+                        "parameters": {
+                            "body": "cf_local_strip_url_prefix_n_generate_body_1:custom_function_result.data.bodyFormat.*",
+                            "headers": "",
+                            "location": "webfilter/ftgd-local-rating?vdom=ATP-Seg-1&access_token=Gx706wf7wfxgr8Nhb530w9HsHdH93Q",
+                            "verify_certificate": "False"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "body"
+                            },
+                            {
+                                "data_type": "string",
+                                "field": "location"
+                            },
+                            {
+                                "data_type": "boolean",
+                                "field": "verify_certificate"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "14",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 280,
+                    "y": -1180
+                },
+                "15": {
+                    "data": {
+                        "action": "post data",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "postDC2_ATP_Seg_1",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "connector": "HTTP",
+                        "connectorConfigs": [
+                            "fortigate-pbs-02"
+                        ],
+                        "connectorId": "290b7499-0374-4930-9cdc-5e9b05d65827",
+                        "connectorVersion": "v1",
+                        "functionId": 10,
+                        "functionName": "postdc2_atp_seg_1",
+                        "id": "15",
+                        "parameters": {
+                            "body": "cf_local_strip_url_prefix_n_generate_body_1:custom_function_result.data.bodyFormat.*",
+                            "headers": "",
+                            "location": "webfilter/ftgd-local-rating?vdom=ATP-Seg-1&access_token=rd89bs6667cq6dcdhnrjhj7rkrNqnG",
+                            "verify_certificate": "False"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "body"
+                            },
+                            {
+                                "data_type": "string",
+                                "field": "location"
+                            },
+                            {
+                                "data_type": "boolean",
+                                "field": "verify_certificate"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "15",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 560,
+                    "y": -1180
+                },
+                "16": {
+                    "data": {
+                        "action": "post data",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "postDR1_ATP_Seg_1",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "connector": "HTTP",
+                        "connectorConfigs": [
+                            "fortigate-bbt-01"
+                        ],
+                        "connectorId": "290b7499-0374-4930-9cdc-5e9b05d65827",
+                        "connectorVersion": "v1",
+                        "functionId": 11,
+                        "functionName": "postdr1_atp_seg_1",
+                        "id": "16",
+                        "parameters": {
+                            "body": "cf_local_strip_url_prefix_n_generate_body_1:custom_function_result.data.bodyFormat.*",
+                            "headers": "",
+                            "location": "webfilter/ftgd-local-rating?vdom=ATP-Seg-1&access_token=mG9gr56ny7rrz4mdssq11gnkf6wgxd",
+                            "verify_certificate": "False"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "body"
+                            },
+                            {
+                                "data_type": "string",
+                                "field": "location"
+                            },
+                            {
+                                "data_type": "boolean",
+                                "field": "verify_certificate"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "16",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 840,
+                    "y": -1180
+                },
+                "2": {
+                    "data": {
+                        "advanced": {
+                            "customName": "FilterMaliciousURL",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "artifact:*.cef.requestURL_malicious",
+                                        "value": "True"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "logic": "and"
+                            }
+                        ],
+                        "functionId": 3,
+                        "functionName": "filtermaliciousurl",
+                        "id": "2",
+                        "type": "filter"
+                    },
+                    "errors": {},
+                    "id": "2",
+                    "type": "filter",
+                    "warnings": {},
+                    "x": 280,
+                    "y": -1680
+                },
+                "3": {
+                    "data": {
+                        "advanced": {
+                            "customName": "cf_local_merge_url_result_1",
+                            "join": []
+                        },
+                        "customFunction": {
+                            "draftMode": false,
+                            "name": "merge_url_result",
+                            "repoName": "local"
+                        },
+                        "functionId": 1,
+                        "functionName": "cf_local_merge_url_result_1",
+                        "id": "3",
+                        "type": "utility",
+                        "utilities": {
+                            "merge_url_result": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "item",
+                                        "label": "resultList",
+                                        "name": "resultList",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "item",
+                                        "label": "artifactInfo",
+                                        "name": "artifactInfo",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "merge_url_result",
+                                "name": "merge_url_result"
+                            }
+                        },
+                        "utilityType": "custom_function",
+                        "values": {
+                            "merge_url_result": {
+                                "artifactInfo": "artifactupdateformat:formatted_data",
+                                "resultList": "mergeresultformat:formatted_data"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "3",
+                    "tab": "customFunctions",
+                    "type": "utility",
+                    "userCode": "    # Write your custom code here...",
+                    "warnings": {},
+                    "x": 1120,
+                    "y": -580
+                },
+                "4": {
+                    "data": {
+                        "advanced": {
+                            "customName": "artifactUpdateFormat",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 30,
+                        "functionName": "artifactupdateformat",
+                        "id": "4",
+                        "parameters": [
+                            "filtered-data:filtermaliciousurl:condition_1:artifact:*.id",
+                            "filtered-data:filtermaliciousurl:condition_1:artifact:*.cef"
+                        ],
+                        "template": "[\n%%\n{{\n      \"artifact_id\" : {0} ,\n      \"cef\" : [{1}]\n}},\n%%\n]",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "4",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 840,
+                    "y": -580
+                },
+                "5": {
+                    "data": {
+                        "advanced": {
+                            "customName": "addNoteFormat",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 28,
+                        "functionName": "addnoteformat",
+                        "id": "5",
+                        "parameters": [
+                            "cf_local_sort_and_gen_markdown_1:custom_function_result.data.markdown",
+                            "postdc1_atp_seg_1:action_result.data.*.response_headers.Date"
+                        ],
+                        "template": "{0}\nExecution Time : {1}",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "5",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 840,
+                    "y": -880
+                },
+                "6": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionId": 4,
+                        "functionName": "add_note_4",
+                        "id": "6",
+                        "type": "utility",
+                        "utilities": {
+                            "add_note": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "description": "",
+                                        "label": "title",
+                                        "name": "title",
+                                        "placeholder": "Enter a note title",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "description": "",
+                                        "label": "content",
+                                        "name": "content",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "choices": [
+                                            "markdown",
+                                            "html"
+                                        ],
+                                        "default": "markdown",
+                                        "description": "",
+                                        "label": "note format",
+                                        "name": "note_format",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "dropdown",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    },
+                                    {
+                                        "default": "general",
+                                        "hidden": true,
+                                        "name": "note_type",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "author",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "event_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "task_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "trace",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "add note",
+                                "name": "add_note"
+                            }
+                        },
+                        "values": {
+                            "add_note": {
+                                "_internal": [
+                                    "container",
+                                    "note_type",
+                                    "author",
+                                    "event_id",
+                                    "task_id",
+                                    "trace"
+                                ],
+                                "content": "addnoteformat:formatted_data",
+                                "note_format": "markdown",
+                                "title": "Playbook Summary: Block URL Result"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "6",
+                    "tab": "apis",
+                    "type": "utility",
+                    "warnings": {},
+                    "x": 560,
+                    "y": -880
+                },
+                "7": {
+                    "data": {
+                        "advanced": {
+                            "customName": "mergeResultFormat",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 21,
+                        "functionName": "mergeresultformat",
+                        "id": "7",
+                        "parameters": [
+                            "postdc1_atp_seg_1:action_result.status",
+                            "postdc2_atp_seg_1:action_result.status",
+                            "postdr1_atp_seg_1:action_result.status",
+                            "postdr2_atp_seg_1:action_result.status",
+                            "postdr2_atp_seg_2:action_result.status",
+                            "postdc1_atp_seg_1:action_result.parameter.body",
+                            "postdc2_atp_seg_1:action_result.parameter.body",
+                            "postdr1_atp_seg_1:action_result.parameter.body",
+                            "postdr2_atp_seg_1:action_result.parameter.body",
+                            "postdr2_atp_seg_2:action_result.parameter.body"
+                        ],
+                        "template": "[\n%%\n{{\"result_body\" : {5}, \"status\" : \"{0}\"}},\n{{\"result_body\" : {6}, \"status\" : \"{1}\"}},\n{{\"result_body\" : {7}, \"status\" : \"{2}\"}},\n{{\"result_body\" : {8}, \"status\" : \"{3}\"}},\n{{\"result_body\" : {9}, \"status\" : \"{4}\"}},\n%%\n]",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "7",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 560,
+                    "y": -580
+                },
+                "8": {
+                    "data": {
+                        "advanced": {
+                            "customName": "cf_local_sort_and_gen_markdown_1",
+                            "join": []
+                        },
+                        "customFunction": {
+                            "draftMode": false,
+                            "name": "sort_and_gen_markdown",
+                            "repoName": "local"
+                        },
+                        "functionId": 1,
+                        "functionName": "cf_local_sort_and_gen_markdown_1",
+                        "id": "8",
+                        "type": "utility",
+                        "utilities": {
+                            "sort_and_gen_markdown": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "item",
+                                        "label": "resultList",
+                                        "name": "resultList",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "sort_and_gen_markdown",
+                                "name": "sort_and_gen_markdown"
+                            }
+                        },
+                        "utilityType": "custom_function",
+                        "values": {
+                            "sort_and_gen_markdown": {
+                                "resultList": "preparenoteformat:formatted_data"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "8",
+                    "tab": "customFunctions",
+                    "type": "utility",
+                    "userCode": "    # Write your custom code here...",
+                    "warnings": {},
+                    "x": 1120,
+                    "y": -880
+                },
+                "9": {
+                    "data": {
+                        "advanced": {
+                            "customName": "prepareNoteFormat",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 32,
+                        "functionName": "preparenoteformat",
+                        "id": "9",
+                        "parameters": [
+                            "postdc1_atp_seg_1:action_result.parameter.body",
+                            "postdc1_atp_seg_1:action_result.status",
+                            "postdc2_atp_seg_1:action_result.parameter.body",
+                            "postdc2_atp_seg_1:action_result.status",
+                            "postdr1_atp_seg_1:action_result.parameter.body",
+                            "postdr1_atp_seg_1:action_result.status",
+                            "postdr2_atp_seg_1:action_result.parameter.body",
+                            "postdr2_atp_seg_1:action_result.status",
+                            "postdr2_atp_seg_2:action_result.parameter.body",
+                            "postdr2_atp_seg_2:action_result.status",
+                            "postdc1_atp_seg_1:action_result.summary.status_code",
+                            "postdc1_atp_seg_1:action_result.summary.reason",
+                            "postdc2_atp_seg_1:action_result.summary.status_code",
+                            "postdc2_atp_seg_1:action_result.summary.reason",
+                            "postdr1_atp_seg_1:action_result.summary.status_code",
+                            "postdr1_atp_seg_1:action_result.summary.reason",
+                            "postdr2_atp_seg_1:action_result.summary.status_code",
+                            "postdr2_atp_seg_1:action_result.summary.reason",
+                            "postdr2_atp_seg_2:action_result.summary.status_code",
+                            "postdr2_atp_seg_2:action_result.summary.reason"
+                        ],
+                        "template": "[\n%%\n{{\"device\" : \"DC1-ATP-Seg-1\", \"body\" : {0}, \"status\" : \"{1}\", \"code\" : \"{10}\",\"reason\" : \"{11}\"}},\n{{\"device\" : \"DC2-ATP-Seg-1\", \"body\" : {2}, \"status\" : \"{3}\", \"code\" : \"{12}\",\"reason\" : \"{13}\"}},\n{{\"device\" : \"DR1-ATP-Seg-1\", \"body\" : {4}, \"status\" : \"{5}\", \"code\" : \"{14}\",\"reason\" : \"{15}\"}},\n{{\"device\" : \"DR2-ATP-Seg-1\", \"body\" : {6}, \"status\" : \"{7}\", \"code\" : \"{16}\",\"reason\" : \"{17}\"}},\n{{\"device\" : \"DR2-ATP-Seg-2\", \"body\" : {8}, \"status\" : \"{9}\", \"code\" : \"{18}\",\"reason\" : \"{19}\"}},\n%%\n]",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "9",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 1400,
+                    "y": -880
+                }
+            },
+            "notes": "",
+            "origin": {
+                "playbook_id": 215,
+                "playbook_name": "PLAYBOOK-CONTAIN-INDICATOR-FORTIGATEKTBCS-URL",
+                "playbook_repo_id": 3,
+                "playbook_repo_name": "mfec_csoc_playbook"
+            }
+        },
+        "input_spec": null,
+        "output_spec": null,
+        "playbook_type": "automation",
+        "python_version": "3",
+        "schema": "5.0.10",
+        "version": "4.10.7.63984"
+    },
+    "create_time": "2025-03-27T15:21:04.369430+00:00",
+    "draft_mode": false,
+    "labels": [
+        "*"
+    ],
+    "tags": []
+}
