@@ -1,0 +1,1515 @@
+{
+    "blockly": false,
+    "blockly_xml": "<xml></xml>",
+    "category": "Uncategorized",
+    "coa": {
+        "data": {
+            "description": "",
+            "edges": [
+                {
+                    "id": "port_28_to_port_16",
+                    "sourceNode": "28",
+                    "sourcePort": "28_out",
+                    "targetNode": "16",
+                    "targetPort": "16_in"
+                },
+                {
+                    "id": "port_18_to_port_19",
+                    "sourceNode": "18",
+                    "sourcePort": "18_out",
+                    "targetNode": "19",
+                    "targetPort": "19_in"
+                },
+                {
+                    "id": "port_19_to_port_20",
+                    "sourceNode": "19",
+                    "sourcePort": "19_out",
+                    "targetNode": "20",
+                    "targetPort": "20_in"
+                },
+                {
+                    "id": "port_20_to_port_21",
+                    "sourceNode": "20",
+                    "sourcePort": "20_out",
+                    "targetNode": "21",
+                    "targetPort": "21_in"
+                },
+                {
+                    "id": "port_15_to_port_28",
+                    "sourceNode": "15",
+                    "sourcePort": "15_out",
+                    "targetNode": "28",
+                    "targetPort": "28_in"
+                },
+                {
+                    "id": "port_16_to_port_17",
+                    "sourceNode": "16",
+                    "sourcePort": "16_out",
+                    "targetNode": "17",
+                    "targetPort": "17_in"
+                },
+                {
+                    "id": "port_17_to_port_18",
+                    "sourceNode": "17",
+                    "sourcePort": "17_out",
+                    "targetNode": "18",
+                    "targetPort": "18_in"
+                },
+                {
+                    "id": "port_13_to_port_15",
+                    "sourceNode": "13",
+                    "sourcePort": "13_out",
+                    "targetNode": "15",
+                    "targetPort": "15_in"
+                },
+                {
+                    "id": "port_0_to_port_14",
+                    "sourceNode": "0",
+                    "sourcePort": "0_out",
+                    "targetNode": "14",
+                    "targetPort": "14_in"
+                },
+                {
+                    "id": "port_14_to_port_11",
+                    "sourceNode": "14",
+                    "sourcePort": "14_out",
+                    "targetNode": "11",
+                    "targetPort": "11_in"
+                },
+                {
+                    "id": "port_9_to_port_3",
+                    "sourceNode": "9",
+                    "sourcePort": "9_out",
+                    "targetNode": "3",
+                    "targetPort": "3_in"
+                },
+                {
+                    "id": "port_23_to_port_24",
+                    "sourceNode": "23",
+                    "sourcePort": "23_out",
+                    "targetNode": "24",
+                    "targetPort": "24_in"
+                },
+                {
+                    "id": "port_21_to_port_22",
+                    "sourceNode": "21",
+                    "sourcePort": "21_out",
+                    "targetNode": "22",
+                    "targetPort": "22_in"
+                },
+                {
+                    "id": "port_22_to_port_23",
+                    "sourceNode": "22",
+                    "sourcePort": "22_out",
+                    "targetNode": "23",
+                    "targetPort": "23_in"
+                },
+                {
+                    "id": "port_11_to_port_12",
+                    "sourceNode": "11",
+                    "sourcePort": "11_out",
+                    "targetNode": "12",
+                    "targetPort": "12_in"
+                },
+                {
+                    "id": "port_12_to_port_13",
+                    "sourceNode": "12",
+                    "sourcePort": "12_out",
+                    "targetNode": "13",
+                    "targetPort": "13_in"
+                },
+                {
+                    "id": "port_3_to_port_1",
+                    "sourceNode": "3",
+                    "sourcePort": "3_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_26_to_port_2",
+                    "sourceNode": "26",
+                    "sourcePort": "26_out",
+                    "targetNode": "2",
+                    "targetPort": "2_in"
+                },
+                {
+                    "id": "port_27_to_port_4",
+                    "sourceNode": "27",
+                    "sourcePort": "27_out",
+                    "targetNode": "4",
+                    "targetPort": "4_in"
+                },
+                {
+                    "id": "port_2_to_port_9",
+                    "sourceNode": "2",
+                    "sourcePort": "2_out",
+                    "targetNode": "9",
+                    "targetPort": "9_in"
+                },
+                {
+                    "id": "port_4_to_port_10",
+                    "sourceNode": "4",
+                    "sourcePort": "4_out",
+                    "targetNode": "10",
+                    "targetPort": "10_in"
+                },
+                {
+                    "id": "port_10_to_port_5",
+                    "sourceNode": "10",
+                    "sourcePort": "10_out",
+                    "targetNode": "5",
+                    "targetPort": "5_in"
+                },
+                {
+                    "id": "port_5_to_port_1",
+                    "sourceNode": "5",
+                    "sourcePort": "5_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_7_to_port_26",
+                    "sourceNode": "7",
+                    "sourcePort": "7_out",
+                    "targetNode": "26",
+                    "targetPort": "26_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_7_to_port_27",
+                    "sourceNode": "7",
+                    "sourcePort": "7_out",
+                    "targetNode": "27",
+                    "targetPort": "27_in"
+                },
+                {
+                    "id": "port_24_to_port_25",
+                    "sourceNode": "24",
+                    "sourcePort": "24_out",
+                    "targetNode": "25",
+                    "targetPort": "25_in"
+                },
+                {
+                    "id": "port_25_to_port_7",
+                    "sourceNode": "25",
+                    "sourcePort": "25_out",
+                    "targetNode": "7",
+                    "targetPort": "7_in"
+                }
+            ],
+            "hash": "7aa86aa46a5acb949718fb5b6f6a2439b439f5ab",
+            "nodes": {
+                "0": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_start",
+                        "id": "0",
+                        "type": "start"
+                    },
+                    "errors": {},
+                    "id": "0",
+                    "type": "start",
+                    "warnings": {},
+                    "x": 280,
+                    "y": -680
+                },
+                "1": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_finish",
+                        "id": "1",
+                        "type": "end"
+                    },
+                    "errors": {},
+                    "id": "1",
+                    "type": "end",
+                    "warnings": {},
+                    "x": 400,
+                    "y": 2260
+                },
+                "10": {
+                    "data": {
+                        "advanced": {
+                            "customName": "FormatOutputForNoteError",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 21,
+                        "functionName": "formatoutputfornoteerror",
+                        "id": "10",
+                        "parameters": [
+                            "ipaddrdata:formatted_data",
+                            "cf_community_datetime_modify_1:custom_function_result.data.datetime_string",
+                            "taskresulterror:formatted_data"
+                        ],
+                        "template": "<b>Containment result</b>\n\n<b>Containment Destination IP Address:</b> {0}\n<b>Execute Time:</b> {1}\n\n{2}",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "10",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 480,
+                    "y": 1720
+                },
+                "11": {
+                    "data": {
+                        "action": "post data",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "AuthReqToFortiManager",
+                            "customNameId": 0,
+                            "delayTime": 0.0,
+                            "description": "HTTP method: POST\nAPI execute method: exec\nURL: /sys/login/user",
+                            "join": [],
+                            "scope": "all"
+                        },
+                        "connector": "HTTP",
+                        "connectorConfigs": [
+                            "fortimanager vayu"
+                        ],
+                        "connectorId": "290b7499-0374-4930-9cdc-5e9b05d65827",
+                        "connectorVersion": "v1",
+                        "functionId": 1,
+                        "functionName": "authreqtofortimanager",
+                        "id": "11",
+                        "parameters": {
+                            "body": "bodyauthreqtofortimanager:formatted_data",
+                            "headers": "{\"Content-Type\":\"application/json\"}",
+                            "location": "/jsonrpc",
+                            "verify_certificate": "False"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "body"
+                            },
+                            {
+                                "data_type": "string",
+                                "field": "location"
+                            },
+                            {
+                                "data_type": "boolean",
+                                "field": "verify_certificate"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "11",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 520,
+                    "y": -460
+                },
+                "12": {
+                    "data": {
+                        "advanced": {
+                            "customName": "GetAuthSessionID",
+                            "customNameId": 0,
+                            "join": [],
+                            "scope": "new",
+                            "separator": ", "
+                        },
+                        "functionId": 2,
+                        "functionName": "getauthsessionid",
+                        "id": "12",
+                        "parameters": [
+                            "authreqtofortimanager:action_result.data.*.parsed_response_body.session"
+                        ],
+                        "template": "{0}",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "12",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 840,
+                    "y": -460
+                },
+                "13": {
+                    "data": {
+                        "advanced": {
+                            "customName": "IPAddrData",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 14,
+                        "functionName": "ipaddrdata",
+                        "id": "13",
+                        "parameters": [
+                            "artifact:*.cef.destinationAddress"
+                        ],
+                        "template": "{0}",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "13",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 280,
+                    "y": -120
+                },
+                "14": {
+                    "data": {
+                        "advanced": {
+                            "customName": "BodyAuthReqToFortiManager",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 15,
+                        "functionName": "bodyauthreqtofortimanager",
+                        "id": "14",
+                        "parameters": [
+                            "artifact:*.id"
+                        ],
+                        "template": "%%\n{{\n\t\"id\": {0},\n\t\"method\": \"exec\",\n\t\"params\": [\n\t  {{\n\t    \"data\": [\n                    {{\n\t\t\"user\": \"phantomcsocfw\",\n        \"passwd\": \"Ktbcs@123\"\n\t        }}\n\t    ],\n\t    \"url\": \"sys/login/user\"\n      \t  }}\n\t],\n\t\"session\": null,\n\t\"verbose\": 1\n}}\n%%",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "14",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 240,
+                    "y": -460
+                },
+                "15": {
+                    "data": {
+                        "advanced": {
+                            "customName": "BodyReqCreateAddrObj",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 12,
+                        "functionName": "bodyreqcreateaddrobj",
+                        "id": "15",
+                        "parameters": [
+                            "ipaddrdata:formatted_data"
+                        ],
+                        "template": "%%\n                {{\n                    \"name\": \"Phantom {0}_32\",\n                    \"subnet\": [\n                        \"{0}\",\"255.255.255.255\"\n                    ],\n                    \"comment\": \"Create by Phantom\",\n                    \"type\": 0,\n                    \"associated-interface\": \"any\",\n                    \"color\": 22\n                }},\n%%",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "15",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 560,
+                    "y": -120
+                },
+                "16": {
+                    "data": {
+                        "action": "post data",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "CreateAddrObj",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "connector": "HTTP",
+                        "connectorConfigs": [
+                            "fortimanager vayu"
+                        ],
+                        "connectorId": "290b7499-0374-4930-9cdc-5e9b05d65827",
+                        "connectorVersion": "v1",
+                        "functionId": 5,
+                        "functionName": "createaddrobj",
+                        "id": "16",
+                        "parameters": {
+                            "body": "reqcreateaddrobj:formatted_data",
+                            "headers": "{\"Content-Type\":\"apllication/json\"}",
+                            "location": "/jsonrpc",
+                            "verify_certificate": "False"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "body"
+                            },
+                            {
+                                "data_type": "string",
+                                "field": "location"
+                            },
+                            {
+                                "data_type": "boolean",
+                                "field": "verify_certificate"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "16",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 280,
+                    "y": 160
+                },
+                "17": {
+                    "data": {
+                        "advanced": {
+                            "customName": "BodyReqAddAddrObjToAddrGrp",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 13,
+                        "functionName": "bodyreqaddaddrobjtoaddrgrp",
+                        "id": "17",
+                        "parameters": [
+                            "ipaddrdata:formatted_data"
+                        ],
+                        "template": "%%\n\"Phantom {0}_32\",\n%%",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "17",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 560,
+                    "y": 180
+                },
+                "18": {
+                    "data": {
+                        "advanced": {
+                            "customName": "ReqAddAddrObjToAddrGrp",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 9,
+                        "functionName": "reqaddaddrobjtoaddrgrp",
+                        "id": "18",
+                        "parameters": [
+                            "getauthsessionid:formatted_data",
+                            "bodyreqaddaddrobjtoaddrgrp:formatted_data"
+                        ],
+                        "template": "%%\n{{\n\t\"session\": \"{0}\",\n\t\"id\": 1,\n\t\"method\": \"add\" ,\n    \"params\": [\n        {{\n            \"url\": \"/pm/config/adom/root/obj/firewall/addrgrp/phantom-blacklist/member\",\n            \"data\": [      \n                        {1}\n            ]\n        }}\n    ]\t\t\t\n}}\n%%",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "18",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 880,
+                    "y": 160
+                },
+                "19": {
+                    "data": {
+                        "action": "post data",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "AddAddrObjToAddrGrp",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "connector": "HTTP",
+                        "connectorConfigs": [
+                            "fortimanager vayu"
+                        ],
+                        "connectorId": "290b7499-0374-4930-9cdc-5e9b05d65827",
+                        "connectorVersion": "v1",
+                        "functionId": 6,
+                        "functionName": "addaddrobjtoaddrgrp",
+                        "id": "19",
+                        "parameters": {
+                            "body": "reqaddaddrobjtoaddrgrp:formatted_data",
+                            "headers": "{\"Content-Type\":\"application/json\"}",
+                            "location": "/jsonrpc",
+                            "verify_certificate": "False"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "body"
+                            },
+                            {
+                                "data_type": "string",
+                                "field": "location"
+                            },
+                            {
+                                "data_type": "boolean",
+                                "field": "verify_certificate"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "19",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 280,
+                    "y": 460
+                },
+                "2": {
+                    "data": {
+                        "action": "update artifact",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "update artifact success",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "connector": "Phantom",
+                        "connectorConfigs": [
+                            "phantom asset"
+                        ],
+                        "connectorId": "deb82aa9-22cc-4675-9cf1-534b8d006eb7",
+                        "connectorVersion": "v1",
+                        "functionId": 1,
+                        "functionName": "update_artifact_success",
+                        "id": "2",
+                        "parameters": {
+                            "artifact_id": "artifact:*.id",
+                            "artifact_json": "",
+                            "cef_json": "{\"destinationAddress_ContainResult\":\"True\"}",
+                            "cef_types_json": "",
+                            "label": "",
+                            "name": "",
+                            "overwrite": "False",
+                            "severity": "",
+                            "tags": ""
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "artifact_id"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "2",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 240,
+                    "y": 1460
+                },
+                "20": {
+                    "data": {
+                        "advanced": {
+                            "customName": "ReqInstallPolicyPackage",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 10,
+                        "functionName": "reqinstallpolicypackage",
+                        "id": "20",
+                        "parameters": [
+                            "getauthsessionid:formatted_data"
+                        ],
+                        "template": "%%\n{{\n\t\"session\": \"{0}\",\n\t\"id\": 1,\n\t\"method\": \"exec\" ,\n\t\"params\": [\n\t\t{{\n\t\t\t\"url\": \"/securityconsole/install/package\",\n            \"data\": [\n                {{\n                    \"adom\": \"root\",\n                    \"pkg\": \"Policy-Internet\",\n                    \"scope member\": [\n                        {{\n                            \"name\": \"BBT-DC2_DH2_R903_U33-34-3301E-FW-01\",\n                            \"vdom\": \"root\"\n                        }}\n                    ],\n                    \"flags\": \"none\"\n                }}\n            ]\n\t\t}}\n\t],\n\t\"verbose\": 1\t\t\t\t\n}}\n%%",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "20",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 560,
+                    "y": 480
+                },
+                "21": {
+                    "data": {
+                        "action": "post data",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "InstallPolicyPackage",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "connector": "HTTP",
+                        "connectorConfigs": [
+                            "fortimanager vayu"
+                        ],
+                        "connectorId": "290b7499-0374-4930-9cdc-5e9b05d65827",
+                        "connectorVersion": "v1",
+                        "functionId": 7,
+                        "functionName": "installpolicypackage",
+                        "id": "21",
+                        "parameters": {
+                            "body": "reqinstallpolicypackage:formatted_data",
+                            "headers": "{\"Content-Type\":\"application/json\"}",
+                            "location": "/jsonrpc",
+                            "verify_certificate": "False"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "body"
+                            },
+                            {
+                                "data_type": "string",
+                                "field": "location"
+                            },
+                            {
+                                "data_type": "boolean",
+                                "field": "verify_certificate"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "21",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 880,
+                    "y": 480
+                },
+                "22": {
+                    "data": {
+                        "advanced": {
+                            "customName": "cf_local_waittime_1",
+                            "join": []
+                        },
+                        "customFunction": {
+                            "draftMode": false,
+                            "name": "waittime",
+                            "repoName": "local"
+                        },
+                        "functionId": 1,
+                        "functionName": "cf_local_waittime_1",
+                        "id": "22",
+                        "type": "utility",
+                        "utilities": {
+                            "waittime": {
+                                "description": "",
+                                "fields": [],
+                                "label": "waittime",
+                                "name": "waittime"
+                            }
+                        },
+                        "utilityType": "custom_function",
+                        "values": {
+                            "waittime": {}
+                        }
+                    },
+                    "errors": {},
+                    "id": "22",
+                    "tab": "customFunctions",
+                    "type": "utility",
+                    "userCode": "    # Write your custom code here...",
+                    "warnings": {},
+                    "x": 280,
+                    "y": 780
+                },
+                "23": {
+                    "data": {
+                        "advanced": {
+                            "customName": "BodyReqCheckTaskResult",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 17,
+                        "functionName": "bodyreqchecktaskresult",
+                        "id": "23",
+                        "parameters": [
+                            "getauthsessionid:formatted_data",
+                            "installpolicypackage:action_result.data.*.parsed_response_body.result.*.data.task"
+                        ],
+                        "template": "%%\n{{\n\t\"session\": \"{0}\",\n\t\"id\": 1,\n\t\"method\": \"get\" ,\n\t\"params\": [\n\t\t{{\n\t\t\t\"url\": \"task/task/{1}\"\n\t\t}}\n\t],\n\t\"verbose\": 1\t\t\t\t\n}}\n%%",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "23",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 560,
+                    "y": 780
+                },
+                "24": {
+                    "data": {
+                        "action": "post data",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "VerityTaskStatus",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "connector": "HTTP",
+                        "connectorConfigs": [
+                            "fortimanager vayu"
+                        ],
+                        "connectorId": "290b7499-0374-4930-9cdc-5e9b05d65827",
+                        "connectorVersion": "v1",
+                        "functionId": 8,
+                        "functionName": "veritytaskstatus",
+                        "id": "24",
+                        "parameters": {
+                            "body": "bodyreqchecktaskresult:formatted_data",
+                            "headers": "{\"Content-Type\":\"application/json\"}",
+                            "location": "/jsonrpc",
+                            "verify_certificate": "False"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "body"
+                            },
+                            {
+                                "data_type": "string",
+                                "field": "location"
+                            },
+                            {
+                                "data_type": "boolean",
+                                "field": "verify_certificate"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "24",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 880,
+                    "y": 780
+                },
+                "25": {
+                    "data": {
+                        "advanced": {
+                            "customName": "cf_community_datetime_modify_1",
+                            "join": []
+                        },
+                        "customFunction": {
+                            "draftMode": false,
+                            "name": "datetime_modify",
+                            "repoName": "community"
+                        },
+                        "functionId": 1,
+                        "functionName": "cf_community_datetime_modify_1",
+                        "id": "25",
+                        "type": "utility",
+                        "utilities": {
+                            "datetime_modify": {
+                                "description": "Change a timestamp by adding or subtracting minutes, hours, or days.",
+                                "fields": [
+                                    {
+                                        "dataTypes": [
+                                            ""
+                                        ],
+                                        "description": "The datetime to modify, which should be provided in a string format determined by input_format_string",
+                                        "inputType": "item",
+                                        "label": "input_datetime",
+                                        "name": "input_datetime",
+                                        "placeholder": "2020-06-27T14:53:08.219016Z",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [],
+                                        "description": "The format string to use for the input according to the Python's datetime.strptime() formatting rules. If none is provided the default will be '%Y-%m-%dT%H:%M:%S.%fZ'. In addition to strptime() formats, the special format \"epoch\" can be used to accept unix epoch timestamps.",
+                                        "inputType": "item",
+                                        "label": "input_format_string",
+                                        "name": "input_format_string",
+                                        "placeholder": "%Y-%m-%dT%H:%M:%S.%fZ",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [
+                                            ""
+                                        ],
+                                        "description": "Choose a unit to modify the date by, which must be either seconds, minutes, hours, or days. If none is provided the default will be 'minutes'",
+                                        "inputType": "item",
+                                        "label": "modification_unit",
+                                        "name": "modification_unit",
+                                        "placeholder": "minutes",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [],
+                                        "description": "The number of seconds, minutes, hours, or days to add or subtract. Use a negative number such as -1.5 to subtract time. Defaults to zero.",
+                                        "inputType": "item",
+                                        "label": "amount_to_modify",
+                                        "name": "amount_to_modify",
+                                        "placeholder": "0",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [],
+                                        "description": "The format string to use for the output according to the Python's datetime.strftime() formatting rules. If none is provided the default will be '%Y-%m-%dT%H:%M:%S.%fZ'.",
+                                        "inputType": "item",
+                                        "label": "output_format_string",
+                                        "name": "output_format_string",
+                                        "placeholder": "%Y-%m-%dT%H:%M:%S.%fZ",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "datetime_modify",
+                                "name": "datetime_modify"
+                            }
+                        },
+                        "utilityType": "custom_function",
+                        "values": {
+                            "datetime_modify": {
+                                "amount_to_modify": "7",
+                                "input_datetime": "veritytaskstatus:action_result.data.*.response_headers.Date",
+                                "input_format_string": "%a, %d %b %Y %H:%M:%S %Z",
+                                "modification_unit": "hours",
+                                "output_format_string": "%b %d,  %Y %H:%M"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "25",
+                    "tab": "customFunctions",
+                    "type": "utility",
+                    "userCode": "    # Write your custom code here...",
+                    "warnings": {},
+                    "x": 1160,
+                    "y": 780
+                },
+                "26": {
+                    "data": {
+                        "advanced": {
+                            "customName": "TaskResultDone",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 19,
+                        "functionName": "taskresultdone",
+                        "id": "26",
+                        "parameters": [
+                            "veritytaskstatus:action_result.data.*.parsed_response_body.result.*.data.state",
+                            "installpolicypackage:action_result.data.*.parsed_response_body.result.*.data.task"
+                        ],
+                        "template": "Policy installation by Phantom to FortiManager has \"{0}\" with task id \"{1}\"",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "26",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 240,
+                    "y": 1200
+                },
+                "27": {
+                    "data": {
+                        "advanced": {
+                            "customName": "TaskResultError",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 20,
+                        "functionName": "taskresulterror",
+                        "id": "27",
+                        "parameters": [
+                            "veritytaskstatus:action_result.data.*.parsed_response_body.result.*.data.state",
+                            "installpolicypackage:action_result.data.*.parsed_response_body.result.*.data.task"
+                        ],
+                        "template": "Policy installation by Phantom to FortiManager has \"{0}\" with task id \"{1}\".\n\nPlease contact FortiManager owner (firewall.support@ktbcs.co.th) directly to further verify failure reason.",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "27",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 480,
+                    "y": 1200
+                },
+                "28": {
+                    "data": {
+                        "advanced": {
+                            "customName": "ReqCreateAddrObj",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 7,
+                        "functionName": "reqcreateaddrobj",
+                        "id": "28",
+                        "parameters": [
+                            "getauthsessionid:formatted_data",
+                            "bodyreqcreateaddrobj:formatted_data"
+                        ],
+                        "template": "%%\n{{\n    \"session\": \"{0}\",\n    \"id\": 1,\n    \"method\": \"set\",\n    \"params\": [\n        {{\n            \"url\": \"/pm/config/adom/root/obj/firewall/address\",\n            \"data\": [\n{1}\n]\n        }}\n    ]\n}}\n%%",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "28",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 840,
+                    "y": -120
+                },
+                "3": {
+                    "data": {
+                        "advanced": {
+                            "customName": "AddSummaryToNoteDone",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "addsummarytonotedone",
+                        "id": "3",
+                        "type": "utility",
+                        "utilities": {
+                            "add_note": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "description": "",
+                                        "label": "title",
+                                        "name": "title",
+                                        "placeholder": "Enter a note title",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "description": "",
+                                        "label": "content",
+                                        "name": "content",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "choices": [
+                                            "markdown",
+                                            "html"
+                                        ],
+                                        "default": "markdown",
+                                        "description": "",
+                                        "label": "note format",
+                                        "name": "note_format",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "dropdown",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    },
+                                    {
+                                        "default": "general",
+                                        "hidden": true,
+                                        "name": "note_type",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "author",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "event_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "task_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "trace",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "add note",
+                                "name": "add_note"
+                            }
+                        },
+                        "values": {
+                            "add_note": {
+                                "_internal": [
+                                    "container",
+                                    "note_type",
+                                    "author",
+                                    "event_id",
+                                    "task_id",
+                                    "trace"
+                                ],
+                                "content": "formatoutputfornotedone:formatted_data",
+                                "note_format": "html",
+                                "title": "Containment result by Phantom"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "3",
+                    "tab": "apis",
+                    "type": "utility",
+                    "warnings": {},
+                    "x": 240,
+                    "y": 1980
+                },
+                "4": {
+                    "data": {
+                        "action": "update artifact",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "update artifact fail",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "connector": "Phantom",
+                        "connectorConfigs": [
+                            "phantom asset"
+                        ],
+                        "connectorId": "deb82aa9-22cc-4675-9cf1-534b8d006eb7",
+                        "connectorVersion": "v1",
+                        "functionId": 2,
+                        "functionName": "update_artifact_fail",
+                        "id": "4",
+                        "parameters": {
+                            "artifact_id": "artifact:*.id",
+                            "artifact_json": "",
+                            "cef_json": "{\"destinationAddress_ContainResult\":\"False\"}",
+                            "cef_types_json": "",
+                            "label": "",
+                            "name": "",
+                            "overwrite": "False",
+                            "severity": "",
+                            "tags": ""
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "artifact_id"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "4",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 480,
+                    "y": 1460
+                },
+                "5": {
+                    "data": {
+                        "advanced": {
+                            "customName": "AddSummaryToNoteError",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "functionId": 2,
+                        "functionName": "addsummarytonoteerror",
+                        "id": "5",
+                        "type": "utility",
+                        "utilities": {
+                            "add_note": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "description": "",
+                                        "label": "title",
+                                        "name": "title",
+                                        "placeholder": "Enter a note title",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "description": "",
+                                        "label": "content",
+                                        "name": "content",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "choices": [
+                                            "markdown",
+                                            "html"
+                                        ],
+                                        "default": "markdown",
+                                        "description": "",
+                                        "label": "note format",
+                                        "name": "note_format",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "dropdown",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    },
+                                    {
+                                        "default": "general",
+                                        "hidden": true,
+                                        "name": "note_type",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "author",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "event_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "task_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "trace",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "add note",
+                                "name": "add_note"
+                            }
+                        },
+                        "values": {
+                            "add_note": {
+                                "_internal": [
+                                    "container",
+                                    "note_type",
+                                    "author",
+                                    "event_id",
+                                    "task_id",
+                                    "trace"
+                                ],
+                                "content": "formatoutputfornoteerror:formatted_data",
+                                "note_format": "html",
+                                "title": "Containment result by Phantom"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "5",
+                    "tab": "apis",
+                    "type": "utility",
+                    "warnings": {},
+                    "x": 480,
+                    "y": 1980
+                },
+                "6": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "veritytaskstatus:action_result.data.*.parsed_response_body.result.*.data.state",
+                                        "value": "done"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "logic": "and"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "veritytaskstatus:action_result.data.*.parsed_response_body.result.*.data.state",
+                                        "value": "error"
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "logic": "and"
+                            }
+                        ],
+                        "functionId": 2,
+                        "functionName": "filter_2",
+                        "id": "6",
+                        "type": "filter"
+                    },
+                    "errors": {},
+                    "id": "6",
+                    "type": "filter",
+                    "warnings": {},
+                    "x": 1480,
+                    "y": 880
+                },
+                "7": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "veritytaskstatus:action_result.data.*.parsed_response_body.result.*.data.state",
+                                        "value": "done"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 1,
+                        "functionName": "decision_1",
+                        "id": "7",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "7",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 320,
+                    "y": 1060
+                },
+                "8": {
+                    "data": {
+                        "advanced": {
+                            "customName": "cf_community_passthrough_2",
+                            "join": []
+                        },
+                        "customFunction": {
+                            "draftMode": false,
+                            "name": "passthrough",
+                            "repoName": "community"
+                        },
+                        "functionId": 2,
+                        "functionName": "cf_community_passthrough_2",
+                        "id": "8",
+                        "type": "utility",
+                        "utilities": {
+                            "passthrough": {
+                                "description": "Return the inputs as outputs. This is useful for publishing pieces of data for other blocks in the playbook to use.",
+                                "fields": [
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "list",
+                                        "label": "input_1",
+                                        "name": "input_1",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "list",
+                                        "label": "input_2",
+                                        "name": "input_2",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "list",
+                                        "label": "input_3",
+                                        "name": "input_3",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "list",
+                                        "label": "input_4",
+                                        "name": "input_4",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "list",
+                                        "label": "input_5",
+                                        "name": "input_5",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "list",
+                                        "label": "input_6",
+                                        "name": "input_6",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "list",
+                                        "label": "input_7",
+                                        "name": "input_7",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "list",
+                                        "label": "input_8",
+                                        "name": "input_8",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "list",
+                                        "label": "input_9",
+                                        "name": "input_9",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "list",
+                                        "label": "input_10",
+                                        "name": "input_10",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "passthrough",
+                                "name": "passthrough"
+                            }
+                        },
+                        "utilityType": "custom_function",
+                        "values": {
+                            "passthrough": {
+                                "input_1": "taskresultdone:formatted_data",
+                                "input_10": null,
+                                "input_2": "taskresulterror:formatted_data",
+                                "input_3": null,
+                                "input_4": null,
+                                "input_5": null,
+                                "input_6": null,
+                                "input_7": null,
+                                "input_8": null,
+                                "input_9": null
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "8",
+                    "tab": "customFunctions",
+                    "type": "utility",
+                    "userCode": "    # Write your custom code here...",
+                    "warnings": {},
+                    "x": 1480,
+                    "y": 1040
+                },
+                "9": {
+                    "data": {
+                        "advanced": {
+                            "customName": "FormatOutputForNoteDone",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 16,
+                        "functionName": "formatoutputfornotedone",
+                        "id": "9",
+                        "parameters": [
+                            "ipaddrdata:formatted_data",
+                            "cf_community_datetime_modify_1:custom_function_result.data.datetime_string",
+                            "taskresultdone:formatted_data"
+                        ],
+                        "template": "<b>Containment result</b>\n\n<b>Containment Destination IP Address:</b> {0}\n<b>Execute Time:</b> {1}\n\n{2}",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "9",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 240,
+                    "y": 1720
+                }
+            },
+            "notes": "",
+            "origin": {
+                "playbook_id": 222,
+                "playbook_name": "PLAYBOOK-CONTAIN-INDICATOR-FORTIMANAGERVAYU-DSTIP-01",
+                "playbook_repo_id": 3,
+                "playbook_repo_name": "mfec_csoc_playbook"
+            }
+        },
+        "input_spec": null,
+        "output_spec": null,
+        "playbook_type": "automation",
+        "python_version": "3",
+        "schema": "5.0.10",
+        "version": "4.10.7.63984"
+    },
+    "create_time": "2025-03-27T15:21:05.185729+00:00",
+    "draft_mode": false,
+    "labels": [
+        "*"
+    ],
+    "tags": []
+}
