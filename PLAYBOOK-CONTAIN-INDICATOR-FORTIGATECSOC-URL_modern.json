@@ -1,0 +1,1128 @@
+{
+    "blockly": false,
+    "blockly_xml": "<xml></xml>",
+    "category": "Uncategorized",
+    "coa": {
+        "data": {
+            "description": "",
+            "edges": [
+                {
+                    "id": "port_0_to_port_13",
+                    "sourceNode": "0",
+                    "sourcePort": "0_out",
+                    "targetNode": "13",
+                    "targetPort": "13_in"
+                },
+                {
+                    "id": "port_16_to_port_11",
+                    "sourceNode": "16",
+                    "sourcePort": "16_out",
+                    "targetNode": "11",
+                    "targetPort": "11_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_13_to_port_7",
+                    "sourceNode": "13",
+                    "sourcePort": "13_out",
+                    "targetNode": "7",
+                    "targetPort": "7_in"
+                },
+                {
+                    "id": "port_5_to_port_20",
+                    "sourceNode": "5",
+                    "sourcePort": "5_out",
+                    "targetNode": "20",
+                    "targetPort": "20_in"
+                },
+                {
+                    "id": "port_9_to_port_2",
+                    "sourceNode": "9",
+                    "sourcePort": "9_out",
+                    "targetNode": "2",
+                    "targetPort": "2_in"
+                },
+                {
+                    "id": "port_12_to_port_1",
+                    "sourceNode": "12",
+                    "sourcePort": "12_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_7_to_port_18",
+                    "sourceNode": "7",
+                    "sourcePort": "7_out",
+                    "targetNode": "18",
+                    "targetPort": "18_in"
+                },
+                {
+                    "id": "port_14_to_port_3",
+                    "sourceNode": "14",
+                    "sourcePort": "14_out",
+                    "targetNode": "3",
+                    "targetPort": "3_in"
+                },
+                {
+                    "id": "port_18_to_port_21",
+                    "sourceNode": "18",
+                    "sourcePort": "18_out",
+                    "targetNode": "21",
+                    "targetPort": "21_in"
+                },
+                {
+                    "id": "port_21_to_port_19",
+                    "sourceNode": "21",
+                    "sourcePort": "21_out",
+                    "targetNode": "19",
+                    "targetPort": "19_in"
+                },
+                {
+                    "id": "port_19_to_port_15",
+                    "sourceNode": "19",
+                    "sourcePort": "19_out",
+                    "targetNode": "15",
+                    "targetPort": "15_in"
+                },
+                {
+                    "id": "port_15_to_port_14",
+                    "sourceNode": "15",
+                    "sourcePort": "15_out",
+                    "targetNode": "14",
+                    "targetPort": "14_in"
+                },
+                {
+                    "id": "port_3_to_port_4",
+                    "sourceNode": "3",
+                    "sourcePort": "3_out",
+                    "targetNode": "4",
+                    "targetPort": "4_in"
+                },
+                {
+                    "id": "port_20_to_port_6",
+                    "sourceNode": "20",
+                    "sourcePort": "20_out",
+                    "targetNode": "6",
+                    "targetPort": "6_in"
+                },
+                {
+                    "id": "port_4_to_port_5",
+                    "sourceNode": "4",
+                    "sourcePort": "4_out",
+                    "targetNode": "5",
+                    "targetPort": "5_in"
+                },
+                {
+                    "id": "port_10_to_port_12",
+                    "sourceNode": "10",
+                    "sourcePort": "10_out",
+                    "targetNode": "12",
+                    "targetPort": "12_in"
+                },
+                {
+                    "id": "port_6_to_port_10",
+                    "sourceNode": "6",
+                    "sourcePort": "6_out",
+                    "targetNode": "10",
+                    "targetPort": "10_in"
+                }
+            ],
+            "hash": "64f72951801c00d74c6df69e71f1edc4aadfc81d",
+            "nodes": {
+                "0": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_start",
+                        "id": "0",
+                        "type": "start"
+                    },
+                    "errors": {},
+                    "id": "0",
+                    "type": "start",
+                    "warnings": {},
+                    "x": 320,
+                    "y": -1840
+                },
+                "1": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_finish",
+                        "id": "1",
+                        "type": "end"
+                    },
+                    "errors": {},
+                    "id": "1",
+                    "type": "end",
+                    "warnings": {},
+                    "x": 480,
+                    "y": 200
+                },
+                "10": {
+                    "data": {
+                        "advanced": {
+                            "customName": "artifactUpdateFormat",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 30,
+                        "functionName": "artifactupdateformat",
+                        "id": "10",
+                        "parameters": [
+                            "filtered-data:filtermaliciousurl:condition_1:artifact:*.id",
+                            "filtered-data:filtermaliciousurl:condition_1:artifact:*.cef"
+                        ],
+                        "template": "[\n%%\n{{\n      \"artifact_id\" : {0} ,\n      \"cef\" : [{1}]\n}},\n%%\n]",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "10",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 840,
+                    "y": -580
+                },
+                "11": {
+                    "data": {
+                        "action": "update artifact",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "updateArtifactTrue",
+                            "customNameId": 0,
+                            "delayTime": 0.0,
+                            "join": []
+                        },
+                        "connector": "Phantom",
+                        "connectorConfigs": [
+                            "phantom asset"
+                        ],
+                        "connectorId": "deb82aa9-22cc-4675-9cf1-534b8d006eb7",
+                        "connectorVersion": "v1",
+                        "functionId": 2,
+                        "functionName": "updateartifacttrue",
+                        "id": "11",
+                        "parameters": {
+                            "artifact_id": "filtered-data:filtermaliciousurl:condition_1:artifact:*.id",
+                            "artifact_json": "",
+                            "cef_json": "addcefcontainresulttrue:formatted_data",
+                            "cef_key": "id",
+                            "cef_types_json": "",
+                            "container_ids": "current",
+                            "exact_match": true,
+                            "label": "",
+                            "limit_search": "",
+                            "name": "",
+                            "overwrite": "False",
+                            "severity": "",
+                            "tags": "",
+                            "values": "artifact:*.id"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "artifact_id"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "11",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 1440,
+                    "y": -20
+                },
+                "12": {
+                    "data": {
+                        "advanced": {
+                            "customName": "cf_local_merge_url_result_1",
+                            "join": []
+                        },
+                        "customFunction": {
+                            "draftMode": false,
+                            "name": "merge_url_result",
+                            "repoName": "local"
+                        },
+                        "functionId": 1,
+                        "functionName": "cf_local_merge_url_result_1",
+                        "id": "12",
+                        "type": "utility",
+                        "utilities": {
+                            "merge_url_result": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "item",
+                                        "label": "resultList",
+                                        "name": "resultList",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "item",
+                                        "label": "artifactInfo",
+                                        "name": "artifactInfo",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "merge_url_result",
+                                "name": "merge_url_result"
+                            }
+                        },
+                        "utilityType": "custom_function",
+                        "values": {
+                            "merge_url_result": {
+                                "artifactInfo": "artifactupdateformat:formatted_data",
+                                "resultList": "mergeresultformat:formatted_data"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "12",
+                    "tab": "customFunctions",
+                    "type": "utility",
+                    "userCode": "    # Write your custom code here...",
+                    "warnings": {},
+                    "x": 1120,
+                    "y": -580
+                },
+                "13": {
+                    "data": {
+                        "advanced": {
+                            "customName": "FilterMaliciousURL",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "artifact:*.cef.requestURL_malicious",
+                                        "value": "True"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "logic": "and"
+                            }
+                        ],
+                        "functionId": 3,
+                        "functionName": "filtermaliciousurl",
+                        "id": "13",
+                        "type": "filter"
+                    },
+                    "errors": {},
+                    "id": "13",
+                    "type": "filter",
+                    "warnings": {},
+                    "x": 280,
+                    "y": -1680
+                },
+                "14": {
+                    "data": {
+                        "action": "post data",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "postDR2_APT_Seg_2",
+                            "customNameId": 0,
+                            "delayTime": 0.0,
+                            "join": []
+                        },
+                        "connector": "HTTP",
+                        "connectorConfigs": [
+                            "csoc-fortigate"
+                        ],
+                        "connectorId": "290b7499-0374-4930-9cdc-5e9b05d65827",
+                        "connectorVersion": "v1",
+                        "functionId": 13,
+                        "functionName": "postdr2_apt_seg_2",
+                        "id": "14",
+                        "parameters": {
+                            "body": "cf_local_strip_url_prefix_n_generate_body_1:custom_function_result.data.bodyFormat.*",
+                            "headers": "",
+                            "location": "webfilter/ftgd-local-rating?vdom=dummy&access_token=06sN8905r8186qNxpg70G89hjNHqNx",
+                            "verify_certificate": "False"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "body"
+                            },
+                            {
+                                "data_type": "string",
+                                "field": "location"
+                            },
+                            {
+                                "data_type": "boolean",
+                                "field": "verify_certificate"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "14",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 1400,
+                    "y": -1180
+                },
+                "15": {
+                    "data": {
+                        "action": "post data",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "postDR2_APT_Seg_1",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "connector": "HTTP",
+                        "connectorConfigs": [
+                            "csoc-fortigate"
+                        ],
+                        "connectorId": "290b7499-0374-4930-9cdc-5e9b05d65827",
+                        "connectorVersion": "v1",
+                        "functionId": 12,
+                        "functionName": "postdr2_apt_seg_1",
+                        "id": "15",
+                        "parameters": {
+                            "body": "cf_local_strip_url_prefix_n_generate_body_1:custom_function_result.data.bodyFormat.*",
+                            "headers": "",
+                            "location": "webfilter/ftgd-local-rating?vdom=root&access_token=06sN8905r8186qNxpg70G89hjNHqNx",
+                            "verify_certificate": "False"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "body"
+                            },
+                            {
+                                "data_type": "string",
+                                "field": "location"
+                            },
+                            {
+                                "data_type": "boolean",
+                                "field": "verify_certificate"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "15",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 1120,
+                    "y": -1180
+                },
+                "16": {
+                    "data": {
+                        "advanced": {
+                            "customName": "addCEFContainResultTrue",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 23,
+                        "functionName": "addcefcontainresulttrue",
+                        "id": "16",
+                        "parameters": [
+                            "cf_local_merge_url_result_1:custom_function_result.data"
+                        ],
+                        "template": "%%\n{{\n\t\"requestURL_ContainResult\": \"True\"\n}}\n%%",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "16",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 1440,
+                    "y": -260
+                },
+                "17": {
+                    "data": {
+                        "action": "update artifact",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "addCEFContainResultFalse2",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "connector": "Phantom",
+                        "connectorConfigs": [
+                            "phantom asset"
+                        ],
+                        "connectorId": "deb82aa9-22cc-4675-9cf1-534b8d006eb7",
+                        "connectorVersion": "v1",
+                        "functionId": 4,
+                        "functionName": "addcefcontainresultfalse2",
+                        "id": "17",
+                        "parameters": {
+                            "artifact_id": "cf_local_merge_url_result_1:custom_function_result.data.failArtifactList",
+                            "artifact_json": "",
+                            "cef_json": "addurlentryerror:formatted_data",
+                            "cef_types_json": "",
+                            "label": "",
+                            "name": "",
+                            "overwrite": "",
+                            "severity": "",
+                            "tags": ""
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "artifact_id"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "17",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 1680,
+                    "y": -20
+                },
+                "18": {
+                    "data": {
+                        "action": "post data",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "postDC1_APT_Seg_1",
+                            "customNameId": 0,
+                            "delayTime": 0.0,
+                            "join": []
+                        },
+                        "connector": "HTTP",
+                        "connectorConfigs": [
+                            "csoc-fortigate"
+                        ],
+                        "connectorId": "290b7499-0374-4930-9cdc-5e9b05d65827",
+                        "connectorVersion": "v1",
+                        "functionId": 9,
+                        "functionName": "postdc1_apt_seg_1",
+                        "id": "18",
+                        "parameters": {
+                            "body": "cf_local_strip_url_prefix_n_generate_body_1:custom_function_result.data.bodyFormat.*",
+                            "headers": "",
+                            "location": "webfilter/ftgd-local-rating?vdom=APT-Seg-1&access_token=06sN8905r8186qNxpg70G89hjNHqNx",
+                            "verify_certificate": "False"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "body"
+                            },
+                            {
+                                "data_type": "string",
+                                "field": "location"
+                            },
+                            {
+                                "data_type": "boolean",
+                                "field": "verify_certificate"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "18",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 280,
+                    "y": -1180
+                },
+                "19": {
+                    "data": {
+                        "action": "post data",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "postDR1_APT_Seg_1",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "connector": "HTTP",
+                        "connectorConfigs": [
+                            "csoc-fortigate"
+                        ],
+                        "connectorId": "290b7499-0374-4930-9cdc-5e9b05d65827",
+                        "connectorVersion": "v1",
+                        "functionId": 11,
+                        "functionName": "postdr1_apt_seg_1",
+                        "id": "19",
+                        "parameters": {
+                            "body": "cf_local_strip_url_prefix_n_generate_body_1:custom_function_result.data.bodyFormat.*",
+                            "headers": "",
+                            "location": "webfilter/ftgd-local-rating?vdom=Internet&access_token=06sN8905r8186qNxpg70G89hjNHqNx",
+                            "verify_certificate": "False"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "body"
+                            },
+                            {
+                                "data_type": "string",
+                                "field": "location"
+                            },
+                            {
+                                "data_type": "boolean",
+                                "field": "verify_certificate"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "19",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 840,
+                    "y": -1180
+                },
+                "2": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionId": 5,
+                        "functionName": "add_note_5",
+                        "id": "2",
+                        "type": "utility",
+                        "utilities": {
+                            "add_note": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "description": "",
+                                        "label": "title",
+                                        "name": "title",
+                                        "placeholder": "Enter a note title",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "description": "",
+                                        "label": "content",
+                                        "name": "content",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "choices": [
+                                            "markdown",
+                                            "html"
+                                        ],
+                                        "default": "markdown",
+                                        "description": "",
+                                        "label": "note format",
+                                        "name": "note_format",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "dropdown",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    },
+                                    {
+                                        "default": "general",
+                                        "hidden": true,
+                                        "name": "note_type",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "author",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "event_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "task_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "trace",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "add note",
+                                "name": "add_note"
+                            }
+                        },
+                        "values": {
+                            "add_note": {
+                                "_internal": [
+                                    "container",
+                                    "note_type",
+                                    "author",
+                                    "event_id",
+                                    "task_id",
+                                    "trace"
+                                ],
+                                "content": "addfailurlformat:formatted_data",
+                                "note_format": "markdown",
+                                "title": "Block URL Failure Report"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "2",
+                    "tab": "apis",
+                    "type": "utility",
+                    "warnings": {},
+                    "x": 1680,
+                    "y": 200
+                },
+                "20": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionId": 4,
+                        "functionName": "add_note_4",
+                        "id": "20",
+                        "type": "utility",
+                        "utilities": {
+                            "add_note": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "description": "",
+                                        "label": "title",
+                                        "name": "title",
+                                        "placeholder": "Enter a note title",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "description": "",
+                                        "label": "content",
+                                        "name": "content",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "choices": [
+                                            "markdown",
+                                            "html"
+                                        ],
+                                        "default": "markdown",
+                                        "description": "",
+                                        "label": "note format",
+                                        "name": "note_format",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "dropdown",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    },
+                                    {
+                                        "default": "general",
+                                        "hidden": true,
+                                        "name": "note_type",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "author",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "event_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "task_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "trace",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "add note",
+                                "name": "add_note"
+                            }
+                        },
+                        "values": {
+                            "add_note": {
+                                "_internal": [
+                                    "container",
+                                    "note_type",
+                                    "author",
+                                    "event_id",
+                                    "task_id",
+                                    "trace"
+                                ],
+                                "content": "addnoteformat:formatted_data",
+                                "note_format": "markdown",
+                                "title": "Playbook Summary: Block URL Result"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "20",
+                    "tab": "apis",
+                    "type": "utility",
+                    "warnings": {},
+                    "x": 560,
+                    "y": -880
+                },
+                "21": {
+                    "data": {
+                        "action": "post data",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "postDC2_APT_Seg_1",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "connector": "HTTP",
+                        "connectorConfigs": [
+                            "csoc-fortigate"
+                        ],
+                        "connectorId": "290b7499-0374-4930-9cdc-5e9b05d65827",
+                        "connectorVersion": "v1",
+                        "functionId": 10,
+                        "functionName": "postdc2_apt_seg_1",
+                        "id": "21",
+                        "parameters": {
+                            "body": "cf_local_strip_url_prefix_n_generate_body_1:custom_function_result.data.bodyFormat.*",
+                            "headers": "",
+                            "location": "webfilter/ftgd-local-rating?vdom=APT-Seg-2&access_token=06sN8905r8186qNxpg70G89hjNHqNx",
+                            "verify_certificate": "False"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "body"
+                            },
+                            {
+                                "data_type": "string",
+                                "field": "location"
+                            },
+                            {
+                                "data_type": "boolean",
+                                "field": "verify_certificate"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "21",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 560,
+                    "y": -1180
+                },
+                "3": {
+                    "data": {
+                        "advanced": {
+                            "customName": "prepareNoteFormat",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 32,
+                        "functionName": "preparenoteformat",
+                        "id": "3",
+                        "parameters": [
+                            "postdc1_apt_seg_1:action_result.parameter.body",
+                            "postdc1_apt_seg_1:action_result.status",
+                            "postdc2_apt_seg_1:action_result.parameter.body",
+                            "postdc2_apt_seg_1:action_result.status",
+                            "postdr1_apt_seg_1:action_result.parameter.body",
+                            "postdr1_apt_seg_1:action_result.status",
+                            "postdr2_apt_seg_1:action_result.parameter.body",
+                            "postdr2_apt_seg_1:action_result.status",
+                            "postdr2_apt_seg_2:action_result.parameter.body",
+                            "postdr2_apt_seg_2:action_result.status",
+                            "postdc1_apt_seg_1:action_result.summary.status_code",
+                            "postdc1_apt_seg_1:action_result.summary.reason",
+                            "postdc2_apt_seg_1:action_result.summary.status_code",
+                            "postdc2_apt_seg_1:action_result.summary.reason",
+                            "postdr1_apt_seg_1:action_result.summary.status_code",
+                            "postdr1_apt_seg_1:action_result.summary.reason",
+                            "postdr2_apt_seg_1:action_result.summary.status_code",
+                            "postdr2_apt_seg_1:action_result.summary.reason",
+                            "postdr2_apt_seg_2:action_result.summary.status_code",
+                            "postdr2_apt_seg_2:action_result.summary.reason"
+                        ],
+                        "template": "[\n%%\n{{\"device\" : \"DC1-APT-Seg-1\", \"body\" : {0}, \"status\" : \"{1}\", \"code\" : \"{10}\",\"reason\" : \"{11}\"}},\n{{\"device\" : \"DC2-APT-Seg-1\", \"body\" : {2}, \"status\" : \"{3}\", \"code\" : \"{12}\",\"reason\" : \"{13}\"}},\n{{\"device\" : \"DR1-APT-Seg-1\", \"body\" : {4}, \"status\" : \"{5}\", \"code\" : \"{14}\",\"reason\" : \"{15}\"}},\n{{\"device\" : \"DR2-APT-Seg-1\", \"body\" : {6}, \"status\" : \"{7}\", \"code\" : \"{16}\",\"reason\" : \"{17}\"}},\n{{\"device\" : \"DR2-APT-Seg-2\", \"body\" : {8}, \"status\" : \"{9}\", \"code\" : \"{18}\",\"reason\" : \"{19}\"}},\n%%\n]",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "3",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 1400,
+                    "y": -880
+                },
+                "4": {
+                    "data": {
+                        "advanced": {
+                            "customName": "cf_local_sort_and_gen_markdown_1",
+                            "join": []
+                        },
+                        "customFunction": {
+                            "draftMode": false,
+                            "name": "sort_and_gen_markdown",
+                            "repoName": "local"
+                        },
+                        "functionId": 1,
+                        "functionName": "cf_local_sort_and_gen_markdown_1",
+                        "id": "4",
+                        "type": "utility",
+                        "utilities": {
+                            "sort_and_gen_markdown": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "item",
+                                        "label": "resultList",
+                                        "name": "resultList",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "sort_and_gen_markdown",
+                                "name": "sort_and_gen_markdown"
+                            }
+                        },
+                        "utilityType": "custom_function",
+                        "values": {
+                            "sort_and_gen_markdown": {
+                                "resultList": "preparenoteformat:formatted_data"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "4",
+                    "tab": "customFunctions",
+                    "type": "utility",
+                    "userCode": "    # Write your custom code here...",
+                    "warnings": {},
+                    "x": 1120,
+                    "y": -880
+                },
+                "5": {
+                    "data": {
+                        "advanced": {
+                            "customName": "addNoteFormat",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 28,
+                        "functionName": "addnoteformat",
+                        "id": "5",
+                        "parameters": [
+                            "cf_local_sort_and_gen_markdown_1:custom_function_result.data.markdown",
+                            "postdc1_apt_seg_1:action_result.data.*.response_headers.Date"
+                        ],
+                        "template": "{0}\nExecution Time : {1}",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "5",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 840,
+                    "y": -880
+                },
+                "6": {
+                    "data": {
+                        "advanced": {
+                            "customName": "mergeResultFormat",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 21,
+                        "functionName": "mergeresultformat",
+                        "id": "6",
+                        "parameters": [
+                            "postdc1_apt_seg_1:action_result.status",
+                            "postdc2_apt_seg_1:action_result.status",
+                            "postdr1_apt_seg_1:action_result.status",
+                            "postdr2_apt_seg_1:action_result.status",
+                            "postdr2_apt_seg_2:action_result.status",
+                            "postdc1_apt_seg_1:action_result.parameter.body",
+                            "postdc2_apt_seg_1:action_result.parameter.body",
+                            "postdr1_apt_seg_1:action_result.parameter.body",
+                            "postdr2_apt_seg_1:action_result.parameter.body",
+                            "postdr2_apt_seg_2:action_result.parameter.body"
+                        ],
+                        "template": "[\n%%\n{{\"result_body\" : {5}, \"status\" : \"{0}\"}},\n{{\"result_body\" : {6}, \"status\" : \"{1}\"}},\n{{\"result_body\" : {7}, \"status\" : \"{2}\"}},\n{{\"result_body\" : {8}, \"status\" : \"{3}\"}},\n{{\"result_body\" : {9}, \"status\" : \"{4}\"}},\n%%\n]",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "6",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 560,
+                    "y": -580
+                },
+                "7": {
+                    "data": {
+                        "advanced": {
+                            "customName": "cf_local_strip_url_prefix_n_generate_body_1",
+                            "join": []
+                        },
+                        "customFunction": {
+                            "draftMode": false,
+                            "name": "strip_url_prefix_n_generate_body",
+                            "repoName": "local"
+                        },
+                        "functionId": 1,
+                        "functionName": "cf_local_strip_url_prefix_n_generate_body_1",
+                        "id": "7",
+                        "type": "utility",
+                        "utilities": {
+                            "strip_url_prefix_n_generate_body": {
+                                "description": "Strip \"http://\" and \"https://\" from input string  and generate body request for add web override category on fortigate",
+                                "fields": [
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "item",
+                                        "label": "requestURLs",
+                                        "name": "requestURLs",
+                                        "placeholder": "URL list",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "strip_url_prefix_n_generate_body",
+                                "name": "strip_url_prefix_n_generate_body"
+                            }
+                        },
+                        "utilityType": "custom_function",
+                        "values": {
+                            "strip_url_prefix_n_generate_body": {
+                                "requestURLs": "filtered-data:filtermaliciousurl:condition_1:artifact:*.cef.requestURL"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "7",
+                    "tab": "customFunctions",
+                    "type": "utility",
+                    "userCode": "    # Write your custom code here...",
+                    "warnings": {},
+                    "x": 280,
+                    "y": -1520
+                },
+                "8": {
+                    "data": {
+                        "advanced": {
+                            "customName": "addURLEntryError",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 25,
+                        "functionName": "addurlentryerror",
+                        "id": "8",
+                        "parameters": [
+                            "cf_local_merge_url_result_1:custom_function_result.data.failArtifactList.*"
+                        ],
+                        "template": "%% \n{{\n{0} this is\n}} \n%%",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "8",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 1680,
+                    "y": -260
+                },
+                "9": {
+                    "data": {
+                        "advanced": {
+                            "customName": "addFailURLFormat",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 29,
+                        "functionName": "addfailurlformat",
+                        "id": "9",
+                        "parameters": [
+                            "filtered-data:filtermaliciousurl:condition_1:artifact:*.cef.requestURL",
+                            "postWebRatingAPTSeg1:action_result.summary.reason",
+                            "postWebRatingAPTSeg1:action_result.summary.status_code",
+                            "postWebRatingAPTSeg1:action_result.message"
+                        ],
+                        "template": "%%\nURL : {0}  \nReason : {1}  \nStatus Code : {2}  \n```\n{3}\n```\n%%",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "9",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 1440,
+                    "y": 200
+                }
+            },
+            "notes": "",
+            "origin": {
+                "playbook_id": 201,
+                "playbook_name": "PLAYBOOK-CONTAIN-INDICATOR-FORTIGATECSOC-URL",
+                "playbook_repo_id": 3,
+                "playbook_repo_name": "mfec_csoc_playbook"
+            }
+        },
+        "input_spec": null,
+        "output_spec": null,
+        "playbook_type": "automation",
+        "python_version": "3",
+        "schema": "5.0.10",
+        "version": "4.10.7.63984"
+    },
+    "create_time": "2025-03-27T15:21:03.845291+00:00",
+    "draft_mode": false,
+    "labels": [
+        "*"
+    ],
+    "tags": []
+}
