@@ -1,0 +1,1173 @@
+{
+    "blockly": false,
+    "blockly_xml": "<xml></xml>",
+    "category": "Uncategorized",
+    "coa": {
+        "data": {
+            "description": "USE CASE: This playbook is used to contain the threat on External IP address in regular time set by Timer App",
+            "edges": [
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_18_to_port_16",
+                    "sourceNode": "18",
+                    "sourcePort": "18_out",
+                    "targetNode": "16",
+                    "targetPort": "16_in"
+                },
+                {
+                    "id": "port_9_to_port_10",
+                    "sourceNode": "9",
+                    "sourcePort": "9_out",
+                    "targetNode": "10",
+                    "targetPort": "10_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_7_to_port_5",
+                    "sourceNode": "7",
+                    "sourcePort": "7_out",
+                    "targetNode": "5",
+                    "targetPort": "5_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_10_to_port_7",
+                    "sourceNode": "10",
+                    "sourcePort": "10_out",
+                    "targetNode": "7",
+                    "targetPort": "7_in"
+                },
+                {
+                    "id": "port_16_to_port_3",
+                    "sourceNode": "16",
+                    "sourcePort": "16_out",
+                    "targetNode": "3",
+                    "targetPort": "3_in"
+                },
+                {
+                    "id": "port_14_to_port_2",
+                    "sourceNode": "14",
+                    "sourcePort": "14_out",
+                    "targetNode": "2",
+                    "targetPort": "2_in"
+                },
+                {
+                    "id": "port_3_to_port_2",
+                    "sourceNode": "3",
+                    "sourcePort": "3_out",
+                    "targetNode": "2",
+                    "targetPort": "2_in"
+                },
+                {
+                    "id": "port_0_to_port_4",
+                    "sourceNode": "0",
+                    "sourcePort": "0_out",
+                    "targetNode": "4",
+                    "targetPort": "4_in"
+                },
+                {
+                    "id": "port_4_to_port_7",
+                    "sourceNode": "4",
+                    "sourcePort": "4_out",
+                    "targetNode": "7",
+                    "targetPort": "7_in"
+                },
+                {
+                    "id": "port_2_to_port_1",
+                    "sourceNode": "2",
+                    "sourcePort": "2_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_6_to_port_15",
+                    "sourceNode": "6",
+                    "sourcePort": "6_out",
+                    "targetNode": "15",
+                    "targetPort": "15_in"
+                },
+                {
+                    "id": "port_8_to_port_9",
+                    "sourceNode": "8",
+                    "sourcePort": "8_out",
+                    "targetNode": "9",
+                    "targetPort": "9_in"
+                },
+                {
+                    "id": "port_5_to_port_18",
+                    "sourceNode": "5",
+                    "sourcePort": "5_out",
+                    "targetNode": "18",
+                    "targetPort": "18_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_18_to_port_6",
+                    "sourceNode": "18",
+                    "sourcePort": "18_out",
+                    "targetNode": "6",
+                    "targetPort": "6_in"
+                },
+                {
+                    "id": "port_15_to_port_21",
+                    "sourceNode": "15",
+                    "sourcePort": "15_out",
+                    "targetNode": "21",
+                    "targetPort": "21_in"
+                },
+                {
+                    "id": "port_21_to_port_20",
+                    "sourceNode": "21",
+                    "sourcePort": "21_out",
+                    "targetNode": "20",
+                    "targetPort": "20_in"
+                },
+                {
+                    "id": "port_12_to_port_2",
+                    "sourceNode": "12",
+                    "sourcePort": "12_out",
+                    "targetNode": "2",
+                    "targetPort": "2_in"
+                },
+                {
+                    "id": "port_20_to_port_17",
+                    "sourceNode": "20",
+                    "sourcePort": "20_out",
+                    "targetNode": "17",
+                    "targetPort": "17_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_17_to_port_8",
+                    "sourceNode": "17",
+                    "sourcePort": "17_out",
+                    "targetNode": "8",
+                    "targetPort": "8_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_17_to_port_11",
+                    "sourceNode": "17",
+                    "sourcePort": "17_out",
+                    "targetNode": "11",
+                    "targetPort": "11_in"
+                },
+                {
+                    "id": "port_11_to_port_8",
+                    "sourceNode": "11",
+                    "sourcePort": "11_out",
+                    "targetNode": "8",
+                    "targetPort": "8_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_10_to_port_19",
+                    "sourceNode": "10",
+                    "sourcePort": "10_out",
+                    "targetNode": "19",
+                    "targetPort": "19_in"
+                },
+                {
+                    "id": "port_19_to_port_13",
+                    "sourceNode": "19",
+                    "sourcePort": "19_out",
+                    "targetNode": "13",
+                    "targetPort": "13_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_13_to_port_12",
+                    "sourceNode": "13",
+                    "sourcePort": "13_out",
+                    "targetNode": "12",
+                    "targetPort": "12_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_13_to_port_14",
+                    "sourceNode": "13",
+                    "sourcePort": "13_out",
+                    "targetNode": "14",
+                    "targetPort": "14_in"
+                }
+            ],
+            "globalCustomCode": "CONTAIN_FAILED = False",
+            "hash": "6ab943020d2206ce09d8639641b42e93a2953f4a",
+            "nodes": {
+                "0": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_start",
+                        "id": "0",
+                        "type": "start"
+                    },
+                    "errors": {},
+                    "id": "0",
+                    "type": "start",
+                    "warnings": {},
+                    "x": 200,
+                    "y": -360
+                },
+                "1": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_finish",
+                        "id": "1",
+                        "type": "end"
+                    },
+                    "errors": {},
+                    "id": "1",
+                    "type": "end",
+                    "warnings": {},
+                    "x": 440,
+                    "y": 3780
+                },
+                "10": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": ">",
+                                        "param": "remove_the_top_ip_address_from_the_list:custom_function:ip_count",
+                                        "value": "0"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 7,
+                        "functionName": "decision_7",
+                        "id": "10",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "10",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 2440
+                },
+                "11": {
+                    "customCode": "def flag_contain_failed(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('flag_contain_failed() called')\n    \n    input_parameter_0 = \"\"\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    global CONTAIN_FAILED\n    CONTAIN_FAILED = True\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n    join_delete_the_created_artifact(container=container)\n\n    return",
+                    "data": {
+                        "advanced": {
+                            "customName": "Flag contain failed",
+                            "customNameId": 0,
+                            "description": "Flag contain failed",
+                            "join": [],
+                            "note": "Flag contain failed"
+                        },
+                        "functionId": 13,
+                        "functionName": "flag_contain_failed",
+                        "id": "11",
+                        "inputParameters": [],
+                        "outputVariables": [],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "11",
+                    "type": "code",
+                    "userCode": "\n    # Write your custom code here...\n    global CONTAIN_FAILED\n    CONTAIN_FAILED = True\n\n",
+                    "warnings": {},
+                    "x": 480,
+                    "y": 1700
+                },
+                "12": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionId": 4,
+                        "functionName": "set_status_set_severity_4",
+                        "id": "12",
+                        "type": "utility",
+                        "utilities": {
+                            "set_severity": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "choices": "notableSeverity",
+                                        "description": "",
+                                        "label": "severity",
+                                        "name": "severity",
+                                        "placeholder": "Select severity",
+                                        "renderType": "dropdown",
+                                        "required": true
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "set severity",
+                                "name": "set_severity",
+                                "refreshNotableData": true
+                            },
+                            "set_status": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "choices": "notableStatus",
+                                        "description": "",
+                                        "label": "status",
+                                        "name": "status",
+                                        "placeholder": "Select status",
+                                        "renderType": "dropdown",
+                                        "required": true
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "trace",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "set status",
+                                "name": "set_status",
+                                "refreshNotableData": true
+                            }
+                        },
+                        "values": {
+                            "set_severity": {
+                                "_internal": [
+                                    "container"
+                                ],
+                                "severity": "low"
+                            },
+                            "set_status": {
+                                "_internal": [
+                                    "container",
+                                    "trace"
+                                ],
+                                "status": "open"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "12",
+                    "tab": "apis",
+                    "type": "utility",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 3220
+                },
+                "13": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "get_containment_status:custom_function:is_contain_failed",
+                                        "value": "True"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 9,
+                        "functionName": "decision_9",
+                        "id": "13",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "13",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 2920
+                },
+                "14": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "set_severity_set_status_1",
+                        "id": "14",
+                        "type": "utility",
+                        "utilities": {
+                            "set_severity": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "choices": "notableSeverity",
+                                        "description": "",
+                                        "label": "severity",
+                                        "name": "severity",
+                                        "placeholder": "Select severity",
+                                        "renderType": "dropdown",
+                                        "required": true
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "set severity",
+                                "name": "set_severity",
+                                "refreshNotableData": true
+                            },
+                            "set_status": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "choices": "notableStatus",
+                                        "description": "",
+                                        "label": "status",
+                                        "name": "status",
+                                        "placeholder": "Select status",
+                                        "renderType": "dropdown",
+                                        "required": true
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "trace",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "set status",
+                                "name": "set_status",
+                                "refreshNotableData": true
+                            }
+                        },
+                        "values": {
+                            "set_severity": {
+                                "_internal": [
+                                    "container"
+                                ],
+                                "severity": "low"
+                            },
+                            "set_status": {
+                                "_internal": [
+                                    "container",
+                                    "trace"
+                                ],
+                                "status": "closed"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "14",
+                    "tab": "apis",
+                    "type": "utility",
+                    "warnings": {},
+                    "x": 400,
+                    "y": 3220
+                },
+                "15": {
+                    "data": {
+                        "action": "add artifact",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "Add dest IP artifact",
+                            "customNameId": 0,
+                            "description": "Add dest IP artifact",
+                            "join": [],
+                            "note": "Add dest IP artifact"
+                        },
+                        "connector": "Phantom",
+                        "connectorConfigs": [
+                            "phantom asset"
+                        ],
+                        "connectorId": "deb82aa9-22cc-4675-9cf1-534b8d006eb7",
+                        "connectorVersion": "v1",
+                        "functionId": 1,
+                        "functionName": "add_dest_ip_artifact",
+                        "id": "15",
+                        "parameters": {
+                            "cef_dictionary": "prepare_dest_ip_artifact:formatted_data",
+                            "cef_name": "",
+                            "cef_value": "",
+                            "container_id": "",
+                            "contains": "",
+                            "label": "event",
+                            "name": "User created artifact",
+                            "run_automation": "False",
+                            "source_data_identifier": "get_the_top_ip_address_from_the_list:custom_function:top_ip_address"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "source_data_identifier"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "15",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 1020
+                },
+                "16": {
+                    "data": {
+                        "action": "add note",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "Add Note for No IP address to contain",
+                            "customNameId": 0,
+                            "description": "Add Note for No IP address to contain",
+                            "join": [],
+                            "note": "Add Note for No IP address to contain"
+                        },
+                        "connector": "Phantom",
+                        "connectorConfigs": [
+                            "phantom asset"
+                        ],
+                        "connectorId": "deb82aa9-22cc-4675-9cf1-534b8d006eb7",
+                        "connectorVersion": "v1",
+                        "functionId": 1,
+                        "functionName": "add_note_for_no_ip_address_to_contain",
+                        "id": "16",
+                        "parameters": {
+                            "container_id": "",
+                            "content": "There is no IP address to contain from the custom list.",
+                            "phase_id": "",
+                            "title": "Destination Address: No IP address to contain"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "title"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "16",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 640,
+                    "y": 740
+                },
+                "17": {
+                    "data": {
+                        "advanced": {
+                            "join": [],
+                            "scope": "all"
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "artifact:*.cef.destinationAddress_ContainResult",
+                                        "value": "True"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 10,
+                        "functionName": "decision_10",
+                        "id": "17",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "17",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 1760
+                },
+                "18": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "!=",
+                                        "param": "get_the_top_ip_address_from_the_list:custom_function:top_ip_address",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 1,
+                        "functionName": "decision_1",
+                        "id": "18",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "18",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 580
+                },
+                "19": {
+                    "customCode": "def get_containment_status(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('get_containment_status() called')\n    \n    input_parameter_0 = \"\"\n\n    get_containment_status__is_contain_failed = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    global CONTAIN_FAILED\n    get_containment_status__is_contain_failed = CONTAIN_FAILED\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='get_containment_status:is_contain_failed', value=json.dumps(get_containment_status__is_contain_failed))\n    decision_9(container=container)\n\n    return",
+                    "data": {
+                        "advanced": {
+                            "customName": "Get containment status",
+                            "customNameId": 0,
+                            "description": "Get containment status",
+                            "join": [],
+                            "note": "Get containment status"
+                        },
+                        "functionId": 14,
+                        "functionName": "get_containment_status",
+                        "id": "19",
+                        "inputParameters": [],
+                        "outputVariables": [
+                            "is_contain_failed"
+                        ],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "19",
+                    "type": "code",
+                    "userCode": "\n    # Write your custom code here...\n    global CONTAIN_FAILED\n    get_containment_status__is_contain_failed = CONTAIN_FAILED\n\n",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 2640
+                },
+                "2": {
+                    "data": {
+                        "advanced": {
+                            "customName": "cf_local_set_custom_field_incident_type_1",
+                            "join": [],
+                            "notRequiredJoins": [
+                                "add_note_for_no_ip_address_to_contain",
+                                "Fortimanager_Block_Src_IP"
+                            ]
+                        },
+                        "customFunction": {
+                            "draftMode": false,
+                            "name": "set_custom_field_incident_type",
+                            "repoName": "local"
+                        },
+                        "functionId": 1,
+                        "functionName": "cf_local_set_custom_field_incident_type_1",
+                        "id": "2",
+                        "type": "utility",
+                        "utilities": {
+                            "set_custom_field_incident_type": {
+                                "description": "set custom field \"Incident Type\"",
+                                "fields": [
+                                    {
+                                        "dataTypes": [
+                                            "phantom container id"
+                                        ],
+                                        "description": "",
+                                        "inputType": "list",
+                                        "label": "Container_id",
+                                        "name": "Container_id",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [],
+                                        "description": "",
+                                        "inputType": "list",
+                                        "label": "incident_type",
+                                        "name": "incident_type",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "set_custom_field_incident_type",
+                                "name": "set_custom_field_incident_type"
+                            }
+                        },
+                        "utilityType": "custom_function",
+                        "values": {
+                            "set_custom_field_incident_type": {
+                                "Container_id": "container:id",
+                                "incident_type": "Operation"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "2",
+                    "tab": "customFunctions",
+                    "type": "utility",
+                    "userCode": "    # Write your custom code here...",
+                    "warnings": {},
+                    "x": 400,
+                    "y": 3520
+                },
+                "20": {
+                    "data": {
+                        "action": "no op",
+                        "actionType": "investigate",
+                        "advanced": {
+                            "customName": "Sleep",
+                            "customNameId": 0,
+                            "description": "sleep",
+                            "join": [],
+                            "note": "sleep"
+                        },
+                        "connector": "Phantom",
+                        "connectorConfigs": [
+                            "phantom asset"
+                        ],
+                        "connectorId": "deb82aa9-22cc-4675-9cf1-534b8d006eb7",
+                        "connectorVersion": "v1",
+                        "functionId": 1,
+                        "functionName": "sleep",
+                        "id": "20",
+                        "parameters": {
+                            "sleep_seconds": "120"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "numeric",
+                                "field": "sleep_seconds"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "20",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 1500
+                },
+                "21": {
+                    "customCode": "def fortimanager_block_dest_ip(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('fortimanager_block_dest_ip() called')\n    \n    get_the_top_ip_address_from_the_list__top_ip_address = json.loads(phantom.get_run_data(key='get_the_top_ip_address_from_the_list:top_ip_address'))\n\n    # call playbook \"local/PLAYBOOK-CONTAIN-INDICATOR-CONSOLIDATED-FORTIMANAGER-DSTIP-01\", returns the playbook_run_id\n    playbook_run_id = phantom.playbook(playbook=\"local/PLAYBOOK-CONTAIN-INDICATOR-CONSOLIDATED-FORTIMANAGER-DSTIP-01\", container=container, name=f\"fortimanager_block_dest_ip_{get_the_top_ip_address_from_the_list__top_ip_address}\", callback=sleep)\n\n    return",
+                    "data": {
+                        "advanced": {
+                            "customName": "Fortimanager Block Dest IP",
+                            "customNameId": 0,
+                            "description": "Fortimanager Block Dest IP",
+                            "join": [],
+                            "note": "Fortimanager Block Dest IP"
+                        },
+                        "functionId": 1,
+                        "functionName": "fortimanager_block_dest_ip",
+                        "id": "21",
+                        "inputs": {},
+                        "playbookName": "test-mfec-block-dst",
+                        "playbookRepoName": "local",
+                        "synchronous": true,
+                        "type": "playbook"
+                    },
+                    "errors": {},
+                    "id": "21",
+                    "type": "playbook",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 1260
+                },
+                "3": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionId": 3,
+                        "functionName": "set_severity_set_status_3",
+                        "id": "3",
+                        "type": "utility",
+                        "utilities": {
+                            "set_severity": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "choices": "notableSeverity",
+                                        "description": "",
+                                        "label": "severity",
+                                        "name": "severity",
+                                        "placeholder": "Select severity",
+                                        "renderType": "dropdown",
+                                        "required": true
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "set severity",
+                                "name": "set_severity",
+                                "refreshNotableData": true
+                            },
+                            "set_status": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "choices": "notableStatus",
+                                        "description": "",
+                                        "label": "status",
+                                        "name": "status",
+                                        "placeholder": "Select status",
+                                        "renderType": "dropdown",
+                                        "required": true
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "trace",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "set status",
+                                "name": "set_status",
+                                "refreshNotableData": true
+                            }
+                        },
+                        "values": {
+                            "set_severity": {
+                                "_internal": [
+                                    "container"
+                                ],
+                                "severity": "low"
+                            },
+                            "set_status": {
+                                "_internal": [
+                                    "container",
+                                    "trace"
+                                ],
+                                "status": "closed"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "3",
+                    "tab": "apis",
+                    "type": "utility",
+                    "warnings": {},
+                    "x": 640,
+                    "y": 3220
+                },
+                "4": {
+                    "customCode": "def collect_all_ip_address(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('collect_all_ip_address() called')\n    \n    input_parameter_0 = \"\"\n\n    collect_all_ip_address__all_ip_address_list = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    collect_all_ip_address__all_ip_address_list = []\n    import ipaddress\n    success, message, iplist = phantom.get_list(list_name='Fortimanager - Dest IP to contain')\n    for ip in iplist:\n        try:\n            ipaddress.ip_address(ip[0])\n            collect_all_ip_address__all_ip_address_list.append(ip[0])\n        except:\n            continue\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='collect_all_ip_address:all_IP_address_list', value=json.dumps(collect_all_ip_address__all_ip_address_list))\n    join_decision_8(container=container)\n\n    return",
+                    "data": {
+                        "advanced": {
+                            "customName": "Collect all IP address",
+                            "customNameId": 0,
+                            "description": "Collect all IP address",
+                            "join": [],
+                            "note": "Collect all IP address"
+                        },
+                        "functionId": 11,
+                        "functionName": "collect_all_ip_address",
+                        "id": "4",
+                        "inputParameters": [],
+                        "outputVariables": [
+                            "all_IP_address_list"
+                        ],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "4",
+                    "type": "code",
+                    "userCode": "\n    # Write your custom code here...\n    collect_all_ip_address__all_ip_address_list = []\n    import ipaddress\n    success, message, iplist = phantom.get_list(list_name='Fortimanager - Dest IP to contain')\n    for ip in iplist:\n        try:\n            ipaddress.ip_address(ip[0])\n            collect_all_ip_address__all_ip_address_list.append(ip[0])\n        except:\n            continue\n\n",
+                    "warnings": {},
+                    "x": 160,
+                    "y": -180
+                },
+                "5": {
+                    "customCode": "def get_the_top_ip_address_from_the_list(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('get_the_top_ip_address_from_the_list() called')\n    \n    input_parameter_0 = \"\"\n\n    get_the_top_ip_address_from_the_list__top_ip_address = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    import ipaddress\n    success, message, iplist = phantom.get_list(list_name='Fortimanager - Dest IP to contain')\n    for ip in iplist:\n        try:\n            ipaddress.ip_address(ip[0])\n            phantom.debug(f\"Top IP: {ip[0]}\")\n            get_the_top_ip_address_from_the_list__top_ip_address = ip[0]\n            break\n        except:\n            continue\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='get_the_top_ip_address_from_the_list:top_ip_address', value=json.dumps(get_the_top_ip_address_from_the_list__top_ip_address))\n    decision_1(container=container)\n\n    return",
+                    "data": {
+                        "advanced": {
+                            "customName": "Get the top IP address from the list",
+                            "customNameId": 0,
+                            "description": "Get the top IP address from the list",
+                            "join": [],
+                            "note": "Get the top IP address from the list"
+                        },
+                        "functionId": 1,
+                        "functionName": "get_the_top_ip_address_from_the_list",
+                        "id": "5",
+                        "inputParameters": [],
+                        "outputVariables": [
+                            "top_ip_address"
+                        ],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "5",
+                    "type": "code",
+                    "userCode": "\n    # Write your custom code here...\n    import ipaddress\n    success, message, iplist = phantom.get_list(list_name='Fortimanager - Dest IP to contain')\n    for ip in iplist:\n        try:\n            ipaddress.ip_address(ip[0])\n            phantom.debug(f\"Top IP: {ip[0]}\")\n            get_the_top_ip_address_from_the_list__top_ip_address = ip[0]\n            break\n        except:\n            continue\n\n",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 300
+                },
+                "6": {
+                    "data": {
+                        "advanced": {
+                            "customName": "Prepare dest IP artifact",
+                            "customNameId": 0,
+                            "description": "Prepare dest IP artifact",
+                            "join": [],
+                            "note": "Prepare dest IP artifact",
+                            "separator": ", "
+                        },
+                        "functionId": 1,
+                        "functionName": "prepare_dest_ip_artifact",
+                        "id": "6",
+                        "parameters": [
+                            "get_the_top_ip_address_from_the_list:custom_function:top_ip_address"
+                        ],
+                        "template": "{{\"destinationAddress\": \"{0}\", \"destinationAddress_malicious\": \"True\"}}",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "6",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 740
+                },
+                "7": {
+                    "data": {
+                        "advanced": {
+                            "join": [],
+                            "notRequiredJoins": [
+                                "FMC_Block_IP"
+                            ]
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "1",
+                                        "value": "1"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            }
+                        ],
+                        "functionId": 8,
+                        "functionName": "decision_8",
+                        "id": "7",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "7",
+                    "joinCustomCode": "def join_decision_8(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None):\n    phantom.debug('join_decision_8() called')\n    \n    # if the joined function has already been called, do nothing\n    #if phantom.get_run_data(key='join_decision_8_called'):\n    #    return\n\n    # no callbacks to check, call connected block \"decision_8\"\n    phantom.save_run_data(key='join_decision_8_called', value='decision_8', auto=True)\n\n    decision_8(container=container, handle=handle)\n    \n    return",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 160
+                },
+                "8": {
+                    "customCode": "def delete_the_created_artifact(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('delete_the_created_artifact() called')\n    \n    input_parameter_0 = \"\"\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    artifacts = phantom.collect(container, 'artifacts:*', scope='all')\n    # phantom.debug(artifacts)\n    for artifact in artifacts:\n        result = phantom.delete_artifact(artifact_id=artifact[\"id\"])\n        phantom.debug('phantom.delete_artifact results: {} '.format(result))\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n    remove_the_top_ip_address_from_the_list(container=container)\n\n    return",
+                    "data": {
+                        "advanced": {
+                            "customName": "Delete the created artifact",
+                            "customNameId": 0,
+                            "description": "Delete the created artifact",
+                            "join": [],
+                            "notRequiredJoins": [
+                                "sleep"
+                            ],
+                            "note": "Delete the created artifact"
+                        },
+                        "functionId": 12,
+                        "functionName": "delete_the_created_artifact",
+                        "id": "8",
+                        "inputParameters": [],
+                        "outputVariables": [],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "8",
+                    "joinCustomCode": "def join_delete_the_created_artifact(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None):\n    phantom.debug('join_delete_the_created_artifact() called')\n    \n    # if the joined function has already been called, do nothing\n    #if phantom.get_run_data(key='join_delete_the_created_artifact_called'):\n    #    return\n\n    # no callbacks to check, call connected block \"delete_the_created_artifact\"\n    #phantom.save_run_data(key='join_delete_the_created_artifact_called', value='delete_the_created_artifact', auto=True)\n\n    delete_the_created_artifact(container=container, handle=handle)\n    \n    return",
+                    "type": "code",
+                    "userCode": "\n    # Write your custom code here...\n    artifacts = phantom.collect(container, 'artifacts:*', scope='all')\n    # phantom.debug(artifacts)\n    for artifact in artifacts:\n        result = phantom.delete_artifact(artifact_id=artifact[\"id\"])\n        phantom.debug('phantom.delete_artifact results: {} '.format(result))\n\n",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 1920
+                },
+                "9": {
+                    "customCode": "def remove_the_top_ip_address_from_the_list(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('remove_the_top_ip_address_from_the_list() called')\n    \n    get_the_top_ip_address_from_the_list__top_ip_address = json.loads(phantom.get_run_data(key='get_the_top_ip_address_from_the_list:top_ip_address'))\n\n    remove_the_top_ip_address_from_the_list__ip_count = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    import ipaddress\n    remove_the_top_ip_address_from_the_list__ip_count = 0\n    \n    phantom.debug(f\"Popping out IP: {get_the_top_ip_address_from_the_list__top_ip_address}\")\n    phantom.delete_from_list(list_name=\"Fortimanager - Dest IP to contain\", value=get_the_top_ip_address_from_the_list__top_ip_address, column=None, remove_all=False, remove_row=False)\n    success, message, iplist = phantom.get_list(list_name='Fortimanager - Dest IP to contain')\n    for ip in iplist:\n        try:\n            ipaddress.ip_address(ip[0])\n            remove_the_top_ip_address_from_the_list__ip_count += 1\n        except:\n            continue\n\n    phantom.debug(f\"Current number of IP address remaining in the list: {remove_the_top_ip_address_from_the_list__ip_count}\")\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='remove_the_top_ip_address_from_the_list:ip_count', value=json.dumps(remove_the_top_ip_address_from_the_list__ip_count))\n    decision_7(container=container)\n\n    return",
+                    "data": {
+                        "advanced": {
+                            "customName": "Remove the top IP address from the list",
+                            "customNameId": 0,
+                            "description": "Remove the top IP address from the list",
+                            "join": [],
+                            "note": "Remove the top IP address from the list"
+                        },
+                        "functionId": 7,
+                        "functionName": "remove_the_top_ip_address_from_the_list",
+                        "id": "9",
+                        "inputParameters": [
+                            "get_the_top_ip_address_from_the_list:custom_function:top_ip_address"
+                        ],
+                        "outputVariables": [
+                            "ip_count"
+                        ],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "9",
+                    "type": "code",
+                    "userCode": "\n    # Write your custom code here...\n    import ipaddress\n    remove_the_top_ip_address_from_the_list__ip_count = 0\n    \n    phantom.debug(f\"Popping out IP: {get_the_top_ip_address_from_the_list__top_ip_address}\")\n    phantom.delete_from_list(list_name=\"Fortimanager - Dest IP to contain\", value=get_the_top_ip_address_from_the_list__top_ip_address, column=None, remove_all=False, remove_row=False)\n    success, message, iplist = phantom.get_list(list_name='Fortimanager - Dest IP to contain')\n    for ip in iplist:\n        try:\n            ipaddress.ip_address(ip[0])\n            remove_the_top_ip_address_from_the_list__ip_count += 1\n        except:\n            continue\n\n    phantom.debug(f\"Current number of IP address remaining in the list: {remove_the_top_ip_address_from_the_list__ip_count}\")\n\n",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 2200
+                }
+            },
+            "notes": "",
+            "origin": {
+                "playbook_id": 155,
+                "playbook_name": "KTB CHILD SCHEDULED CONTAIN EXTERNAL IP - FORTIMANAGER DEST",
+                "playbook_repo_id": 3,
+                "playbook_repo_name": "mfec_csoc_playbook"
+            }
+        },
+        "input_spec": null,
+        "output_spec": null,
+        "playbook_type": "automation",
+        "python_version": "3",
+        "schema": "5.0.10",
+        "version": "4.10.7.63984"
+    },
+    "create_time": "2025-03-27T15:21:02.449248+00:00",
+    "draft_mode": false,
+    "labels": [
+        "*"
+    ],
+    "tags": []
+}
