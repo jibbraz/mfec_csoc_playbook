@@ -1,0 +1,389 @@
+{
+    "blockly": false,
+    "blockly_xml": "<xml></xml>",
+    "category": "Uncategorized",
+    "coa": {
+        "data": {
+            "description": "",
+            "edges": [
+                {
+                    "id": "port_0_to_port_2",
+                    "sourceNode": "0",
+                    "sourcePort": "0_out",
+                    "targetNode": "2",
+                    "targetPort": "2_in"
+                },
+                {
+                    "id": "port_2_to_port_7",
+                    "sourceNode": "2",
+                    "sourcePort": "2_out",
+                    "targetNode": "7",
+                    "targetPort": "7_in"
+                },
+                {
+                    "id": "port_5_to_port_1",
+                    "sourceNode": "5",
+                    "sourcePort": "5_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_7_to_port_6",
+                    "sourceNode": "7",
+                    "sourcePort": "7_out",
+                    "targetNode": "6",
+                    "targetPort": "6_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_6_to_port_5",
+                    "sourceNode": "6",
+                    "sourcePort": "6_out",
+                    "targetNode": "5",
+                    "targetPort": "5_in"
+                },
+                {
+                    "id": "port_2_to_port_4",
+                    "sourceNode": "2",
+                    "sourcePort": "2_out",
+                    "targetNode": "4",
+                    "targetPort": "4_in"
+                },
+                {
+                    "id": "port_4_to_port_3",
+                    "sourceNode": "4",
+                    "sourcePort": "4_out",
+                    "targetNode": "3",
+                    "targetPort": "3_in"
+                },
+                {
+                    "id": "port_3_to_port_6",
+                    "sourceNode": "3",
+                    "sourcePort": "3_out",
+                    "targetNode": "6",
+                    "targetPort": "6_in"
+                }
+            ],
+            "hash": "b2990dcfa779398e6a38a539d6ef1a0eef8aa4cd",
+            "nodes": {
+                "0": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_start",
+                        "id": "0",
+                        "type": "start"
+                    },
+                    "errors": {},
+                    "id": "0",
+                    "type": "start",
+                    "warnings": {},
+                    "x": 440,
+                    "y": 180
+                },
+                "1": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_finish",
+                        "id": "1",
+                        "type": "end"
+                    },
+                    "errors": {},
+                    "id": "1",
+                    "type": "end",
+                    "warnings": {},
+                    "x": 400,
+                    "y": 1560
+                },
+                "2": {
+                    "customCode": "def format_custom_fields(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('format_custom_fields() called')\n    \n    create_time_value = container.get('create_time', None)\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n    format_mail_subject(container=container)\n    cf_local_datetime_modify_1(container=container)\n\n    return",
+                    "data": {
+                        "advanced": {
+                            "customName": "format custom fields",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "format_custom_fields",
+                        "id": "2",
+                        "inputParameters": [
+                            "container:create_time"
+                        ],
+                        "outputVariables": [],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "2",
+                    "type": "code",
+                    "userCode": "\n    # Write your custom code here...\n    \n\n",
+                    "warnings": {},
+                    "x": 400,
+                    "y": 340
+                },
+                "3": {
+                    "data": {
+                        "advanced": {
+                            "customName": "format mail body",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 1,
+                        "functionName": "format_mail_body",
+                        "id": "3",
+                        "parameters": [
+                            "container:name",
+                            "container:owner_name",
+                            "container:status",
+                            "container:severity",
+                            "container:sensitivity",
+                            "cf_local_datetime_modify_1:custom_function_result.data.datetime_string",
+                            "container:due_time",
+                            "container:url"
+                        ],
+                        "template": "Case Name: {0}\nCase Owner: {1}\nCase Status: {2}\nCase Severity: {3}\nCase Sensitivty: {4}\nCreate Time: {5}\nContainer URL: {7}",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "3",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 860
+                },
+                "4": {
+                    "data": {
+                        "advanced": {
+                            "customName": "cf_local_datetime_modify_1",
+                            "join": []
+                        },
+                        "customFunction": {
+                            "draftMode": false,
+                            "name": "datetime_modify",
+                            "repoName": "local"
+                        },
+                        "functionId": 1,
+                        "functionName": "cf_local_datetime_modify_1",
+                        "id": "4",
+                        "type": "utility",
+                        "utilities": {
+                            "datetime_modify": {
+                                "description": "Change a timestamp by adding or subtracting minutes, hours, or days.",
+                                "fields": [
+                                    {
+                                        "dataTypes": [
+                                            ""
+                                        ],
+                                        "description": "The datetime to modify, which should be provided in a string format determined by input_format_string",
+                                        "inputType": "item",
+                                        "label": "input_datetime",
+                                        "name": "input_datetime",
+                                        "placeholder": "2020-06-27T14:53:08.219016Z",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [],
+                                        "description": "The format string to use for the input according to the Python's datetime.strptime() formatting rules. If none is provided the default will be '%Y-%m-%dT%H:%M:%S.%fZ'. In addition to strptime() formats, the special format \"epoch\" can be used to accept unix epoch timestamps.",
+                                        "inputType": "item",
+                                        "label": "input_format_string",
+                                        "name": "input_format_string",
+                                        "placeholder": "%Y-%m-%dT%H:%M:%S.%fZ",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [
+                                            ""
+                                        ],
+                                        "description": "Choose a unit to modify the date by, which must be either seconds, minutes, hours, or days. If none is provided the default will be 'minutes'",
+                                        "inputType": "item",
+                                        "label": "modification_unit",
+                                        "name": "modification_unit",
+                                        "placeholder": "minutes",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [],
+                                        "description": "The number of seconds, minutes, hours, or days to add or subtract. Use a negative number such as -1.5 to subtract time. Defaults to zero.",
+                                        "inputType": "item",
+                                        "label": "amount_to_modify",
+                                        "name": "amount_to_modify",
+                                        "placeholder": "0",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [],
+                                        "description": "The format string to use for the output according to the Python's datetime.strftime() formatting rules. If none is provided the default will be '%Y-%m-%dT%H:%M:%S.%fZ'.",
+                                        "inputType": "item",
+                                        "label": "output_format_string",
+                                        "name": "output_format_string",
+                                        "placeholder": "%Y-%m-%dT%H:%M:%S.%fZ",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "datetime_modify",
+                                "name": "datetime_modify"
+                            }
+                        },
+                        "utilityType": "custom_function",
+                        "values": {
+                            "datetime_modify": {
+                                "amount_to_modify": "7",
+                                "input_datetime": "container:create_time",
+                                "input_format_string": "%Y-%m-%d  %H:%M:%S.%f+00",
+                                "modification_unit": "hours",
+                                "output_format_string": "%Y-%m-%dT%H:%M:%S.%f+07"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "4",
+                    "tab": "customFunctions",
+                    "type": "utility",
+                    "userCode": "    # Write your custom code here...",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 620
+                },
+                "5": {
+                    "data": {
+                        "action": "send email",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "send email case promotion",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "connector": "SMTP",
+                        "connectorConfigs": [
+                            "smtp asset"
+                        ],
+                        "connectorId": "45bb6f37-4478-499b-b4a3-51ecfa62b78c",
+                        "connectorVersion": "v1",
+                        "functionId": 1,
+                        "functionName": "send_email_case_promotion",
+                        "id": "5",
+                        "parameters": {
+                            "attachments": "",
+                            "bcc": "",
+                            "body": "format_mail_body:formatted_data",
+                            "cc": "",
+                            "from": "no-reply-phantom@ktbcs.co.th",
+                            "headers": "",
+                            "subject": "format_mail_subject:formatted_data",
+                            "to": "security-infra@ktbcs.co.th"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "to"
+                            },
+                            {
+                                "data_type": "string",
+                                "field": "body"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "5",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 360,
+                    "y": 1300
+                },
+                "6": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "!=",
+                                        "param": "format_mail_body:formatted_data",
+                                        "value": ""
+                                    },
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "!=",
+                                        "param": "format_mail_subject:formatted_data",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "logic": "and"
+                            }
+                        ],
+                        "functionId": 1,
+                        "functionName": "filter_1",
+                        "id": "6",
+                        "type": "filter"
+                    },
+                    "errors": {},
+                    "id": "6",
+                    "type": "filter",
+                    "warnings": {},
+                    "x": 360,
+                    "y": 1120
+                },
+                "7": {
+                    "data": {
+                        "advanced": {
+                            "customName": "format mail subject",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 2,
+                        "functionName": "format_mail_subject",
+                        "id": "7",
+                        "parameters": [
+                            "container:name"
+                        ],
+                        "template": "Event {0} has been promoted to case",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "7",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 560,
+                    "y": 620
+                }
+            },
+            "notes": "",
+            "origin": {
+                "playbook_id": 172,
+                "playbook_name": "KTB UC SEND EMAIL CASE PROMOTION",
+                "playbook_repo_id": 3,
+                "playbook_repo_name": "mfec_csoc_playbook"
+            }
+        },
+        "input_spec": null,
+        "output_spec": null,
+        "playbook_type": "automation",
+        "python_version": "3",
+        "schema": "5.0.10",
+        "version": "4.10.7.63984"
+    },
+    "create_time": "2025-03-27T15:21:02.840873+00:00",
+    "draft_mode": false,
+    "labels": [
+        "*"
+    ],
+    "tags": []
+}
