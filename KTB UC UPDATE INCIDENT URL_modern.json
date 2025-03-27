@@ -1,0 +1,292 @@
+{
+    "blockly": false,
+    "blockly_xml": "<xml></xml>",
+    "category": "Uncategorized",
+    "coa": {
+        "data": {
+            "description": "",
+            "edges": [
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_5_to_port_2",
+                    "sourceNode": "5",
+                    "sourcePort": "5_out",
+                    "targetNode": "2",
+                    "targetPort": "2_in"
+                },
+                {
+                    "id": "port_4_to_port_5",
+                    "sourceNode": "4",
+                    "sourcePort": "4_out",
+                    "targetNode": "5",
+                    "targetPort": "5_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_5_to_port_3",
+                    "sourceNode": "5",
+                    "sourcePort": "5_out",
+                    "targetNode": "3",
+                    "targetPort": "3_in"
+                },
+                {
+                    "id": "port_2_to_port_6",
+                    "sourceNode": "2",
+                    "sourcePort": "2_out",
+                    "targetNode": "6",
+                    "targetPort": "6_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        },
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_6_to_port_1",
+                    "sourceNode": "6",
+                    "sourcePort": "6_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_3_to_port_6",
+                    "sourceNode": "3",
+                    "sourcePort": "3_out",
+                    "targetNode": "6",
+                    "targetPort": "6_in"
+                },
+                {
+                    "id": "port_0_to_port_5",
+                    "sourceNode": "0",
+                    "sourcePort": "0_out",
+                    "targetNode": "5",
+                    "targetPort": "5_in"
+                }
+            ],
+            "hash": "146602a556eaf7c457b1b9c27394d9b62cbe06d6",
+            "nodes": {
+                "0": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_start",
+                        "id": "0",
+                        "type": "start"
+                    },
+                    "errors": {},
+                    "id": "0",
+                    "type": "start",
+                    "warnings": {},
+                    "x": 800,
+                    "y": 140
+                },
+                "1": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_finish",
+                        "id": "1",
+                        "type": "end"
+                    },
+                    "errors": {},
+                    "id": "1",
+                    "type": "end",
+                    "warnings": {},
+                    "x": 800,
+                    "y": 1200
+                },
+                "2": {
+                    "customCode": "def format_search_url(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('format_search_url() called')\n    \n    id_value = container.get('id', None)\n    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.event_id', 'artifact:*.id'])\n    container_item_0 = [item[0] for item in container_data]\n\n    format_search_url__note_search_url = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    \n    # create dynamic url from static splunk url and event_id in container\n    \n    static_url = \"https://splunk-es.csoc.krungthai.local/en-GB/app/SplunkEnterpriseSecuritySuite/incident_review?earliest=-7d%40h&latest=now&search=event_id%3D\"\n    dynamic_url = static_url + container_item_0[0]\n    \n    # update artifact\n    artifactid = \"\"\n    parameters = []\n    cef_json = { '_incident_url': dynamic_url }\n    \n    url = phantom.build_phantom_rest_url('container' , id_value , 'artifacts')\n    #url = url + '?_filter_cef__username=\"' + filtered_artifacts_item_1_0[0] +'\"'\n    #phantom.debug(url)\n    response = phantom.requests.get(url, verify=False)\n    for key in response.json()['data']:\n        for item in key:\n            if item == 'id':\n                artifactid = key[item]\n                parameters.append({\n                    'artifact_id': artifactid,\n                   \t'name': \"\",\n                \t'label': \"\",\n\t\t            'severity': \"\",\n\t\t            'cef_json': cef_json,\n\t\t            'cef_types_json': { '_incident_url' : ['url'] },\n    \t            'tags': \"\",\n\t\t            'overwrite': \"\",\n                    'artifact_json': \"\",\n                })\n                phantom.act(action=\"update artifact\", parameters=parameters, assets=['phantom asset'], name=\"update_incident_url\")\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='format_search_url:note_search_url', value=json.dumps(format_search_url__note_search_url))\n    join_decision_2(container=container)\n\n    return",
+                    "data": {
+                        "advanced": {
+                            "customName": "format search url",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "format_search_url",
+                        "id": "2",
+                        "inputParameters": [
+                            "artifact:*.cef.event_id",
+                            "container:id"
+                        ],
+                        "outputVariables": [
+                            "note_search_url"
+                        ],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "2",
+                    "type": "code",
+                    "userCode": "\n    # Write your custom code here...\n    \n    # create dynamic url from static splunk url and event_id in container\n    \n    static_url = \"https://splunk-es.csoc.krungthai.local/en-GB/app/SplunkEnterpriseSecuritySuite/incident_review?earliest=-7d%40h&latest=now&search=event_id%3D\"\n    dynamic_url = static_url + container_item_0[0]\n    \n    # update artifact\n    artifactid = \"\"\n    parameters = []\n    cef_json = { '_incident_url': dynamic_url }\n    \n    url = phantom.build_phantom_rest_url('container' , id_value , 'artifacts')\n    #url = url + '?_filter_cef__username=\"' + filtered_artifacts_item_1_0[0] +'\"'\n    #phantom.debug(url)\n    response = phantom.requests.get(url, verify=False)\n    for key in response.json()['data']:\n        for item in key:\n            if item == 'id':\n                artifactid = key[item]\n                parameters.append({\n                    'artifact_id': artifactid,\n                   \t'name': \"\",\n                \t'label': \"\",\n\t\t            'severity': \"\",\n\t\t            'cef_json': cef_json,\n\t\t            'cef_types_json': { '_incident_url' : ['url'] },\n    \t            'tags': \"\",\n\t\t            'overwrite': \"\",\n                    'artifact_json': \"\",\n                })\n                phantom.act(action=\"update artifact\", parameters=parameters, assets=['phantom asset'], name=\"update_incident_url\")\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################",
+                    "warnings": {},
+                    "x": 600,
+                    "y": 500
+                },
+                "3": {
+                    "customCode": "def delete_original_search(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('delete_original_search() called')\n    \n    input_parameter_0 = \"\"\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    updated_artifact = {}\n    artifacts = phantom.collect(container, 'artifacts:*', scope='all')\n    #phantom.debug(len(artifacts))\n    key = '_originating_search'    \n    for artifact in artifacts:\n        updated_artifact['cef'] = artifact['cef']\n        updated_artifact['cef_types'] = artifact['cef_types']\n        \n        if key in updated_artifact['cef']:\n            del updated_artifact['cef']['_originating_search']\n        if key in updated_artifact['cef']:\n            del updated_artifact['cef_types']['_originating_search']\n\n        artifact_id = artifact[\"id\"]\n        phantom.debug('updating artifact {} with the following attributes:\\n{}'.format(artifact_id, updated_artifact))\n        url = phantom.build_phantom_rest_url('artifact', artifact_id)\n        phantom.debug(url)\n        response = phantom.requests.post(url, json=updated_artifact, verify=False).json()\n\n        phantom.debug('POST /rest/artifact returned the following response:\\n{}'.format(response))\n        if 'success' not in response or response['success'] != True:\n            raise RuntimeError(\"POST /rest/artifact failed\") \n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n    join_decision_2(container=container)\n\n    return",
+                    "data": {
+                        "advanced": {
+                            "customName": "delete original search",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "functionId": 3,
+                        "functionName": "delete_original_search",
+                        "id": "3",
+                        "inputParameters": [],
+                        "outputVariables": [],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "3",
+                    "type": "code",
+                    "userCode": "\n    # Write your custom code here...\n    updated_artifact = {}\n    artifacts = phantom.collect(container, 'artifacts:*', scope='all')\n    #phantom.debug(len(artifacts))\n    key = '_originating_search'    \n    for artifact in artifacts:\n        updated_artifact['cef'] = artifact['cef']\n        updated_artifact['cef_types'] = artifact['cef_types']\n        \n        if key in updated_artifact['cef']:\n            del updated_artifact['cef']['_originating_search']\n        if key in updated_artifact['cef']:\n            del updated_artifact['cef_types']['_originating_search']\n\n        artifact_id = artifact[\"id\"]\n        phantom.debug('updating artifact {} with the following attributes:\\n{}'.format(artifact_id, updated_artifact))\n        url = phantom.build_phantom_rest_url('artifact', artifact_id)\n        phantom.debug(url)\n        response = phantom.requests.post(url, json=updated_artifact, verify=False).json()\n\n        phantom.debug('POST /rest/artifact returned the following response:\\n{}'.format(response))\n        if 'success' not in response or response['success'] != True:\n            raise RuntimeError(\"POST /rest/artifact failed\") \n\n",
+                    "warnings": {},
+                    "x": 880,
+                    "y": 500
+                },
+                "4": {
+                    "customCode": "def delete_duplicate_artifact(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('delete_duplicate_artifact() called')\n    \n    id_value = container.get('id', None)\n    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.event_id', 'artifact:*.id'])\n    container_item_0 = [item[0] for item in container_data]\n\n    delete_duplicate_artifact__artifactid = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    artifactid = []\n    artifactcount = 0\n    \n    url = phantom.build_phantom_rest_url('container' , id_value , 'artifacts')\n    response = phantom.requests.get(url, verify=False)\n    for key in response.json()['data']:\n        for item in key:\n            if item == 'id':\n                artifactid.append(key[item])\n                artifactcount += 1\n    \n    phantom.debug(container_item_0)\n    if (container_item_0[0] == container_item_0[1]):\n        success = phantom.delete_artifact(artifact_id=artifactid[1])\n        phantom.debug('phantom.delete_artifact results: success: {} '.format(success))\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='delete_duplicate_artifact:artifactid', value=json.dumps(delete_duplicate_artifact__artifactid))\n    join_filter_1(container=container)\n\n    return",
+                    "data": {
+                        "advanced": {
+                            "customName": "delete duplicate artifact",
+                            "customNameId": 0,
+                            "description": "compare event_id and delete one artifact if found identical",
+                            "join": [],
+                            "note": "compare event_id and delete one artifact if found identical"
+                        },
+                        "functionId": 2,
+                        "functionName": "delete_duplicate_artifact",
+                        "id": "4",
+                        "inputParameters": [
+                            "container:id",
+                            "artifact:*.cef.event_id"
+                        ],
+                        "outputVariables": [
+                            "artifactid"
+                        ],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "4",
+                    "type": "code",
+                    "userCode": "\n    # Write your custom code here...\n    artifactid = []\n    artifactcount = 0\n    \n    url = phantom.build_phantom_rest_url('container' , id_value , 'artifacts')\n    response = phantom.requests.get(url, verify=False)\n    for key in response.json()['data']:\n        for item in key:\n            if item == 'id':\n                artifactid.append(key[item])\n                artifactcount += 1\n    \n    phantom.debug(container_item_0)\n    if (container_item_0[0] == container_item_0[1]):\n        success = phantom.delete_artifact(artifact_id=artifactid[1])\n        phantom.debug('phantom.delete_artifact results: success: {} '.format(success))\n\n",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 400
+                },
+                "5": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "!=",
+                                        "param": "artifact:*.cef.event_id",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "logic": "and"
+                            }
+                        ],
+                        "functionId": 1,
+                        "functionName": "filter_1",
+                        "id": "5",
+                        "type": "filter"
+                    },
+                    "errors": {},
+                    "id": "5",
+                    "type": "filter",
+                    "warnings": {},
+                    "x": 760,
+                    "y": 340
+                },
+                "6": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "container:label",
+                                        "value": "account"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 2,
+                        "functionName": "decision_2",
+                        "id": "6",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "6",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 760,
+                    "y": 780
+                }
+            },
+            "notes": "",
+            "origin": {
+                "playbook_id": 178,
+                "playbook_name": "KTB UC UPDATE INCIDENT URL",
+                "playbook_repo_id": 3,
+                "playbook_repo_name": "mfec_csoc_playbook"
+            }
+        },
+        "input_spec": null,
+        "output_spec": null,
+        "playbook_type": "automation",
+        "python_version": "3",
+        "schema": "5.0.10",
+        "version": "4.10.7.63984"
+    },
+    "create_time": "2025-03-27T15:21:03.021712+00:00",
+    "draft_mode": false,
+    "labels": [
+        "*"
+    ],
+    "tags": []
+}
