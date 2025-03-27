@@ -1,0 +1,313 @@
+{
+    "blockly": false,
+    "blockly_xml": "<xml></xml>",
+    "category": "Onboarding",
+    "coa": {
+        "data": {
+            "customCode": "\"\"\"\nauto close\n\"\"\"\n\nimport phantom.rules as phantom\nimport json\nfrom datetime import datetime, timedelta\n@phantom.playbook_block()\ndef on_start(container):\n    phantom.debug('on_start() called')\n    \n    # call 'auto_close_confirmation' block\n    auto_close_confirmation(container=container)\n\n    return\n\n@phantom.playbook_block()\ndef auto_close_confirmation(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('auto_close_confirmation() called')\n    \n    # set user and message variables for phantom.prompt call\n    user = \"ktanalyst\"\n    message = \"\"\"Please Enter Child ID\"\"\"\n\n    #responses:\n    response_types = [\n        {\n            \"prompt\": \"Enter Case ID\",\n            \"options\": {\n                \"type\": \"message\",\n            },\n        },\n        {\n            \"prompt\": \"Enter List of Child ID\",\n            \"options\": {\n                \"type\": \"message\",\n            },\n        },\n    ]\n\n    phantom.prompt2(container=container, user=user, message=message, respond_in_mins=30, name=\"auto_close_confirmation\", separator=\", \", response_types=response_types, callback=decision_1)\n\n    return\n\n@phantom.playbook_block()\ndef decision_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('decision_1() called')\n\n    # check for 'if' condition 1\n    matched = phantom.decision(\n        container=container,\n        action_results=results,\n        conditions=[\n            [\"auto_close_confirmation:action_result.status\", \"==\", \"success\"],\n        ])\n\n    # call connected blocks if condition 1 matched\n    if matched:\n        cf_community_string_split_1(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)\n        return\n\n    # call connected blocks for 'else' condition 2\n\n    return\n\n@phantom.playbook_block()\ndef cf_community_string_split_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('cf_community_string_split_1() called')\n    \n    action_results_data_0 = phantom.collect2(container=container, datapath=['auto_close_confirmation:action_result.summary.responses.1', 'auto_close_confirmation:action_result.parameter.context.artifact_id'], action_results=results )\n    literal_values_0 = [\n        [\n            \",\",\n            \"True\",\n        ],\n    ]\n\n    parameters = []\n\n    for item0 in literal_values_0:\n        for item1 in action_results_data_0:\n            parameters.append({\n                'delimiter': item0[0],\n                'input_string': item1[0],\n                'strip_whitespace': item0[1],\n            })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"community/string_split\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='community/string_split', parameters=parameters, name='cf_community_string_split_1', callback=custom_function_1)\n\n    return\n\n@phantom.playbook_block()\ndef custom_function_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('custom_function_1() called')\n    \n    status_value = container.get('status', None)\n    id_value = container.get('id', None)\n    results_data_1 = phantom.collect2(container=container, datapath=['auto_close_confirmation:action_result.status', 'auto_close_confirmation:action_result.parameter.message', 'auto_close_confirmation:action_result.summary.responses.0'], action_results=results)\n    custom_function_results_data_1 = phantom.collect2(container=container, datapath=['cf_community_string_split_1:custom_function_result.data.*.item'], action_results=results)\n    results_item_1_0 = [item[0] for item in results_data_1]\n    results_item_1_1 = [item[1] for item in results_data_1]\n    results_item_1_2 = [item[2] for item in results_data_1]\n    custom_function_results_item_1_0 = [item[0] for item in custom_function_results_data_1]\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    for container_id in custom_function_results_item_1_0:\n        try:\n            target_container = phantom.get_container(container_id)\n            phantom.set_status(container=target_container, status=\"Closed\")\n            phantom.update(target_container,  {'custom_fields':{'Assigned To':  \"Playbook\"}})\n            #note_content += \"event : \" + str(container_id) + \"success\\n\\n\"\n            note_content = \"This event closed by main event \" + str(custom_function_results_data_1)\n        except:\n            note_content += \"event : \" + str(container_id) + \"fail. \\n\\n\"    \n        success, message, note_id = phantom.add_note(container=target_container, note_type='general', title='Closed by Automation Playbook', content=note_content)   \n        \n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    return\n\n@phantom.playbook_block()\ndef on_finish(container, summary):\n    phantom.debug('on_finish() called')\n    # This function is called after all actions are completed.\n    # summary of all the action and/or all details of actions\n    # can be collected here.\n\n    # summary_json = phantom.get_summary()\n    # if 'result' in summary_json:\n        # for action_result in summary_json['result']:\n            # if 'action_run_id' in action_result:\n                # action_results = phantom.get_action_results(action_run_id=action_result['action_run_id'], result_data=False, flatten=False)\n                # phantom.debug(action_results)\n\n    return",
+            "description": "auto close",
+            "edges": [
+                {
+                    "id": "port_0_to_port_5",
+                    "sourceNode": "0",
+                    "sourcePort": "0_out",
+                    "targetNode": "5",
+                    "targetPort": "5_in"
+                },
+                {
+                    "id": "port_5_to_port_4",
+                    "sourceNode": "5",
+                    "sourcePort": "5_out",
+                    "targetNode": "4",
+                    "targetPort": "4_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_4_to_port_2",
+                    "sourceNode": "4",
+                    "sourcePort": "4_out",
+                    "targetNode": "2",
+                    "targetPort": "2_in"
+                },
+                {
+                    "id": "port_2_to_port_3",
+                    "sourceNode": "2",
+                    "sourcePort": "2_out",
+                    "targetNode": "3",
+                    "targetPort": "3_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_4_to_port_1",
+                    "sourceNode": "4",
+                    "sourcePort": "4_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_3_to_port_1",
+                    "sourceNode": "3",
+                    "sourcePort": "3_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                }
+            ],
+            "hash": "ee5dd3587865c0594416b5dcb2819ca550e1d01d",
+            "nodes": {
+                "0": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_start",
+                        "id": "0",
+                        "type": "start"
+                    },
+                    "errors": {},
+                    "id": "0",
+                    "type": "start",
+                    "warnings": {},
+                    "x": 200,
+                    "y": 100
+                },
+                "1": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_finish",
+                        "id": "1",
+                        "type": "end"
+                    },
+                    "errors": {},
+                    "id": "1",
+                    "type": "end",
+                    "warnings": {},
+                    "x": 480,
+                    "y": 1280
+                },
+                "2": {
+                    "data": {
+                        "advanced": {
+                            "customName": "cf_community_string_split_1",
+                            "join": []
+                        },
+                        "customFunction": {
+                            "draftMode": false,
+                            "name": "string_split",
+                            "repoName": "community"
+                        },
+                        "functionId": 1,
+                        "functionName": "cf_community_string_split_1",
+                        "id": "2",
+                        "type": "utility",
+                        "utilities": {
+                            "string_split": {
+                                "description": "Return a list of the components of input_string when split using the specified delimiter. If strip_whitespace is not specified or is \"True\", strip all whitespace from the beginning and end of each resulting component.",
+                                "fields": [
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "The string to split",
+                                        "inputType": "item",
+                                        "label": "input_string",
+                                        "name": "input_string",
+                                        "placeholder": "item_1, item_2, item_3",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [],
+                                        "description": "The delimiter to split by, which defaults to a comma",
+                                        "inputType": "item",
+                                        "label": "delimiter",
+                                        "name": "delimiter",
+                                        "placeholder": ",",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [],
+                                        "description": "Either True or False to indicate whether or not to remove whitespace before and after each item. Defaults to True",
+                                        "inputType": "item",
+                                        "label": "strip_whitespace",
+                                        "name": "strip_whitespace",
+                                        "placeholder": "True",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "string_split",
+                                "name": "string_split"
+                            }
+                        },
+                        "utilityType": "custom_function",
+                        "values": {
+                            "string_split": {
+                                "delimiter": ",",
+                                "input_string": "auto_close_confirmation:action_result.summary.responses.1",
+                                "strip_whitespace": "True"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "2",
+                    "tab": "customFunctions",
+                    "type": "utility",
+                    "userCode": "    # Write your custom code here...",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 520
+                },
+                "3": {
+                    "customCode": "def custom_function_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('custom_function_1() called')\n    \n    status_value = container.get('status', None)\n    id_value = container.get('id', None)\n    results_data_1 = phantom.collect2(container=container, datapath=['prompt_1:action_result.status', 'prompt_1:action_result.parameter.message', 'prompt_1:action_result.summary.responses.0'], action_results=results)\n    custom_function_results_data_1 = phantom.collect2(container=container, datapath=['cf_community_string_split_1:custom_function_result.data.*.item'], action_results=results)\n    results_item_1_0 = [item[0] for item in results_data_1]\n    results_item_1_1 = [item[1] for item in results_data_1]\n    results_item_1_2 = [item[2] for item in results_data_1]\n    custom_function_results_item_1_0 = [item[0] for item in custom_function_results_data_1]\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    for container_id in custom_function_results_item_1_0:\n        try:\n            target_container = phantom.get_container(container_id)\n            phantom.set_status(container=target_container, status=\"Closed\")\n            phantom.assign(target_container, 'Playbook')\n            #note_content += \"event : \" + str(container_id) + \"success\\n\\n\"\n            note_content = \"This event closed by main event \" + str(custom_function_results_data_1)\n        except:\n            note_content += \"event : \" + str(container_id) + \"fail. \\n\\n\"    \n        success, message, note_id = phantom.add_note(container=target_container, note_type='general', title='Closed by Automation Playbook', content=note_content)   \n        \n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    return",
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "custom_function_1",
+                        "id": "3",
+                        "inputParameters": [
+                            "auto_close_confirmation:action_result.status",
+                            "auto_close_confirmation:action_result.parameter.message",
+                            "auto_close_confirmation:action_result.summary.responses.0",
+                            "cf_community_string_split_1:custom_function_result.data.*.item",
+                            "container:status",
+                            "container:id"
+                        ],
+                        "outputVariables": [],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "3",
+                    "type": "code",
+                    "userCode": "\n    # Write your custom code here...\n    for container_id in custom_function_results_item_1_0:\n        try:\n            target_container = phantom.get_container(container_id)\n            phantom.set_status(container=target_container, status=\"Closed\")\n            phantom.assign(target_container, 'Playbook')\n            #note_content += \"event : \" + str(container_id) + \"success\\n\\n\"\n            note_content = \"This event closed by main event \" + str(custom_function_results_data_1)\n        except:\n            note_content += \"event : \" + str(container_id) + \"fail. \\n\\n\"    \n        success, message, note_id = phantom.add_note(container=target_container, note_type='general', title='Closed by Automation Playbook', content=note_content)   \n        \n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 820
+                },
+                "4": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "auto_close_confirmation:action_result.status",
+                                        "value": "success"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 1,
+                        "functionName": "decision_1",
+                        "id": "4",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "4",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 360
+                },
+                "5": {
+                    "data": {
+                        "advanced": {
+                            "customName": "Auto Close Confirmation",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "approver": {
+                            "type": "role",
+                            "value": "ktanalyst"
+                        },
+                        "functionId": 1,
+                        "functionName": "auto_close_confirmation",
+                        "id": "5",
+                        "message": "Please Enter Child ID",
+                        "parameters": [],
+                        "responseTime": 30.0,
+                        "responses": [
+                            {
+                                "responseOptions": [
+                                    "",
+                                    ""
+                                ],
+                                "responsePrompt": "Enter Case ID",
+                                "responseType": "message"
+                            },
+                            {
+                                "responseOptions": [
+                                    "",
+                                    ""
+                                ],
+                                "responsePrompt": "Enter List of Child ID",
+                                "responseType": "message"
+                            }
+                        ],
+                        "type": "prompt"
+                    },
+                    "errors": {},
+                    "id": "5",
+                    "type": "prompt",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 220
+                }
+            },
+            "notes": "",
+            "origin": {
+                "playbook_id": 143,
+                "playbook_name": "Auto close link case",
+                "playbook_repo_id": 3,
+                "playbook_repo_name": "mfec_csoc_playbook"
+            }
+        },
+        "input_spec": null,
+        "output_spec": null,
+        "playbook_type": "automation",
+        "python_version": "3",
+        "schema": "5.0.10",
+        "version": "4.10.7.63984"
+    },
+    "create_time": "2025-03-27T15:21:01.949786+00:00",
+    "draft_mode": false,
+    "labels": [
+        "*"
+    ],
+    "tags": []
+}
