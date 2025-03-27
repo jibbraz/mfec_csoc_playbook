@@ -1,0 +1,282 @@
+{
+    "blockly": false,
+    "blockly_xml": "<xml></xml>",
+    "category": "Uncategorized",
+    "coa": {
+        "data": {
+            "description": "",
+            "edges": [
+                {
+                    "id": "port_0_to_port_2",
+                    "sourceNode": "0",
+                    "sourcePort": "0_out",
+                    "targetNode": "2",
+                    "targetPort": "2_in"
+                },
+                {
+                    "id": "port_3_to_port_1",
+                    "sourceNode": "3",
+                    "sourcePort": "3_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_5_to_port_6",
+                    "sourceNode": "5",
+                    "sourcePort": "5_out",
+                    "targetNode": "6",
+                    "targetPort": "6_in"
+                },
+                {
+                    "id": "port_4_to_port_6",
+                    "sourceNode": "4",
+                    "sourcePort": "4_out",
+                    "targetNode": "6",
+                    "targetPort": "6_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_6_to_port_3",
+                    "sourceNode": "6",
+                    "sourcePort": "6_out",
+                    "targetNode": "3",
+                    "targetPort": "3_in"
+                },
+                {
+                    "id": "port_2_to_port_5",
+                    "sourceNode": "2",
+                    "sourcePort": "2_out",
+                    "targetNode": "5",
+                    "targetPort": "5_in"
+                },
+                {
+                    "id": "port_2_to_port_4",
+                    "sourceNode": "2",
+                    "sourcePort": "2_out",
+                    "targetNode": "4",
+                    "targetPort": "4_in"
+                }
+            ],
+            "hash": "6754e678b0d8401b3560afb456355010fd4f526c",
+            "nodes": {
+                "0": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_start",
+                        "id": "0",
+                        "type": "start"
+                    },
+                    "errors": {},
+                    "id": "0",
+                    "type": "start",
+                    "warnings": {},
+                    "x": 200,
+                    "y": 100
+                },
+                "1": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_finish",
+                        "id": "1",
+                        "type": "end"
+                    },
+                    "errors": {},
+                    "id": "1",
+                    "type": "end",
+                    "warnings": {},
+                    "x": 600,
+                    "y": 1220
+                },
+                "2": {
+                    "customCode": "def format_custom_fields(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('format_custom_fields() called')\n    \n    create_time_value = container.get('create_time', None)\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n    format_mail_body(container=container)\n    format_mail_subject(container=container)\n\n    return",
+                    "data": {
+                        "advanced": {
+                            "customName": "format custom fields",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "format_custom_fields",
+                        "id": "2",
+                        "inputParameters": [
+                            "container:create_time"
+                        ],
+                        "outputVariables": [],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "2",
+                    "type": "code",
+                    "userCode": "\n    # Write your custom code here...\n    \n\n",
+                    "warnings": {},
+                    "x": 600,
+                    "y": 180
+                },
+                "3": {
+                    "data": {
+                        "action": "send email",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "send email contain approval",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "connector": "SMTP",
+                        "connectorConfigs": [
+                            "smtp asset"
+                        ],
+                        "connectorId": "45bb6f37-4478-499b-b4a3-51ecfa62b78c",
+                        "connectorVersion": "v1",
+                        "functionId": 1,
+                        "functionName": "send_email_contain_approval",
+                        "id": "3",
+                        "parameters": {
+                            "attachments": "",
+                            "bcc": "",
+                            "body": "format_mail_body:formatted_data",
+                            "cc": "",
+                            "from": "no-reply-phantom@ktbcs.co.th",
+                            "headers": "",
+                            "subject": "format_mail_subject:formatted_data",
+                            "to": "security-infra@ktbcs.co.th"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "to"
+                            },
+                            {
+                                "data_type": "string",
+                                "field": "body"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "3",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 280,
+                    "y": 1080
+                },
+                "4": {
+                    "data": {
+                        "advanced": {
+                            "customName": "format mail subject",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 2,
+                        "functionName": "format_mail_subject",
+                        "id": "4",
+                        "parameters": [
+                            "container:name"
+                        ],
+                        "template": "SOAR - Containment Approval Timeout - Notification",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "4",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 720,
+                    "y": 620
+                },
+                "5": {
+                    "data": {
+                        "advanced": {
+                            "customName": "format mail body",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 1,
+                        "functionName": "format_mail_body",
+                        "id": "5",
+                        "parameters": [
+                            "container:name",
+                            "container:id",
+                            "artifact:*.cef.deviceHostname",
+                            "container:severity",
+                            "artifact:*.cef.signature",
+                            "artifact:*.cef.host_mac"
+                        ],
+                        "template": "This is an automated message to inform you of the containment approval timeout , you need a manual containment. \n\nCase Name: {0}\nCase number: {1}\nDevice Hostname: {2}\nCase Severity: {3}\nSignature: {4}\nHost MacAddress: {5}\n\nPlease do not respond to this message.",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "5",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 200,
+                    "y": 600
+                },
+                "6": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "!=",
+                                        "param": "format_mail_body:formatted_data",
+                                        "value": ""
+                                    },
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "!=",
+                                        "param": "format_mail_subject:formatted_data",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "logic": "and"
+                            }
+                        ],
+                        "functionId": 1,
+                        "functionName": "filter_1",
+                        "id": "6",
+                        "type": "filter"
+                    },
+                    "errors": {},
+                    "id": "6",
+                    "type": "filter",
+                    "warnings": {},
+                    "x": 440,
+                    "y": 920
+                }
+            },
+            "notes": "",
+            "origin": {
+                "playbook_id": 176,
+                "playbook_name": "KTB UC SEND EMAIL CONTAIN timeout",
+                "playbook_repo_id": 3,
+                "playbook_repo_name": "mfec_csoc_playbook"
+            }
+        },
+        "input_spec": null,
+        "output_spec": null,
+        "playbook_type": "automation",
+        "python_version": "3",
+        "schema": "5.0.10",
+        "version": "4.10.7.63984"
+    },
+    "create_time": "2025-03-27T15:21:02.959576+00:00",
+    "draft_mode": false,
+    "labels": [
+        "*"
+    ],
+    "tags": []
+}
