@@ -1,0 +1,134 @@
+{
+    "blockly": false,
+    "blockly_xml": "<xml></xml>",
+    "category": "Samples",
+    "coa": {
+        "data": {
+            "description": "",
+            "edges": [
+                {
+                    "id": "port_2_to_port_1",
+                    "sourceNode": "2",
+                    "sourcePort": "2_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_0_to_port_2",
+                    "sourceNode": "0",
+                    "sourcePort": "0_out",
+                    "targetNode": "2",
+                    "targetPort": "2_in"
+                }
+            ],
+            "hash": "25d8eaadd453bb8b95f17a2680d79b1151115096",
+            "nodes": {
+                "0": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_start",
+                        "id": "0",
+                        "type": "start"
+                    },
+                    "errors": {},
+                    "id": "0",
+                    "type": "start",
+                    "warnings": {},
+                    "x": 240,
+                    "y": 260
+                },
+                "1": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_finish",
+                        "id": "1",
+                        "type": "end"
+                    },
+                    "errors": {},
+                    "id": "1",
+                    "type": "end",
+                    "warnings": {},
+                    "x": 240,
+                    "y": 700
+                },
+                "2": {
+                    "data": {
+                        "advanced": {
+                            "customName": "cf_local_ADD_T0_T3_FalsePositive_1",
+                            "join": []
+                        },
+                        "customFunction": {
+                            "draftMode": false,
+                            "name": "ADD_T0_T3_FalsePositive",
+                            "repoName": "local"
+                        },
+                        "functionId": 1,
+                        "functionName": "cf_local_add_t0_t3_falsepositive_1",
+                        "id": "2",
+                        "type": "utility",
+                        "utilities": {
+                            "ADD_T0_T3_FalsePositive": {
+                                "description": "Set T0 default value - T3",
+                                "fields": [
+                                    {
+                                        "dataTypes": [
+                                            "phantom container id"
+                                        ],
+                                        "description": "",
+                                        "inputType": "item",
+                                        "label": "container_id_now",
+                                        "name": "container_id_now",
+                                        "placeholder": "container:id",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "add_t0_t3_falsepositive",
+                                "name": "add_t0_t3_falsepositive"
+                            }
+                        },
+                        "utilityType": "custom_function",
+                        "values": {
+                            "ADD_T0_T3_FalsePositive": {
+                                "container_id_now": "container:id"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "2",
+                    "tab": "customFunctions",
+                    "type": "utility",
+                    "userCode": "    # Write your custom code here...",
+                    "warnings": {},
+                    "x": 200,
+                    "y": 440
+                }
+            },
+            "notes": "",
+            "origin": {
+                "playbook_id": 277,
+                "playbook_name": "Set False Positive",
+                "playbook_repo_id": 3,
+                "playbook_repo_name": "mfec_csoc_playbook"
+            }
+        },
+        "input_spec": null,
+        "output_spec": null,
+        "playbook_type": "automation",
+        "python_version": "3",
+        "schema": "5.0.10",
+        "version": "4.10.7.63984"
+    },
+    "create_time": "2025-03-27T15:21:07.925960+00:00",
+    "draft_mode": false,
+    "labels": [
+        "*"
+    ],
+    "tags": [
+        "false_positive"
+    ]
+}
