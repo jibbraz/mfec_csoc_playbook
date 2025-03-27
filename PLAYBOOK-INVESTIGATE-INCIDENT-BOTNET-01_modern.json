@@ -1,0 +1,3571 @@
+{
+    "blockly": false,
+    "blockly_xml": "<xml></xml>",
+    "category": "Uncategorized",
+    "coa": {
+        "data": {
+            "description": "USE CASE: This playbook will call triage playbook, make decision to assign to analyst or create incident",
+            "edges": [
+                {
+                    "id": "port_23_to_port_24",
+                    "sourceNode": "23",
+                    "sourcePort": "23_out",
+                    "targetNode": "24",
+                    "targetPort": "24_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_24_to_port_3",
+                    "sourceNode": "24",
+                    "sourcePort": "24_out",
+                    "targetNode": "3",
+                    "targetPort": "3_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_35_to_port_29",
+                    "sourceNode": "35",
+                    "sourcePort": "35_out",
+                    "targetNode": "29",
+                    "targetPort": "29_in"
+                },
+                {
+                    "id": "port_30_to_port_31",
+                    "sourceNode": "30",
+                    "sourcePort": "30_out",
+                    "targetNode": "31",
+                    "targetPort": "31_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_31_to_port_15",
+                    "sourceNode": "31",
+                    "sourcePort": "31_out",
+                    "targetNode": "15",
+                    "targetPort": "15_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_31_to_port_18",
+                    "sourceNode": "31",
+                    "sourcePort": "31_out",
+                    "targetNode": "18",
+                    "targetPort": "18_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_42_to_port_28",
+                    "sourceNode": "42",
+                    "sourcePort": "42_out",
+                    "targetNode": "28",
+                    "targetPort": "28_in"
+                },
+                {
+                    "id": "port_28_to_port_7",
+                    "sourceNode": "28",
+                    "sourcePort": "28_out",
+                    "targetNode": "7",
+                    "targetPort": "7_in"
+                },
+                {
+                    "id": "port_7_to_port_20",
+                    "sourceNode": "7",
+                    "sourcePort": "7_out",
+                    "targetNode": "20",
+                    "targetPort": "20_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_20_to_port_21",
+                    "sourceNode": "20",
+                    "sourcePort": "20_out",
+                    "targetNode": "21",
+                    "targetPort": "21_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_20_to_port_5",
+                    "sourceNode": "20",
+                    "sourcePort": "20_out",
+                    "targetNode": "5",
+                    "targetPort": "5_in"
+                },
+                {
+                    "id": "port_13_to_port_11",
+                    "sourceNode": "13",
+                    "sourcePort": "13_out",
+                    "targetNode": "11",
+                    "targetPort": "11_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_39_to_port_13",
+                    "sourceNode": "39",
+                    "sourcePort": "39_out",
+                    "targetNode": "13",
+                    "targetPort": "13_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_11_to_port_32",
+                    "sourceNode": "11",
+                    "sourcePort": "11_out",
+                    "targetNode": "32",
+                    "targetPort": "32_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_32_to_port_9",
+                    "sourceNode": "32",
+                    "sourcePort": "32_out",
+                    "targetNode": "9",
+                    "targetPort": "9_in"
+                },
+                {
+                    "id": "port_9_to_port_10",
+                    "sourceNode": "9",
+                    "sourcePort": "9_out",
+                    "targetNode": "10",
+                    "targetPort": "10_in"
+                },
+                {
+                    "id": "port_10_to_port_8",
+                    "sourceNode": "10",
+                    "sourcePort": "10_out",
+                    "targetNode": "8",
+                    "targetPort": "8_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_8_to_port_17",
+                    "sourceNode": "8",
+                    "sourcePort": "8_out",
+                    "targetNode": "17",
+                    "targetPort": "17_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_8_to_port_4",
+                    "sourceNode": "8",
+                    "sourcePort": "8_out",
+                    "targetNode": "4",
+                    "targetPort": "4_in"
+                },
+                {
+                    "id": "port_41_to_port_37",
+                    "sourceNode": "41",
+                    "sourcePort": "41_out",
+                    "targetNode": "37",
+                    "targetPort": "37_in"
+                },
+                {
+                    "id": "port_29_to_port_30",
+                    "sourceNode": "29",
+                    "sourcePort": "29_out",
+                    "targetNode": "30",
+                    "targetPort": "30_in"
+                },
+                {
+                    "id": "port_43_to_port_41",
+                    "sourceNode": "43",
+                    "sourcePort": "43_out",
+                    "targetNode": "41",
+                    "targetPort": "41_in"
+                },
+                {
+                    "id": "port_3_to_port_1",
+                    "sourceNode": "3",
+                    "sourcePort": "3_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_27_to_port_1",
+                    "sourceNode": "27",
+                    "sourcePort": "27_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_17_to_port_1",
+                    "sourceNode": "17",
+                    "sourcePort": "17_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_16_to_port_1",
+                    "sourceNode": "16",
+                    "sourcePort": "16_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_18_to_port_1",
+                    "sourceNode": "18",
+                    "sourcePort": "18_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_2_to_port_1",
+                    "sourceNode": "2",
+                    "sourcePort": "2_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_21_to_port_1",
+                    "sourceNode": "21",
+                    "sourcePort": "21_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_6_to_port_1",
+                    "sourceNode": "6",
+                    "sourcePort": "6_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_44_to_port_1",
+                    "sourceNode": "44",
+                    "sourcePort": "44_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_44_to_port_49",
+                    "sourceNode": "44",
+                    "sourcePort": "44_out",
+                    "targetNode": "49",
+                    "targetPort": "49_in"
+                },
+                {
+                    "id": "port_0_to_port_51",
+                    "sourceNode": "0",
+                    "sourcePort": "0_out",
+                    "targetNode": "51",
+                    "targetPort": "51_in"
+                },
+                {
+                    "id": "port_51_to_port_44",
+                    "sourceNode": "51",
+                    "sourcePort": "51_out",
+                    "targetNode": "44",
+                    "targetPort": "44_in"
+                },
+                {
+                    "id": "port_5_to_port_1",
+                    "sourceNode": "5",
+                    "sourcePort": "5_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_15_to_port_1",
+                    "sourceNode": "15",
+                    "sourcePort": "15_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_4_to_port_1",
+                    "sourceNode": "4",
+                    "sourcePort": "4_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_38_to_port_34",
+                    "sourceNode": "38",
+                    "sourcePort": "38_out",
+                    "targetNode": "34",
+                    "targetPort": "34_in"
+                },
+                {
+                    "id": "port_43_to_port_22",
+                    "sourceNode": "43",
+                    "sourcePort": "43_out",
+                    "targetNode": "22",
+                    "targetPort": "22_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_49_to_port_12",
+                    "sourceNode": "49",
+                    "sourcePort": "49_out",
+                    "targetNode": "12",
+                    "targetPort": "12_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_12_to_port_43",
+                    "sourceNode": "12",
+                    "sourcePort": "12_out",
+                    "targetNode": "43",
+                    "targetPort": "43_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_49_to_port_48",
+                    "sourceNode": "49",
+                    "sourcePort": "49_out",
+                    "targetNode": "48",
+                    "targetPort": "48_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_24_to_port_39",
+                    "sourceNode": "24",
+                    "sourcePort": "24_out",
+                    "targetNode": "39",
+                    "targetPort": "39_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_11_to_port_38",
+                    "sourceNode": "11",
+                    "sourcePort": "11_out",
+                    "targetNode": "38",
+                    "targetPort": "38_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_11_to_port_14",
+                    "sourceNode": "11",
+                    "sourcePort": "11_out",
+                    "targetNode": "14",
+                    "targetPort": "14_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_24_to_port_33",
+                    "sourceNode": "24",
+                    "sourcePort": "24_out",
+                    "targetNode": "33",
+                    "targetPort": "33_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_37_to_port_42",
+                    "sourceNode": "37",
+                    "sourcePort": "37_out",
+                    "targetNode": "42",
+                    "targetPort": "42_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_37_to_port_27",
+                    "sourceNode": "37",
+                    "sourcePort": "37_out",
+                    "targetNode": "27",
+                    "targetPort": "27_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_17_to_port_16",
+                    "sourceNode": "17",
+                    "sourcePort": "17_out",
+                    "targetNode": "16",
+                    "targetPort": "16_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_18_to_port_2",
+                    "sourceNode": "18",
+                    "sourcePort": "18_out",
+                    "targetNode": "2",
+                    "targetPort": "2_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_31_to_port_19",
+                    "sourceNode": "31",
+                    "sourcePort": "31_out",
+                    "targetNode": "19",
+                    "targetPort": "19_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_21_to_port_6",
+                    "sourceNode": "21",
+                    "sourcePort": "21_out",
+                    "targetNode": "6",
+                    "targetPort": "6_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_50_to_port_25",
+                    "sourceNode": "50",
+                    "sourcePort": "50_out",
+                    "targetNode": "25",
+                    "targetPort": "25_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_49_to_port_26",
+                    "sourceNode": "49",
+                    "sourcePort": "49_out",
+                    "targetNode": "26",
+                    "targetPort": "26_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_26_to_port_23",
+                    "sourceNode": "26",
+                    "sourcePort": "26_out",
+                    "targetNode": "23",
+                    "targetPort": "23_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_26_to_port_38",
+                    "sourceNode": "26",
+                    "sourcePort": "26_out",
+                    "targetNode": "38",
+                    "targetPort": "38_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_12_to_port_40",
+                    "sourceNode": "12",
+                    "sourcePort": "12_out",
+                    "targetNode": "40",
+                    "targetPort": "40_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_40_to_port_41",
+                    "sourceNode": "40",
+                    "sourcePort": "40_out",
+                    "targetNode": "41",
+                    "targetPort": "41_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_40_to_port_42",
+                    "sourceNode": "40",
+                    "sourcePort": "40_out",
+                    "targetNode": "42",
+                    "targetPort": "42_in"
+                },
+                {
+                    "id": "port_52_to_port_46",
+                    "sourceNode": "52",
+                    "sourcePort": "52_out",
+                    "targetNode": "46",
+                    "targetPort": "46_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_46_to_port_47",
+                    "sourceNode": "46",
+                    "sourcePort": "46_out",
+                    "targetNode": "47",
+                    "targetPort": "47_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_38_to_port_35",
+                    "sourceNode": "38",
+                    "sourcePort": "38_out",
+                    "targetNode": "35",
+                    "targetPort": "35_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_34_to_port_35",
+                    "sourceNode": "34",
+                    "sourcePort": "34_out",
+                    "targetNode": "35",
+                    "targetPort": "35_in"
+                },
+                {
+                    "id": "port_25_to_port_35",
+                    "sourceNode": "25",
+                    "sourcePort": "25_out",
+                    "targetNode": "35",
+                    "targetPort": "35_in"
+                },
+                {
+                    "id": "port_47_to_port_35",
+                    "sourceNode": "47",
+                    "sourcePort": "47_out",
+                    "targetNode": "35",
+                    "targetPort": "35_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_46_to_port_35",
+                    "sourceNode": "46",
+                    "sourcePort": "46_out",
+                    "targetNode": "35",
+                    "targetPort": "35_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_34_to_port_50",
+                    "sourceNode": "34",
+                    "sourcePort": "34_out",
+                    "targetNode": "50",
+                    "targetPort": "50_in"
+                },
+                {
+                    "id": "port_36_to_port_45",
+                    "sourceNode": "36",
+                    "sourcePort": "36_out",
+                    "targetNode": "45",
+                    "targetPort": "45_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_45_to_port_35",
+                    "sourceNode": "45",
+                    "sourcePort": "45_out",
+                    "targetNode": "35",
+                    "targetPort": "35_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_50_to_port_36",
+                    "sourceNode": "50",
+                    "sourcePort": "50_out",
+                    "targetNode": "36",
+                    "targetPort": "36_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_45_to_port_52",
+                    "sourceNode": "45",
+                    "sourcePort": "45_out",
+                    "targetNode": "52",
+                    "targetPort": "52_in"
+                }
+            ],
+            "hash": "b0b984c82ea42c6897096ff602df515e6dc2ec13",
+            "nodes": {
+                "0": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_start",
+                        "id": "0",
+                        "type": "start"
+                    },
+                    "errors": {},
+                    "id": "0",
+                    "type": "start",
+                    "warnings": {},
+                    "x": -200,
+                    "y": -1320
+                },
+                "1": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_finish",
+                        "id": "1",
+                        "type": "end"
+                    },
+                    "errors": {},
+                    "id": "1",
+                    "type": "end",
+                    "warnings": {},
+                    "x": 2360,
+                    "y": 2700
+                },
+                "10": {
+                    "data": {
+                        "action": "run query",
+                        "actionType": "investigate",
+                        "advanced": {
+                            "customName": "not quarantined No containment Run query",
+                            "customNameId": 0,
+                            "description": "not quarantined No containment Run query get number of host\nwith the same\nsignature",
+                            "join": [],
+                            "note": "not quarantined No containment Run query get number of host\nwith the same\nsignature"
+                        },
+                        "connector": "Splunk",
+                        "connectorConfigs": [
+                            "splunk es asset"
+                        ],
+                        "connectorId": "91883aa8-9c81-470b-97a1-5d8f7995f560",
+                        "connectorVersion": "v1",
+                        "functionId": 4,
+                        "functionName": "not_quarantined_no_containment_run_query",
+                        "id": "10",
+                        "parameters": {
+                            "command": "search",
+                            "display": "",
+                            "parse_only": "",
+                            "query": "not_quarantined_no_containment_format_da:formatted_data"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "query"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "10",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 80,
+                    "y": 1660
+                },
+                "11": {
+                    "data": {
+                        "advanced": {
+                            "customName": "Check Is it in the list of NO containmen",
+                            "customNameId": 0,
+                            "description": "Check Is it in the list of NO\ncontainment Or is a\nserver (subnets for\nservers)",
+                            "join": [],
+                            "note": "Check Is it in the list of NO\ncontainment Or is a\nserver (subnets for\nservers)"
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "!=",
+                                        "param": "is_it_in_the_list_of_no_containment_or_i:custom_function:noContainmentTrue",
+                                        "value": "[]"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 11,
+                        "functionName": "check_is_it_in_the_list_of_no_containmen",
+                        "id": "11",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "11",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 200,
+                    "y": 1160
+                },
+                "12": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "in",
+                                        "param": "amp",
+                                        "value": "artifact:*.cef.sourcetype"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 18,
+                        "functionName": "decision_18",
+                        "id": "12",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "12",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 880,
+                    "y": -640
+                },
+                "13": {
+                    "customCode": "def is_it_in_the_list_of_no_containment_or_i(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('is_it_in_the_list_of_no_containment_or_i() called')\n    \n    filtered_artifacts_data_1 = phantom.collect2(container=container, datapath=['filtered-data:filter_out_devicehostname:condition_1:artifact:*.cef.deviceHostname'])\n    filtered_artifacts_item_1_0 = [item[0] for item in filtered_artifacts_data_1]\n\n    is_it_in_the_list_of_no_containment_or_i__nocontainmenttrue = None\n    is_it_in_the_list_of_no_containment_or_i__nocontainmentfalse = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    success, message, nocontainmentlist = phantom.get_list(list_name='nocontainmentlist')\n    \n    urllist = filtered_artifacts_item_1_0\n    noContainmentTrue = []\n    noContainmentFalse = []\n    for item in urllist:\n        if not any(item in sublist for sublist in nocontainmentlist):\n            phantom.debug(\"{} is public\".format(item))\n            phantom.debug(\"*******in noContainment********\")\n            phantom.debug(item)\n            phantom.debug(nocontainmentlist)\n            noContainmentFalse.append(item)\n        else:\n            phantom.debug(\"{} is private\".format(item))\n            phantom.debug(\"*******in Containment********\")\n            phantom.debug(item)\n            noContainmentTrue.append(item)\n            \n    is_it_in_the_list_of_no_containment_or_i__nocontainmenttrue = noContainmentTrue\n    is_it_in_the_list_of_no_containment_or_i__nocontainmentfalse = noContainmentFalse\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='is_it_in_the_list_of_no_containment_or_i:noContainmentTrue', value=json.dumps(is_it_in_the_list_of_no_containment_or_i__nocontainmenttrue))\n    phantom.save_run_data(key='is_it_in_the_list_of_no_containment_or_i:noContainmentFalse', value=json.dumps(is_it_in_the_list_of_no_containment_or_i__nocontainmentfalse))\n    check_is_it_in_the_list_of_no_containmen(container=container)\n\n    return",
+                    "data": {
+                        "advanced": {
+                            "customName": "Is it in the list of NO containment Or i",
+                            "customNameId": 0,
+                            "description": "Is it in the list of NO\ncontainment Or is a\nserver (subnets for\nservers)",
+                            "join": [],
+                            "note": "Is it in the list of NO\ncontainment Or is a\nserver (subnets for\nservers)"
+                        },
+                        "functionId": 3,
+                        "functionName": "is_it_in_the_list_of_no_containment_or_i",
+                        "id": "13",
+                        "inputParameters": [
+                            "filtered-data:filter_out_devicehostname:condition_1:artifact:*.cef.deviceHostname"
+                        ],
+                        "outputVariables": [
+                            "noContainmentTrue",
+                            "noContainmentFalse"
+                        ],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "13",
+                    "type": "code",
+                    "userCode": "\n    # Write your custom code here...\n    success, message, nocontainmentlist = phantom.get_list(list_name='nocontainmentlist')\n    \n    urllist = filtered_artifacts_item_1_0\n    noContainmentTrue = []\n    noContainmentFalse = []\n    for item in urllist:\n        if not any(item in sublist for sublist in nocontainmentlist):\n            phantom.debug(\"{} is public\".format(item))\n            phantom.debug(\"*******in noContainment********\")\n            phantom.debug(item)\n            phantom.debug(nocontainmentlist)\n            noContainmentFalse.append(item)\n        else:\n            phantom.debug(\"{} is private\".format(item))\n            phantom.debug(\"*******in Containment********\")\n            phantom.debug(item)\n            noContainmentTrue.append(item)\n            \n    is_it_in_the_list_of_no_containment_or_i__nocontainmenttrue = noContainmentTrue\n    is_it_in_the_list_of_no_containment_or_i__nocontainmentfalse = noContainmentFalse\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################",
+                    "warnings": {},
+                    "x": 200,
+                    "y": 900
+                },
+                "14": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionId": 19,
+                        "functionName": "add_note_19",
+                        "id": "14",
+                        "type": "utility",
+                        "utilities": {
+                            "add_note": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "description": "",
+                                        "label": "title",
+                                        "name": "title",
+                                        "placeholder": "Enter a note title",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "description": "",
+                                        "label": "content",
+                                        "name": "content",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "choices": [
+                                            "markdown",
+                                            "html"
+                                        ],
+                                        "default": "markdown",
+                                        "description": "",
+                                        "label": "note format",
+                                        "name": "note_format",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "dropdown",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    },
+                                    {
+                                        "default": "general",
+                                        "hidden": true,
+                                        "name": "note_type",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "author",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "event_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "task_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "trace",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "add note",
+                                "name": "add_note"
+                            }
+                        },
+                        "values": {
+                            "add_note": {
+                                "_internal": [
+                                    "container",
+                                    "note_type",
+                                    "author",
+                                    "event_id",
+                                    "task_id",
+                                    "trace"
+                                ],
+                                "content": "not_quarantined_malware_detected_on_serv:custom_function:criticalDevice",
+                                "note_format": "markdown",
+                                "title": "Non Contained - non-Critial-no conain"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "14",
+                    "tab": "apis",
+                    "type": "utility",
+                    "warnings": {},
+                    "x": 360,
+                    "y": 1280
+                },
+                "15": {
+                    "data": {
+                        "advanced": {
+                            "customName": "not quarantined not critical  Assign Ana",
+                            "customNameId": 0,
+                            "description": "not quarantined not critical  Assign Analyst\nto make final decision",
+                            "join": [],
+                            "note": "not quarantined not critical  Assign Analyst\nto make final decision"
+                        },
+                        "functionId": 3,
+                        "functionName": "not_quarantined_not_critical_Assign_Ana",
+                        "id": "15",
+                        "type": "utility",
+                        "utilities": {
+                            "add_note": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "description": "",
+                                        "label": "title",
+                                        "name": "title",
+                                        "placeholder": "Enter a note title",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "description": "",
+                                        "label": "content",
+                                        "name": "content",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "choices": [
+                                            "markdown",
+                                            "html"
+                                        ],
+                                        "default": "markdown",
+                                        "description": "",
+                                        "label": "note format",
+                                        "name": "note_format",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "dropdown",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    },
+                                    {
+                                        "default": "general",
+                                        "hidden": true,
+                                        "name": "note_type",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "author",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "event_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "task_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "trace",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "add note",
+                                "name": "add_note"
+                            }
+                        },
+                        "values": {
+                            "add_note": {
+                                "_internal": [
+                                    "container",
+                                    "note_type",
+                                    "author",
+                                    "event_id",
+                                    "task_id",
+                                    "trace"
+                                ],
+                                "content": "Less than 10",
+                                "note_format": "markdown",
+                                "title": "Number of affected host with  same  signature"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "15",
+                    "tab": "apis",
+                    "type": "utility",
+                    "warnings": {},
+                    "x": 1000,
+                    "y": 2380
+                },
+                "16": {
+                    "data": {
+                        "advanced": {
+                            "customName": "not quarantined No containment Set sever",
+                            "customNameId": 0,
+                            "description": "not quarantined No containment Set severity to\nMedium",
+                            "join": [],
+                            "note": "not quarantined No containment Set severity to\nMedium"
+                        },
+                        "functionId": 10,
+                        "functionName": "not_quarantined_no_containment_set_sever",
+                        "id": "16",
+                        "type": "utility",
+                        "utilities": {
+                            "set_severity": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "choices": "notableSeverity",
+                                        "description": "",
+                                        "label": "severity",
+                                        "name": "severity",
+                                        "placeholder": "Select severity",
+                                        "renderType": "dropdown",
+                                        "required": true
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "set severity",
+                                "name": "set_severity",
+                                "refreshNotableData": true
+                            }
+                        },
+                        "values": {
+                            "set_severity": {
+                                "_internal": [
+                                    "container"
+                                ],
+                                "severity": "medium"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "16",
+                    "tab": "apis",
+                    "type": "utility",
+                    "warnings": {},
+                    "x": -80,
+                    "y": 2380
+                },
+                "17": {
+                    "data": {
+                        "advanced": {
+                            "customName": "not quarantined No containment check sev",
+                            "customNameId": 0,
+                            "description": "not quarantined No containment check severity low",
+                            "join": [],
+                            "note": "not quarantined No containment check severity low"
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "!=",
+                                        "param": "container:severity",
+                                        "value": "low"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 13,
+                        "functionName": "not_quarantined_no_containment_check_sev",
+                        "id": "17",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "17",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": -360,
+                    "y": 2420
+                },
+                "18": {
+                    "data": {
+                        "advanced": {
+                            "customName": "not quarantined not critical check sever",
+                            "customNameId": 0,
+                            "description": "not quarantined not critical check severity low",
+                            "join": [],
+                            "note": "not quarantined not critical check severity low"
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "!=",
+                                        "param": "container:severity",
+                                        "value": "low"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 6,
+                        "functionName": "not_quarantined_not_critical_check_sever",
+                        "id": "18",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "18",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 480,
+                    "y": 2420
+                },
+                "19": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionId": 23,
+                        "functionName": "add_note_23",
+                        "id": "19",
+                        "type": "utility",
+                        "utilities": {
+                            "add_note": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "description": "",
+                                        "label": "title",
+                                        "name": "title",
+                                        "placeholder": "Enter a note title",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "description": "",
+                                        "label": "content",
+                                        "name": "content",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "choices": [
+                                            "markdown",
+                                            "html"
+                                        ],
+                                        "default": "markdown",
+                                        "description": "",
+                                        "label": "note format",
+                                        "name": "note_format",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "dropdown",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    },
+                                    {
+                                        "default": "general",
+                                        "hidden": true,
+                                        "name": "note_type",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "author",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "event_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "task_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "trace",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "add note",
+                                "name": "add_note"
+                            }
+                        },
+                        "values": {
+                            "add_note": {
+                                "_internal": [
+                                    "container",
+                                    "note_type",
+                                    "author",
+                                    "event_id",
+                                    "task_id",
+                                    "trace"
+                                ],
+                                "content": "not_quarantined_not_critical_run_query_g:action_result.summary.total_events",
+                                "note_format": "markdown",
+                                "title": "Number of host with same signature"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "19",
+                    "tab": "apis",
+                    "type": "utility",
+                    "warnings": {},
+                    "x": 360,
+                    "y": 1800
+                },
+                "2": {
+                    "data": {
+                        "advanced": {
+                            "customName": "not quarantined not critical Set severit",
+                            "customNameId": 0,
+                            "description": "not quarantined not critical Set severity to\nMedium",
+                            "join": [],
+                            "note": "not quarantined not critical Set severity to\nMedium"
+                        },
+                        "functionId": 4,
+                        "functionName": "not_quarantined_not_critical_set_severit",
+                        "id": "2",
+                        "type": "utility",
+                        "utilities": {
+                            "set_severity": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "choices": "notableSeverity",
+                                        "description": "",
+                                        "label": "severity",
+                                        "name": "severity",
+                                        "placeholder": "Select severity",
+                                        "renderType": "dropdown",
+                                        "required": true
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "set severity",
+                                "name": "set_severity",
+                                "refreshNotableData": true
+                            }
+                        },
+                        "values": {
+                            "set_severity": {
+                                "_internal": [
+                                    "container"
+                                ],
+                                "severity": "medium"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "2",
+                    "tab": "apis",
+                    "type": "utility",
+                    "warnings": {},
+                    "x": 760,
+                    "y": 2380
+                },
+                "20": {
+                    "data": {
+                        "advanced": {
+                            "customName": "quarantined not critical Check number of",
+                            "customNameId": 0,
+                            "description": "quarantined not critical Check number of hosts with the same signature",
+                            "join": [],
+                            "note": "quarantined not critical Check number of hosts with the same signature"
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": ">=",
+                                        "param": "quarantined_not_critical_run_query_get_n:action_result.summary.total_events",
+                                        "value": "10"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 7,
+                        "functionName": "quarantined_not_critical_check_number_of",
+                        "id": "20",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "20",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 1680,
+                    "y": 1980
+                },
+                "21": {
+                    "data": {
+                        "advanced": {
+                            "customName": "quarantined not critical check severity",
+                            "customNameId": 0,
+                            "description": "quarantined not critical check severity low",
+                            "join": [],
+                            "note": "quarantined not critical check severity low"
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "!=",
+                                        "param": "container:severity",
+                                        "value": "low"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 8,
+                        "functionName": "quarantined_not_critical_check_severity",
+                        "id": "21",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "21",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 1640,
+                    "y": 2220
+                },
+                "22": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionId": 18,
+                        "functionName": "add_note_18",
+                        "id": "22",
+                        "type": "utility",
+                        "utilities": {
+                            "add_note": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "description": "",
+                                        "label": "title",
+                                        "name": "title",
+                                        "placeholder": "Enter a note title",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "description": "",
+                                        "label": "content",
+                                        "name": "content",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "choices": [
+                                            "markdown",
+                                            "html"
+                                        ],
+                                        "default": "markdown",
+                                        "description": "",
+                                        "label": "note format",
+                                        "name": "note_format",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "dropdown",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    },
+                                    {
+                                        "default": "general",
+                                        "hidden": true,
+                                        "name": "note_type",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "author",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "event_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "task_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "trace",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "add note",
+                                "name": "add_note"
+                            }
+                        },
+                        "values": {
+                            "add_note": {
+                                "_internal": [
+                                    "container",
+                                    "note_type",
+                                    "author",
+                                    "event_id",
+                                    "task_id",
+                                    "trace"
+                                ],
+                                "content": "get_trajectory_by_hostname_1:action_result.message",
+                                "note_format": "markdown",
+                                "title": "Device trajectory  note"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "22",
+                    "tab": "apis",
+                    "type": "utility",
+                    "warnings": {},
+                    "x": 880,
+                    "y": -200
+                },
+                "23": {
+                    "customCode": "def not_quarantined_malware_detected_on_serv(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('not_quarantined_malware_detected_on_serv() called')\n    \n    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.deviceHostname', 'artifact:*.id'])\n    container_item_0 = [item[0] for item in container_data]\n\n    not_quarantined_malware_detected_on_serv__noncriticaldevice = None\n    not_quarantined_malware_detected_on_serv__criticaldevice = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    criticalDevice = []\n    noncriticalDevice = []\n    success, message, devicelist = phantom.get_list(list_name='Servers and Critical desktops')\n    if devicelist is not None:        \n        for item in container_item_0:\n            if devicelist is not None:\n                if not any(item in device for device in devicelist):\n                    noncriticalDevice.append(item)\n                else:\n                    criticalDevice.append(item)\n\n    phantom.debug(noncriticalDevice)\n    phantom.debug(criticalDevice)\n    not_quarantined_malware_detected_on_serv__noncriticaldevice = noncriticalDevice\n    not_quarantined_malware_detected_on_serv__criticaldevice = criticalDevice\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='not_quarantined_malware_detected_on_serv:noncriticalDevice', value=json.dumps(not_quarantined_malware_detected_on_serv__noncriticaldevice))\n    phantom.save_run_data(key='not_quarantined_malware_detected_on_serv:criticalDevice', value=json.dumps(not_quarantined_malware_detected_on_serv__criticaldevice))\n    check_not_quarantined_malware_detected_o(container=container)\n\n    return",
+                    "data": {
+                        "advanced": {
+                            "customName": "not quarantined Malware detected on serv",
+                            "customNameId": 0,
+                            "description": "not quarantined Malware\ndetected on\nserver or\ncritical\ndesktop",
+                            "join": [],
+                            "note": "not quarantined Malware\ndetected on\nserver or\ncritical\ndesktop"
+                        },
+                        "functionId": 2,
+                        "functionName": "not_quarantined_malware_detected_on_serv",
+                        "id": "23",
+                        "inputParameters": [
+                            "artifact:*.cef.deviceHostname"
+                        ],
+                        "outputVariables": [
+                            "noncriticalDevice",
+                            "criticalDevice"
+                        ],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "23",
+                    "type": "code",
+                    "userCode": "\n    # Write your custom code here...\n    criticalDevice = []\n    noncriticalDevice = []\n    success, message, devicelist = phantom.get_list(list_name='Servers and Critical desktops')\n    if devicelist is not None:        \n        for item in container_item_0:\n            if devicelist is not None:\n                if not any(item in device for device in devicelist):\n                    noncriticalDevice.append(item)\n                else:\n                    criticalDevice.append(item)\n                \n  \n    phantom.debug(noncriticalDevice)\n    phantom.debug(criticalDevice)\n    not_quarantined_malware_detected_on_serv__noncriticaldevice = noncriticalDevice\n    not_quarantined_malware_detected_on_serv__criticaldevice = criticalDevice\n\n",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 240
+                },
+                "24": {
+                    "data": {
+                        "advanced": {
+                            "customName": "Check not quarantined Malware detected o",
+                            "customNameId": 0,
+                            "description": "Check not quarantined Malware\ndetected on\nserver or\ncritical\ndesktop",
+                            "join": [],
+                            "note": "Check not quarantined Malware\ndetected on\nserver or\ncritical\ndesktop"
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "!=",
+                                        "param": "not_quarantined_malware_detected_on_serv:custom_function:criticalDevice",
+                                        "value": "[]"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 3,
+                        "functionName": "check_not_quarantined_malware_detected_o",
+                        "id": "24",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "24",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 480
+                },
+                "25": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionId": 26,
+                        "functionName": "add_note_26",
+                        "id": "25",
+                        "type": "utility",
+                        "utilities": {
+                            "add_note": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "description": "",
+                                        "label": "title",
+                                        "name": "title",
+                                        "placeholder": "Enter a note title",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "description": "",
+                                        "label": "content",
+                                        "name": "content",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "choices": [
+                                            "markdown",
+                                            "html"
+                                        ],
+                                        "default": "markdown",
+                                        "description": "",
+                                        "label": "note format",
+                                        "name": "note_format",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "dropdown",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    },
+                                    {
+                                        "default": "general",
+                                        "hidden": true,
+                                        "name": "note_type",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "author",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "event_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "task_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "trace",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "add note",
+                                "name": "add_note"
+                            }
+                        },
+                        "values": {
+                            "add_note": {
+                                "_internal": [
+                                    "container",
+                                    "note_type",
+                                    "author",
+                                    "event_id",
+                                    "task_id",
+                                    "trace"
+                                ],
+                                "content": "Contain has been done before",
+                                "note_format": "markdown",
+                                "title": "Contained Notes"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "25",
+                    "tab": "apis",
+                    "type": "utility",
+                    "warnings": {},
+                    "x": 800,
+                    "y": 860
+                },
+                "26": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "!=",
+                                        "param": "artifact:*.cef.deviceHostname",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 22,
+                        "functionName": "decision_22",
+                        "id": "26",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "26",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 560,
+                    "y": 60
+                },
+                "27": {
+                    "data": {
+                        "advanced": {
+                            "customName": "Set severity to High quarantined malware",
+                            "customNameId": 0,
+                            "description": "Set severity to\nHigh quarantined malware ",
+                            "join": [],
+                            "note": "Set severity to\nHigh quarantined malware "
+                        },
+                        "functionId": 1,
+                        "functionName": "set_severity_to_high_quarantined_malware",
+                        "id": "27",
+                        "type": "utility",
+                        "utilities": {
+                            "set_severity": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "choices": "notableSeverity",
+                                        "description": "",
+                                        "label": "severity",
+                                        "name": "severity",
+                                        "placeholder": "Select severity",
+                                        "renderType": "dropdown",
+                                        "required": true
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "set severity",
+                                "name": "set_severity",
+                                "refreshNotableData": true
+                            }
+                        },
+                        "values": {
+                            "set_severity": {
+                                "_internal": [
+                                    "container"
+                                ],
+                                "severity": "high"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "27",
+                    "tab": "apis",
+                    "type": "utility",
+                    "warnings": {},
+                    "x": 2280,
+                    "y": 2080
+                },
+                "28": {
+                    "data": {
+                        "advanced": {
+                            "customName": "quarantined not critical Format data to",
+                            "customNameId": 0,
+                            "description": "quarantined not critical Format data to\nRun Query",
+                            "join": [],
+                            "note": "quarantined not critical Format data to\nRun Query",
+                            "separator": ", "
+                        },
+                        "functionId": 2,
+                        "functionName": "quarantined_not_critical_format_data_to",
+                        "id": "28",
+                        "parameters": [
+                            "artifact:*.cef.signature"
+                        ],
+                        "template": "index=* sourcetype = kaspersky:gnrl OR sourcetype = *cisco:amp* OR sourcetype = mcafee*  earliest=-8h@h latest=now\n| search \"{0}\"\n| dedup dest",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "28",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 1680,
+                    "y": 1420
+                },
+                "29": {
+                    "data": {
+                        "advanced": {
+                            "customName": "not quarantined not critical Format data",
+                            "customNameId": 0,
+                            "description": "not quarantined not critical Format data to\nRun Query",
+                            "join": [],
+                            "note": "not quarantined not critical Format data to\nRun Query",
+                            "separator": ", "
+                        },
+                        "functionId": 1,
+                        "functionName": "not_quarantined_not_critical_format_data",
+                        "id": "29",
+                        "parameters": [
+                            "artifact:*.cef.signature"
+                        ],
+                        "template": "index=* sourcetype = kaspersky:gnrl OR sourcetype = *cisco:amp* OR sourcetype = mcafee*  earliest=-8h@h latest=now\n| search \"{0}\"\n| dedup dest",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "29",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 840,
+                    "y": 1420
+                },
+                "3": {
+                    "data": {
+                        "advanced": {
+                            "customName": "Set severity to High not quarantined mal",
+                            "customNameId": 0,
+                            "description": "Set severity to\nHigh not quarantined malware ",
+                            "join": [],
+                            "note": "Set severity to\nHigh not quarantined malware "
+                        },
+                        "functionId": 2,
+                        "functionName": "set_severity_to_high_not_quarantined_mal",
+                        "id": "3",
+                        "type": "utility",
+                        "utilities": {
+                            "set_severity": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "choices": "notableSeverity",
+                                        "description": "",
+                                        "label": "severity",
+                                        "name": "severity",
+                                        "placeholder": "Select severity",
+                                        "renderType": "dropdown",
+                                        "required": true
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "set severity",
+                                "name": "set_severity",
+                                "refreshNotableData": true
+                            }
+                        },
+                        "values": {
+                            "set_severity": {
+                                "_internal": [
+                                    "container"
+                                ],
+                                "severity": "high"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "3",
+                    "tab": "apis",
+                    "type": "utility",
+                    "warnings": {},
+                    "x": -760,
+                    "y": 2440
+                },
+                "30": {
+                    "data": {
+                        "action": "run query",
+                        "actionType": "investigate",
+                        "advanced": {
+                            "customName": "not quarantined not critical Run query g",
+                            "customNameId": 0,
+                            "description": "not quarantined not critical Run query get number of host\nwith the same\nsignature",
+                            "join": [],
+                            "note": "not quarantined not critical Run query get number of host\nwith the same\nsignature"
+                        },
+                        "connector": "Splunk",
+                        "connectorConfigs": [
+                            "splunk es asset"
+                        ],
+                        "connectorId": "91883aa8-9c81-470b-97a1-5d8f7995f560",
+                        "connectorVersion": "v1",
+                        "functionId": 1,
+                        "functionName": "not_quarantined_not_critical_run_query_g",
+                        "id": "30",
+                        "parameters": {
+                            "command": "search",
+                            "display": "",
+                            "parse_only": "",
+                            "query": "not_quarantined_not_critical_format_data:formatted_data"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "query"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "30",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 840,
+                    "y": 1680
+                },
+                "31": {
+                    "data": {
+                        "advanced": {
+                            "customName": "not quarantined not critical Check numbe",
+                            "customNameId": 0,
+                            "description": "not quarantined not critical Check number of hosts with the same signature",
+                            "join": [],
+                            "note": "not quarantined not critical Check number of hosts with the same signature"
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": ">=",
+                                        "param": "not_quarantined_not_critical_run_query_g:action_result.summary.total_events",
+                                        "value": "10"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 5,
+                        "functionName": "not_quarantined_not_critical_check_numbe",
+                        "id": "31",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "31",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 680,
+                    "y": 1960
+                },
+                "32": {
+                    "data": {
+                        "advanced": {
+                            "customName": "not quarantined no containment Filter si",
+                            "customNameId": 0,
+                            "description": "not quarantined no containment Filter\nsignature from \ncontainer",
+                            "join": [],
+                            "note": "not quarantined no containment Filter\nsignature from \ncontainer"
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "!=",
+                                        "param": "artifact:*.cef.signature",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "logic": "and"
+                            }
+                        ],
+                        "functionId": 7,
+                        "functionName": "not_quarantined_no_containment_filter_si",
+                        "id": "32",
+                        "type": "filter"
+                    },
+                    "errors": {},
+                    "id": "32",
+                    "type": "filter",
+                    "warnings": {},
+                    "x": 80,
+                    "y": 1300
+                },
+                "33": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionId": 22,
+                        "functionName": "add_note_22",
+                        "id": "33",
+                        "type": "utility",
+                        "utilities": {
+                            "add_note": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "description": "",
+                                        "label": "title",
+                                        "name": "title",
+                                        "placeholder": "Enter a note title",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "description": "",
+                                        "label": "content",
+                                        "name": "content",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "choices": [
+                                            "markdown",
+                                            "html"
+                                        ],
+                                        "default": "markdown",
+                                        "description": "",
+                                        "label": "note format",
+                                        "name": "note_format",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "dropdown",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    },
+                                    {
+                                        "default": "general",
+                                        "hidden": true,
+                                        "name": "note_type",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "author",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "event_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "task_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "trace",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "add note",
+                                "name": "add_note"
+                            }
+                        },
+                        "values": {
+                            "add_note": {
+                                "_internal": [
+                                    "container",
+                                    "note_type",
+                                    "author",
+                                    "event_id",
+                                    "task_id",
+                                    "trace"
+                                ],
+                                "content": "not_quarantined_malware_detected_on_serv:custom_function:criticalDevice",
+                                "note_format": "markdown",
+                                "title": "device note critcal"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "33",
+                    "tab": "apis",
+                    "type": "utility",
+                    "warnings": {},
+                    "x": -120,
+                    "y": 420
+                },
+                "34": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "artifact:*.cef.sourceAddress_malicious",
+                                        "value": "True"
+                                    },
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "artifact:*.cef.destinationAddress_malicious",
+                                        "value": "True"
+                                    },
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "artifact:*.cef.requestURL_malicious",
+                                        "value": "True"
+                                    },
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "artifact:*.cef.fileHash_malicious",
+                                        "value": "True"
+                                    },
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "in",
+                                        "param": "indicator_malicious",
+                                        "value": "artifact:*.cef.tags"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "or",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 15,
+                        "functionName": "decision_15",
+                        "id": "34",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "34",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 800,
+                    "y": 380
+                },
+                "35": {
+                    "data": {
+                        "advanced": {
+                            "customName": "not quarantined Filter signature from  c",
+                            "customNameId": 0,
+                            "description": "not quarantined Filter\nsignature from \ncontainer",
+                            "join": [],
+                            "notRequiredJoins": [
+                                "playbook_local_ktb_malware_contain_playbook_1",
+                                "playbook_local_ktb_approve_playbook_2"
+                            ],
+                            "note": "not quarantined Filter\nsignature from \ncontainer"
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "!=",
+                                        "param": "artifact:*.cef.signature",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "logic": "and"
+                            }
+                        ],
+                        "functionId": 3,
+                        "functionName": "not_quarantined_Filter_signature_from_c",
+                        "id": "35",
+                        "type": "filter"
+                    },
+                    "errors": {},
+                    "id": "35",
+                    "type": "filter",
+                    "warnings": {},
+                    "x": 960,
+                    "y": 1200
+                },
+                "36": {
+                    "data": {
+                        "advanced": {
+                            "customName": "playbook_local_KTB_Approve_Playbook_2",
+                            "join": []
+                        },
+                        "functionId": 2,
+                        "functionName": "playbook_local_ktb_approve_playbook_2",
+                        "id": "36",
+                        "inputs": {},
+                        "playbookName": "KTB Approve Playbook_modern",
+                        "playbookRepo": 3,
+                        "playbookRepoName": "mfec_csoc_playbook",
+                        "playbookType": "automation",
+                        "synchronous": true,
+                        "type": "playbook"
+                    },
+                    "errors": {},
+                    "id": "36",
+                    "type": "playbook",
+                    "warnings": {},
+                    "x": 1360,
+                    "y": 300
+                },
+                "37": {
+                    "data": {
+                        "advanced": {
+                            "customName": "Check Malware detected on server or crit",
+                            "customNameId": 0,
+                            "description": "Check Malware\ndetected on\nserver or\ncritical\ndesktop",
+                            "join": [],
+                            "note": "Check Malware\ndetected on\nserver or\ncritical\ndesktop"
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "!=",
+                                        "param": "malre_detect_on_server:custom_function:criticalDevice",
+                                        "value": "[]"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 2,
+                        "functionName": "check_malware_detected_on_server_or_crit",
+                        "id": "37",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "37",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 1560,
+                    "y": -340
+                },
+                "38": {
+                    "data": {
+                        "advanced": {
+                            "join": [],
+                            "notRequiredJoins": [
+                                "playbook_local_ktb_master_playbook_1"
+                            ]
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "in",
+                                        "param": "stealthwatch",
+                                        "value": "artifact:*.cef.sourcetype"
+                                    },
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "forti",
+                                        "value": "artifact:*.cef.sourcetype"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "or",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 17,
+                        "functionName": "decision_17",
+                        "id": "38",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "38",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 800,
+                    "y": 180
+                },
+                "39": {
+                    "data": {
+                        "advanced": {
+                            "customName": "Filter out deviceHostname",
+                            "customNameId": 0,
+                            "description": "Filter out deviceHostname",
+                            "join": [],
+                            "note": "Filter out deviceHostname"
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "!=",
+                                        "param": "artifact:*.cef.deviceHostname",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "logic": "and"
+                            }
+                        ],
+                        "functionId": 6,
+                        "functionName": "filter_out_devicehostname",
+                        "id": "39",
+                        "type": "filter"
+                    },
+                    "errors": {},
+                    "id": "39",
+                    "type": "filter",
+                    "warnings": {},
+                    "x": 200,
+                    "y": 720
+                },
+                "4": {
+                    "data": {
+                        "advanced": {
+                            "customName": "not quarantined No containment  Assign A",
+                            "customNameId": 0,
+                            "description": "not quarantined No containment  Assign Analyst\nto make final decision",
+                            "join": [],
+                            "note": "not quarantined No containment  Assign Analyst\nto make final decision"
+                        },
+                        "functionId": 9,
+                        "functionName": "not_quarantined_No_containment_Assign_A",
+                        "id": "4",
+                        "type": "utility",
+                        "utilities": {
+                            "add_note": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "description": "",
+                                        "label": "title",
+                                        "name": "title",
+                                        "placeholder": "Enter a note title",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "description": "",
+                                        "label": "content",
+                                        "name": "content",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "choices": [
+                                            "markdown",
+                                            "html"
+                                        ],
+                                        "default": "markdown",
+                                        "description": "",
+                                        "label": "note format",
+                                        "name": "note_format",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "dropdown",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    },
+                                    {
+                                        "default": "general",
+                                        "hidden": true,
+                                        "name": "note_type",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "author",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "event_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "task_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "trace",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "add note",
+                                "name": "add_note"
+                            }
+                        },
+                        "values": {
+                            "add_note": {
+                                "_internal": [
+                                    "container",
+                                    "note_type",
+                                    "author",
+                                    "event_id",
+                                    "task_id",
+                                    "trace"
+                                ],
+                                "content": "Less than 10",
+                                "note_format": "markdown",
+                                "title": "Number of host affected with same signature"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "4",
+                    "tab": "apis",
+                    "type": "utility",
+                    "warnings": {},
+                    "x": 240,
+                    "y": 2380
+                },
+                "40": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "!=",
+                                        "param": "artifact:*.cef.deviceHostname",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 23,
+                        "functionName": "decision_23",
+                        "id": "40",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "40",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 1280,
+                    "y": -900
+                },
+                "41": {
+                    "customCode": "def malre_detect_on_server(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('malre_detect_on_server() called')\n    \n    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.deviceHostname', 'artifact:*.id'])\n    container_item_0 = [item[0] for item in container_data]\n\n    malre_detect_on_server__noncriticaldevice = None\n    malre_detect_on_server__criticaldevice = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    criticalDevice = []\n    noncriticalDevice = []\n    success, message, devicelist = phantom.get_list(list_name='Servers and Critical desktops')\n    if devicelist is not None:        \n        for item in container_item_0:\n            if devicelist is not None:\n                if not any(item in device for device in devicelist):\n                    noncriticalDevice.append(item)\n                else:\n                    criticalDevice.append(item)\n                \n    malre_detect_on_server__noncriticaldevice = noncriticalDevice\n    malre_detect_on_server__criticaldevice = criticalDevice\n    phantom.debug(criticalDevice)\n    phantom.debug(noncriticalDevice)\n    phantom.debug(\"---------------------------------\")  \n    \n    #########################################################################\n    #########################################################################\n    #########################################################################\n    #########################################################################\n    #########################################################################\n    #########################################################################\n    #########################################################################\n    #########################################################################\n    #########################################################################\n    #########################################################################\n    #########################################################################\n    #########################################################################\n    #########################################################################\n    #########################################################################\n    #########################################################################\n    #########################################################################\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='malre_detect_on_server:noncriticalDevice', value=json.dumps(malre_detect_on_server__noncriticaldevice))\n    phantom.save_run_data(key='malre_detect_on_server:criticalDevice', value=json.dumps(malre_detect_on_server__criticaldevice))\n    check_malware_detected_on_server_or_crit(container=container)\n\n    return",
+                    "data": {
+                        "advanced": {
+                            "customName": "Malre_detect_on_server",
+                            "customNameId": 0,
+                            "join": [],
+                            "notRequiredJoins": [
+                                "get_trajectory_by_hostname_1",
+                                "playbook_local_ktb_master_playbook_1"
+                            ]
+                        },
+                        "functionId": 4,
+                        "functionName": "malre_detect_on_server",
+                        "id": "41",
+                        "inputParameters": [
+                            "artifact:*.cef.deviceHostname"
+                        ],
+                        "outputVariables": [
+                            "noncriticalDevice",
+                            "criticalDevice"
+                        ],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "41",
+                    "type": "code",
+                    "userCode": "\n    criticalDevice = []\n    noncriticalDevice = []\n    success, message, devicelist = phantom.get_list(list_name='Servers and Critical desktops')\n    if devicelist is not None:        \n        for item in container_item_0:\n            if devicelist is not None:\n                if not any(item in device for device in devicelist):\n                    noncriticalDevice.append(item)\n                else:\n                    criticalDevice.append(item)\n                \n    malre_detect_on_server__noncriticaldevice = noncriticalDevice\n    malre_detect_on_server__criticaldevice = criticalDevice\n    phantom.debug(criticalDevice)\n    phantom.debug(noncriticalDevice)\n    phantom.debug(\"---------------------------------\")  \n    \n    #########################################################################\n    #########################################################################\n    #########################################################################\n    #########################################################################\n    #########################################################################\n    #########################################################################\n    #########################################################################\n    #########################################################################\n    #########################################################################\n    #########################################################################\n    #########################################################################\n    #########################################################################\n    #########################################################################\n    #########################################################################\n    #########################################################################\n    #########################################################################",
+                    "warnings": {},
+                    "x": 1560,
+                    "y": -580
+                },
+                "42": {
+                    "data": {
+                        "advanced": {
+                            "customName": "quarantine not critical Filter signature",
+                            "customNameId": 0,
+                            "description": "quarantined not critical Filter\nsignature from \ncontainer",
+                            "join": [],
+                            "notRequiredJoins": [
+                                "playbook_local_ktb_master_playbook_1",
+                                "get_trajectory_by_hostname_1"
+                            ],
+                            "note": "quarantined not critical Filter\nsignature from \ncontainer"
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "!=",
+                                        "param": "artifact:*.cef.signature",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "logic": "and"
+                            }
+                        ],
+                        "functionId": 4,
+                        "functionName": "quarantine_not_critical_filter_signature",
+                        "id": "42",
+                        "type": "filter"
+                    },
+                    "errors": {},
+                    "id": "42",
+                    "type": "filter",
+                    "warnings": {},
+                    "x": 1680,
+                    "y": 1220
+                },
+                "43": {
+                    "data": {
+                        "action": "get_trajectory_by_hostname",
+                        "actionType": "contain",
+                        "advanced": {
+                            "join": []
+                        },
+                        "connector": "Cisco CX AMP",
+                        "connectorConfigs": [
+                            "amp-test"
+                        ],
+                        "connectorId": "2698ece9-3ada-479e-99cc-f93f74606467",
+                        "connectorVersion": "v1",
+                        "functionId": 1,
+                        "functionName": "get_trajectory_by_hostname_1",
+                        "id": "43",
+                        "parameters": {
+                            "hostName": "artifact:*.cef.deviceHostname",
+                            "hostname": "artifact:*.cef.deviceHostname",
+                            "ip": "artifact:*.cef.sourceAddress"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "hostName"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "43",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 880,
+                    "y": -500
+                },
+                "44": {
+                    "data": {
+                        "advanced": {
+                            "customName": "Identify if case is closed",
+                            "customNameId": 0,
+                            "description": "ktb",
+                            "join": [],
+                            "note": "Identify if case is closed"
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "container:status",
+                                        "value": "closed"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 16,
+                        "functionName": "identify_if_case_is_closed",
+                        "id": "44",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "44",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": -240,
+                    "y": -800
+                },
+                "45": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "in",
+                                        "param": "contain_approved",
+                                        "value": "artifact:*.tags"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 25,
+                        "functionName": "decision_25",
+                        "id": "45",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "45",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 1360,
+                    "y": 560
+                },
+                "46": {
+                    "data": {
+                        "advanced": {
+                            "join": [],
+                            "notRequiredJoins": [
+                                "playbook_local_ktb_master_playbook_1"
+                            ]
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "in",
+                                        "param": "Address_blocked",
+                                        "value": "artifact:*.tags"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 24,
+                        "functionName": "decision_24",
+                        "id": "46",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "46",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 1280,
+                    "y": 1020
+                },
+                "47": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionId": 27,
+                        "functionName": "set_status_27",
+                        "id": "47",
+                        "type": "utility",
+                        "utilities": {
+                            "set_status": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "choices": "notableStatus",
+                                        "description": "",
+                                        "label": "status",
+                                        "name": "status",
+                                        "placeholder": "Select status",
+                                        "renderType": "dropdown",
+                                        "required": true
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "trace",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "set status",
+                                "name": "set_status",
+                                "refreshNotableData": true
+                            }
+                        },
+                        "values": {
+                            "set_status": {
+                                "_internal": [
+                                    "container",
+                                    "trace"
+                                ],
+                                "status": "resolved"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "47",
+                    "tab": "apis",
+                    "type": "utility",
+                    "warnings": {},
+                    "x": 1280,
+                    "y": 1240
+                },
+                "48": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionId": 20,
+                        "functionName": "add_note_20",
+                        "id": "48",
+                        "type": "utility",
+                        "utilities": {
+                            "add_note": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "description": "",
+                                        "label": "title",
+                                        "name": "title",
+                                        "placeholder": "Enter a note title",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "description": "",
+                                        "label": "content",
+                                        "name": "content",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "choices": [
+                                            "markdown",
+                                            "html"
+                                        ],
+                                        "default": "markdown",
+                                        "description": "",
+                                        "label": "note format",
+                                        "name": "note_format",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "dropdown",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    },
+                                    {
+                                        "default": "general",
+                                        "hidden": true,
+                                        "name": "note_type",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "author",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "event_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "task_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "trace",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "add note",
+                                "name": "add_note"
+                            }
+                        },
+                        "values": {
+                            "add_note": {
+                                "_internal": [
+                                    "container",
+                                    "note_type",
+                                    "author",
+                                    "event_id",
+                                    "task_id",
+                                    "trace"
+                                ],
+                                "content": "Non-Contained Flow",
+                                "note_format": "markdown",
+                                "title": "Non-Contained Notes"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "48",
+                    "tab": "apis",
+                    "type": "utility",
+                    "warnings": {},
+                    "x": 120,
+                    "y": -200
+                },
+                "49": {
+                    "data": {
+                        "advanced": {
+                            "customName": "Is Malware quarantined based on action",
+                            "customNameId": 0,
+                            "description": "Is\nMalware\nquarantined\nbased on\n\u2018action\u2019 field in\nnotable",
+                            "join": [],
+                            "note": "Is\nMalware\nquarantined\nbased on\n\u2018action\u2019 field in\nnotable"
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "not in",
+                                        "param": "device_quarantined",
+                                        "value": "artifact:*.tags"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 1,
+                        "functionName": "is_malware_quarantined_based_on_action",
+                        "id": "49",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "49",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 560,
+                    "y": -160
+                },
+                "5": {
+                    "data": {
+                        "advanced": {
+                            "customName": "quarantined not critical  Assign Analyst",
+                            "customNameId": 0,
+                            "description": "quarantined not critical  Assign Analyst\nto make final decision",
+                            "join": [],
+                            "note": "quarantined not critical  Assign Analyst\nto make final decision"
+                        },
+                        "functionId": 5,
+                        "functionName": "quarantined_not_critical_Assign_Analyst",
+                        "id": "5",
+                        "type": "utility",
+                        "utilities": {
+                            "add_note": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "description": "",
+                                        "label": "title",
+                                        "name": "title",
+                                        "placeholder": "Enter a note title",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "description": "",
+                                        "label": "content",
+                                        "name": "content",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "choices": [
+                                            "markdown",
+                                            "html"
+                                        ],
+                                        "default": "markdown",
+                                        "description": "",
+                                        "label": "note format",
+                                        "name": "note_format",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "dropdown",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    },
+                                    {
+                                        "default": "general",
+                                        "hidden": true,
+                                        "name": "note_type",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "author",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "event_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "task_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "trace",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "add note",
+                                "name": "add_note"
+                            }
+                        },
+                        "values": {
+                            "add_note": {
+                                "_internal": [
+                                    "container",
+                                    "note_type",
+                                    "author",
+                                    "event_id",
+                                    "task_id",
+                                    "trace"
+                                ],
+                                "content": "Less than 10",
+                                "note_format": "markdown",
+                                "title": "Number of hosts with same signature"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "5",
+                    "tab": "apis",
+                    "type": "utility",
+                    "warnings": {},
+                    "x": 1880,
+                    "y": 2360
+                },
+                "50": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "in",
+                                        "param": "Address_blocked",
+                                        "value": "artifact:*.tags"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 21,
+                        "functionName": "decision_21",
+                        "id": "50",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "50",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 800,
+                    "y": 620
+                },
+                "51": {
+                    "data": {
+                        "advanced": {
+                            "customName": "playbook_local_NPLOYWON_TEST_PLAYBOOK_MASTER_1",
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "playbook_local_NPLOYWON_TEST_PLAYBOOK_MASTER_1",
+                        "id": "51",
+                        "inputs": {},
+                        "playbookName": "KTB Master Playbook_modern",
+                        "playbookRepo": 3,
+                        "playbookRepoName": "mfec_csoc_playbook",
+                        "playbookType": "automation",
+                        "synchronous": true,
+                        "type": "playbook"
+                    },
+                    "errors": {},
+                    "id": "51",
+                    "type": "playbook",
+                    "warnings": {},
+                    "x": -240,
+                    "y": -1040
+                },
+                "52": {
+                    "data": {
+                        "advanced": {
+                            "customName": "playbook_local_NPLOYWON_TEST_CHILD_MALWARE_1",
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "playbook_local_NPLOYWON_TEST_CHILD_MALWARE_1",
+                        "id": "52",
+                        "inputs": {},
+                        "playbookName": "KTB Malware Contain Playbook_modern",
+                        "playbookRepo": 3,
+                        "playbookRepoName": "mfec_csoc_playbook",
+                        "playbookType": "automation",
+                        "synchronous": true,
+                        "type": "playbook"
+                    },
+                    "errors": {},
+                    "id": "52",
+                    "type": "playbook",
+                    "warnings": {},
+                    "x": 1320,
+                    "y": 760
+                },
+                "6": {
+                    "data": {
+                        "advanced": {
+                            "customName": "quarantined not critical Set severity to",
+                            "customNameId": 0,
+                            "description": "quarantined not critical Set severity to\nMedium",
+                            "join": [],
+                            "note": "quarantined not critical Set severity to\nMedium"
+                        },
+                        "functionId": 6,
+                        "functionName": "quarantined_not_critical_set_severity_to",
+                        "id": "6",
+                        "type": "utility",
+                        "utilities": {
+                            "set_severity": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "choices": "notableSeverity",
+                                        "description": "",
+                                        "label": "severity",
+                                        "name": "severity",
+                                        "placeholder": "Select severity",
+                                        "renderType": "dropdown",
+                                        "required": true
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "set severity",
+                                "name": "set_severity",
+                                "refreshNotableData": true
+                            }
+                        },
+                        "values": {
+                            "set_severity": {
+                                "_internal": [
+                                    "container"
+                                ],
+                                "severity": "medium"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "6",
+                    "tab": "apis",
+                    "type": "utility",
+                    "warnings": {},
+                    "x": 1560,
+                    "y": 2460
+                },
+                "7": {
+                    "data": {
+                        "action": "run query",
+                        "actionType": "investigate",
+                        "advanced": {
+                            "customName": "quarantined not critical Run query get n",
+                            "customNameId": 0,
+                            "description": "quarantined not critical Run query get number of host\nwith the same\nsignature",
+                            "join": [],
+                            "note": "quarantined not critical Run query get number of host\nwith the same\nsignature"
+                        },
+                        "connector": "Splunk",
+                        "connectorConfigs": [
+                            "splunk es asset"
+                        ],
+                        "connectorId": "91883aa8-9c81-470b-97a1-5d8f7995f560",
+                        "connectorVersion": "v1",
+                        "functionId": 2,
+                        "functionName": "quarantined_not_critical_run_query_get_n",
+                        "id": "7",
+                        "parameters": {
+                            "command": "search",
+                            "display": "",
+                            "parse_only": "",
+                            "query": "quarantined_not_critical_format_data_to:formatted_data"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "query"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "7",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 1680,
+                    "y": 1660
+                },
+                "8": {
+                    "data": {
+                        "advanced": {
+                            "customName": "not quarantined No containment Check num",
+                            "customNameId": 0,
+                            "description": "not quarantined No containment Check number of hosts with the same signature",
+                            "join": [],
+                            "note": "not quarantined No containment Check number of hosts with the same signature"
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": ">=",
+                                        "param": "not_quarantined_no_containment_run_query:action_result.summary.total_events",
+                                        "value": "10"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 12,
+                        "functionName": "not_quarantined_no_containment_check_num",
+                        "id": "8",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "8",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 80,
+                    "y": 1940
+                },
+                "9": {
+                    "data": {
+                        "advanced": {
+                            "customName": "not quarantined No containment Format da",
+                            "customNameId": 0,
+                            "description": "not quarantined No containment Format data to\nRun Query",
+                            "join": [],
+                            "note": "not quarantined No containment Format data to\nRun Query",
+                            "separator": ", "
+                        },
+                        "functionId": 4,
+                        "functionName": "not_quarantined_no_containment_format_da",
+                        "id": "9",
+                        "parameters": [
+                            "artifact:*.cef.signature"
+                        ],
+                        "template": "index=* sourcetype = kaspersky:gnrl OR sourcetype = *cisco:amp* OR sourcetype = mcafee*  earliest=-8h@h latest=now\n| search \"{0}\"\n| dedup dest",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "9",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 80,
+                    "y": 1400
+                }
+            },
+            "notes": "Inputs:\nAutomatically triggered by creation of container based on notable event being forwarded by Splunk\nEnterprise\n\nInteractions:\nPhantom, Splunk, HP Service Manager\n\nActions:\nCall playbook, run query, create incident\n\nArtifacts:\nP1: Call triage playbook, make decision to assign to analyst or create incident",
+            "origin": {
+                "playbook_id": 235,
+                "playbook_name": "PLAYBOOK-INVESTIGATE-INCIDENT-BOTNET-01",
+                "playbook_repo_id": 3,
+                "playbook_repo_name": "mfec_csoc_playbook"
+            }
+        },
+        "input_spec": null,
+        "output_spec": null,
+        "playbook_type": "automation",
+        "python_version": "3",
+        "schema": "5.0.10",
+        "version": "4.10.7.63984"
+    },
+    "create_time": "2025-03-27T15:21:05.225056+00:00",
+    "draft_mode": false,
+    "labels": [
+        "botnet"
+    ],
+    "tags": []
+}
