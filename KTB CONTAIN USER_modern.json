@@ -1,0 +1,569 @@
+{
+    "blockly": false,
+    "blockly_xml": "<xml></xml>",
+    "category": "Uncategorized",
+    "coa": {
+        "data": {
+            "description": "",
+            "edges": [
+                {
+                    "id": "port_0_to_port_2",
+                    "sourceNode": "0",
+                    "sourcePort": "0_out",
+                    "targetNode": "2",
+                    "targetPort": "2_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_2_to_port_1",
+                    "sourceNode": "2",
+                    "sourcePort": "2_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_2_to_port_3",
+                    "sourceNode": "2",
+                    "sourcePort": "2_out",
+                    "targetNode": "3",
+                    "targetPort": "3_in"
+                },
+                {
+                    "id": "port_3_to_port_7",
+                    "sourceNode": "3",
+                    "sourcePort": "3_out",
+                    "targetNode": "7",
+                    "targetPort": "7_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_7_to_port_9",
+                    "sourceNode": "7",
+                    "sourcePort": "7_out",
+                    "targetNode": "9",
+                    "targetPort": "9_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_7_to_port_8",
+                    "sourceNode": "7",
+                    "sourcePort": "7_out",
+                    "targetNode": "8",
+                    "targetPort": "8_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 2
+                        }
+                    ],
+                    "id": "port_7_to_port_10",
+                    "sourceNode": "7",
+                    "sourcePort": "7_out",
+                    "targetNode": "10",
+                    "targetPort": "10_in"
+                },
+                {
+                    "id": "port_4_to_port_1",
+                    "sourceNode": "4",
+                    "sourcePort": "4_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_9_to_port_6",
+                    "sourceNode": "9",
+                    "sourcePort": "9_out",
+                    "targetNode": "6",
+                    "targetPort": "6_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_6_to_port_4",
+                    "sourceNode": "6",
+                    "sourcePort": "6_out",
+                    "targetNode": "4",
+                    "targetPort": "4_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_6_to_port_5",
+                    "sourceNode": "6",
+                    "sourcePort": "6_out",
+                    "targetNode": "5",
+                    "targetPort": "5_in"
+                },
+                {
+                    "id": "port_5_to_port_1",
+                    "sourceNode": "5",
+                    "sourcePort": "5_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_8_to_port_6",
+                    "sourceNode": "8",
+                    "sourcePort": "8_out",
+                    "targetNode": "6",
+                    "targetPort": "6_in"
+                },
+                {
+                    "id": "port_10_to_port_6",
+                    "sourceNode": "10",
+                    "sourcePort": "10_out",
+                    "targetNode": "6",
+                    "targetPort": "6_in"
+                }
+            ],
+            "hash": "4deed5b1668b8102abf7ea3d22aa2c503898ce98",
+            "nodes": {
+                "0": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_start",
+                        "id": "0",
+                        "type": "start"
+                    },
+                    "errors": {},
+                    "id": "0",
+                    "type": "start",
+                    "warnings": {},
+                    "x": 200,
+                    "y": 100
+                },
+                "1": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_finish",
+                        "id": "1",
+                        "type": "end"
+                    },
+                    "errors": {},
+                    "id": "1",
+                    "type": "end",
+                    "warnings": {},
+                    "x": 240,
+                    "y": 1620
+                },
+                "10": {
+                    "data": {
+                        "action": "disable account",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "disable account ktbcs",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "connector": "AD LDAP",
+                        "connectorConfigs": [
+                            "csoc ad ldap asset containment"
+                        ],
+                        "connectorId": "a5730e5d-a396-4695-92c2-35ff391aaf45",
+                        "connectorVersion": "v1",
+                        "functionId": 2,
+                        "functionName": "disable_account_ktbcs",
+                        "id": "10",
+                        "parameters": {
+                            "attributes": "samaccountname;mail;userprincipalname;distinguishedname",
+                            "filter": "format_1:formatted_data",
+                            "search_base": "",
+                            "use_samaccountname": "True",
+                            "user": "artifact:*.cef.destinationUserName"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "user"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "10",
+                    "type": "action",
+                    "warnings": {},
+                    "x": -120,
+                    "y": 900
+                },
+                "2": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "!=",
+                                        "param": "artifact:*.cef.destinationUserName",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 2,
+                        "functionName": "decision_2",
+                        "id": "2",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "2",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 280
+                },
+                "3": {
+                    "data": {
+                        "advanced": {
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 1,
+                        "functionName": "format_1",
+                        "id": "3",
+                        "parameters": [
+                            "artifact:*.cef.destinationUserName"
+                        ],
+                        "template": "(samaccountname={0})",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "3",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 440
+                },
+                "4": {
+                    "customCode": "def set_artifact_contain_successful(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('set_artifact_contain_successful() called')\n    \n    container_data = phantom.collect2(container=container, datapath=['artifact:*.id', 'artifact:*.id'])\n    container_item_0 = [item[0] for item in container_data]\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    parameters = []\n    \n    cef_json = {\"destinationUserName_ContainResult\" : \"True\" }\n                    \n    # build parameters list for 'update_result' call\n    parameters.append({\n    'artifact_id': container_item_0[0],\n    'name': \"\",\n    'label': \"\",\n    'severity': \"\",\n    'cef_json': cef_json,\n    'cef_types_json': \"\",\n    'tags': \"\",\n    'overwrite': \"\",\n    'artifact_json': \"\",\n    })\n    \n    phantom.act(action=\"update artifact\", parameters=parameters, assets=['phantom asset'], name=\"update_artifact_update_result\")\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    return",
+                    "data": {
+                        "advanced": {
+                            "customName": "set artifact contain successful",
+                            "customNameId": 0,
+                            "join": [],
+                            "notRequiredJoins": [
+                                "disable_account_csoc",
+                                "disable_account_ktbcs",
+                                "disable_account_ktb"
+                            ]
+                        },
+                        "functionId": 1,
+                        "functionName": "set_artifact_contain_successful",
+                        "id": "4",
+                        "inputParameters": [
+                            "artifact:*.id"
+                        ],
+                        "outputVariables": [],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "4",
+                    "type": "code",
+                    "userCode": "\n    # Write your custom code here...\n    parameters = []\n    \n    cef_json = {\"destinationUserName_ContainResult\" : \"True\" }\n                    \n    # build parameters list for 'update_result' call\n    parameters.append({\n    'artifact_id': container_item_0[0],\n    'name': \"\",\n    'label': \"\",\n    'severity': \"\",\n    'cef_json': cef_json,\n    'cef_types_json': \"\",\n    'tags': \"\",\n    'overwrite': \"\",\n    'artifact_json': \"\",\n    })\n    \n    phantom.act(action=\"update artifact\", parameters=parameters, assets=['phantom asset'], name=\"update_artifact_update_result\")\n    ################################################################################\n    ################################################################################\n    ################################################################################",
+                    "warnings": {},
+                    "x": 120,
+                    "y": 1320
+                },
+                "5": {
+                    "customCode": "def set_artifact_contain_unsuccessful(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('set_artifact_contain_unsuccessful() called')\n    \n    container_data = phantom.collect2(container=container, datapath=['artifact:*.id', 'artifact:*.id'])\n    container_item_0 = [item[0] for item in container_data]\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    parameters = []\n    \n    cef_json = {\"destinationUserName_ContainResult\" : \"False\" }\n                    \n    # build parameters list for 'update_result' call\n    parameters.append({\n    'artifact_id': container_item_0[0],\n    'name': \"\",\n    'label': \"\",\n    'severity': \"\",\n    'cef_json': cef_json,\n    'cef_types_json': \"\",\n    'tags': \"\",\n    'overwrite': \"\",\n    'artifact_json': \"\",\n    })\n    \n    phantom.act(action=\"update artifact\", parameters=parameters, assets=['phantom asset'], name=\"update_artifact_update_result\")\n    ################################################################################\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    return",
+                    "data": {
+                        "advanced": {
+                            "customName": "set artifact contain unsuccessful",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "functionId": 2,
+                        "functionName": "set_artifact_contain_unsuccessful",
+                        "id": "5",
+                        "inputParameters": [
+                            "artifact:*.id"
+                        ],
+                        "outputVariables": [],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "5",
+                    "type": "code",
+                    "userCode": "\n    # Write your custom code here...\n    parameters = []\n    \n    cef_json = {\"destinationUserName_ContainResult\" : \"False\" }\n                    \n    # build parameters list for 'update_result' call\n    parameters.append({\n    'artifact_id': container_item_0[0],\n    'name': \"\",\n    'label': \"\",\n    'severity': \"\",\n    'cef_json': cef_json,\n    'cef_types_json': \"\",\n    'tags': \"\",\n    'overwrite': \"\",\n    'artifact_json': \"\",\n    })\n    \n    phantom.act(action=\"update artifact\", parameters=parameters, assets=['phantom asset'], name=\"update_artifact_update_result\")\n    ################################################################################",
+                    "warnings": {},
+                    "x": 400,
+                    "y": 1320
+                },
+                "6": {
+                    "data": {
+                        "advanced": {
+                            "join": [],
+                            "notRequiredJoins": [
+                                "disable_account_csoc",
+                                "disable_account_ktb",
+                                "disable_account_ktbcs"
+                            ]
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "disable_account_csoc:action_result.summary.account_status",
+                                        "value": "disabled"
+                                    },
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "disable_account_ktb:action_result.summary.account_status",
+                                        "value": "disabled"
+                                    },
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "disable_account_ktbcs:action_result.summary.account_status",
+                                        "value": "disabled"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "or",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 4,
+                        "functionName": "decision_4",
+                        "id": "6",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "6",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 120,
+                    "y": 1180
+                },
+                "7": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "artifact:*.cef.destinationUserName_AD",
+                                        "value": "CSOC AD"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "artifact:*.cef.destinationUserName_AD",
+                                        "value": "KTB AD"
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else If",
+                                "logic": "and",
+                                "type": "elif"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 2,
+                                        "op": "==",
+                                        "param": "artifact:*.cef.destinationUserName_AD",
+                                        "value": "KTBCS AD"
+                                    }
+                                ],
+                                "conditionIndex": 2,
+                                "display": "Else If",
+                                "logic": "and",
+                                "type": "elif"
+                            }
+                        ],
+                        "functionId": 3,
+                        "functionName": "decision_3",
+                        "id": "7",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "7",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 720
+                },
+                "8": {
+                    "data": {
+                        "action": "disable account",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "disable account ktb",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "connector": "AD LDAP",
+                        "connectorConfigs": [
+                            "csoc ad ldap asset containment"
+                        ],
+                        "connectorId": "a5730e5d-a396-4695-92c2-35ff391aaf45",
+                        "connectorVersion": "v1",
+                        "functionId": 3,
+                        "functionName": "disable_account_ktb",
+                        "id": "8",
+                        "parameters": {
+                            "attributes": "samaccountname;mail;userprincipalname;distinguishedname",
+                            "filter": "format_1:formatted_data",
+                            "search_base": "",
+                            "use_samaccountname": "True",
+                            "user": "artifact:*.cef.destinationUserName"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "user"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "8",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 400,
+                    "y": 900
+                },
+                "9": {
+                    "data": {
+                        "action": "disable account",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "disable account csoc",
+                            "customNameId": 0,
+                            "delayTime": 0.0,
+                            "join": []
+                        },
+                        "connector": "AD LDAP",
+                        "connectorConfigs": [
+                            "csoc ad ldap asset containment"
+                        ],
+                        "connectorId": "a5730e5d-a396-4695-92c2-35ff391aaf45",
+                        "connectorVersion": "v1",
+                        "functionId": 1,
+                        "functionName": "disable_account_csoc",
+                        "id": "9",
+                        "parameters": {
+                            "attributes": "sAMAccountName",
+                            "filter": "",
+                            "search_base": "",
+                            "use_samaccountname": "True",
+                            "user": "artifact:*.cef.destinationUserName"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "user"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "9",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 120,
+                    "y": 900
+                }
+            },
+            "notes": "",
+            "origin": {
+                "playbook_id": 161,
+                "playbook_name": "KTB CONTAIN USER",
+                "playbook_repo_id": 3,
+                "playbook_repo_name": "mfec_csoc_playbook"
+            }
+        },
+        "input_spec": null,
+        "output_spec": null,
+        "playbook_type": "automation",
+        "python_version": "3",
+        "schema": "5.0.10",
+        "version": "4.10.7.63984"
+    },
+    "create_time": "2025-03-27T15:21:02.494018+00:00",
+    "draft_mode": false,
+    "labels": [
+        "*"
+    ],
+    "tags": []
+}
