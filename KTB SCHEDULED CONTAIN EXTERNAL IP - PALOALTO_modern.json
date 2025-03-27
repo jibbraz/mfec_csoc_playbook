@@ -1,0 +1,408 @@
+{
+    "blockly": false,
+    "blockly_xml": "<xml></xml>",
+    "category": "Uncategorized",
+    "coa": {
+        "data": {
+            "description": "USE CASE: This playbook is used to contain the threat on External IP address in regular time set by Timer App",
+            "edges": [
+                {
+                    "id": "port_0_to_port_7",
+                    "sourceNode": "0",
+                    "sourcePort": "0_out",
+                    "targetNode": "7",
+                    "targetPort": "7_in"
+                },
+                {
+                    "id": "port_7_to_port_3",
+                    "sourceNode": "7",
+                    "sourcePort": "7_out",
+                    "targetNode": "3",
+                    "targetPort": "3_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_3_to_port_4",
+                    "sourceNode": "3",
+                    "sourcePort": "3_out",
+                    "targetNode": "4",
+                    "targetPort": "4_in"
+                },
+                {
+                    "id": "port_4_to_port_8",
+                    "sourceNode": "4",
+                    "sourcePort": "4_out",
+                    "targetNode": "8",
+                    "targetPort": "8_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_3_to_port_8",
+                    "sourceNode": "3",
+                    "sourcePort": "3_out",
+                    "targetNode": "8",
+                    "targetPort": "8_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_6_to_port_1",
+                    "sourceNode": "6",
+                    "sourcePort": "6_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_6_to_port_2",
+                    "sourceNode": "6",
+                    "sourcePort": "6_out",
+                    "targetNode": "2",
+                    "targetPort": "2_in"
+                },
+                {
+                    "id": "port_2_to_port_1",
+                    "sourceNode": "2",
+                    "sourcePort": "2_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_8_to_port_5",
+                    "sourceNode": "8",
+                    "sourcePort": "8_out",
+                    "targetNode": "5",
+                    "targetPort": "5_in"
+                },
+                {
+                    "id": "port_5_to_port_6",
+                    "sourceNode": "5",
+                    "sourcePort": "5_out",
+                    "targetNode": "6",
+                    "targetPort": "6_in"
+                }
+            ],
+            "globalCustomCode": "MAIN_PLAYBOOK_SRC_IP_FAILED = False",
+            "hash": "66eb6fa762688cf3f78c992449fbca5725bfcee0",
+            "nodes": {
+                "0": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_start",
+                        "id": "0",
+                        "type": "start"
+                    },
+                    "errors": {},
+                    "id": "0",
+                    "type": "start",
+                    "warnings": {},
+                    "x": 200,
+                    "y": 100
+                },
+                "1": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_finish",
+                        "id": "1",
+                        "type": "end"
+                    },
+                    "errors": {},
+                    "id": "1",
+                    "type": "end",
+                    "warnings": {},
+                    "x": 200,
+                    "y": 2060
+                },
+                "2": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "set_status_1",
+                        "id": "2",
+                        "type": "utility",
+                        "utilities": {
+                            "set_status": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "choices": "notableStatus",
+                                        "description": "",
+                                        "label": "status",
+                                        "name": "status",
+                                        "placeholder": "Select status",
+                                        "renderType": "dropdown",
+                                        "required": true
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "trace",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "set status",
+                                "name": "set_status",
+                                "refreshNotableData": true
+                            }
+                        },
+                        "values": {
+                            "set_status": {
+                                "_internal": [
+                                    "container",
+                                    "trace"
+                                ],
+                                "status": "open"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "2",
+                    "tab": "apis",
+                    "type": "utility",
+                    "warnings": {},
+                    "x": 440,
+                    "y": 1780
+                },
+                "3": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "container:status",
+                                        "value": "Open"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 1,
+                        "functionName": "decision_1",
+                        "id": "3",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "3",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 580
+                },
+                "4": {
+                    "customCode": "def flag_src_ip_failed(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('flag_src_ip_failed() called')\n    \n    input_parameter_0 = \"\"\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    global MAIN_PLAYBOOK_SRC_IP_FAILED\n    MAIN_PLAYBOOK_SRC_IP_FAILED = True\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n    join_playbook_local_KTB_CHILD_SCHEDULED_CONTAIN_EXTERNAL_IP_PALOALTO_DEST_1(container=container)\n\n    return",
+                    "data": {
+                        "advanced": {
+                            "customName": "Flag src IP failed",
+                            "customNameId": 0,
+                            "description": "Flag src IP failed",
+                            "join": [],
+                            "note": "Flag src IP failed"
+                        },
+                        "functionId": 1,
+                        "functionName": "flag_src_ip_failed",
+                        "id": "4",
+                        "inputParameters": [],
+                        "outputVariables": [],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "4",
+                    "type": "code",
+                    "userCode": "\n    # Write your custom code here...\n    global MAIN_PLAYBOOK_SRC_IP_FAILED\n    MAIN_PLAYBOOK_SRC_IP_FAILED = True\n\n",
+                    "warnings": {},
+                    "x": -200,
+                    "y": 800
+                },
+                "5": {
+                    "customCode": "def get_src_ip_containment_status(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('get_src_ip_containment_status() called')\n    \n    input_parameter_0 = \"\"\n\n    get_src_ip_containment_status__is_src_ip_contain_failed = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    global MAIN_PLAYBOOK_SRC_IP_FAILED\n    get_src_ip_containment_status__is_src_ip_contain_failed = MAIN_PLAYBOOK_SRC_IP_FAILED\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='get_src_ip_containment_status:is_src_ip_contain_failed', value=json.dumps(get_src_ip_containment_status__is_src_ip_contain_failed))\n    decision_2(container=container)\n\n    return",
+                    "data": {
+                        "advanced": {
+                            "customName": "Get src IP containment status",
+                            "customNameId": 0,
+                            "description": "Get src IP containment status",
+                            "join": [],
+                            "note": "Get src IP containment status"
+                        },
+                        "functionId": 2,
+                        "functionName": "get_src_ip_containment_status",
+                        "id": "5",
+                        "inputParameters": [],
+                        "outputVariables": [
+                            "is_src_ip_contain_failed"
+                        ],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "5",
+                    "type": "code",
+                    "userCode": "\n    # Write your custom code here...\n    global MAIN_PLAYBOOK_SRC_IP_FAILED\n    get_src_ip_containment_status__is_src_ip_contain_failed = MAIN_PLAYBOOK_SRC_IP_FAILED\n\n",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 1380
+                },
+                "6": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "get_src_ip_containment_status:custom_function:is_src_ip_contain_failed",
+                                        "value": "False"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 2,
+                        "functionName": "decision_2",
+                        "id": "6",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "6",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 1640
+                },
+                "7": {
+                    "data": {
+                        "advanced": {
+                            "customName": "playbook_local_KTB_CHILD_SCHEDULED_CONTAIN_EXTERNAL_IP_PALOALTO_SRC_1",
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "playbook_local_KTB_CHILD_SCHEDULED_CONTAIN_EXTERNAL_IP_PALOALTO_SRC_1",
+                        "id": "7",
+                        "inputs": {},
+                        "playbookName": "KTB CHILD SCHEDULED CONTAIN EXTERNAL IP - PALOALTO SRC_modern",
+                        "playbookRepo": 3,
+                        "playbookRepoName": "mfec_csoc_playbook",
+                        "playbookType": "automation",
+                        "synchronous": true,
+                        "type": "playbook"
+                    },
+                    "errors": {},
+                    "id": "7",
+                    "type": "playbook",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 300
+                },
+                "8": {
+                    "data": {
+                        "advanced": {
+                            "customName": "playbook_local_KTB_CHILD_SCHEDULED_CONTAIN_EXTERNAL_IP_PALOALTO_DEST_1",
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "playbook_local_KTB_CHILD_SCHEDULED_CONTAIN_EXTERNAL_IP_PALOALTO_DEST_1",
+                        "id": "8",
+                        "inputs": {},
+                        "playbookName": "KTB CHILD SCHEDULED CONTAIN EXTERNAL IP - PALOALTO DEST_modern",
+                        "playbookRepo": 3,
+                        "playbookRepoName": "mfec_csoc_playbook",
+                        "playbookType": "automation",
+                        "synchronous": true,
+                        "type": "playbook"
+                    },
+                    "errors": {},
+                    "id": "8",
+                    "joinCustomCode": "def join_playbook_local_KTB_CHILD_SCHEDULED_CONTAIN_EXTERNAL_IP_PALOALTO_DEST_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None):\n    phantom.debug('join_playbook_local_KTB_CHILD_SCHEDULED_CONTAIN_EXTERNAL_IP_PALOALTO_DEST_1() called')\n\n    # check if all connected incoming playbooks, actions, or custom functions are done i.e. have succeeded or failed\n    #if phantom.completed(playbook_names=['playbook_local_KTB_CHILD_SCHEDULED_CONTAIN_EXTERNAL_IP_PALOALTO_SRC_1']):\n        \n    # call connected block \"playbook_local_KTB_CHILD_SCHEDULED_CONTAIN_EXTERNAL_IP_PALOALTO_DEST_1\"\n    playbook_local_KTB_CHILD_SCHEDULED_CONTAIN_EXTERNAL_IP_PALOALTO_DEST_1(container=container, handle=handle)\n    \n    return",
+                    "type": "playbook",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 1100
+                }
+            },
+            "notes": "",
+            "origin": {
+                "playbook_id": 169,
+                "playbook_name": "KTB SCHEDULED CONTAIN EXTERNAL IP - PALOALTO",
+                "playbook_repo_id": 3,
+                "playbook_repo_name": "mfec_csoc_playbook"
+            }
+        },
+        "input_spec": null,
+        "output_spec": null,
+        "playbook_type": "automation",
+        "python_version": "3",
+        "schema": "5.0.10",
+        "version": "4.10.7.63984"
+    },
+    "create_time": "2025-03-27T15:21:02.756427+00:00",
+    "draft_mode": false,
+    "labels": [
+        "timer-daily-paloalto"
+    ],
+    "tags": []
+}
