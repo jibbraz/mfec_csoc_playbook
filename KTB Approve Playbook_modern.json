@@ -1,0 +1,924 @@
+{
+    "blockly": false,
+    "blockly_xml": "<xml></xml>",
+    "category": "Uncategorized",
+    "coa": {
+        "data": {
+            "description": "USE CASE: This playbook is used to contain the threat",
+            "edges": [
+                {
+                    "id": "port_14_to_port_8",
+                    "sourceNode": "14",
+                    "sourcePort": "14_out",
+                    "targetNode": "8",
+                    "targetPort": "8_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_8_to_port_3",
+                    "sourceNode": "8",
+                    "sourcePort": "8_out",
+                    "targetNode": "3",
+                    "targetPort": "3_in"
+                },
+                {
+                    "id": "port_11_to_port_12",
+                    "sourceNode": "11",
+                    "sourcePort": "11_out",
+                    "targetNode": "12",
+                    "targetPort": "12_in"
+                },
+                {
+                    "id": "port_4_to_port_1",
+                    "sourceNode": "4",
+                    "sourcePort": "4_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_0_to_port_10",
+                    "sourceNode": "0",
+                    "sourcePort": "0_out",
+                    "targetNode": "10",
+                    "targetPort": "10_in"
+                },
+                {
+                    "id": "port_2_to_port_1",
+                    "sourceNode": "2",
+                    "sourcePort": "2_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_3_to_port_4",
+                    "sourceNode": "3",
+                    "sourcePort": "3_out",
+                    "targetNode": "4",
+                    "targetPort": "4_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_10_to_port_2",
+                    "sourceNode": "10",
+                    "sourcePort": "10_out",
+                    "targetNode": "2",
+                    "targetPort": "2_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_10_to_port_11",
+                    "sourceNode": "10",
+                    "sourcePort": "10_out",
+                    "targetNode": "11",
+                    "targetPort": "11_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_3_to_port_5",
+                    "sourceNode": "3",
+                    "sourcePort": "3_out",
+                    "targetNode": "5",
+                    "targetPort": "5_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_8_to_port_6",
+                    "sourceNode": "8",
+                    "sourcePort": "8_out",
+                    "targetNode": "6",
+                    "targetPort": "6_in"
+                },
+                {
+                    "id": "port_12_to_port_13",
+                    "sourceNode": "12",
+                    "sourcePort": "12_out",
+                    "targetNode": "13",
+                    "targetPort": "13_in"
+                },
+                {
+                    "id": "port_13_to_port_14",
+                    "sourceNode": "13",
+                    "sourcePort": "13_out",
+                    "targetNode": "14",
+                    "targetPort": "14_in"
+                },
+                {
+                    "id": "port_5_to_port_7",
+                    "sourceNode": "5",
+                    "sourcePort": "5_out",
+                    "targetNode": "7",
+                    "targetPort": "7_in"
+                },
+                {
+                    "id": "port_7_to_port_1",
+                    "sourceNode": "7",
+                    "sourcePort": "7_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_6_to_port_9",
+                    "sourceNode": "6",
+                    "sourcePort": "6_out",
+                    "targetNode": "9",
+                    "targetPort": "9_in"
+                },
+                {
+                    "id": "port_9_to_port_1",
+                    "sourceNode": "9",
+                    "sourcePort": "9_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                }
+            ],
+            "globalCustomCode": "import ipaddress",
+            "hash": "554b06f5a08dd407e95e11056ed794dd3f68e20a",
+            "nodes": {
+                "0": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_start",
+                        "id": "0",
+                        "type": "start"
+                    },
+                    "errors": {},
+                    "id": "0",
+                    "type": "start",
+                    "warnings": {},
+                    "x": -680,
+                    "y": -1140
+                },
+                "1": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_finish",
+                        "id": "1",
+                        "type": "end"
+                    },
+                    "errors": {},
+                    "id": "1",
+                    "type": "end",
+                    "warnings": {},
+                    "x": 120,
+                    "y": 2380
+                },
+                "10": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "in",
+                                        "param": "contain_approved",
+                                        "value": "artifact:*.tags"
+                                    },
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "in",
+                                        "param": "device_quarantined",
+                                        "value": "artifact:*.tags"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "or",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 20,
+                        "functionName": "decision_20",
+                        "id": "10",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "10",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 400,
+                    "y": -900
+                },
+                "11": {
+                    "data": {
+                        "advanced": {
+                            "customName": "playbook_local_KTB_UC_SEND_EMAIL_CONTAIN_APPROVAL_1",
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "playbook_local_ktb_uc_send_email_contain_approval_1",
+                        "id": "11",
+                        "inputs": {},
+                        "playbookName": "KTB UC SEND EMAIL CONTAIN APPROVAL_modern",
+                        "playbookRepo": 3,
+                        "playbookRepoName": "mfec_csoc_playbook",
+                        "playbookType": "automation",
+                        "synchronous": true,
+                        "type": "playbook"
+                    },
+                    "errors": {},
+                    "id": "11",
+                    "type": "playbook",
+                    "warnings": {},
+                    "x": -720,
+                    "y": -480
+                },
+                "12": {
+                    "data": {
+                        "advanced": {
+                            "customName": "cf_local_Containment_Precheck_1",
+                            "join": []
+                        },
+                        "customFunction": {
+                            "draftMode": false,
+                            "name": "Containment_Precheck",
+                            "repoName": "local"
+                        },
+                        "functionId": 1,
+                        "functionName": "cf_local_containment_precheck_1",
+                        "id": "12",
+                        "type": "utility",
+                        "utilities": {
+                            "Containment_Precheck": {
+                                "description": "",
+                                "fields": [],
+                                "label": "containment_precheck",
+                                "name": "containment_precheck"
+                            }
+                        },
+                        "utilityType": "custom_function",
+                        "values": {
+                            "Containment_Precheck": {}
+                        }
+                    },
+                    "errors": {},
+                    "id": "12",
+                    "tab": "customFunctions",
+                    "type": "utility",
+                    "userCode": "    # Write your custom code here...",
+                    "warnings": {},
+                    "x": -640,
+                    "y": -120
+                },
+                "13": {
+                    "customCode": "def custom_function_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('custom_function_1() called')\n    \n    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.host_mac', 'artifact:*.cef.deviceHostname', 'artifact:*.cef.destinationAddress', 'artifact:*.id'])\n    container_item_0 = [item[0] for item in container_data]\n    container_item_1 = [item[1] for item in container_data]\n    container_item_2 = [item[2] for item in container_data]\n\n    custom_function_1__who_was_contained = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n    tempstr = \"\" \n    phantom.debug(container_item_0[0])\n    phantom.debug('=-------------==')\n    phantom.debug(container_item_1[0])\n    \n    if container_item_0[0] != None :\n       tempstr = \"Host Mac Address \" + container_item_0[0]\n    elif container_item_1[0] != None :\n       tempstr = \"AMP host \" + container_item_1[0]\n    else :\n       tempstr = str(container_item_2[0])\n        \n    custom_function_1__who_was_contained = tempstr\n    \n    ###################################################\n    ###################################################\n    ###################################################\n    ###################################################\n    ###################################################\n    ###################################################\n    ###################################################\n    ###################################################\n    ###################################################\n    ###################################################\n    ###################################################\n    ###################################################\n    ###################################################\n    ###################################################\n    ###################################################\n    ###################################################\n    ###################################################\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='custom_function_1:who_was_contained', value=json.dumps(custom_function_1__who_was_contained))\n    Safety_check_before_Containment(container=container)\n\n    return",
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "custom_function_1",
+                        "id": "13",
+                        "inputParameters": [
+                            "artifact:*.cef.host_mac",
+                            "artifact:*.cef.deviceHostname",
+                            "artifact:*.cef.destinationAddress"
+                        ],
+                        "outputVariables": [
+                            "who_was_contained"
+                        ],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "13",
+                    "type": "code",
+                    "userCode": "    tempstr = \"\" \n    phantom.debug(container_item_0[0])\n    phantom.debug('=-------------==')\n    phantom.debug(container_item_1[0])\n    \n    if container_item_0[0] != None :\n       tempstr = \"Host Mac Address \" + container_item_0[0]\n    elif container_item_1[0] != None :\n       tempstr = \"AMP host \" + container_item_1[0]\n    else :\n       tempstr = str(container_item_2[0])\n        \n    custom_function_1__who_was_contained = tempstr\n    \n    ###################################################\n    ###################################################\n    ###################################################\n    ###################################################\n    ###################################################\n    ###################################################\n    ###################################################\n    ###################################################\n    ###################################################\n    ###################################################\n    ###################################################\n    ###################################################\n    ###################################################\n    ###################################################\n    ###################################################\n    ###################################################\n    ###################################################",
+                    "warnings": {},
+                    "x": -600,
+                    "y": 340
+                },
+                "14": {
+                    "data": {
+                        "advanced": {
+                            "customName": "Safety check before  Containment",
+                            "customNameId": 0,
+                            "description": "Safety check before executing Containment ",
+                            "join": [],
+                            "note": "Safety check before executing Containment ",
+                            "separator": ", "
+                        },
+                        "approver": {
+                            "type": "role",
+                            "value": "Tier2 Analyst"
+                        },
+                        "functionId": 1,
+                        "functionName": "Safety_check_before_Containment",
+                        "id": "14",
+                        "message": "***WARNING Event ID {0}*** \nThe host {1} may be compromised.  {2} will be isolated.\n\n\nDo you want to proceed with containment ?",
+                        "parameters": [
+                            "container:id",
+                            "artifact:*.cef.deviceHostname",
+                            "custom_function_1:custom_function:who_was_contained"
+                        ],
+                        "responseTime": 1.0,
+                        "responses": [
+                            {
+                                "responseOptions": [
+                                    "Yes",
+                                    "No"
+                                ],
+                                "responsePrompt": "",
+                                "responseType": "yes/no"
+                            }
+                        ],
+                        "type": "prompt"
+                    },
+                    "errors": {
+                        "responses": [
+                            {
+                                "responsePrompt": "Questions cannot be empty."
+                            }
+                        ]
+                    },
+                    "id": "14",
+                    "type": "prompt",
+                    "warnings": {},
+                    "x": 160,
+                    "y": -500
+                },
+                "2": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionId": 6,
+                        "functionName": "add_note_6",
+                        "id": "2",
+                        "type": "utility",
+                        "utilities": {
+                            "add_note": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "description": "",
+                                        "label": "title",
+                                        "name": "title",
+                                        "placeholder": "Enter a note title",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "description": "",
+                                        "label": "content",
+                                        "name": "content",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "choices": [
+                                            "markdown",
+                                            "html"
+                                        ],
+                                        "default": "markdown",
+                                        "description": "",
+                                        "label": "note format",
+                                        "name": "note_format",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "dropdown",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    },
+                                    {
+                                        "default": "general",
+                                        "hidden": true,
+                                        "name": "note_type",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "author",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "event_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "task_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "trace",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "add note",
+                                "name": "add_note"
+                            }
+                        },
+                        "values": {
+                            "add_note": {
+                                "_internal": [
+                                    "container",
+                                    "note_type",
+                                    "author",
+                                    "event_id",
+                                    "task_id",
+                                    "trace"
+                                ],
+                                "content": "Approved Or Contained it before.",
+                                "note_format": "markdown",
+                                "title": "Contain Approve Notes"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "2",
+                    "tab": "apis",
+                    "type": "utility",
+                    "warnings": {},
+                    "x": 1280,
+                    "y": 520
+                },
+                "3": {
+                    "data": {
+                        "advanced": {
+                            "customName": "Check containment decision",
+                            "customNameId": 0,
+                            "description": "Check containment decision",
+                            "join": [],
+                            "note": "Check containment decision"
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "Safety_check_before_Containment:action_result.summary.responses.0",
+                                        "value": "Yes"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 11,
+                        "functionName": "check_containment_decision",
+                        "id": "3",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "3",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 200,
+                    "y": -100
+                },
+                "4": {
+                    "data": {
+                        "advanced": {
+                            "customName": "cf_community_artifact_update_1",
+                            "join": []
+                        },
+                        "customFunction": {
+                            "draftMode": false,
+                            "name": "artifact_update",
+                            "repoName": "community"
+                        },
+                        "functionId": 1,
+                        "functionName": "cf_community_artifact_update_1",
+                        "id": "4",
+                        "type": "utility",
+                        "utilities": {
+                            "artifact_update": {
+                                "description": "Update an artifact with the specified attributes. All parameters are optional, except that cef_field and cef_value must both be provided if one is provided.",
+                                "fields": [
+                                    {
+                                        "dataTypes": [
+                                            "phantom artifact id"
+                                        ],
+                                        "description": "ID of the artifact to update, which is required.",
+                                        "inputType": "item",
+                                        "label": "artifact_id",
+                                        "name": "artifact_id",
+                                        "placeholder": "1234",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [],
+                                        "description": "Change the name of the artifact.",
+                                        "inputType": "item",
+                                        "label": "name",
+                                        "name": "name",
+                                        "placeholder": "artifact",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [],
+                                        "description": "Change the label of the artifact.",
+                                        "inputType": "item",
+                                        "label": "label",
+                                        "name": "label",
+                                        "placeholder": "events",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [
+                                            ""
+                                        ],
+                                        "description": "Change the severity of the artifact. Typically this is either \"High\", \"Medium\", or \"Low\".",
+                                        "inputType": "item",
+                                        "label": "severity",
+                                        "name": "severity",
+                                        "placeholder": "Medium",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [],
+                                        "description": "The name of the CEF field to populate in the artifact, such as \"destinationAddress\" or \"sourceDnsDomain\". Required only if cef_value is provided.",
+                                        "inputType": "item",
+                                        "label": "cef_field",
+                                        "name": "cef_field",
+                                        "placeholder": "destinationAddress",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "The value of the CEF field to populate in the artifact, such as the IP address, domain name, or file hash. Required only if cef_field is provided.",
+                                        "inputType": "item",
+                                        "label": "cef_value",
+                                        "name": "cef_value",
+                                        "placeholder": "192.0.2.192",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [],
+                                        "description": "The CEF data type of the data in cef_value. For example, this could be \"ip\", \"hash\", or \"domain\". Optional, but only operational if cef_field is provided.",
+                                        "inputType": "item",
+                                        "label": "cef_data_type",
+                                        "name": "cef_data_type",
+                                        "placeholder": "ip",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [],
+                                        "description": "A comma-separated list of tags to apply to the artifact, which is optional.",
+                                        "inputType": "item",
+                                        "label": "tags",
+                                        "name": "tags",
+                                        "placeholder": "tag1, tag2, tag3",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [],
+                                        "description": "Optional parameter to modify any extra attributes of the artifact. Input_json will be merged with other inputs. In the event of a conflict, input_json will take precedence.",
+                                        "inputType": "item",
+                                        "label": "input_json",
+                                        "name": "input_json",
+                                        "placeholder": "{\"source_data_identifier\": \"1234\", \"data\": \"5678\"}",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "artifact_update",
+                                "name": "artifact_update"
+                            }
+                        },
+                        "utilityType": "custom_function",
+                        "values": {
+                            "artifact_update": {
+                                "artifact_id": "artifact:*.id",
+                                "cef_data_type": null,
+                                "cef_field": null,
+                                "cef_value": null,
+                                "input_json": null,
+                                "label": null,
+                                "name": null,
+                                "severity": null,
+                                "tags": "indicator_malicious,contain_approved"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "4",
+                    "tab": "customFunctions",
+                    "type": "utility",
+                    "userCode": "    # Write your custom code here...",
+                    "warnings": {},
+                    "x": -80,
+                    "y": 1000
+                },
+                "5": {
+                    "data": {
+                        "advanced": {
+                            "customName": "cf_local_Set_last_automated_action_1",
+                            "join": []
+                        },
+                        "customFunction": {
+                            "draftMode": false,
+                            "name": "Set_last_automated_action",
+                            "repoName": "local"
+                        },
+                        "functionId": 1,
+                        "functionName": "cf_local_set_last_automated_action_1",
+                        "id": "5",
+                        "type": "utility",
+                        "utilities": {
+                            "Set_last_automated_action": {
+                                "description": "set custom field last_automated_action",
+                                "fields": [
+                                    {
+                                        "dataTypes": [
+                                            "phantom container id"
+                                        ],
+                                        "description": "",
+                                        "inputType": "list",
+                                        "label": "Container_id",
+                                        "name": "Container_id",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [],
+                                        "description": "",
+                                        "inputType": "list",
+                                        "label": "a_status",
+                                        "name": "a_status",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "set_last_automated_action",
+                                "name": "set_last_automated_action"
+                            }
+                        },
+                        "utilityType": "custom_function",
+                        "values": {
+                            "Set_last_automated_action": {
+                                "Container_id": "container:id",
+                                "a_status": "Containment Approval Rejected"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "5",
+                    "tab": "customFunctions",
+                    "type": "utility",
+                    "userCode": "    # Write your custom code here...",
+                    "warnings": {},
+                    "x": 440,
+                    "y": 140
+                },
+                "6": {
+                    "data": {
+                        "advanced": {
+                            "customName": "cf_local_Set_last_automated_action_2",
+                            "join": []
+                        },
+                        "customFunction": {
+                            "draftMode": false,
+                            "name": "Set_last_automated_action",
+                            "repoName": "local"
+                        },
+                        "functionId": 2,
+                        "functionName": "cf_local_set_last_automated_action_2",
+                        "id": "6",
+                        "type": "utility",
+                        "utilities": {
+                            "Set_last_automated_action": {
+                                "description": "set custom field last_automated_action",
+                                "fields": [
+                                    {
+                                        "dataTypes": [
+                                            "phantom container id"
+                                        ],
+                                        "description": "",
+                                        "inputType": "list",
+                                        "label": "Container_id",
+                                        "name": "Container_id",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [],
+                                        "description": "",
+                                        "inputType": "list",
+                                        "label": "a_status",
+                                        "name": "a_status",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "set_last_automated_action",
+                                "name": "set_last_automated_action"
+                            }
+                        },
+                        "utilityType": "custom_function",
+                        "values": {
+                            "Set_last_automated_action": {
+                                "Container_id": "container:id",
+                                "a_status": "Containment Approval Timeout"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "6",
+                    "tab": "customFunctions",
+                    "type": "utility",
+                    "userCode": "    # Write your custom code here...",
+                    "warnings": {},
+                    "x": 800,
+                    "y": -60
+                },
+                "7": {
+                    "data": {
+                        "advanced": {
+                            "customName": "playbook_local_KTB_UC_SEND_EMAIL_CONTAIN_no_approval_1",
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "playbook_local_ktb_uc_send_email_contain_no_approval_1",
+                        "id": "7",
+                        "inputs": {},
+                        "playbookName": "KTB UC SEND EMAIL CONTAIN no_approval_modern",
+                        "playbookRepo": 3,
+                        "playbookRepoName": "mfec_csoc_playbook",
+                        "playbookType": "automation",
+                        "synchronous": true,
+                        "type": "playbook"
+                    },
+                    "errors": {},
+                    "id": "7",
+                    "type": "playbook",
+                    "warnings": {},
+                    "x": 480,
+                    "y": 700
+                },
+                "8": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "Safety_check_before_Containment:action_result.status",
+                                        "value": "success"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "Safety_check_before_Containment:action_result.status",
+                                        "value": "failed"
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else If",
+                                "logic": "and",
+                                "type": "elif"
+                            }
+                        ],
+                        "functionId": 19,
+                        "functionName": "decision_19",
+                        "id": "8",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "8",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 200,
+                    "y": -320
+                },
+                "9": {
+                    "data": {
+                        "advanced": {
+                            "customName": "playbook_local_KTB_UC_SEND_EMAIL_CONTAIN_timeout_1",
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "playbook_local_ktb_uc_send_email_contain_timeout_1",
+                        "id": "9",
+                        "inputs": {},
+                        "playbookName": "KTB UC SEND EMAIL CONTAIN timeout_modern",
+                        "playbookRepo": 3,
+                        "playbookRepoName": "mfec_csoc_playbook",
+                        "playbookType": "automation",
+                        "synchronous": true,
+                        "type": "playbook"
+                    },
+                    "errors": {},
+                    "id": "9",
+                    "type": "playbook",
+                    "warnings": {},
+                    "x": 800,
+                    "y": 520
+                }
+            },
+            "notes": "Inputs:\nTriggered by triage playbook\n\nInteractions:\nCheck Point Firewall, Palo Alto Firewall, LDAP, Cisco ISE, LDAP, Phantom\n\nActions:\nQuarantine device, Block IP, Disable User, Update Artifact\n\nArtifacts:\nP1: Contain the threat",
+            "origin": {
+                "playbook_id": 152,
+                "playbook_name": "KTB Approve Playbook",
+                "playbook_repo_id": 3,
+                "playbook_repo_name": "mfec_csoc_playbook"
+            }
+        },
+        "input_spec": null,
+        "output_spec": null,
+        "playbook_type": "automation",
+        "python_version": "3",
+        "schema": "5.0.10",
+        "version": "4.10.7.63984"
+    },
+    "create_time": "2025-03-27T15:21:02.142674+00:00",
+    "draft_mode": false,
+    "labels": [
+        "*"
+    ],
+    "tags": []
+}
