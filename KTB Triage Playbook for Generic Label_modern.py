@@ -1,0 +1,636 @@
+"""
+USE CASE: This playbook will perform triage tasks for label events, identify false positive and set timestamp for T0, T1.
+"""
+
+import phantom.rules as phantom
+import json
+from datetime import datetime, timedelta
+@phantom.playbook_block()
+def on_start(container):
+    phantom.debug('on_start() called')
+    
+    # call 'cf_local_add_t0_t1_1' block
+    cf_local_add_t0_t1_1(container=container)
+
+    return
+
+"""
+Format data to run query
+get similar events found
+in last 7 days and are
+false positive
+"""
+@phantom.playbook_block()
+def format_data_to_run_query_get_similar_eve(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('format_data_to_run_query_get_similar_eve() called')
+    
+    template = """index=phantom_container  earliest=-7d@d latest=now 
+| eval ctime = strptime(container_update_time,\"%FT%T.%6QZ\")
+| sort 0 - ctime
+| dedup id
+| search \"custom_fields.False Positive\"=Yes
+| search name=\"{0}\"
+| dedup id 
+| dedup \"custom_fields.Assigned To\"
+| rename \"custom_fields.Assigned To\" as assigned_to
+| search assigned_to != \"Playbook\""""
+
+    # parameter list for template variable replacement
+    parameters = [
+        "container:name",
+    ]
+
+    phantom.format(container=container, template=template, parameters=parameters, name="format_data_to_run_query_get_similar_eve", separator=", ")
+
+    run_query_get_similar_events_found_in_la(container=container)
+
+    return
+
+"""
+Run query
+get similar events found
+in last 7 days and are
+false positive
+"""
+@phantom.playbook_block()
+def run_query_get_similar_events_found_in_la(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('run_query_get_similar_events_found_in_la() called')
+        
+    #phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))
+    
+    # collect data for 'run_query_get_similar_events_found_in_la' call
+    formatted_data_1 = phantom.get_format_data(name='format_data_to_run_query_get_similar_eve')
+
+    parameters = []
+    
+    # build parameters list for 'run_query_get_similar_events_found_in_la' call
+    parameters.append({
+        'query': formatted_data_1,
+        'command': "search",
+        'display': "",
+        'parse_only': "",
+    })
+
+    phantom.act(action="run query", parameters=parameters, assets=['splunk es asset'], callback=print_query_result_to_notes, name="run_query_get_similar_events_found_in_la")
+
+    return
+
+"""
+If similar
+events found
+in last 7 days
+and are false
+positive
+"""
+@phantom.playbook_block()
+def if_similar_events_found_in_last_7_days_a(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('if_similar_events_found_in_last_7_days_a() called')
+
+    # check for 'if' condition 1
+    matched = phantom.decision(
+        container=container,
+        action_results=results,
+        conditions=[
+            ["check_event_name:custom_function:Notable_contain_unknown", "==", True],
+        ])
+
+    # call connected blocks if condition 1 matched
+    if matched:
+        false_positive_not_checked(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)
+        return
+
+    # check for 'elif' condition 2
+    matched = phantom.decision(
+        container=container,
+        action_results=results,
+        conditions=[
+            ["run_query_get_similar_events_found_in_la:action_result.summary.total_events", ">=", 2],
+        ])
+
+    # call connected blocks if condition 2 matched
+    if matched:
+        Set_custom_fields_False_Positive_True(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)
+        return
+
+    # call connected blocks for 'else' condition 3
+    false_positive_checked_but_not_matched(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)
+
+    return
+
+@phantom.playbook_block()
+def join_if_similar_events_found_in_last_7_days_a(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('join_if_similar_events_found_in_last_7_days_a() called')
+    
+    # if the joined function has already been called, do nothing
+    if phantom.get_run_data(key='join_if_similar_events_found_in_last_7_days_a_called'):
+        return
+
+    # check if all connected incoming playbooks, actions, or custom functions are done i.e. have succeeded or failed
+    if phantom.completed(action_names=['run_query_get_similar_events_found_in_la']):
+        
+        # save the state that the joined function has now been called
+        phantom.save_run_data(key='join_if_similar_events_found_in_last_7_days_a_called', value='if_similar_events_found_in_last_7_days_a')
+        
+        # call connected block "if_similar_events_found_in_last_7_days_a"
+        if_similar_events_found_in_last_7_days_a(container=container, handle=handle)
+    
+    return
+
+"""
+Set custom fields
+-False Positive = True
+-Closure Type = auto
+"""
+@phantom.playbook_block()
+def Set_custom_fields_False_Positive_True(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('Set_custom_fields_False_Positive_True() called')
+    
+    id_value = container.get('id', None)
+
+    ################################################################################
+    ## Custom Code Start
+    ################################################################################
+
+    # Write your custom code here...
+
+    update_data = {"custom_fields": {"False Positive": "Yes", "Closure Type": "auto", "Assigned To": "Playbook"}}
+    success, message = phantom.update(container, update_data)
+
+    ################################################################################
+    ## Custom Code End
+    ################################################################################
+    cf_local_set_status_to_closed_1(container=container)
+
+    return
+
+"""
+Adding Timestamp of T0, T1
+"""
+@phantom.playbook_block()
+def cf_local_add_t0_t1_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('cf_local_add_t0_t1_1() called')
+    
+    container_property_0 = [
+        [
+            container.get("id"),
+        ],
+    ]
+
+    parameters = []
+
+    for item0 in container_property_0:
+        parameters.append({
+            'container_id_now': item0[0],
+        })
+    ################################################################################
+    ## Custom Code Start
+    ################################################################################
+
+    # Write your custom code here...
+
+    ################################################################################
+    ## Custom Code End
+    ################################################################################    
+
+    # call custom function "local/add_t0_t1", returns the custom_function_run_id
+    phantom.custom_function(custom_function='local/add_t0_t1', parameters=parameters, name='cf_local_add_t0_t1_1', callback=filter_for_selecting_severity)
+
+    return
+
+@phantom.playbook_block()
+def false_positive_checked_but_not_matched(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('false_positive_checked_but_not_matched() called')
+
+    note_title = "Notes from Triage playbook - Checked but not matched"
+    note_content = "False Positive checked but not matched on this event"
+    note_format = "markdown"
+    phantom.add_note(container=container, note_type="general", title=note_title, content=note_content, note_format=note_format)
+
+    phantom.set_status(container=container, status="Open")
+    cf_local_set_last_automated_action_1(container=container)
+
+    return
+
+"""
+Filtering for selecting severity
+"""
+@phantom.playbook_block()
+def filter_for_selecting_severity(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('filter_for_selecting_severity() called')
+
+    # collect filtered artifact ids for 'if' condition 1
+    matched_artifacts_1, matched_results_1 = phantom.condition(
+        container=container,
+        action_results=results,
+        conditions=[
+            ["artifact:*.cef.severity", "==", "critical"],
+        ],
+        name="filter_for_selecting_severity:condition_1")
+
+    # call connected blocks if filtered artifacts or results
+    if matched_artifacts_1 or matched_results_1:
+        set_severity_10(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function, filtered_artifacts=matched_artifacts_1, filtered_results=matched_results_1)
+
+    # collect filtered artifact ids for 'if' condition 2
+    matched_artifacts_2, matched_results_2 = phantom.condition(
+        container=container,
+        action_results=results,
+        conditions=[
+            ["artifact:*.cef.severity", "==", "high"],
+        ],
+        name="filter_for_selecting_severity:condition_2")
+
+    # call connected blocks if filtered artifacts or results
+    if matched_artifacts_2 or matched_results_2:
+        set_severity_11(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function, filtered_artifacts=matched_artifacts_2, filtered_results=matched_results_2)
+
+    # collect filtered artifact ids for 'if' condition 3
+    matched_artifacts_3, matched_results_3 = phantom.condition(
+        container=container,
+        action_results=results,
+        conditions=[
+            ["artifact:*.cef.severity", "==", "medium"],
+        ],
+        name="filter_for_selecting_severity:condition_3")
+
+    # call connected blocks if filtered artifacts or results
+    if matched_artifacts_3 or matched_results_3:
+        set_severity_8(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function, filtered_artifacts=matched_artifacts_3, filtered_results=matched_results_3)
+
+    # collect filtered artifact ids for 'if' condition 4
+    matched_artifacts_4, matched_results_4 = phantom.condition(
+        container=container,
+        action_results=results,
+        conditions=[
+            ["artifact:*.cef.severity", "==", "low"],
+        ],
+        name="filter_for_selecting_severity:condition_4")
+
+    # call connected blocks if filtered artifacts or results
+    if matched_artifacts_4 or matched_results_4:
+        set_severity_9(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function, filtered_artifacts=matched_artifacts_4, filtered_results=matched_results_4)
+
+    # collect filtered artifact ids for 'if' condition 5
+    matched_artifacts_5, matched_results_5 = phantom.condition(
+        container=container,
+        action_results=results,
+        conditions=[
+            ["artifact:*.cef.severity", "==", ""],
+        ],
+        name="filter_for_selecting_severity:condition_5")
+
+    # call connected blocks if filtered artifacts or results
+    if matched_artifacts_5 or matched_results_5:
+        pass
+
+    return
+
+"""
+Set severity to Medium
+"""
+@phantom.playbook_block()
+def set_severity_8(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('set_severity_8() called')
+
+    phantom.set_severity(container=container, severity="Medium")
+    join_filter_out_search_name(container=container)
+
+    return
+
+"""
+Set severity to Low
+"""
+@phantom.playbook_block()
+def set_severity_9(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('set_severity_9() called')
+
+    phantom.set_severity(container=container, severity="Low")
+    join_filter_out_search_name(container=container)
+
+    return
+
+@phantom.playbook_block()
+def set_severity_10(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('set_severity_10() called')
+
+    phantom.set_severity(container=container, severity="Critical")
+    join_filter_out_search_name(container=container)
+
+    return
+
+@phantom.playbook_block()
+def set_severity_11(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('set_severity_11() called')
+
+    phantom.set_severity(container=container, severity="High")
+    join_filter_out_search_name(container=container)
+
+    return
+
+@phantom.playbook_block()
+def filter_out_search_name(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('filter_out_search_name() called')
+    
+    name_param = container.get('name', None)
+
+    # check for 'if' condition 1
+    matched = phantom.decision(
+        container=container,
+        action_results=results,
+        conditions=[
+            ["artifact:*.cef.search_name", "in", "custom_list:triage-search-name"],
+            [name_param, "!=", ""],
+        ],
+        logical_operator='and')
+
+    # call connected blocks if condition 1 matched
+    if matched:
+        check_event_name(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)
+        format_data_to_run_query_get_similar_eve(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)
+        return
+
+    # call connected blocks for 'else' condition 2
+    note_from_triage_playbook_not_checked(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)
+
+    return
+
+@phantom.playbook_block()
+def join_filter_out_search_name(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('join_filter_out_search_name() called')
+
+    # check if all connected incoming playbooks, actions, or custom functions are done i.e. have succeeded or failed
+    if phantom.completed(custom_function_names=['cf_local_add_t0_t1_1']):
+        
+        # call connected block "filter_out_search_name"
+        filter_out_search_name(container=container, handle=handle)
+    
+    return
+
+@phantom.playbook_block()
+def note_from_triage_playbook_not_checked(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('note_from_triage_playbook_not_checked() called')
+
+    note_title = "Notes from Triage playbook - Not checked due to search name not in custom list"
+    note_content = "False Positive not checked on this event due to search name not in custom list"
+    note_format = "markdown"
+    phantom.add_note(container=container, note_type="general", title=note_title, content=note_content, note_format=note_format)
+
+    return
+
+@phantom.playbook_block()
+def print_query_result_to_notes(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('print_query_result_to_notes() called')
+    
+    template = """{0} case closed in last 7 days with False Positive by
+
+%%
+event id: {2}
+analyst name: {1}
+
+%%"""
+
+    # parameter list for template variable replacement
+    parameters = [
+        "run_query_get_similar_events_found_in_la:action_result.summary.total_events",
+        "run_query_get_similar_events_found_in_la:action_result.data.*.assigned_to",
+        "run_query_get_similar_events_found_in_la:action_result.data.*.id",
+    ]
+
+    phantom.format(container=container, template=template, parameters=parameters, name="print_query_result_to_notes", separator=", ")
+
+    Note_from_Triage_playbook_Matched_even(container=container)
+
+    return
+
+"""
+{case} case closed in last 7 days with False Positive by
+
+%%
+event id: {event id}
+analyst name: {analyst name}
+
+%%
+"""
+@phantom.playbook_block()
+def Note_from_Triage_playbook_Matched_even(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('Note_from_Triage_playbook_Matched_even() called')
+
+    formatted_data_1 = phantom.get_format_data(name='print_query_result_to_notes')
+
+    note_title = "Note from Triage playbook - Matched event id  closed as false positive"
+    note_content = formatted_data_1
+    note_format = "markdown"
+    phantom.add_note(container=container, note_type="general", title=note_title, content=note_content, note_format=note_format)
+    join_if_similar_events_found_in_last_7_days_a(container=container)
+
+    return
+
+@phantom.playbook_block()
+def false_positive_not_checked(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('false_positive_not_checked() called')
+
+    note_title = "Notes from Triage playbook - Not check"
+    note_content = "Event title contains \"unknown\" or \"?\". False positive not check."
+    note_format = "markdown"
+    phantom.add_note(container=container, note_type="general", title=note_title, content=note_content, note_format=note_format)
+
+    phantom.set_status(container=container, status="Open")
+    cf_local_set_last_automated_action_2(container=container)
+
+    return
+
+"""
+check event name contains "[]" or "unknown" or "?". If yes, not check false positive.
+"""
+@phantom.playbook_block()
+def check_event_name(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('check_event_name() called')
+    
+    name_value = container.get('name', None)
+
+    check_event_name__Notable_contain_unknown = None
+
+    ################################################################################
+    ## Custom Code Start
+    ################################################################################
+
+    # Write your custom code here...
+    phantom.debug(name_value.find("unknown"))
+    phantom.debug(name_value.find("?"))
+    if name_value.find("unknown") == -1 and name_value.find("?") == -1 and name_value.find("[]") == -1 and name_value.find("()") == -1:
+        check_event_name__Notable_contain_unknown = False
+    else:
+        check_event_name__Notable_contain_unknown = True
+
+    ################################################################################
+    ## Custom Code End
+    ################################################################################
+
+    phantom.save_run_data(key='check_event_name:Notable_contain_unknown', value=json.dumps(check_event_name__Notable_contain_unknown))
+    join_if_similar_events_found_in_last_7_days_a(container=container)
+
+    return
+
+@phantom.playbook_block()
+def cf_local_set_last_automated_action_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('cf_local_set_last_automated_action_1() called')
+    
+    container_property_0 = [
+        [
+            container.get("id"),
+        ],
+    ]
+    literal_values_0 = [
+        [
+            "Triaged",
+        ],
+    ]
+
+    parameters = []
+
+    literal_values_0_0 = [item[0] for item in literal_values_0]
+    container_property_0_0 = [item[0] for item in container_property_0]
+
+    parameters.append({
+        'a_status': literal_values_0_0,
+        'Container_id': container_property_0_0,
+    })
+    ################################################################################
+    ## Custom Code Start
+    ################################################################################
+
+    # Write your custom code here...
+
+    ################################################################################
+    ## Custom Code End
+    ################################################################################    
+
+    # call custom function "local/set_last_automated_action", returns the custom_function_run_id
+    phantom.custom_function(custom_function='local/set_last_automated_action', parameters=parameters, name='cf_local_set_last_automated_action_1')
+
+    return
+
+@phantom.playbook_block()
+def cf_local_set_last_automated_action_2(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('cf_local_set_last_automated_action_2() called')
+    
+    container_property_0 = [
+        [
+            container.get("id"),
+        ],
+    ]
+    literal_values_0 = [
+        [
+            "Triaged",
+        ],
+    ]
+
+    parameters = []
+
+    literal_values_0_0 = [item[0] for item in literal_values_0]
+    container_property_0_0 = [item[0] for item in container_property_0]
+
+    parameters.append({
+        'a_status': literal_values_0_0,
+        'Container_id': container_property_0_0,
+    })
+    ################################################################################
+    ## Custom Code Start
+    ################################################################################
+
+    # Write your custom code here...
+
+    ################################################################################
+    ## Custom Code End
+    ################################################################################    
+
+    # call custom function "local/set_last_automated_action", returns the custom_function_run_id
+    phantom.custom_function(custom_function='local/set_last_automated_action', parameters=parameters, name='cf_local_set_last_automated_action_2')
+
+    return
+
+@phantom.playbook_block()
+def cf_local_set_last_automated_action_3(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('cf_local_set_last_automated_action_3() called')
+    
+    container_property_0 = [
+        [
+            container.get("id"),
+        ],
+    ]
+    literal_values_0 = [
+        [
+            "Closed",
+        ],
+    ]
+
+    parameters = []
+
+    literal_values_0_0 = [item[0] for item in literal_values_0]
+    container_property_0_0 = [item[0] for item in container_property_0]
+
+    parameters.append({
+        'a_status': literal_values_0_0,
+        'Container_id': container_property_0_0,
+    })
+    ################################################################################
+    ## Custom Code Start
+    ################################################################################
+
+    # Write your custom code here...
+
+    ################################################################################
+    ## Custom Code End
+    ################################################################################    
+
+    # call custom function "local/set_last_automated_action", returns the custom_function_run_id
+    phantom.custom_function(custom_function='local/set_last_automated_action', parameters=parameters, name='cf_local_set_last_automated_action_3')
+
+    return
+
+@phantom.playbook_block()
+def cf_local_set_status_to_closed_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('cf_local_set_status_to_closed_1() called')
+    
+    container_property_0 = [
+        [
+            container.get("id"),
+        ],
+    ]
+
+    parameters = []
+
+    for item0 in container_property_0:
+        parameters.append({
+            'container_id_now': item0[0],
+        })
+    ################################################################################
+    ## Custom Code Start
+    ################################################################################
+
+    # Write your custom code here...
+
+    ################################################################################
+    ## Custom Code End
+    ################################################################################    
+
+    # call custom function "local/set_status_to_closed", returns the custom_function_run_id
+    phantom.custom_function(custom_function='local/set_status_to_closed', parameters=parameters, name='cf_local_set_status_to_closed_1', callback=cf_local_set_last_automated_action_3)
+
+    return
+
+@phantom.playbook_block()
+def on_finish(container, summary):
+    phantom.debug('on_finish() called')
+    # This function is called after all actions are completed.
+    # summary of all the action and/or all details of actions
+    # can be collected here.
+
+    # summary_json = phantom.get_summary()
+    # if 'result' in summary_json:
+        # for action_result in summary_json['result']:
+            # if 'action_run_id' in action_result:
+                # action_results = phantom.get_action_results(action_run_id=action_result['action_run_id'], result_data=False, flatten=False)
+                # phantom.debug(action_results)
+
+    return
