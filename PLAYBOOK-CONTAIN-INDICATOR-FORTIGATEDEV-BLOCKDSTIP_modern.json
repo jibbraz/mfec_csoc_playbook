@@ -1,0 +1,166 @@
+{
+    "blockly": false,
+    "blockly_xml": "<xml></xml>",
+    "category": "Uncategorized",
+    "coa": {
+        "data": {
+            "description": "",
+            "edges": [
+                {
+                    "id": "port_0_to_port_2",
+                    "sourceNode": "0",
+                    "sourcePort": "0_out",
+                    "targetNode": "2",
+                    "targetPort": "2_in"
+                },
+                {
+                    "id": "port_2_to_port_3",
+                    "sourceNode": "2",
+                    "sourcePort": "2_out",
+                    "targetNode": "3",
+                    "targetPort": "3_in"
+                },
+                {
+                    "id": "port_3_to_port_4",
+                    "sourceNode": "3",
+                    "sourcePort": "3_out",
+                    "targetNode": "4",
+                    "targetPort": "4_in"
+                },
+                {
+                    "id": "port_4_to_port_1",
+                    "sourceNode": "4",
+                    "sourcePort": "4_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                }
+            ],
+            "hash": "1434c5a5476a27fd155fbb04c7e60f384192631a",
+            "nodes": {
+                "0": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_start",
+                        "id": "0",
+                        "type": "start"
+                    },
+                    "errors": {},
+                    "id": "0",
+                    "type": "start",
+                    "warnings": {},
+                    "x": 200,
+                    "y": 100
+                },
+                "1": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_finish",
+                        "id": "1",
+                        "type": "end"
+                    },
+                    "errors": {},
+                    "id": "1",
+                    "type": "end",
+                    "warnings": {},
+                    "x": 200,
+                    "y": 600
+                },
+                "2": {
+                    "data": {
+                        "advanced": {
+                            "customName": "playbook_local_PLAYBOOK_CONTAIN_INDICATOR_FORTIGATECDEV_BLOCKDSTIP_KCSEXTDEVL2_1",
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "playbook_local_PLAYBOOK_CONTAIN_INDICATOR_FORTIGATECDEV_BLOCKDSTIP_KCSEXTDEVL2_1",
+                        "id": "2",
+                        "inputs": {},
+                        "playbookName": "PLAYBOOK-CONTAIN-INDICATOR-FORTIGATEDEV-BLOCKDSTIP[KCSEXTDEVL2]_modern",
+                        "playbookRepo": 3,
+                        "playbookRepoName": "mfec_csoc_playbook",
+                        "playbookType": "automation",
+                        "synchronous": false,
+                        "type": "playbook"
+                    },
+                    "errors": {},
+                    "id": "2",
+                    "type": "playbook",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 280
+                },
+                "3": {
+                    "data": {
+                        "advanced": {
+                            "customName": "playbook_local_PLAYBOOK_CONTAIN_INDICATOR_FORTIGATECDEV_BLOCKDSTIP_KCSEXTDEVL3_1",
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "playbook_local_PLAYBOOK_CONTAIN_INDICATOR_FORTIGATECDEV_BLOCKDSTIP_KCSEXTDEVL3_1",
+                        "id": "3",
+                        "inputs": {},
+                        "playbookName": "PLAYBOOK-CONTAIN-INDICATOR-FORTIGATEDEV-BLOCKDSTIP[KCSEXTDEVL3]_modern",
+                        "playbookRepo": 3,
+                        "playbookRepoName": "mfec_csoc_playbook",
+                        "playbookType": "automation",
+                        "synchronous": false,
+                        "type": "playbook"
+                    },
+                    "errors": {},
+                    "id": "3",
+                    "type": "playbook",
+                    "warnings": {},
+                    "x": 480,
+                    "y": 280
+                },
+                "4": {
+                    "data": {
+                        "advanced": {
+                            "customName": "playbook_local_PLAYBOOK_CONTAIN_INDICATOR_FORTIGATECDEV_BLOCKDSTIP_KCSEXTDEVVAYU_1",
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "playbook_local_PLAYBOOK_CONTAIN_INDICATOR_FORTIGATECDEV_BLOCKDSTIP_KCSEXTDEVVAYU_1",
+                        "id": "4",
+                        "inputs": {},
+                        "playbookName": "PLAYBOOK-CONTAIN-INDICATOR-FORTIGATEDEV-BLOCKDSTIP[KCSEXTDEVVAYU]_modern",
+                        "playbookRepo": 3,
+                        "playbookRepoName": "mfec_csoc_playbook",
+                        "playbookType": "automation",
+                        "synchronous": false,
+                        "type": "playbook"
+                    },
+                    "errors": {},
+                    "id": "4",
+                    "type": "playbook",
+                    "warnings": {},
+                    "x": 800,
+                    "y": 280
+                }
+            },
+            "notes": "",
+            "origin": {
+                "playbook_id": 202,
+                "playbook_name": "PLAYBOOK-CONTAIN-INDICATOR-FORTIGATEDEV-BLOCKDSTIP",
+                "playbook_repo_id": 3,
+                "playbook_repo_name": "mfec_csoc_playbook"
+            }
+        },
+        "input_spec": null,
+        "output_spec": null,
+        "playbook_type": "automation",
+        "python_version": "3",
+        "schema": "5.0.10",
+        "version": "4.10.7.63984"
+    },
+    "create_time": "2025-03-27T15:21:03.777412+00:00",
+    "draft_mode": false,
+    "labels": [
+        "*"
+    ],
+    "tags": []
+}
