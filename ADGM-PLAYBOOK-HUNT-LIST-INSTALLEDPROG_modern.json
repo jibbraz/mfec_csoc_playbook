@@ -1,0 +1,946 @@
+{
+    "blockly": false,
+    "blockly_xml": "<xml></xml>",
+    "category": "Uncategorized",
+    "coa": {
+        "data": {
+            "description": "",
+            "edges": [
+                {
+                    "id": "port_15_to_port_2",
+                    "sourceNode": "15",
+                    "sourcePort": "15_out",
+                    "targetNode": "2",
+                    "targetPort": "2_in"
+                },
+                {
+                    "id": "port_2_to_port_4",
+                    "sourceNode": "2",
+                    "sourcePort": "2_out",
+                    "targetNode": "4",
+                    "targetPort": "4_in"
+                },
+                {
+                    "id": "port_4_to_port_3",
+                    "sourceNode": "4",
+                    "sourcePort": "4_out",
+                    "targetNode": "3",
+                    "targetPort": "3_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_3_to_port_16",
+                    "sourceNode": "3",
+                    "sourcePort": "3_out",
+                    "targetNode": "16",
+                    "targetPort": "16_in"
+                },
+                {
+                    "id": "port_16_to_port_1",
+                    "sourceNode": "16",
+                    "sourcePort": "16_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_3_to_port_17",
+                    "sourceNode": "3",
+                    "sourcePort": "3_out",
+                    "targetNode": "17",
+                    "targetPort": "17_in"
+                },
+                {
+                    "id": "port_17_to_port_10",
+                    "sourceNode": "17",
+                    "sourcePort": "17_out",
+                    "targetNode": "10",
+                    "targetPort": "10_in"
+                },
+                {
+                    "id": "port_10_to_port_5",
+                    "sourceNode": "10",
+                    "sourcePort": "10_out",
+                    "targetNode": "5",
+                    "targetPort": "5_in"
+                },
+                {
+                    "id": "port_5_to_port_6",
+                    "sourceNode": "5",
+                    "sourcePort": "5_out",
+                    "targetNode": "6",
+                    "targetPort": "6_in"
+                },
+                {
+                    "id": "port_6_to_port_11",
+                    "sourceNode": "6",
+                    "sourcePort": "6_out",
+                    "targetNode": "11",
+                    "targetPort": "11_in"
+                },
+                {
+                    "id": "port_11_to_port_13",
+                    "sourceNode": "11",
+                    "sourcePort": "11_out",
+                    "targetNode": "13",
+                    "targetPort": "13_in"
+                },
+                {
+                    "id": "port_13_to_port_7",
+                    "sourceNode": "13",
+                    "sourcePort": "13_out",
+                    "targetNode": "7",
+                    "targetPort": "7_in"
+                },
+                {
+                    "id": "port_7_to_port_12",
+                    "sourceNode": "7",
+                    "sourcePort": "7_out",
+                    "targetNode": "12",
+                    "targetPort": "12_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 1
+                        }
+                    ],
+                    "id": "port_12_to_port_8",
+                    "sourceNode": "12",
+                    "sourcePort": "12_out",
+                    "targetNode": "8",
+                    "targetPort": "8_in"
+                },
+                {
+                    "id": "port_8_to_port_19",
+                    "sourceNode": "8",
+                    "sourcePort": "8_out",
+                    "targetNode": "19",
+                    "targetPort": "19_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_12_to_port_9",
+                    "sourceNode": "12",
+                    "sourcePort": "12_out",
+                    "targetNode": "9",
+                    "targetPort": "9_in"
+                },
+                {
+                    "id": "port_9_to_port_1",
+                    "sourceNode": "9",
+                    "sourcePort": "9_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_19_to_port_18",
+                    "sourceNode": "19",
+                    "sourcePort": "19_out",
+                    "targetNode": "18",
+                    "targetPort": "18_in"
+                },
+                {
+                    "id": "port_18_to_port_20",
+                    "sourceNode": "18",
+                    "sourcePort": "18_out",
+                    "targetNode": "20",
+                    "targetPort": "20_in"
+                },
+                {
+                    "id": "port_20_to_port_1",
+                    "sourceNode": "20",
+                    "sourcePort": "20_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_0_to_port_14",
+                    "sourceNode": "0",
+                    "sourcePort": "0_out",
+                    "targetNode": "14",
+                    "targetPort": "14_in"
+                },
+                {
+                    "id": "port_14_to_port_15",
+                    "sourceNode": "14",
+                    "sourcePort": "14_out",
+                    "targetNode": "15",
+                    "targetPort": "15_in"
+                }
+            ],
+            "hash": "b7f7d9a7ad078e1ae20403f4c8115242d6c21914",
+            "nodes": {
+                "0": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_start",
+                        "id": "0",
+                        "type": "start"
+                    },
+                    "errors": {},
+                    "id": "0",
+                    "type": "start",
+                    "warnings": {},
+                    "x": -120,
+                    "y": -180
+                },
+                "1": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_finish",
+                        "id": "1",
+                        "type": "end"
+                    },
+                    "errors": {},
+                    "id": "1",
+                    "type": "end",
+                    "warnings": {},
+                    "x": -240,
+                    "y": 2840
+                },
+                "10": {
+                    "data": {
+                        "action": "get data",
+                        "actionType": "investigate",
+                        "advanced": {
+                            "customName": "ExecuteTask",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "connector": "HTTP",
+                        "connectorConfigs": [
+                            "altiris uat"
+                        ],
+                        "connectorId": "290b7499-0374-4930-9cdc-5e9b05d65827",
+                        "connectorVersion": "v1",
+                        "functionId": 2,
+                        "functionName": "executetask",
+                        "id": "10",
+                        "parameters": {
+                            "headers": "",
+                            "location": "executetaskgetinstalledprogramuri:formatted_data",
+                            "verify_certificate": "False"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "location"
+                            },
+                            {
+                                "data_type": "boolean",
+                                "field": "verify_certificate"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "10",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 360,
+                    "y": 800
+                },
+                "11": {
+                    "data": {
+                        "advanced": {
+                            "customName": "GetTaskStatusURI",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 6,
+                        "functionName": "gettaskstatusuri",
+                        "id": "11",
+                        "parameters": [
+                            "executedtaskguid:formatted_data"
+                        ],
+                        "template": "/ASDK.Task/TaskManagementService.asmx/gettaskstatus?taskGuid={0}",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "11",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 80,
+                    "y": 1360
+                },
+                "12": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "!=",
+                                        "param": "gettaskstatus:action_result.data.*.parsed_response_body.*.taskstatusDetails.Status",
+                                        "value": "Completed"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 4,
+                        "functionName": "decision_4",
+                        "id": "12",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "12",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 80,
+                    "y": 1880
+                },
+                "13": {
+                    "data": {
+                        "action": "get data",
+                        "actionType": "investigate",
+                        "advanced": {
+                            "customName": "GetTaskStatus",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "connector": "HTTP",
+                        "connectorConfigs": [
+                            "altiris uat"
+                        ],
+                        "connectorId": "290b7499-0374-4930-9cdc-5e9b05d65827",
+                        "connectorVersion": "v1",
+                        "functionId": 4,
+                        "functionName": "gettaskstatus",
+                        "id": "13",
+                        "parameters": {
+                            "headers": "",
+                            "location": "gettaskstatusuri:formatted_data",
+                            "verify_certificate": "False"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "location"
+                            },
+                            {
+                                "data_type": "boolean",
+                                "field": "verify_certificate"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "13",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 400,
+                    "y": 1400
+                },
+                "14": {
+                    "data": {
+                        "advanced": {
+                            "customName": "ClientHostname",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 9,
+                        "functionName": "clienthostname",
+                        "id": "14",
+                        "parameters": [
+                            "artifact:*.cef.destinationHostName"
+                        ],
+                        "template": "{0}",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "14",
+                    "type": "format",
+                    "warnings": {},
+                    "x": -160,
+                    "y": -40
+                },
+                "15": {
+                    "data": {
+                        "advanced": {
+                            "customName": "GetClientHostnameURI",
+                            "customNameId": 0,
+                            "description": "Get client hostname and prepare URI to get computer guid",
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 1,
+                        "functionName": "getclienthostnameuri",
+                        "id": "15",
+                        "parameters": [
+                            "clienthostname:formatted_data"
+                        ],
+                        "template": "/ASDK.NS/ItemManagementService.asmx/GetItemsByNameAndType?name={0}&type=ComputerResource",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "15",
+                    "type": "format",
+                    "warnings": {},
+                    "x": -160,
+                    "y": 200
+                },
+                "16": {
+                    "data": {
+                        "advanced": {
+                            "customName": "NotifyClientNotExist",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "approver": {
+                            "type": "role",
+                            "value": "Administrator"
+                        },
+                        "functionId": 2,
+                        "functionName": "notifyclientnotexist",
+                        "id": "16",
+                        "message": "This client {0} not managed by Symantec Altiris. The playbook will be stop.",
+                        "parameters": [
+                            "clienthostname:formatted_data"
+                        ],
+                        "responseTime": 30.0,
+                        "responses": [
+                            {
+                                "responseOptions": [],
+                                "responsePrompt": "",
+                                "responseType": "message"
+                            }
+                        ],
+                        "type": "prompt"
+                    },
+                    "errors": {
+                        "responses": [
+                            {
+                                "responsePrompt": "Questions cannot be empty."
+                            }
+                        ]
+                    },
+                    "id": "16",
+                    "type": "prompt",
+                    "warnings": {},
+                    "x": -280,
+                    "y": 900
+                },
+                "17": {
+                    "data": {
+                        "advanced": {
+                            "customName": "ExecuteTaskGetInstalledProgramURI",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 3,
+                        "functionName": "executetaskgetinstalledprogramuri",
+                        "id": "17",
+                        "parameters": [
+                            "compguid:formatted_data"
+                        ],
+                        "template": "/ASDK.Task/TaskManagementService.asmx/executetask?taskGuid=5afa05b8-a400-4d66-a7e9-4492dcdf9b6a&executionName=CSOC-ThreatHunter-Response&inputParameters=<inputParameters><parameter><name>@AssignedResources</name><value>{0}</value></parameter></inputParameters>",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "17",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 80,
+                    "y": 800
+                },
+                "18": {
+                    "data": {
+                        "advanced": {
+                            "customName": "TaskResourceStatus",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 8,
+                        "functionName": "taskresourcestatus",
+                        "id": "18",
+                        "parameters": [
+                            "gettaskresourcestatusresult:action_result.data.*.parsed_response_body.taskresourcestatusDetails.OutputProperties.*.Value"
+                        ],
+                        "template": "{0}",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "18",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 360,
+                    "y": 2320
+                },
+                "19": {
+                    "data": {
+                        "action": "get data",
+                        "actionType": "investigate",
+                        "advanced": {
+                            "customName": "GetTaskResourceStatusResult",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "connector": "HTTP",
+                        "connectorConfigs": [
+                            "altiris uat"
+                        ],
+                        "connectorId": "290b7499-0374-4930-9cdc-5e9b05d65827",
+                        "connectorVersion": "v1",
+                        "functionId": 3,
+                        "functionName": "gettaskresourcestatusresult",
+                        "id": "19",
+                        "parameters": {
+                            "headers": "",
+                            "location": "taskresourcestatusuri:formatted_data",
+                            "verify_certificate": "False"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "location"
+                            },
+                            {
+                                "data_type": "boolean",
+                                "field": "verify_certificate"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "19",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 360,
+                    "y": 2080
+                },
+                "2": {
+                    "data": {
+                        "action": "get data",
+                        "actionType": "investigate",
+                        "advanced": {
+                            "customName": "GetCompGuid",
+                            "customNameId": 0,
+                            "delayTime": 0.0,
+                            "join": []
+                        },
+                        "connector": "HTTP",
+                        "connectorConfigs": [
+                            "altiris uat"
+                        ],
+                        "connectorId": "290b7499-0374-4930-9cdc-5e9b05d65827",
+                        "connectorVersion": "v1",
+                        "functionId": 1,
+                        "functionName": "getcompguid",
+                        "id": "2",
+                        "parameters": {
+                            "headers": "",
+                            "location": "getclienthostnameuri:formatted_data",
+                            "verify_certificate": "False"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "location"
+                            },
+                            {
+                                "data_type": "boolean",
+                                "field": "verify_certificate"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "2",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 220
+                },
+                "20": {
+                    "data": {
+                        "advanced": {
+                            "customName": "AddNoteToEvent",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "addnotetoevent",
+                        "id": "20",
+                        "type": "utility",
+                        "utilities": {
+                            "add_note": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "description": "",
+                                        "label": "title",
+                                        "name": "title",
+                                        "placeholder": "Enter a note title",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "description": "",
+                                        "label": "content",
+                                        "name": "content",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "choices": [
+                                            "markdown",
+                                            "html"
+                                        ],
+                                        "default": "markdown",
+                                        "description": "",
+                                        "label": "note format",
+                                        "name": "note_format",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "dropdown",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    },
+                                    {
+                                        "default": "general",
+                                        "hidden": true,
+                                        "name": "note_type",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "author",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "event_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "task_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "trace",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "add note",
+                                "name": "add_note"
+                            }
+                        },
+                        "values": {
+                            "add_note": {
+                                "_internal": [
+                                    "container",
+                                    "note_type",
+                                    "author",
+                                    "event_id",
+                                    "task_id",
+                                    "trace"
+                                ],
+                                "content": "taskresourcestatus:formatted_data",
+                                "note_format": "html",
+                                "title": "List of installed program"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "20",
+                    "tab": "apis",
+                    "type": "utility",
+                    "warnings": {},
+                    "x": 360,
+                    "y": 2580
+                },
+                "3": {
+                    "data": {
+                        "advanced": {
+                            "customName": "CheckClientExist",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "getcompguid:action_result.data.*.parsed_response_body.*.guid",
+                                        "value": "None"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 1,
+                                        "op": "==",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "conditionIndex": 1,
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "functionId": 3,
+                        "functionName": "checkclientexist",
+                        "id": "3",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "3",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": -160,
+                    "y": 720
+                },
+                "4": {
+                    "data": {
+                        "advanced": {
+                            "customName": "CompGuid",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 2,
+                        "functionName": "compguid",
+                        "id": "4",
+                        "parameters": [
+                            "getcompguid:action_result.data.*.parsed_response_body.*.guid"
+                        ],
+                        "template": "{0}",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "4",
+                    "type": "format",
+                    "warnings": {},
+                    "x": -160,
+                    "y": 480
+                },
+                "5": {
+                    "data": {
+                        "advanced": {
+                            "customName": "ExecutedTaskGuid",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 4,
+                        "functionName": "executedtaskguid",
+                        "id": "5",
+                        "parameters": [
+                            "executetask:action_result.data.*.parsed_response_body.guid.#text"
+                        ],
+                        "template": "{0}",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "5",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 80,
+                    "y": 1080
+                },
+                "6": {
+                    "data": {
+                        "advanced": {
+                            "customName": "cf_local_waittime_1",
+                            "join": []
+                        },
+                        "customFunction": {
+                            "draftMode": false,
+                            "name": "waittime",
+                            "repoName": "local"
+                        },
+                        "functionId": 1,
+                        "functionName": "cf_local_waittime_1",
+                        "id": "6",
+                        "type": "utility",
+                        "utilities": {
+                            "waittime": {
+                                "description": "",
+                                "fields": [],
+                                "label": "waittime",
+                                "name": "waittime"
+                            }
+                        },
+                        "utilityType": "custom_function",
+                        "values": {
+                            "waittime": {}
+                        }
+                    },
+                    "errors": {},
+                    "id": "6",
+                    "tab": "customFunctions",
+                    "type": "utility",
+                    "userCode": "    # Write your custom code here...",
+                    "warnings": {},
+                    "x": 400,
+                    "y": 1080
+                },
+                "7": {
+                    "data": {
+                        "advanced": {
+                            "customName": "TaskStatus",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 7,
+                        "functionName": "taskstatus",
+                        "id": "7",
+                        "parameters": [
+                            "gettaskstatus:action_result.data.*.parsed_response_body.*.taskstatusDetails.Status"
+                        ],
+                        "template": "{0}",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "7",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 80,
+                    "y": 1640
+                },
+                "8": {
+                    "data": {
+                        "advanced": {
+                            "customName": "TaskResourceStatusURI",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 5,
+                        "functionName": "taskresourcestatusuri",
+                        "id": "8",
+                        "parameters": [
+                            "executedtaskguid:formatted_data",
+                            "compguid:formatted_data"
+                        ],
+                        "template": "/ASDK.Task/TaskManagementService.asmx/Gettaskresourcestatus?taskInstanceGuid={0}&resourceGuid={1}",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "8",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 360,
+                    "y": 1840
+                },
+                "9": {
+                    "data": {
+                        "advanced": {
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "approver": {
+                            "type": "role",
+                            "value": "Administrator"
+                        },
+                        "functionId": 4,
+                        "functionName": "prompt_4",
+                        "id": "9",
+                        "message": "Task execution on target {0} has failure. Please contact CSOC-Platform for working with Symantec Altiris Administrator.",
+                        "parameters": [
+                            "compguid:formatted_data"
+                        ],
+                        "responseTime": 30.0,
+                        "responses": [
+                            {
+                                "responseOptions": [],
+                                "responsePrompt": "",
+                                "responseType": "message"
+                            }
+                        ],
+                        "type": "prompt"
+                    },
+                    "errors": {
+                        "responses": [
+                            {
+                                "responsePrompt": "Questions cannot be empty."
+                            }
+                        ]
+                    },
+                    "id": "9",
+                    "type": "prompt",
+                    "warnings": {},
+                    "x": 80,
+                    "y": 2040
+                }
+            },
+            "notes": "",
+            "origin": {
+                "playbook_id": 140,
+                "playbook_name": "ADGM-PLAYBOOK-HUNT-LIST-INSTALLEDPROG",
+                "playbook_repo_id": 3,
+                "playbook_repo_name": "mfec_csoc_playbook"
+            }
+        },
+        "input_spec": null,
+        "output_spec": null,
+        "playbook_type": "automation",
+        "python_version": "3",
+        "schema": "5.0.10",
+        "version": "4.10.7.63984"
+    },
+    "create_time": "2025-03-27T15:21:01.903753+00:00",
+    "draft_mode": false,
+    "labels": [
+        "*"
+    ],
+    "tags": []
+}
