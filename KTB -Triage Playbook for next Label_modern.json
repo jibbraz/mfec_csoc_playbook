@@ -1,0 +1,587 @@
+{
+    "blockly": false,
+    "blockly_xml": "<xml></xml>",
+    "category": "Uncategorized",
+    "coa": {
+        "data": {
+            "description": "USE CASE: This playbook will perform triage tasks for label events, identify false positive and set timestamp for T0, T1.",
+            "edges": [
+                {
+                    "id": "port_2_to_port_1",
+                    "sourceNode": "2",
+                    "sourcePort": "2_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_0_to_port_3",
+                    "sourceNode": "0",
+                    "sourcePort": "0_out",
+                    "targetNode": "3",
+                    "targetPort": "3_in"
+                },
+                {
+                    "id": "port_8_to_port_2",
+                    "sourceNode": "8",
+                    "sourcePort": "8_out",
+                    "targetNode": "2",
+                    "targetPort": "2_in"
+                },
+                {
+                    "id": "port_4_to_port_6",
+                    "sourceNode": "4",
+                    "sourcePort": "4_out",
+                    "targetNode": "6",
+                    "targetPort": "6_in"
+                },
+                {
+                    "id": "port_3_to_port_4",
+                    "sourceNode": "3",
+                    "sourcePort": "3_out",
+                    "targetNode": "4",
+                    "targetPort": "4_in"
+                },
+                {
+                    "id": "port_5_to_port_8",
+                    "sourceNode": "5",
+                    "sourcePort": "5_out",
+                    "targetNode": "8",
+                    "targetPort": "8_in"
+                },
+                {
+                    "id": "port_6_to_port_7",
+                    "sourceNode": "6",
+                    "sourcePort": "6_out",
+                    "targetNode": "7",
+                    "targetPort": "7_in"
+                },
+                {
+                    "id": "port_7_to_port_5",
+                    "sourceNode": "7",
+                    "sourcePort": "7_out",
+                    "targetNode": "5",
+                    "targetPort": "5_in"
+                }
+            ],
+            "hash": "1849ca9a7989b67cb8434aa9b44ae13de83250c7",
+            "nodes": {
+                "0": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_start",
+                        "id": "0",
+                        "type": "start"
+                    },
+                    "errors": {},
+                    "id": "0",
+                    "type": "start",
+                    "warnings": {},
+                    "x": -40,
+                    "y": -1140
+                },
+                "1": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_finish",
+                        "id": "1",
+                        "type": "end"
+                    },
+                    "errors": {},
+                    "id": "1",
+                    "type": "end",
+                    "warnings": {},
+                    "x": -40,
+                    "y": 1020
+                },
+                "2": {
+                    "data": {
+                        "advanced": {
+                            "customName": "cf_local_Set_last_automated_action_3",
+                            "join": []
+                        },
+                        "customFunction": {
+                            "draftMode": false,
+                            "name": "Set_last_automated_action",
+                            "repoName": "local"
+                        },
+                        "functionId": 3,
+                        "functionName": "cf_local_set_last_automated_action_3",
+                        "id": "2",
+                        "type": "utility",
+                        "utilities": {
+                            "Set_last_automated_action": {
+                                "description": "set custom field last_automated_action",
+                                "fields": [
+                                    {
+                                        "dataTypes": [
+                                            "phantom container id"
+                                        ],
+                                        "description": "",
+                                        "inputType": "list",
+                                        "label": "Container_id",
+                                        "name": "Container_id",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [],
+                                        "description": "",
+                                        "inputType": "list",
+                                        "label": "a_status",
+                                        "name": "a_status",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "set_last_automated_action",
+                                "name": "set_last_automated_action"
+                            }
+                        },
+                        "utilityType": "custom_function",
+                        "values": {
+                            "Set_last_automated_action": {
+                                "Container_id": "container:id",
+                                "a_status": "Closed"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "2",
+                    "tab": "customFunctions",
+                    "type": "utility",
+                    "userCode": "    # Write your custom code here...",
+                    "warnings": {},
+                    "x": -80,
+                    "y": 740
+                },
+                "3": {
+                    "data": {
+                        "advanced": {
+                            "customName": "cf_local_ADD_T0_T1_1",
+                            "description": "Adding Timestamp of T0, T1",
+                            "join": [],
+                            "note": "Adding Timestamp of T0, T1"
+                        },
+                        "customFunction": {
+                            "draftMode": false,
+                            "name": "ADD_T0_T1",
+                            "repoName": "local"
+                        },
+                        "functionId": 1,
+                        "functionName": "cf_local_add_t0_t1_1",
+                        "id": "3",
+                        "type": "utility",
+                        "utilities": {
+                            "ADD_T0_T1": {
+                                "description": "Set T0 default value",
+                                "fields": [
+                                    {
+                                        "dataTypes": [
+                                            "phantom container id"
+                                        ],
+                                        "description": "",
+                                        "inputType": "item",
+                                        "label": "container_id_now",
+                                        "name": "container_id_now",
+                                        "placeholder": "container:id",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "add_t0_t1",
+                                "name": "add_t0_t1"
+                            }
+                        },
+                        "utilityType": "custom_function",
+                        "values": {
+                            "ADD_T0_T1": {
+                                "container_id_now": "container:id"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "3",
+                    "tab": "customFunctions",
+                    "type": "utility",
+                    "userCode": "    # Write your custom code here...",
+                    "warnings": {},
+                    "x": -80,
+                    "y": -960
+                },
+                "4": {
+                    "customCode": "def cf_local_set_incident_type_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('cf_local_set_incident_type_1() called')\n    \n    container_property_0 = [\n        [\n            container.get(\"id\"),\n        ],\n    ]\n\n    parameters = []\n\n    for item0 in container_property_0:\n        parameters.append({\n            'container_id': item0[0],\n        })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    update_data = {\"custom_fields\":{\"Incident Type\":\"Unauthorized Access \"}}\n    success, message = phantom.update(container, update_data)\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"local/set_incident_type\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='local/set_incident_type', parameters=parameters, name='cf_local_set_incident_type_1', callback=cf_local_set_detection_technology_incident_type_1)\n\n    return",
+                    "data": {
+                        "advanced": {
+                            "customName": "cf_local_Set_Incident_Type_1",
+                            "join": []
+                        },
+                        "customFunction": {
+                            "draftMode": false,
+                            "name": "Set_Incident_Type",
+                            "repoName": "local"
+                        },
+                        "functionId": 1,
+                        "functionName": "cf_local_set_incident_type_1",
+                        "id": "4",
+                        "type": "utility",
+                        "utilities": {
+                            "Set_Incident_Type": {
+                                "description": "set incident type to unauthorized access",
+                                "fields": [
+                                    {
+                                        "dataTypes": [
+                                            "phantom container id"
+                                        ],
+                                        "description": "",
+                                        "inputType": "item",
+                                        "label": "container_id",
+                                        "name": "container_id",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "set_incident_type",
+                                "name": "set_incident_type"
+                            }
+                        },
+                        "utilityType": "custom_function",
+                        "values": {
+                            "Set_Incident_Type": {
+                                "container_id": "container:id"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "4",
+                    "tab": "customFunctions",
+                    "type": "utility",
+                    "userCode": "\n    # Write your custom code here...\n    update_data = {\"custom_fields\":{\"Incident Type\":\"Unauthorized Access \"}}\n    success, message = phantom.update(container, update_data)\n\n",
+                    "warnings": {},
+                    "x": -80,
+                    "y": -680
+                },
+                "5": {
+                    "data": {
+                        "advanced": {
+                            "customName": "cf_local_Set_Assigned_To_Playbook_1",
+                            "join": []
+                        },
+                        "customFunction": {
+                            "draftMode": false,
+                            "name": "Set_Assigned_To_Playbook",
+                            "repoName": "local"
+                        },
+                        "functionId": 1,
+                        "functionName": "cf_local_set_assigned_to_playbook_1",
+                        "id": "5",
+                        "type": "utility",
+                        "utilities": {
+                            "Set_Assigned_To_Playbook": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "dataTypes": [
+                                            "phantom container id"
+                                        ],
+                                        "description": "",
+                                        "inputType": "item",
+                                        "label": "container_id",
+                                        "name": "container_id",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "set_assigned_to_playbook",
+                                "name": "set_assigned_to_playbook"
+                            }
+                        },
+                        "utilityType": "custom_function",
+                        "values": {
+                            "Set_Assigned_To_Playbook": {
+                                "container_id": "container:id"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "5",
+                    "tab": "customFunctions",
+                    "type": "utility",
+                    "userCode": "    # Write your custom code here...",
+                    "warnings": {},
+                    "x": -80,
+                    "y": 180
+                },
+                "6": {
+                    "customCode": "def cf_local_set_detection_technology_incident_type_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('cf_local_set_detection_technology_incident_type_1() called')\n    \n    container_property_0 = [\n        [\n            container.get(\"id\"),\n        ],\n    ]\n\n    parameters = []\n\n    for item0 in container_property_0:\n        parameters.append({\n            'container_id': item0[0],\n        })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    update_data = {\"custom_fields\":{\"Detection Technology\":\"Splunk ES\"}}\n    success, message = phantom.update(container, update_data)\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"local/set_detection_technology_incident_type\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='local/set_detection_technology_incident_type', parameters=parameters, name='cf_local_set_detection_technology_incident_type_1', callback=cf_local_set_fault_positive_no_1)\n\n    return",
+                    "data": {
+                        "advanced": {
+                            "customName": "cf_local_Set_Detection_Technology_Incident_Type_1",
+                            "join": []
+                        },
+                        "customFunction": {
+                            "draftMode": false,
+                            "name": "Set_Detection_Technology_Incident_Type",
+                            "repoName": "local"
+                        },
+                        "functionId": 1,
+                        "functionName": "cf_local_set_detection_technology_incident_type_1",
+                        "id": "6",
+                        "type": "utility",
+                        "utilities": {
+                            "Set_Detection_Technology_Incident_Type": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "dataTypes": [
+                                            "phantom container id"
+                                        ],
+                                        "description": "",
+                                        "inputType": "item",
+                                        "label": "container_id",
+                                        "name": "container_id",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "set_detection_technology_incident_type",
+                                "name": "set_detection_technology_incident_type"
+                            }
+                        },
+                        "utilityType": "custom_function",
+                        "values": {
+                            "Set_Detection_Technology_Incident_Type": {
+                                "container_id": "container:id"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "6",
+                    "tab": "customFunctions",
+                    "type": "utility",
+                    "userCode": "\n    # Write your custom code here...\n    update_data = {\"custom_fields\":{\"Detection Technology\":\"Splunk ES\"}}\n    success, message = phantom.update(container, update_data)\n\n",
+                    "warnings": {},
+                    "x": -80,
+                    "y": -400
+                },
+                "7": {
+                    "data": {
+                        "advanced": {
+                            "customName": "cf_local_Set_Fault_Positive_No_1",
+                            "join": []
+                        },
+                        "customFunction": {
+                            "draftMode": false,
+                            "name": "Set_Fault_Positive_No",
+                            "repoName": "local"
+                        },
+                        "functionId": 1,
+                        "functionName": "cf_local_set_fault_positive_no_1",
+                        "id": "7",
+                        "type": "utility",
+                        "utilities": {
+                            "Set_Fault_Positive_No": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "dataTypes": [
+                                            "phantom container id"
+                                        ],
+                                        "description": "",
+                                        "inputType": "item",
+                                        "label": "container_id",
+                                        "name": "container_id",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "set_fault_positive_no",
+                                "name": "set_fault_positive_no"
+                            }
+                        },
+                        "utilityType": "custom_function",
+                        "values": {
+                            "Set_Fault_Positive_No": {
+                                "container_id": "container_id"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "7",
+                    "tab": "customFunctions",
+                    "type": "utility",
+                    "userCode": "    # Write your custom code here...",
+                    "warnings": {},
+                    "x": -80,
+                    "y": -100
+                },
+                "8": {
+                    "data": {
+                        "advanced": {
+                            "customName": "set status to closed",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "functionId": 16,
+                        "functionName": "set_status_to_closed",
+                        "id": "8",
+                        "type": "utility",
+                        "utilities": {
+                            "add_note": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "description": "",
+                                        "label": "title",
+                                        "name": "title",
+                                        "placeholder": "Enter a note title",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "description": "",
+                                        "label": "content",
+                                        "name": "content",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "choices": [
+                                            "markdown",
+                                            "html"
+                                        ],
+                                        "default": "markdown",
+                                        "description": "",
+                                        "label": "note format",
+                                        "name": "note_format",
+                                        "placeholder": "Enter the note content",
+                                        "renderType": "dropdown",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    },
+                                    {
+                                        "default": "general",
+                                        "hidden": true,
+                                        "name": "note_type",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "author",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "event_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "task_id",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "trace",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "add note",
+                                "name": "add_note"
+                            },
+                            "set_status": {
+                                "description": "",
+                                "fields": [
+                                    {
+                                        "choices": "notableStatus",
+                                        "description": "",
+                                        "label": "status",
+                                        "name": "status",
+                                        "placeholder": "Select status",
+                                        "renderType": "dropdown",
+                                        "required": true
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "container",
+                                        "required": false
+                                    },
+                                    {
+                                        "hidden": true,
+                                        "name": "trace",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "set status",
+                                "name": "set_status",
+                                "refreshNotableData": true
+                            }
+                        },
+                        "values": {
+                            "add_note": {
+                                "_internal": [
+                                    "container",
+                                    "note_type",
+                                    "author",
+                                    "event_id",
+                                    "task_id",
+                                    "trace"
+                                ],
+                                "content": "Notes from Triage playbook - set status to closed",
+                                "note_format": "markdown",
+                                "title": "Notes from Triage playbook - set status to closed"
+                            },
+                            "set_status": {
+                                "_internal": [
+                                    "container",
+                                    "trace"
+                                ],
+                                "status": "closed"
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "8",
+                    "tab": "apis",
+                    "type": "utility",
+                    "warnings": {},
+                    "x": -80,
+                    "y": 460
+                }
+            },
+            "notes": "",
+            "origin": {
+                "playbook_id": 150,
+                "playbook_name": "KTB -Triage Playbook for next Label",
+                "playbook_repo_id": 3,
+                "playbook_repo_name": "mfec_csoc_playbook"
+            }
+        },
+        "input_spec": null,
+        "output_spec": null,
+        "playbook_type": "automation",
+        "python_version": "3",
+        "schema": "5.0.10",
+        "version": "4.10.7.63984"
+    },
+    "create_time": "2025-03-27T15:21:02.131328+00:00",
+    "draft_mode": false,
+    "labels": [
+        "next"
+    ],
+    "tags": []
+}
