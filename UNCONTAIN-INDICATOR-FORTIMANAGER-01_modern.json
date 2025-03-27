@@ -1,0 +1,540 @@
+{
+    "blockly": false,
+    "blockly_xml": "<xml></xml>",
+    "category": "Uncategorized",
+    "coa": {
+        "data": {
+            "description": "",
+            "edges": [
+                {
+                    "id": "port_4_to_port_6",
+                    "sourceNode": "4",
+                    "sourcePort": "4_out",
+                    "targetNode": "6",
+                    "targetPort": "6_in"
+                },
+                {
+                    "id": "port_9_to_port_1",
+                    "sourceNode": "9",
+                    "sourcePort": "9_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_2_to_port_3",
+                    "sourceNode": "2",
+                    "sourcePort": "2_out",
+                    "targetNode": "3",
+                    "targetPort": "3_in"
+                },
+                {
+                    "id": "port_3_to_port_9",
+                    "sourceNode": "3",
+                    "sourcePort": "3_out",
+                    "targetNode": "9",
+                    "targetPort": "9_in"
+                },
+                {
+                    "id": "port_0_to_port_4",
+                    "sourceNode": "0",
+                    "sourcePort": "0_out",
+                    "targetNode": "4",
+                    "targetPort": "4_in"
+                },
+                {
+                    "id": "port_6_to_port_7",
+                    "sourceNode": "6",
+                    "sourcePort": "6_out",
+                    "targetNode": "7",
+                    "targetPort": "7_in"
+                },
+                {
+                    "id": "port_7_to_port_8",
+                    "sourceNode": "7",
+                    "sourcePort": "7_out",
+                    "targetNode": "8",
+                    "targetPort": "8_in"
+                },
+                {
+                    "id": "port_8_to_port_5",
+                    "sourceNode": "8",
+                    "sourcePort": "8_out",
+                    "targetNode": "5",
+                    "targetPort": "5_in"
+                },
+                {
+                    "id": "port_5_to_port_2",
+                    "sourceNode": "5",
+                    "sourcePort": "5_out",
+                    "targetNode": "2",
+                    "targetPort": "2_in"
+                }
+            ],
+            "hash": "24ebe866340ad0a44da4ba686ca61a6fb51958c4",
+            "nodes": {
+                "0": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_start",
+                        "id": "0",
+                        "type": "start"
+                    },
+                    "errors": {},
+                    "id": "0",
+                    "type": "start",
+                    "warnings": {},
+                    "x": 160,
+                    "y": -120
+                },
+                "1": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_finish",
+                        "id": "1",
+                        "type": "end"
+                    },
+                    "errors": {},
+                    "id": "1",
+                    "type": "end",
+                    "warnings": {},
+                    "x": 480,
+                    "y": 1160
+                },
+                "2": {
+                    "data": {
+                        "advanced": {
+                            "customName": "ReqInstallPolicyPackage",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 10,
+                        "functionName": "reqinstallpolicypackage",
+                        "id": "2",
+                        "parameters": [
+                            "getauthsessionid:formatted_data"
+                        ],
+                        "template": "%%\n{{\n\t\"session\": \"{0}\",\n\t\"id\": 1,\n\t\"method\": \"exec\" ,\n\t\"params\": [\n\t\t{{\n\t\t\t\"url\": \"/securityconsole/install/package\",\n            \"data\": [\n                {{\n                    \"adom\": \"root\",\n                    \"pkg\": \"FortiGate CSOC\",\n                    \"scope member\": [\n                        {{\n                            \"name\": \"FGVM01TM22001286\",\n                            \"vdom\": \"root\"\n                        }}\n                    ],\n                    \"flags\": \"none\"\n                }}\n            ]\n\t\t}}\n\t],\n\t\"verbose\": 1\t\t\t\t\n}}\n%%",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "2",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 720,
+                    "y": 540
+                },
+                "3": {
+                    "data": {
+                        "action": "post data",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "InstallPolicyPackage",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "connector": "HTTP",
+                        "connectorConfigs": [
+                            "csoc-fortimanager"
+                        ],
+                        "connectorId": "290b7499-0374-4930-9cdc-5e9b05d65827",
+                        "connectorVersion": "v1",
+                        "functionId": 7,
+                        "functionName": "installpolicypackage",
+                        "id": "3",
+                        "parameters": {
+                            "body": "reqinstallpolicypackage:formatted_data",
+                            "headers": "{\"Content-Type\":\"application/json\"}",
+                            "location": "/jsonrpc",
+                            "verify_certificate": "False"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "body"
+                            },
+                            {
+                                "data_type": "string",
+                                "field": "location"
+                            },
+                            {
+                                "data_type": "boolean",
+                                "field": "verify_certificate"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "3",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 840
+                },
+                "4": {
+                    "data": {
+                        "action": "post data",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "AuthReqToFortiManager",
+                            "customNameId": 0,
+                            "delayTime": 0.0,
+                            "description": "HTTP method: POST\nAPI execute method: exec\nURL: /sys/login/user",
+                            "join": [],
+                            "scope": "all"
+                        },
+                        "connector": "HTTP",
+                        "connectorConfigs": [
+                            "csoc-fortimanager"
+                        ],
+                        "connectorId": "290b7499-0374-4930-9cdc-5e9b05d65827",
+                        "connectorVersion": "v1",
+                        "functionId": 1,
+                        "functionName": "authreqtofortimanager",
+                        "id": "4",
+                        "parameters": {
+                            "body": "{ \t\"id\": 1, \t\"method\": \"exec\", \t\"params\": [ \t\t{ \t\t\t\"data\": [ \t\t\t{ \t\t\t\t\"passwd\": \"soar\", \t\t\t\t\"user\": \"soar\" \t\t\t} \t\t\t], \t\t\t\"url\": \"sys/login/user\" \t\t} \t], \t\"session\": null, \t\"verbose\": 1 }",
+                            "headers": "{\"Content-Type\":\"application/json\"}",
+                            "location": "/jsonrpc",
+                            "verify_certificate": "False"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "body"
+                            },
+                            {
+                                "data_type": "string",
+                                "field": "location"
+                            },
+                            {
+                                "data_type": "boolean",
+                                "field": "verify_certificate"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "4",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 240
+                },
+                "5": {
+                    "data": {
+                        "action": "post data",
+                        "actionType": "generic",
+                        "advanced": {
+                            "customName": "DelAddrObjToAddrGrp",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "connector": "HTTP",
+                        "connectorConfigs": [
+                            "csoc-fortimanager"
+                        ],
+                        "connectorId": "290b7499-0374-4930-9cdc-5e9b05d65827",
+                        "connectorVersion": "v1",
+                        "functionId": 6,
+                        "functionName": "deladdrobjtoaddrgrp",
+                        "id": "5",
+                        "parameters": {
+                            "body": "reqdeladdrobjfromaddrgrp:formatted_data",
+                            "headers": "{\"Content-Type\":\"application/json\"}",
+                            "location": "/jsonrpc",
+                            "verify_certificate": "False"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "body"
+                            },
+                            {
+                                "data_type": "string",
+                                "field": "location"
+                            },
+                            {
+                                "data_type": "boolean",
+                                "field": "verify_certificate"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "5",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 440,
+                    "y": 540
+                },
+                "6": {
+                    "data": {
+                        "advanced": {
+                            "customName": "GetAuthSessionID",
+                            "customNameId": 0,
+                            "join": [],
+                            "scope": "new",
+                            "separator": ", "
+                        },
+                        "functionId": 2,
+                        "functionName": "getauthsessionid",
+                        "id": "6",
+                        "parameters": [
+                            "authreqtofortimanager:action_result.data.*.parsed_response_body.session"
+                        ],
+                        "template": "{0}",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "6",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 440,
+                    "y": 240
+                },
+                "7": {
+                    "data": {
+                        "advanced": {
+                            "customName": "BodyReqDelAddrObjFromAddrGrp",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 13,
+                        "functionName": "bodyreqdeladdrobjfromaddrgrp",
+                        "id": "7",
+                        "parameters": [
+                            "artifact:*.cef.destinationAddress"
+                        ],
+                        "template": "%%\n\"Phantom {0}_32\",\n%%",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "7",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 720,
+                    "y": 240
+                },
+                "8": {
+                    "data": {
+                        "advanced": {
+                            "customName": "ReqDelAddrObjFromAddrGrp",
+                            "customNameId": 0,
+                            "join": [],
+                            "separator": ", "
+                        },
+                        "functionId": 9,
+                        "functionName": "reqdeladdrobjfromaddrgrp",
+                        "id": "8",
+                        "parameters": [
+                            "getauthsessionid:formatted_data",
+                            "bodyreqdeladdrobjfromaddrgrp:formatted_data"
+                        ],
+                        "template": "%%\n{{\n\t\"session\": \"{0}\",\n\t\"id\": 1,\n\t\"method\": \"delete\" ,\n    \"params\": [\n        {{\n            \"url\": \"/pm/config/adom/root/obj/firewall/addrgrp/Phantom-Blacklist/member/\",\n              \"data\": [      \n                        {1}\n            ]\n        }}\n    ]\t\t\t\n}}\n%%",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "8",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 540
+                },
+                "9": {
+                    "data": {
+                        "advanced": {
+                            "customName": "cf_community_debug_1",
+                            "join": []
+                        },
+                        "customFunction": {
+                            "draftMode": false,
+                            "name": "debug",
+                            "repoName": "community"
+                        },
+                        "functionId": 1,
+                        "functionName": "cf_community_debug_1",
+                        "id": "9",
+                        "type": "utility",
+                        "utilities": {
+                            "debug": {
+                                "description": "Print debug messages with the type and value of 0-10 different inputs. This is useful for checking the values of input data or the outputs of other playbook blocks.",
+                                "fields": [
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "list",
+                                        "label": "input_1",
+                                        "name": "input_1",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "list",
+                                        "label": "input_2",
+                                        "name": "input_2",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "list",
+                                        "label": "input_3",
+                                        "name": "input_3",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "list",
+                                        "label": "input_4",
+                                        "name": "input_4",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "list",
+                                        "label": "input_5",
+                                        "name": "input_5",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "list",
+                                        "label": "input_6",
+                                        "name": "input_6",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "list",
+                                        "label": "input_7",
+                                        "name": "input_7",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "list",
+                                        "label": "input_8",
+                                        "name": "input_8",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "list",
+                                        "label": "input_9",
+                                        "name": "input_9",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    },
+                                    {
+                                        "dataTypes": [
+                                            "*"
+                                        ],
+                                        "description": "",
+                                        "inputType": "list",
+                                        "label": "input_10",
+                                        "name": "input_10",
+                                        "placeholder": "",
+                                        "renderType": "datapath",
+                                        "required": false
+                                    }
+                                ],
+                                "label": "debug",
+                                "name": "debug"
+                            }
+                        },
+                        "utilityType": "custom_function",
+                        "values": {
+                            "debug": {
+                                "input_1": "artifact:*.cef.destinationAddress",
+                                "input_10": null,
+                                "input_2": null,
+                                "input_3": null,
+                                "input_4": null,
+                                "input_5": null,
+                                "input_6": null,
+                                "input_7": null,
+                                "input_8": null,
+                                "input_9": null
+                            }
+                        }
+                    },
+                    "errors": {},
+                    "id": "9",
+                    "tab": "customFunctions",
+                    "type": "utility",
+                    "userCode": "    # Write your custom code here...",
+                    "warnings": {},
+                    "x": 440,
+                    "y": 840
+                }
+            },
+            "notes": "",
+            "origin": {
+                "playbook_id": 278,
+                "playbook_name": "UNCONTAIN-INDICATOR-FORTIMANAGER-01",
+                "playbook_repo_id": 3,
+                "playbook_repo_name": "mfec_csoc_playbook"
+            }
+        },
+        "input_spec": null,
+        "output_spec": null,
+        "playbook_type": "automation",
+        "python_version": "3",
+        "schema": "5.0.10",
+        "version": "4.10.7.63984"
+    },
+    "create_time": "2025-03-27T15:21:07.986997+00:00",
+    "draft_mode": false,
+    "labels": [
+        "*"
+    ],
+    "tags": []
+}
