@@ -1,0 +1,283 @@
+{
+    "blockly": false,
+    "blockly_xml": "<xml></xml>",
+    "category": "Uncategorized",
+    "coa": {
+        "data": {
+            "description": "",
+            "edges": [
+                {
+                    "id": "port_0_to_port_7",
+                    "sourceNode": "0",
+                    "sourcePort": "0_out",
+                    "targetNode": "7",
+                    "targetPort": "7_in"
+                },
+                {
+                    "id": "port_2_to_port_3",
+                    "sourceNode": "2",
+                    "sourcePort": "2_out",
+                    "targetNode": "3",
+                    "targetPort": "3_in"
+                },
+                {
+                    "id": "port_3_to_port_4",
+                    "sourceNode": "3",
+                    "sourcePort": "3_out",
+                    "targetNode": "4",
+                    "targetPort": "4_in"
+                },
+                {
+                    "id": "port_4_to_port_5",
+                    "sourceNode": "4",
+                    "sourcePort": "4_out",
+                    "targetNode": "5",
+                    "targetPort": "5_in"
+                },
+                {
+                    "id": "port_5_to_port_6",
+                    "sourceNode": "5",
+                    "sourcePort": "5_out",
+                    "targetNode": "6",
+                    "targetPort": "6_in"
+                },
+                {
+                    "id": "port_6_to_port_1",
+                    "sourceNode": "6",
+                    "sourcePort": "6_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_7_to_port_2",
+                    "sourceNode": "7",
+                    "sourcePort": "7_out",
+                    "targetNode": "2",
+                    "targetPort": "2_in"
+                }
+            ],
+            "hash": "6375ef39175b57482519acee0d4fc8fb381cdc51",
+            "nodes": {
+                "0": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_start",
+                        "id": "0",
+                        "type": "start"
+                    },
+                    "errors": {},
+                    "id": "0",
+                    "type": "start",
+                    "warnings": {},
+                    "x": 200,
+                    "y": 100
+                },
+                "1": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_finish",
+                        "id": "1",
+                        "type": "end"
+                    },
+                    "errors": {},
+                    "id": "1",
+                    "type": "end",
+                    "warnings": {},
+                    "x": 840,
+                    "y": 900
+                },
+                "2": {
+                    "data": {
+                        "advanced": {
+                            "customName": "playbook_local_PLAYBOOK_UNCONTAIN_INDICATOR_FORTIMANAGER_SRC_VAYUX_SRCIP_01_1",
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "playbook_local_PLAYBOOK_UNCONTAIN_INDICATOR_FORTIMANAGER_SRC_VAYUX_SRCIP_01_1",
+                        "id": "2",
+                        "inputs": {},
+                        "playbookName": "PLAYBOOK-UNCONTAIN-INDICATOR-FORTIMANAGER-SRC-VAYUX-SRCIP-01_modern",
+                        "playbookRepo": 3,
+                        "playbookRepoName": "mfec_csoc_playbook",
+                        "playbookType": "automation",
+                        "synchronous": false,
+                        "type": "playbook"
+                    },
+                    "errors": {},
+                    "id": "2",
+                    "type": "playbook",
+                    "warnings": {},
+                    "x": 800,
+                    "y": 280
+                },
+                "3": {
+                    "data": {
+                        "advanced": {
+                            "customName": "playbook_local_PLAYBOOK_UNCONTAIN_INDICATOR_FORTIMANAGER_BBT_VAYUX_SRCIP_01_1",
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "playbook_local_PLAYBOOK_UNCONTAIN_INDICATOR_FORTIMANAGER_BBT_VAYUX_SRCIP_01_1",
+                        "id": "3",
+                        "inputs": {},
+                        "playbookName": "PLAYBOOK-UNCONTAIN-INDICATOR-FORTIMANAGER-BBT-VAYUX-SRCIP-01_modern",
+                        "playbookRepo": 3,
+                        "playbookRepoName": "mfec_csoc_playbook",
+                        "playbookType": "automation",
+                        "synchronous": false,
+                        "type": "playbook"
+                    },
+                    "errors": {},
+                    "id": "3",
+                    "type": "playbook",
+                    "warnings": {},
+                    "x": 1080,
+                    "y": 280
+                },
+                "4": {
+                    "data": {
+                        "advanced": {
+                            "customName": "playbook_local_PLAYBOOK_UNCONTAIN_INDICATOR_FORTIGATEINTERNET_SRCIP_1",
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "playbook_local_PLAYBOOK_UNCONTAIN_INDICATOR_FORTIGATEINTERNET_SRCIP_1",
+                        "id": "4",
+                        "inputs": {},
+                        "playbookName": "PLAYBOOK-UNCONTAIN-INDICATOR-FORTIGATEINTERNET-SRCIP_modern",
+                        "playbookRepo": 3,
+                        "playbookRepoName": "mfec_csoc_playbook",
+                        "playbookType": "automation",
+                        "synchronous": false,
+                        "type": "playbook"
+                    },
+                    "errors": {},
+                    "id": "4",
+                    "type": "playbook",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 580
+                },
+                "5": {
+                    "data": {
+                        "advanced": {
+                            "customName": "playbook_local_PLAYBOOK_UNCONTAIN_INDICATOR_FORTIGATEINTERNET_DR_SRCIP_1",
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "playbook_local_PLAYBOOK_UNCONTAIN_INDICATOR_FORTIGATEINTERNET_DR_SRCIP_1",
+                        "id": "5",
+                        "inputs": {},
+                        "playbookName": "PLAYBOOK-UNCONTAIN-INDICATOR-FORTIGATEINTERNET-DR-SRCIP_modern",
+                        "playbookRepo": 3,
+                        "playbookRepoName": "mfec_csoc_playbook",
+                        "playbookType": "automation",
+                        "synchronous": false,
+                        "type": "playbook"
+                    },
+                    "errors": {},
+                    "id": "5",
+                    "type": "playbook",
+                    "warnings": {},
+                    "x": 480,
+                    "y": 580
+                },
+                "6": {
+                    "data": {
+                        "advanced": {
+                            "customName": "playbook_local_PLAYBOOK_UNCONTAIN_INDICATOR_FORTIGATEDEV_SRCIP_1",
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "playbook_local_PLAYBOOK_UNCONTAIN_INDICATOR_FORTIGATEDEV_SRCIP_1",
+                        "id": "6",
+                        "inputs": {},
+                        "playbookName": "PLAYBOOK-UNCONTAIN-INDICATOR-FORTIGATEDEV-SRCIP_modern",
+                        "playbookRepo": 3,
+                        "playbookRepoName": "mfec_csoc_playbook",
+                        "playbookType": "automation",
+                        "synchronous": false,
+                        "type": "playbook"
+                    },
+                    "errors": {},
+                    "id": "6",
+                    "type": "playbook",
+                    "warnings": {},
+                    "x": 800,
+                    "y": 580
+                },
+                "7": {
+                    "data": {
+                        "advanced": {
+                            "customName": "playbook_local_PLAYBOOK_UNCONTAIN_INDICATOR_FORTIGATEACI_SRCIP_1",
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "playbook_local_PLAYBOOK_UNCONTAIN_INDICATOR_FORTIGATEACI_SRCIP_1",
+                        "id": "7",
+                        "inputs": {},
+                        "playbookName": "PLAYBOOK-UNCONTAIN-INDICATOR-FORTIGATEACI-SRCIP_modern",
+                        "playbookRepo": 3,
+                        "playbookRepoName": "mfec_csoc_playbook",
+                        "playbookType": "automation",
+                        "synchronous": false,
+                        "type": "playbook"
+                    },
+                    "errors": {},
+                    "id": "7",
+                    "type": "playbook",
+                    "warnings": {},
+                    "x": 160,
+                    "y": 280
+                },
+                "8": {
+                    "data": {
+                        "advanced": {
+                            "customName": "playbook_local_PLAYBOOK_UNCONTAIN_INDICATOR_FORTIMANAGERVAYU_SRCIP_01_1",
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "playbook_local_PLAYBOOK_UNCONTAIN_INDICATOR_FORTIMANAGERVAYU_SRCIP_01_1",
+                        "id": "8",
+                        "inputs": {},
+                        "playbookName": "PLAYBOOK-UNCONTAIN-INDICATOR-FORTIMANAGERVAYU-SRCIP-01_modern",
+                        "playbookRepo": 3,
+                        "playbookRepoName": "mfec_csoc_playbook",
+                        "playbookType": "automation",
+                        "synchronous": false,
+                        "type": "playbook"
+                    },
+                    "errors": {},
+                    "id": "8",
+                    "type": "playbook",
+                    "warnings": {},
+                    "x": 480,
+                    "y": 280
+                }
+            },
+            "notes": "",
+            "origin": {
+                "playbook_id": 247,
+                "playbook_name": "PLAYBOOK-UNCONTAIN-INDICATOR-FORTIGATE-BLOCKSRCIP-[One-Click]",
+                "playbook_repo_id": 3,
+                "playbook_repo_name": "mfec_csoc_playbook"
+            }
+        },
+        "input_spec": null,
+        "output_spec": null,
+        "playbook_type": "automation",
+        "python_version": "3",
+        "schema": "5.0.10",
+        "version": "6.1.1.211"
+    },
+    "create_time": "2025-03-27T15:21:06.178631+00:00",
+    "draft_mode": false,
+    "labels": [
+        "*"
+    ],
+    "tags": []
+}
