@@ -69,7 +69,7 @@ def decision_1(action=None, success=None, container=None, results=None, handle=N
 
     # call connected blocks if condition 1 matched
     if matched:
-        Palo_Alto_Block_Dest_IP(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)
+        block_ip_6(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)
         return
 
     # call connected blocks for 'else' condition 2
@@ -304,6 +304,8 @@ def set_severity_set_status_1(action=None, success=None, container=None, results
     phantom.set_severity(container=container, severity="Low")
 
     phantom.set_status(container=container, status="Closed")
+
+    container = phantom.get_container(container.get('id', None))
     join_cf_local_set_custom_field_incident_type_1(container=container)
 
     return
@@ -314,6 +316,8 @@ def set_severity_set_status_2(action=None, success=None, container=None, results
     phantom.set_severity(container=container, severity="Low")
 
     phantom.set_status(container=container, status="Open")
+
+    container = phantom.get_container(container.get('id', None))
     join_cf_local_set_custom_field_incident_type_1(container=container)
 
     return
@@ -324,6 +328,8 @@ def set_severity_set_status_3(action=None, success=None, container=None, results
     phantom.set_severity(container=container, severity="Low")
 
     phantom.set_status(container=container, status="Closed")
+
+    container = phantom.get_container(container.get('id', None))
     join_cf_local_set_custom_field_incident_type_1(container=container)
 
     return
@@ -420,7 +426,7 @@ Save the result to global var
 def Save_the_result_to_global_var(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
     phantom.debug('Save_the_result_to_global_var() called')
     
-    results_data_1 = phantom.collect2(container=container, datapath=['Palo_Alto_Block_Dest_IP:action_result.parameter.ip', 'Palo_Alto_Block_Dest_IP:action_result.status'], action_results=results)
+    results_data_1 = phantom.collect2(container=container, datapath=['block_ip_6:action_result.parameter.ip', 'block_ip_6:action_result.status'], action_results=results)
     results_item_1_0 = [item[0] for item in results_data_1]
     results_item_1_1 = [item[1] for item in results_data_1]
 
@@ -499,24 +505,14 @@ def Clear_Global_Variable(action=None, success=None, container=None, results=Non
 """
 Palo Alto Block Dest IP
 """
-def Palo_Alto_Block_Dest_IP(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
-    phantom.debug('Palo_Alto_Block_Dest_IP() called')
+def block_ip_6(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
+    phantom.debug('block_ip_6() called')
         
     #phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))
-    
-    Get_the_top_IP_address_from_the_list__top_ip_address = json.loads(phantom.get_run_data(key='Get_the_top_IP_address_from_the_list:top_ip_address'))
-    # collect data for 'Palo_Alto_Block_Dest_IP' call
 
     parameters = []
-    
-    # build parameters list for 'Palo_Alto_Block_Dest_IP' call
-    parameters.append({
-        'ip': Get_the_top_IP_address_from_the_list__top_ip_address,
-        'vsys': "vsys1",
-        'is_source_address': False,
-    })
 
-    phantom.act(action="block ip", parameters=parameters, assets=['cxapp_palo-dc1-asset','cxapp_palo-dr1-asset','cxapp_palo-vpndc-asset','cxapp_palo-vpndr-asset'], callback=Save_the_result_to_global_var, name="Palo_Alto_Block_Dest_IP")
+    phantom.act(action="block ip", parameters=parameters, callback=Save_the_result_to_global_var, name="block_ip_6")
 
     return
 

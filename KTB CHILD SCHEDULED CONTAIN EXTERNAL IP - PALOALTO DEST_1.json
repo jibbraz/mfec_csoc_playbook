@@ -7,7 +7,7 @@
             "clean": true,
             "code_block": "IP_CONTAIN_GLOBAL_RESULTS = []",
             "description": "USE CASE: This playbook is used to contain the threat on External IP address in regular time set by Timer App",
-            "hash": "afc2b570cce00c2bc11fd156dae014db68b40ac8",
+            "hash": "33c5516492fe19a092446a82d4c3314350dba712",
             "joint": {
                 "cells": [
                     {
@@ -702,7 +702,7 @@
                                 "opacity": 1
                             }
                         },
-                        "block_code": "def set_severity_set_status_3(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('set_severity_set_status_3() called')\n\n    phantom.set_severity(container=container, severity=\"Low\")\n\n    phantom.set_status(container=container, status=\"Closed\")\n    join_cf_local_set_custom_field_incident_type_1(container=container)\n\n    return",
+                        "block_code": "def set_severity_set_status_3(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('set_severity_set_status_3() called')\n\n    phantom.set_severity(container=container, severity=\"Low\")\n\n    phantom.set_status(container=container, status=\"Closed\")\n\n    container = phantom.get_container(container.get('id', None))\n    join_cf_local_set_custom_field_incident_type_1(container=container)\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": false,
@@ -738,8 +738,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 331,
-                        "line_start": 321,
+                        "line_end": 337,
+                        "line_start": 325,
                         "message": "Configuring now",
                         "name": "set severity, set status",
                         "notes": "",
@@ -806,6 +806,7 @@
                         },
                         "previous_function": "",
                         "previous_name": "set_severity_set_status_3",
+                        "refetch_container": true,
                         "show_number": false,
                         "size": {
                             "height": 100,
@@ -881,7 +882,7 @@
                                 "opacity": 1
                             }
                         },
-                        "block_code": "def set_severity_set_status_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('set_severity_set_status_1() called')\n\n    phantom.set_severity(container=container, severity=\"Low\")\n\n    phantom.set_status(container=container, status=\"Closed\")\n    join_cf_local_set_custom_field_incident_type_1(container=container)\n\n    return",
+                        "block_code": "def set_severity_set_status_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('set_severity_set_status_1() called')\n\n    phantom.set_severity(container=container, severity=\"Low\")\n\n    phantom.set_status(container=container, status=\"Closed\")\n\n    container = phantom.get_container(container.get('id', None))\n    join_cf_local_set_custom_field_incident_type_1(container=container)\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": false,
@@ -917,7 +918,7 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 311,
+                        "line_end": 313,
                         "line_start": 301,
                         "message": "Configuring now",
                         "name": "set severity, set status",
@@ -985,6 +986,7 @@
                         },
                         "previous_function": "",
                         "previous_name": "set_severity_set_status_1",
+                        "refetch_container": true,
                         "show_number": false,
                         "size": {
                             "height": 100,
@@ -1817,9 +1819,9 @@
                             "Add_Note_for_No_IP_address_to_contain",
                             "Add_Note_for_the_result"
                         ],
-                        "join_start": 369,
-                        "line_end": 383,
-                        "line_start": 331,
+                        "join_start": 375,
+                        "line_end": 389,
+                        "line_start": 337,
                         "message": "Configuring now",
                         "name": "set_custom_field_incident_type",
                         "notes": "",
@@ -2008,7 +2010,7 @@
                                 "opacity": 1
                             }
                         },
-                        "block_code": "def decision_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('decision_1() called')\n\n    # check for 'if' condition 1\n    matched = phantom.decision(\n        container=container,\n        action_results=results,\n        conditions=[\n            [\"Get_the_top_IP_address_from_the_list:custom_function:top_ip_address\", \"!=\", \"\"],\n        ])\n\n    # call connected blocks if condition 1 matched\n    if matched:\n        Palo_Alto_Block_Dest_IP(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)\n        return\n\n    # call connected blocks for 'else' condition 2\n    Add_Note_for_No_IP_address_to_contain(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)\n\n    return",
+                        "block_code": "def decision_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('decision_1() called')\n\n    # check for 'if' condition 1\n    matched = phantom.decision(\n        container=container,\n        action_results=results,\n        conditions=[\n            [\"Get_the_top_IP_address_from_the_list:custom_function:top_ip_address\", \"!=\", \"\"],\n        ])\n\n    # call connected blocks if condition 1 matched\n    if matched:\n        block_ip_6(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)\n        return\n\n    # call connected blocks for 'else' condition 2\n    Add_Note_for_No_IP_address_to_contain(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": false,
@@ -2140,715 +2142,6 @@
                         "z": 461
                     },
                     {
-                        "active": false,
-                        "angle": 0,
-                        "attrs": {
-                            ".background": {
-                                "fill": "#000000",
-                                "stroke": "#5C6773"
-                            },
-                            ".color-band": {
-                                "fill": "#3C444D"
-                            },
-                            ".functionBlock": {
-                                "text": "Collect all IP address"
-                            },
-                            ".inPorts>.port-in": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".inPorts>.port-in>.port-body": {
-                                "port": {
-                                    "id": "in",
-                                    "type": "in"
-                                }
-                            },
-                            ".message": {
-                                "opacity": 0,
-                                "ref-x": 5,
-                                "ref-y": 105,
-                                "text": "Configuring now"
-                            },
-                            ".outPorts>.port-out": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".outPorts>.port-out>.port-body": {
-                                "port": {
-                                    "id": "out",
-                                    "type": "out"
-                                }
-                            },
-                            ".title": {
-                                "text": "custom function"
-                            },
-                            "g.delete": {
-                                "display": "none"
-                            },
-                            "g.error": {
-                                "opacity": 1
-                            },
-                            "g.error image": {
-                                "xlink:href": "/inc/coa/img/block_icon_warn_grey.svg"
-                            },
-                            "g.notes": {
-                                "display": "block"
-                            },
-                            "g.notes image": {
-                                "opacity": 1,
-                                "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
-                            }
-                        },
-                        "block_code": "def Collect_all_IP_address(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Collect_all_IP_address() called')\n    \n    input_parameter_0 = \"\"\n\n    Collect_all_IP_address__all_IP_address_list = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    Collect_all_IP_address__all_IP_address_list = []\n    import ipaddress\n    success, message, iplist = phantom.get_list(list_name='PaloAlto - Dest IP to contain')\n    for ip in iplist:\n        try:\n            ipaddress.ip_address(ip[0])\n            Collect_all_IP_address__all_IP_address_list.append(ip[0])\n        except:\n            continue\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='Collect_all_IP_address:all_IP_address_list', value=json.dumps(Collect_all_IP_address__all_IP_address_list))\n    join_decision_8(container=container)\n\n    return",
-                        "callback_code": "",
-                        "callback_start": 1,
-                        "callsback": false,
-                        "connected_to_start": true,
-                        "connection_name": "",
-                        "connection_type": "",
-                        "customCodeEndLineOffset": 7,
-                        "customCodeStartLine": 10,
-                        "custom_callback": "",
-                        "custom_code": "def Collect_all_IP_address(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Collect_all_IP_address() called')\n    \n    input_parameter_0 = \"\"\n\n    Collect_all_IP_address__all_IP_address_list = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    Collect_all_IP_address__all_IP_address_list = []\n    import ipaddress\n    success, message, iplist = phantom.get_list(list_name='PaloAlto - Dest IP to contain')\n    for ip in iplist:\n        try:\n            ipaddress.ip_address(ip[0])\n            Collect_all_IP_address__all_IP_address_list.append(ip[0])\n        except:\n            continue\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='Collect_all_IP_address:all_IP_address_list', value=json.dumps(Collect_all_IP_address__all_IP_address_list))\n    join_decision_8(container=container)\n\n    return",
-                        "custom_join": "",
-                        "custom_name": "Collect all IP address",
-                        "description": "Collect all IP address",
-                        "functionBlock": "custom function",
-                        "has_custom": true,
-                        "has_custom_block": false,
-                        "has_custom_callback": false,
-                        "has_custom_join": false,
-                        "id": "32d92c4c-b3d6-4d32-8519-05cb28196274",
-                        "inPorts": [
-                            "in"
-                        ],
-                        "join_code": "",
-                        "join_optional": [],
-                        "join_start": 1,
-                        "legacy": true,
-                        "line_end": 417,
-                        "line_start": 386,
-                        "message": "Configuring now",
-                        "name": "custom function",
-                        "notes": "Collect all IP address",
-                        "number": 11,
-                        "order": 15,
-                        "outPorts": [
-                            "out"
-                        ],
-                        "outputVariables": [
-                            {
-                                "position": 0,
-                                "type": "",
-                                "value": "all_IP_address_list"
-                            }
-                        ],
-                        "parameters": [
-                            {
-                                "position": 0,
-                                "type": "",
-                                "value": ""
-                            }
-                        ],
-                        "ports": {
-                            "groups": {
-                                "in": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "left"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "left"
-                                    }
-                                },
-                                "out": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "right"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "right"
-                                    }
-                                }
-                            }
-                        },
-                        "position": {
-                            "x": -180,
-                            "y": 80
-                        },
-                        "previous_function": "",
-                        "previous_name": "Collect_all_IP_address",
-                        "show_number": true,
-                        "size": {
-                            "height": 100,
-                            "width": 180
-                        },
-                        "state": "custom function",
-                        "status": "deprecating",
-                        "title": "custom function",
-                        "type": "coa.FunctionBlock",
-                        "userGeneratedCode": "\n    # Write your custom code here...\n    Collect_all_IP_address__all_IP_address_list = []\n    import ipaddress\n    success, message, iplist = phantom.get_list(list_name='PaloAlto - Dest IP to contain')\n    for ip in iplist:\n        try:\n            ipaddress.ip_address(ip[0])\n            Collect_all_IP_address__all_IP_address_list.append(ip[0])\n        except:\n            continue\n\n",
-                        "warn": false,
-                        "z": 486
-                    },
-                    {
-                        "active": false,
-                        "angle": 0,
-                        "attrs": {
-                            ".background": {
-                                "fill": "#000000",
-                                "stroke": "#5C6773"
-                            },
-                            ".color-band": {
-                                "fill": "#3C444D"
-                            },
-                            ".functionBlock": {
-                                "text": "Get the top IP address fr..."
-                            },
-                            ".inPorts>.port-in": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".inPorts>.port-in>.port-body": {
-                                "port": {
-                                    "id": "in",
-                                    "type": "in"
-                                }
-                            },
-                            ".message": {
-                                "opacity": 0,
-                                "ref-x": 5,
-                                "ref-y": 105,
-                                "text": "Configuring now"
-                            },
-                            ".outPorts>.port-out": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".outPorts>.port-out>.port-body": {
-                                "port": {
-                                    "id": "out",
-                                    "type": "out"
-                                }
-                            },
-                            ".title": {
-                                "text": "custom function"
-                            },
-                            "g.delete": {
-                                "display": "none"
-                            },
-                            "g.error": {
-                                "opacity": 1
-                            },
-                            "g.error image": {
-                                "xlink:href": "/inc/coa/img/block_icon_warn_grey.svg"
-                            },
-                            "g.notes": {
-                                "display": "block"
-                            },
-                            "g.notes image": {
-                                "opacity": 1,
-                                "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
-                            }
-                        },
-                        "block_code": "def Get_the_top_IP_address_from_the_list(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Get_the_top_IP_address_from_the_list() called')\n    \n    input_parameter_0 = \"\"\n\n    Get_the_top_IP_address_from_the_list__top_ip_address = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    import ipaddress\n    success, message, iplist = phantom.get_list(list_name='PaloAlto - Dest IP to contain')\n    for ip in iplist:\n        try:\n            ipaddress.ip_address(ip[0])\n            phantom.debug(f\"Top IP: {ip[0]}\")\n            Get_the_top_IP_address_from_the_list__top_ip_address = ip[0]\n            break\n        except:\n            continue\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='Get_the_top_IP_address_from_the_list:top_ip_address', value=json.dumps(Get_the_top_IP_address_from_the_list__top_ip_address))\n    decision_1(container=container)\n\n    return",
-                        "callback_code": "",
-                        "callback_start": 1,
-                        "callsback": false,
-                        "connected_to_start": true,
-                        "connection_name": "Sleep",
-                        "connection_type": "action",
-                        "customCodeEndLineOffset": 7,
-                        "customCodeStartLine": 10,
-                        "custom_callback": "",
-                        "custom_code": "def Get_the_top_IP_address_from_the_list(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Get_the_top_IP_address_from_the_list() called')\n    \n    input_parameter_0 = \"\"\n\n    Get_the_top_IP_address_from_the_list__top_ip_address = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    import ipaddress\n    success, message, iplist = phantom.get_list(list_name='PaloAlto - Dest IP to contain')\n    for ip in iplist:\n        try:\n            ipaddress.ip_address(ip[0])\n            phantom.debug(f\"Top IP: {ip[0]}\")\n            Get_the_top_IP_address_from_the_list__top_ip_address = ip[0]\n            break\n        except:\n            continue\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='Get_the_top_IP_address_from_the_list:top_ip_address', value=json.dumps(Get_the_top_IP_address_from_the_list__top_ip_address))\n    decision_1(container=container)\n\n    return",
-                        "custom_join": "",
-                        "custom_name": "Get the top IP address from the list",
-                        "description": "Get the top IP address from the list",
-                        "functionBlock": "custom function",
-                        "has_custom": true,
-                        "has_custom_block": false,
-                        "has_custom_callback": false,
-                        "has_custom_join": false,
-                        "id": "ebf2fd33-22d2-40a7-bacd-a7a5dd7eb0bb",
-                        "inPorts": [
-                            "in"
-                        ],
-                        "join_code": "",
-                        "join_optional": [],
-                        "join_start": 1,
-                        "legacy": true,
-                        "line_end": 59,
-                        "line_start": 27,
-                        "message": "Configuring now",
-                        "name": "custom function",
-                        "notes": "Get the top IP address from the list",
-                        "number": 1,
-                        "order": 2,
-                        "outPorts": [
-                            "out"
-                        ],
-                        "outputVariables": [
-                            {
-                                "position": 0,
-                                "type": "",
-                                "value": "top_ip_address"
-                            }
-                        ],
-                        "parameters": [
-                            {
-                                "position": 0,
-                                "type": "",
-                                "value": ""
-                            }
-                        ],
-                        "ports": {
-                            "groups": {
-                                "in": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "left"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "left"
-                                    }
-                                },
-                                "out": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "right"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "right"
-                                    }
-                                }
-                            }
-                        },
-                        "position": {
-                            "x": 300,
-                            "y": 80
-                        },
-                        "previous_function": "",
-                        "previous_name": "Get_the_top_IP_address_from_the_list",
-                        "show_number": true,
-                        "size": {
-                            "height": 100,
-                            "width": 180
-                        },
-                        "state": "custom function",
-                        "status": "deprecating",
-                        "title": "custom function",
-                        "type": "coa.FunctionBlock",
-                        "userGeneratedCode": "\n    # Write your custom code here...\n    import ipaddress\n    success, message, iplist = phantom.get_list(list_name='PaloAlto - Dest IP to contain')\n    for ip in iplist:\n        try:\n            ipaddress.ip_address(ip[0])\n            phantom.debug(f\"Top IP: {ip[0]}\")\n            Get_the_top_IP_address_from_the_list__top_ip_address = ip[0]\n            break\n        except:\n            continue\n\n",
-                        "warn": false,
-                        "z": 494
-                    },
-                    {
-                        "action": "add note",
-                        "action_type": "generic",
-                        "active": false,
-                        "active_keys": {},
-                        "active_values": {
-                            "container_id": "",
-                            "content": "There is no IP address to contain from the custom list.",
-                            "phase_id": "",
-                            "title": "Destination Address: No IP address to contain"
-                        },
-                        "angle": 0,
-                        "app": "Phantom",
-                        "appid": "deb82aa9-22cc-4675-9cf1-534b8d006eb7",
-                        "approver": "",
-                        "assets": [
-                            {
-                                "action": "add note",
-                                "actions": [
-                                    "no op",
-                                    "update list",
-                                    "get action result",
-                                    "create container",
-                                    "import container",
-                                    "export container",
-                                    "deflate item",
-                                    "add artifact",
-                                    "find listitem",
-                                    "add listitem",
-                                    "find artifacts",
-                                    "update artifact tags",
-                                    "add note",
-                                    "update artifact",
-                                    "test connectivity"
-                                ],
-                                "active": true,
-                                "app_name": "Phantom",
-                                "app_version": "3.2.21",
-                                "appid": "deb82aa9-22cc-4675-9cf1-534b8d006eb7",
-                                "asset_name": "phantom asset",
-                                "config_type": "asset",
-                                "count": 0,
-                                "fields": {
-                                    "container_id": "",
-                                    "content": "There is no IP address to contain from the custom list.",
-                                    "phase_id": "",
-                                    "title": "Destination Address: No IP address to contain"
-                                },
-                                "has_app": true,
-                                "id": 13,
-                                "loaded": false,
-                                "missing": false,
-                                "name": "phantom asset",
-                                "output": [
-                                    {
-                                        "data_path": "action_result.status",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "success",
-                                            "failed"
-                                        ]
-                                    },
-                                    {
-                                        "contains": [
-                                            "phantom container id"
-                                        ],
-                                        "data_path": "action_result.parameter.container_id",
-                                        "data_type": "numeric",
-                                        "example_values": [
-                                            35
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.parameter.content",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "Adding a note via app action"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.parameter.phase_id",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "data_path": "action_result.parameter.title",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "Note test",
-                                            "Testing note"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "action_result.data",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "data_path": "action_result.summary",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "column_name": "Status",
-                                        "column_order": 0,
-                                        "data_path": "action_result.message",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "Note created"
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "summary.total_objects",
-                                        "data_type": "numeric",
-                                        "example_values": [
-                                            1
-                                        ]
-                                    },
-                                    {
-                                        "data_path": "summary.total_objects_successful",
-                                        "data_type": "numeric",
-                                        "example_values": [
-                                            1
-                                        ]
-                                    }
-                                ],
-                                "parameters": {
-                                    "container_id": {
-                                        "contains": [
-                                            "phantom container id"
-                                        ],
-                                        "data_type": "numeric",
-                                        "default": null,
-                                        "description": "The container id (defaults to current container)",
-                                        "key": "container_id",
-                                        "order": 2,
-                                        "primary": true,
-                                        "required": false
-                                    },
-                                    "content": {
-                                        "data_type": "string",
-                                        "default": null,
-                                        "description": "Note content",
-                                        "key": "content",
-                                        "order": 1,
-                                        "required": false
-                                    },
-                                    "phase_id": {
-                                        "data_type": "string",
-                                        "default": null,
-                                        "description": "Phase the note will be associated with",
-                                        "key": "phase_id",
-                                        "order": 3,
-                                        "required": false
-                                    },
-                                    "title": {
-                                        "data_type": "string",
-                                        "default": null,
-                                        "description": "Title for the note",
-                                        "key": "title",
-                                        "order": 0,
-                                        "required": true
-                                    }
-                                },
-                                "product_name": "Phantom",
-                                "product_vendor": "Phantom",
-                                "targets": "13",
-                                "type": "information"
-                            }
-                        ],
-                        "attrs": {
-                            ".action": {
-                                "text": "Add Note for No IP addre..."
-                            },
-                            ".background": {
-                                "fill": "#000000",
-                                "stroke": "#5C6773"
-                            },
-                            ".color-band": {
-                                "fill": "#3C444D"
-                            },
-                            ".inPorts>.port-in": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".inPorts>.port-in>.port-body": {
-                                "port": {
-                                    "id": "in",
-                                    "type": "in"
-                                }
-                            },
-                            ".message": {
-                                "opacity": 0,
-                                "ref-x": 5,
-                                "ref-y": 105,
-                                "text": "Configuring now"
-                            },
-                            ".outPorts>.port-out": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".outPorts>.port-out>.port-body": {
-                                "port": {
-                                    "id": "out",
-                                    "type": "out"
-                                }
-                            },
-                            ".title": {
-                                "text": "Generic"
-                            },
-                            "g.approver image": {
-                                "opacity": 1
-                            },
-                            "g.code image": {
-                                "opacity": 1
-                            },
-                            "g.delete": {
-                                "display": "none"
-                            },
-                            "g.error": {
-                                "opacity": 0
-                            },
-                            "g.error image": {
-                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
-                            },
-                            "g.icon image": {
-                                "xlink:href": "/inc/coa/img/block_icon_generic.svg"
-                            },
-                            "g.notes": {
-                                "display": "block"
-                            },
-                            "g.notes image": {
-                                "opacity": 1,
-                                "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
-                            },
-                            "g.timer image": {
-                                "opacity": 1
-                            }
-                        },
-                        "block_code": "def Add_Note_for_No_IP_address_to_contain(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Add_Note_for_No_IP_address_to_contain() called')\n        \n    #phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))\n    \n    # collect data for 'Add_Note_for_No_IP_address_to_contain' call\n\n    parameters = []\n    \n    # build parameters list for 'Add_Note_for_No_IP_address_to_contain' call\n    parameters.append({\n        'title': \"Destination Address: No IP address to contain\",\n        'content': \"There is no IP address to contain from the custom list.\",\n        'phase_id': \"\",\n        'container_id': \"\",\n    })\n\n    phantom.act(action=\"add note\", parameters=parameters, assets=['phantom asset'], callback=set_severity_set_status_3, name=\"Add_Note_for_No_IP_address_to_contain\")\n\n    return",
-                        "callback_code": "",
-                        "callback_start": 93,
-                        "callsback": true,
-                        "color": "",
-                        "connected_to_start": true,
-                        "connection_name": "Sleep",
-                        "connection_type": "action",
-                        "custom_callback": "",
-                        "custom_code": "",
-                        "custom_join": "",
-                        "custom_name": "Add Note for No IP address to contain",
-                        "delay": 0,
-                        "description": "Add Note for No IP address to contain",
-                        "has_custom": false,
-                        "has_custom_block": false,
-                        "has_custom_callback": false,
-                        "has_custom_join": false,
-                        "id": "efa262f8-cb42-48f0-aa6d-1a203d4740b3",
-                        "inPorts": [
-                            "in"
-                        ],
-                        "join_code": "",
-                        "join_optional": [],
-                        "join_start": 1,
-                        "line_end": 104,
-                        "line_start": 83,
-                        "message": "Configuring now",
-                        "name": "add note",
-                        "notes": "Add Note for No IP address to contain",
-                        "number": 1,
-                        "order": 4,
-                        "outPorts": [
-                            "out"
-                        ],
-                        "ports": {
-                            "groups": {
-                                "in": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "left"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "left"
-                                    }
-                                },
-                                "out": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "right"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "right"
-                                    }
-                                }
-                            }
-                        },
-                        "position": {
-                            "x": 780,
-                            "y": 320
-                        },
-                        "previous_function": "",
-                        "previous_name": "Add_Note_for_No_IP_address_to_contain",
-                        "required_params": {
-                            "title": true
-                        },
-                        "reviewer": "",
-                        "show_number": true,
-                        "size": {
-                            "height": 100,
-                            "width": 180
-                        },
-                        "state": "app_action_assets",
-                        "status": "",
-                        "title": "Generic",
-                        "type": "coa.Action",
-                        "warn": false,
-                        "z": 496
-                    },
-                    {
                         "0": "E",
                         "1": "N",
                         "2": "D",
@@ -2911,8 +2204,8 @@
                         "join_code": "# read-only block view not available",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 536,
-                        "line_start": 523,
+                        "line_end": 532,
+                        "line_start": 519,
                         "name": "",
                         "notes": "",
                         "number": 0,
@@ -3050,7 +2343,7 @@
                                 "opacity": 1
                             }
                         },
-                        "block_code": "def set_severity_set_status_2(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('set_severity_set_status_2() called')\n\n    phantom.set_severity(container=container, severity=\"Low\")\n\n    phantom.set_status(container=container, status=\"Open\")\n    join_cf_local_set_custom_field_incident_type_1(container=container)\n\n    return",
+                        "block_code": "def set_severity_set_status_2(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('set_severity_set_status_2() called')\n\n    phantom.set_severity(container=container, severity=\"Low\")\n\n    phantom.set_status(container=container, status=\"Open\")\n\n    container = phantom.get_container(container.get('id', None))\n    join_cf_local_set_custom_field_incident_type_1(container=container)\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": false,
@@ -3086,8 +2379,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 321,
-                        "line_start": 311,
+                        "line_end": 325,
+                        "line_start": 313,
                         "message": "Configuring now",
                         "name": "set severity, set status",
                         "notes": "",
@@ -3154,6 +2447,7 @@
                         },
                         "previous_function": "",
                         "previous_name": "set_severity_set_status_2",
+                        "refetch_container": true,
                         "show_number": false,
                         "size": {
                             "height": 100,
@@ -3243,188 +2537,6 @@
                         },
                         "type": "link",
                         "z": 505
-                    },
-                    {
-                        "active": false,
-                        "angle": 0,
-                        "attrs": {
-                            ".background": {
-                                "fill": "#000000",
-                                "stroke": "#5C6773"
-                            },
-                            ".color-band": {
-                                "fill": "#3C444D"
-                            },
-                            ".functionBlock": {
-                                "text": "Remove the top IP addre..."
-                            },
-                            ".inPorts>.port-in": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".inPorts>.port-in>.port-body": {
-                                "port": {
-                                    "id": "in",
-                                    "type": "in"
-                                }
-                            },
-                            ".message": {
-                                "opacity": 0,
-                                "ref-x": 5,
-                                "ref-y": 105,
-                                "text": "Configuring now"
-                            },
-                            ".outPorts>.port-out": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".outPorts>.port-out>.port-body": {
-                                "port": {
-                                    "id": "out",
-                                    "type": "out"
-                                }
-                            },
-                            ".title": {
-                                "text": "custom function"
-                            },
-                            "g.delete": {
-                                "display": "none"
-                            },
-                            "g.error": {
-                                "opacity": 1
-                            },
-                            "g.error image": {
-                                "xlink:href": "/inc/coa/img/block_icon_warn_grey.svg"
-                            },
-                            "g.notes": {
-                                "display": "block"
-                            },
-                            "g.notes image": {
-                                "opacity": 1,
-                                "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
-                            }
-                        },
-                        "block_code": "def Remove_the_top_IP_address_from_the_list(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Remove_the_top_IP_address_from_the_list() called')\n    \n    Get_the_top_IP_address_from_the_list__top_ip_address = json.loads(phantom.get_run_data(key='Get_the_top_IP_address_from_the_list:top_ip_address'))\n\n    Remove_the_top_IP_address_from_the_list__ip_count = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    import ipaddress\n    Remove_the_top_IP_address_from_the_list__ip_count = 0\n    \n    phantom.debug(f\"Popping out IP: {Get_the_top_IP_address_from_the_list__top_ip_address}\")\n    phantom.delete_from_list(list_name=\"PaloAlto - Dest IP to contain\", value=Get_the_top_IP_address_from_the_list__top_ip_address, column=None, remove_all=False, remove_row=False)\n    success, message, iplist = phantom.get_list(list_name='PaloAlto - Dest IP to contain')\n    for ip in iplist:\n        try:\n            ipaddress.ip_address(ip[0])\n            Remove_the_top_IP_address_from_the_list__ip_count += 1\n        except:\n            continue\n\n    phantom.debug(f\"Current number of IP address remaining in the list: {Remove_the_top_IP_address_from_the_list__ip_count}\")\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='Remove_the_top_IP_address_from_the_list:ip_count', value=json.dumps(Remove_the_top_IP_address_from_the_list__ip_count))\n    decision_7(container=container)\n\n    return",
-                        "callback_code": "",
-                        "callback_start": 1,
-                        "callsback": false,
-                        "connected_to_start": true,
-                        "connection_name": "Sleep",
-                        "connection_type": "action",
-                        "customCodeEndLineOffset": 7,
-                        "customCodeStartLine": 10,
-                        "custom_callback": "",
-                        "custom_code": "def Remove_the_top_IP_address_from_the_list(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Remove_the_top_IP_address_from_the_list() called')\n    \n    Get_the_top_IP_address_from_the_list__top_ip_address = json.loads(phantom.get_run_data(key='Get_the_top_IP_address_from_the_list:top_ip_address'))\n\n    Remove_the_top_IP_address_from_the_list__ip_count = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    import ipaddress\n    Remove_the_top_IP_address_from_the_list__ip_count = 0\n    \n    phantom.debug(f\"Popping out IP: {Get_the_top_IP_address_from_the_list__top_ip_address}\")\n    phantom.delete_from_list(list_name=\"PaloAlto - Dest IP to contain\", value=Get_the_top_IP_address_from_the_list__top_ip_address, column=None, remove_all=False, remove_row=False)\n    success, message, iplist = phantom.get_list(list_name='PaloAlto - Dest IP to contain')\n    for ip in iplist:\n        try:\n            ipaddress.ip_address(ip[0])\n            Remove_the_top_IP_address_from_the_list__ip_count += 1\n        except:\n            continue\n\n    phantom.debug(f\"Current number of IP address remaining in the list: {Remove_the_top_IP_address_from_the_list__ip_count}\")\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='Remove_the_top_IP_address_from_the_list:ip_count', value=json.dumps(Remove_the_top_IP_address_from_the_list__ip_count))\n    decision_7(container=container)\n\n    return",
-                        "custom_join": "",
-                        "custom_name": "Remove the top IP address from the list",
-                        "description": "Remove the top IP address from the list",
-                        "functionBlock": "custom function",
-                        "has_custom": true,
-                        "has_custom_block": false,
-                        "has_custom_callback": false,
-                        "has_custom_join": false,
-                        "id": "1328a0cd-89bf-4554-837b-4d7d90ea4cec",
-                        "inPorts": [
-                            "in"
-                        ],
-                        "join_code": "",
-                        "join_optional": [],
-                        "join_start": 1,
-                        "legacy": true,
-                        "line_end": 143,
-                        "line_start": 107,
-                        "message": "Configuring now",
-                        "name": "custom function",
-                        "notes": "Remove the top IP address from the list",
-                        "number": 7,
-                        "order": 5,
-                        "outPorts": [
-                            "out"
-                        ],
-                        "outputVariables": [
-                            {
-                                "position": 0,
-                                "type": "",
-                                "value": "ip_count"
-                            }
-                        ],
-                        "parameters": [
-                            {
-                                "position": 0,
-                                "type": "",
-                                "value": "Get_the_top_IP_address_from_the_list:custom_function:top_ip_address"
-                            }
-                        ],
-                        "ports": {
-                            "groups": {
-                                "in": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "left"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "left"
-                                    }
-                                },
-                                "out": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "right"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "right"
-                                    }
-                                }
-                            }
-                        },
-                        "position": {
-                            "x": 1720,
-                            "y": 80
-                        },
-                        "previous_function": "",
-                        "previous_name": "Remove_the_top_IP_address_from_the_list",
-                        "show_number": true,
-                        "size": {
-                            "height": 100,
-                            "width": 180
-                        },
-                        "state": "custom function",
-                        "status": "deprecating",
-                        "title": "custom function",
-                        "type": "coa.FunctionBlock",
-                        "userGeneratedCode": "\n    # Write your custom code here...\n    import ipaddress\n    Remove_the_top_IP_address_from_the_list__ip_count = 0\n    \n    phantom.debug(f\"Popping out IP: {Get_the_top_IP_address_from_the_list__top_ip_address}\")\n    phantom.delete_from_list(list_name=\"PaloAlto - Dest IP to contain\", value=Get_the_top_IP_address_from_the_list__top_ip_address, column=None, remove_all=False, remove_row=False)\n    success, message, iplist = phantom.get_list(list_name='PaloAlto - Dest IP to contain')\n    for ip in iplist:\n        try:\n            ipaddress.ip_address(ip[0])\n            Remove_the_top_IP_address_from_the_list__ip_count += 1\n        except:\n            continue\n\n    phantom.debug(f\"Current number of IP address remaining in the list: {Remove_the_top_IP_address_from_the_list__ip_count}\")\n\n",
-                        "warn": false,
-                        "z": 516
                     },
                     {
                         "action": "add note",
@@ -3862,188 +2974,6 @@
                                 "fill": "#3C444D"
                             },
                             ".functionBlock": {
-                                "text": "Clear Global Variable"
-                            },
-                            ".inPorts>.port-in": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".inPorts>.port-in>.port-body": {
-                                "port": {
-                                    "id": "in",
-                                    "type": "in"
-                                }
-                            },
-                            ".message": {
-                                "opacity": 0,
-                                "ref-x": 5,
-                                "ref-y": 105,
-                                "text": "Configuring now"
-                            },
-                            ".outPorts>.port-out": {
-                                "ref": ".background",
-                                "ref-x": 0.5
-                            },
-                            ".outPorts>.port-out>.port-body": {
-                                "port": {
-                                    "id": "out",
-                                    "type": "out"
-                                }
-                            },
-                            ".title": {
-                                "text": "custom function"
-                            },
-                            "g.delete": {
-                                "display": "none"
-                            },
-                            "g.error": {
-                                "opacity": 1
-                            },
-                            "g.error image": {
-                                "xlink:href": "/inc/coa/img/block_icon_warn_grey.svg"
-                            },
-                            "g.notes": {
-                                "display": "block"
-                            },
-                            "g.notes image": {
-                                "opacity": 1,
-                                "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
-                            }
-                        },
-                        "block_code": "def Clear_Global_Variable(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Clear_Global_Variable() called')\n    \n    input_parameter_0 = \"\"\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    global IP_CONTAIN_GLOBAL_RESULTS \n    IP_CONTAIN_GLOBAL_RESULTS = []\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n    Collect_all_IP_address(container=container)\n\n    return",
-                        "callback_code": "",
-                        "callback_start": 1,
-                        "callsback": false,
-                        "connected_to_start": true,
-                        "connection_name": "",
-                        "connection_type": "",
-                        "customCodeEndLineOffset": 5,
-                        "customCodeStartLine": 8,
-                        "custom_callback": "",
-                        "custom_code": "def Clear_Global_Variable(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Clear_Global_Variable() called')\n    \n    input_parameter_0 = \"\"\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    global IP_CONTAIN_GLOBAL_RESULTS \n    IP_CONTAIN_GLOBAL_RESULTS = []\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n    Collect_all_IP_address(container=container)\n\n    return",
-                        "custom_join": "",
-                        "custom_name": "Clear Global Variable",
-                        "description": "Clear Global Variable",
-                        "functionBlock": "custom function",
-                        "has_custom": true,
-                        "has_custom_block": false,
-                        "has_custom_callback": false,
-                        "has_custom_join": false,
-                        "id": "eae186e9-fa86-43ba-a747-caa957301553",
-                        "inPorts": [
-                            "in"
-                        ],
-                        "join_code": "",
-                        "join_optional": [],
-                        "join_start": 1,
-                        "legacy": true,
-                        "line_end": 499,
-                        "line_start": 479,
-                        "message": "Configuring now",
-                        "name": "custom function",
-                        "notes": "Clear Global Variable",
-                        "number": 13,
-                        "order": 18,
-                        "outPorts": [
-                            "out"
-                        ],
-                        "outputVariables": [
-                            {
-                                "position": 0,
-                                "type": "",
-                                "value": ""
-                            }
-                        ],
-                        "parameters": [
-                            {
-                                "position": 0,
-                                "type": "",
-                                "value": ""
-                            }
-                        ],
-                        "ports": {
-                            "groups": {
-                                "in": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "left"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "left"
-                                    }
-                                },
-                                "out": {
-                                    "attrs": {
-                                        ".port-body": {
-                                            "fill": "#fff",
-                                            "magnet": true,
-                                            "r": 10,
-                                            "stroke": "#000"
-                                        },
-                                        ".port-label": {
-                                            "fill": "#000"
-                                        }
-                                    },
-                                    "label": {
-                                        "position": {
-                                            "args": {
-                                                "y": 10
-                                            },
-                                            "name": "right"
-                                        }
-                                    },
-                                    "position": {
-                                        "name": "right"
-                                    }
-                                }
-                            }
-                        },
-                        "position": {
-                            "x": -460,
-                            "y": 80
-                        },
-                        "previous_function": "",
-                        "previous_name": "Clear_Global_Variable",
-                        "show_number": true,
-                        "size": {
-                            "height": 100,
-                            "width": 180
-                        },
-                        "state": "custom function",
-                        "status": "deprecating",
-                        "title": "custom function",
-                        "type": "coa.FunctionBlock",
-                        "userGeneratedCode": "\n    # Write your custom code here...\n    global IP_CONTAIN_GLOBAL_RESULTS \n    IP_CONTAIN_GLOBAL_RESULTS = []\n\n",
-                        "warn": false,
-                        "z": 522
-                    },
-                    {
-                        "active": false,
-                        "angle": 0,
-                        "attrs": {
-                            ".background": {
-                                "fill": "#000000",
-                                "stroke": "#5C6773"
-                            },
-                            ".color-band": {
-                                "fill": "#3C444D"
-                            },
-                            ".functionBlock": {
                                 "text": "Check the result"
                             },
                             ".inPorts>.port-in": {
@@ -4220,6 +3150,1163 @@
                         "z": 524
                     },
                     {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "5829b461-5065-4b94-937c-e8f3086b3a88",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "97b0706a-b19a-45db-b3ca-4fc5a36057dc",
+                            "port": "out-1",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "d21b9a4c-00c6-4764-b5f7-b021e051ae2d",
+                            "selector": ".port-body[type=\"input\"]"
+                        },
+                        "type": "link",
+                        "z": 527
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "a520db40-0a7a-4e77-bc0c-f11abb60b0a4",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "d21b9a4c-00c6-4764-b5f7-b021e051ae2d",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "0e40c7b0-8ef2-4d9c-be3a-5e7782c566a4",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 531
+                    },
+                    {
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".functionBlock": {
+                                "text": "Clear Global Variable"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "custom function"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 1
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn_grey.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1,
+                                "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
+                            }
+                        },
+                        "block_code": "def Clear_Global_Variable(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Clear_Global_Variable() called')\n    \n    input_parameter_0 = \"\"\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    global IP_CONTAIN_GLOBAL_RESULTS \n    IP_CONTAIN_GLOBAL_RESULTS = []\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n    Collect_all_IP_address(container=container)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "",
+                        "connection_type": "",
+                        "customCodeEndLineOffset": 5,
+                        "customCodeStartLine": 8,
+                        "custom_callback": "",
+                        "custom_code": "def Clear_Global_Variable(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Clear_Global_Variable() called')\n    \n    input_parameter_0 = \"\"\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    global IP_CONTAIN_GLOBAL_RESULTS \n    IP_CONTAIN_GLOBAL_RESULTS = []\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n    Collect_all_IP_address(container=container)\n\n    return",
+                        "custom_join": "",
+                        "custom_name": "Clear Global Variable",
+                        "description": "Clear Global Variable",
+                        "functionBlock": "custom function",
+                        "has_custom": true,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "eae186e9-fa86-43ba-a747-caa957301553",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "legacy": true,
+                        "line_end": 505,
+                        "line_start": 485,
+                        "message": "Configuring now",
+                        "name": "custom function",
+                        "notes": "Clear Global Variable",
+                        "number": 13,
+                        "order": 18,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "outputVariables": [
+                            {
+                                "position": 0,
+                                "type": "",
+                                "value": ""
+                            }
+                        ],
+                        "parameters": [
+                            {
+                                "position": 0,
+                                "type": "",
+                                "value": ""
+                            }
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": -460,
+                            "y": 80
+                        },
+                        "previous_function": "",
+                        "previous_name": "Clear_Global_Variable",
+                        "show_number": true,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "custom function",
+                        "status": "deprecating",
+                        "title": "custom function",
+                        "type": "coa.FunctionBlock",
+                        "userGeneratedCode": "\n    # Write your custom code here...\n    global IP_CONTAIN_GLOBAL_RESULTS \n    IP_CONTAIN_GLOBAL_RESULTS = []\n\n",
+                        "warn": false,
+                        "z": 536
+                    },
+                    {
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".functionBlock": {
+                                "text": "Collect all IP address"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "custom function"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 1
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn_grey.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1,
+                                "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
+                            }
+                        },
+                        "block_code": "def Collect_all_IP_address(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Collect_all_IP_address() called')\n    \n    input_parameter_0 = \"\"\n\n    Collect_all_IP_address__all_IP_address_list = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    Collect_all_IP_address__all_IP_address_list = []\n    import ipaddress\n    success, message, iplist = phantom.get_list(list_name='PaloAlto - Dest IP to contain')\n    for ip in iplist:\n        try:\n            ipaddress.ip_address(ip[0])\n            Collect_all_IP_address__all_IP_address_list.append(ip[0])\n        except:\n            continue\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='Collect_all_IP_address:all_IP_address_list', value=json.dumps(Collect_all_IP_address__all_IP_address_list))\n    join_decision_8(container=container)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "",
+                        "connection_type": "",
+                        "customCodeEndLineOffset": 7,
+                        "customCodeStartLine": 10,
+                        "custom_callback": "",
+                        "custom_code": "def Collect_all_IP_address(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Collect_all_IP_address() called')\n    \n    input_parameter_0 = \"\"\n\n    Collect_all_IP_address__all_IP_address_list = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    Collect_all_IP_address__all_IP_address_list = []\n    import ipaddress\n    success, message, iplist = phantom.get_list(list_name='PaloAlto - Dest IP to contain')\n    for ip in iplist:\n        try:\n            ipaddress.ip_address(ip[0])\n            Collect_all_IP_address__all_IP_address_list.append(ip[0])\n        except:\n            continue\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='Collect_all_IP_address:all_IP_address_list', value=json.dumps(Collect_all_IP_address__all_IP_address_list))\n    join_decision_8(container=container)\n\n    return",
+                        "custom_join": "",
+                        "custom_name": "Collect all IP address",
+                        "description": "Collect all IP address",
+                        "functionBlock": "custom function",
+                        "has_custom": true,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "32d92c4c-b3d6-4d32-8519-05cb28196274",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "legacy": true,
+                        "line_end": 423,
+                        "line_start": 392,
+                        "message": "Configuring now",
+                        "name": "custom function",
+                        "notes": "Collect all IP address",
+                        "number": 11,
+                        "order": 15,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "outputVariables": [
+                            {
+                                "position": 0,
+                                "type": "",
+                                "value": "all_IP_address_list"
+                            }
+                        ],
+                        "parameters": [
+                            {
+                                "position": 0,
+                                "type": "",
+                                "value": ""
+                            }
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": -180,
+                            "y": 80
+                        },
+                        "previous_function": "",
+                        "previous_name": "Collect_all_IP_address",
+                        "show_number": true,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "custom function",
+                        "status": "deprecating",
+                        "title": "custom function",
+                        "type": "coa.FunctionBlock",
+                        "userGeneratedCode": "\n    # Write your custom code here...\n    Collect_all_IP_address__all_IP_address_list = []\n    import ipaddress\n    success, message, iplist = phantom.get_list(list_name='PaloAlto - Dest IP to contain')\n    for ip in iplist:\n        try:\n            ipaddress.ip_address(ip[0])\n            Collect_all_IP_address__all_IP_address_list.append(ip[0])\n        except:\n            continue\n\n",
+                        "warn": false,
+                        "z": 537
+                    },
+                    {
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".functionBlock": {
+                                "text": "Get the top IP address fr..."
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "custom function"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 1
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn_grey.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1,
+                                "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
+                            }
+                        },
+                        "block_code": "def Get_the_top_IP_address_from_the_list(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Get_the_top_IP_address_from_the_list() called')\n    \n    input_parameter_0 = \"\"\n\n    Get_the_top_IP_address_from_the_list__top_ip_address = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    import ipaddress\n    success, message, iplist = phantom.get_list(list_name='PaloAlto - Dest IP to contain')\n    for ip in iplist:\n        try:\n            ipaddress.ip_address(ip[0])\n            phantom.debug(f\"Top IP: {ip[0]}\")\n            Get_the_top_IP_address_from_the_list__top_ip_address = ip[0]\n            break\n        except:\n            continue\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='Get_the_top_IP_address_from_the_list:top_ip_address', value=json.dumps(Get_the_top_IP_address_from_the_list__top_ip_address))\n    decision_1(container=container)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "Sleep",
+                        "connection_type": "action",
+                        "customCodeEndLineOffset": 7,
+                        "customCodeStartLine": 10,
+                        "custom_callback": "",
+                        "custom_code": "def Get_the_top_IP_address_from_the_list(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Get_the_top_IP_address_from_the_list() called')\n    \n    input_parameter_0 = \"\"\n\n    Get_the_top_IP_address_from_the_list__top_ip_address = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    import ipaddress\n    success, message, iplist = phantom.get_list(list_name='PaloAlto - Dest IP to contain')\n    for ip in iplist:\n        try:\n            ipaddress.ip_address(ip[0])\n            phantom.debug(f\"Top IP: {ip[0]}\")\n            Get_the_top_IP_address_from_the_list__top_ip_address = ip[0]\n            break\n        except:\n            continue\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='Get_the_top_IP_address_from_the_list:top_ip_address', value=json.dumps(Get_the_top_IP_address_from_the_list__top_ip_address))\n    decision_1(container=container)\n\n    return",
+                        "custom_join": "",
+                        "custom_name": "Get the top IP address from the list",
+                        "description": "Get the top IP address from the list",
+                        "functionBlock": "custom function",
+                        "has_custom": true,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "ebf2fd33-22d2-40a7-bacd-a7a5dd7eb0bb",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "legacy": true,
+                        "line_end": 59,
+                        "line_start": 27,
+                        "message": "Configuring now",
+                        "name": "custom function",
+                        "notes": "Get the top IP address from the list",
+                        "number": 1,
+                        "order": 2,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "outputVariables": [
+                            {
+                                "position": 0,
+                                "type": "",
+                                "value": "top_ip_address"
+                            }
+                        ],
+                        "parameters": [
+                            {
+                                "position": 0,
+                                "type": "",
+                                "value": ""
+                            }
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 300,
+                            "y": 80
+                        },
+                        "previous_function": "",
+                        "previous_name": "Get_the_top_IP_address_from_the_list",
+                        "show_number": true,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "custom function",
+                        "status": "deprecating",
+                        "title": "custom function",
+                        "type": "coa.FunctionBlock",
+                        "userGeneratedCode": "\n    # Write your custom code here...\n    import ipaddress\n    success, message, iplist = phantom.get_list(list_name='PaloAlto - Dest IP to contain')\n    for ip in iplist:\n        try:\n            ipaddress.ip_address(ip[0])\n            phantom.debug(f\"Top IP: {ip[0]}\")\n            Get_the_top_IP_address_from_the_list__top_ip_address = ip[0]\n            break\n        except:\n            continue\n\n",
+                        "warn": false,
+                        "z": 538
+                    },
+                    {
+                        "action": "add note",
+                        "action_type": "generic",
+                        "active": false,
+                        "active_keys": {},
+                        "active_values": {
+                            "container_id": "",
+                            "content": "There is no IP address to contain from the custom list.",
+                            "phase_id": "",
+                            "title": "Destination Address: No IP address to contain"
+                        },
+                        "angle": 0,
+                        "app": "Phantom",
+                        "appid": "deb82aa9-22cc-4675-9cf1-534b8d006eb7",
+                        "approver": "",
+                        "assets": [
+                            {
+                                "action": "add note",
+                                "actions": [
+                                    "no op",
+                                    "update list",
+                                    "get action result",
+                                    "create container",
+                                    "import container",
+                                    "export container",
+                                    "deflate item",
+                                    "add artifact",
+                                    "find listitem",
+                                    "add listitem",
+                                    "find artifacts",
+                                    "update artifact tags",
+                                    "add note",
+                                    "update artifact",
+                                    "test connectivity"
+                                ],
+                                "active": true,
+                                "app_name": "Phantom",
+                                "app_version": "3.2.21",
+                                "appid": "deb82aa9-22cc-4675-9cf1-534b8d006eb7",
+                                "asset_name": "phantom asset",
+                                "config_type": "asset",
+                                "count": 0,
+                                "fields": {
+                                    "container_id": "",
+                                    "content": "There is no IP address to contain from the custom list.",
+                                    "phase_id": "",
+                                    "title": "Destination Address: No IP address to contain"
+                                },
+                                "has_app": true,
+                                "id": 13,
+                                "loaded": false,
+                                "missing": false,
+                                "name": "phantom asset",
+                                "output": [
+                                    {
+                                        "data_path": "action_result.status",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "success",
+                                            "failed"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "phantom container id"
+                                        ],
+                                        "data_path": "action_result.parameter.container_id",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            35
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.content",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Adding a note via app action"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.phase_id",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.title",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Note test",
+                                            "Testing note"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.summary",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "column_name": "Status",
+                                        "column_order": 0,
+                                        "data_path": "action_result.message",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Note created"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects_successful",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    }
+                                ],
+                                "parameters": {
+                                    "container_id": {
+                                        "contains": [
+                                            "phantom container id"
+                                        ],
+                                        "data_type": "numeric",
+                                        "default": null,
+                                        "description": "The container id (defaults to current container)",
+                                        "key": "container_id",
+                                        "order": 2,
+                                        "primary": true,
+                                        "required": false
+                                    },
+                                    "content": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "Note content",
+                                        "key": "content",
+                                        "order": 1,
+                                        "required": false
+                                    },
+                                    "phase_id": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "Phase the note will be associated with",
+                                        "key": "phase_id",
+                                        "order": 3,
+                                        "required": false
+                                    },
+                                    "title": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "Title for the note",
+                                        "key": "title",
+                                        "order": 0,
+                                        "required": true
+                                    }
+                                },
+                                "product_name": "Phantom",
+                                "product_vendor": "Phantom",
+                                "targets": "13",
+                                "type": "information"
+                            }
+                        ],
+                        "attrs": {
+                            ".action": {
+                                "text": "Add Note for No IP addre..."
+                            },
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#E6984E"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "Generic"
+                            },
+                            "g.approver image": {
+                                "opacity": 1
+                            },
+                            "g.code image": {
+                                "opacity": 1
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 1
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.icon image": {
+                                "xlink:href": "/inc/coa/img/block_icon_generic.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1,
+                                "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
+                            },
+                            "g.timer image": {
+                                "opacity": 1
+                            }
+                        },
+                        "block_code": "def Add_Note_for_No_IP_address_to_contain(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Add_Note_for_No_IP_address_to_contain() called')\n        \n    #phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))\n    \n    # collect data for 'Add_Note_for_No_IP_address_to_contain' call\n\n    parameters = []\n    \n    # build parameters list for 'Add_Note_for_No_IP_address_to_contain' call\n    parameters.append({\n        'title': \"Destination Address: No IP address to contain\",\n        'content': \"There is no IP address to contain from the custom list.\",\n        'phase_id': \"\",\n        'container_id': \"\",\n    })\n\n    phantom.act(action=\"add note\", parameters=parameters, assets=['phantom asset'], callback=set_severity_set_status_3, name=\"Add_Note_for_No_IP_address_to_contain\")\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 93,
+                        "callsback": true,
+                        "color": "",
+                        "connected_to_start": true,
+                        "connection_name": "Sleep",
+                        "connection_type": "action",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "Add Note for No IP address to contain",
+                        "delay": 0,
+                        "description": "Add Note for No IP address to contain",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "efa262f8-cb42-48f0-aa6d-1a203d4740b3",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 104,
+                        "line_start": 83,
+                        "message": "Configuring now",
+                        "name": "add note",
+                        "notes": "Add Note for No IP address to contain",
+                        "number": 1,
+                        "order": 4,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 780,
+                            "y": 320
+                        },
+                        "previous_function": "",
+                        "previous_name": "Add_Note_for_No_IP_address_to_contain",
+                        "required_params": {
+                            "title": true
+                        },
+                        "reviewer": "",
+                        "show_number": true,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "app_action_assets",
+                        "status": "warn",
+                        "title": "Generic",
+                        "type": "coa.Action",
+                        "warn": false,
+                        "z": 540
+                    },
+                    {
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#E6984E"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".functionBlock": {
+                                "text": "Save the result to global ..."
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "custom function"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 1
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1,
+                                "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
+                            }
+                        },
+                        "block_code": "def Save_the_result_to_global_var(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Save_the_result_to_global_var() called')\n    \n    results_data_1 = phantom.collect2(container=container, datapath=['block_ip_6:action_result.parameter.ip', 'block_ip_6:action_result.status'], action_results=results)\n    results_item_1_0 = [item[0] for item in results_data_1]\n    results_item_1_1 = [item[1] for item in results_data_1]\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    global IP_CONTAIN_GLOBAL_RESULTS\n    \n    phantom.debug(IP_CONTAIN_GLOBAL_RESULTS)\n    phantom.debug(\"------------------\")\n    phantom.debug(results_item_1_0)\n    phantom.debug(results_item_1_1)\n    phantom.debug(\"------------------\")\n    \n    result_summary = \"success\"\n\n    for result_per_asset in results_item_1_1:\n        if result_per_asset != \"success\":\n            result_summary = \"failed\"\n                \n    IP_CONTAIN_GLOBAL_RESULTS.append({'ip': results_item_1_0[0], 'status': result_summary})\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n    Sleep(container=container)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "block ip",
+                        "connection_type": "action",
+                        "customCodeEndLineOffset": 5,
+                        "customCodeStartLine": 10,
+                        "custom_callback": "",
+                        "custom_code": "def Save_the_result_to_global_var(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Save_the_result_to_global_var() called')\n    \n    input_parameter_0 = \"\"\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    global IP_CONTAIN_GLOBAL_RESULTS\n    \n    phantom.debug(IP_CONTAIN_GLOBAL_RESULTS)\n    phantom.debug(\"------------------\")\n    phantom.debug(results_item_1_0)\n    phantom.debug(results_item_1_1)\n    phantom.debug(\"------------------\")\n    \n    result_summary = \"success\"\n\n    for result_per_asset in results_item_1_1:\n        if result_per_asset != \"success\":\n            result_summary = \"failed\"\n                \n    IP_CONTAIN_GLOBAL_RESULTS.append({'ip': results_item_1_0[0], 'status': result_summary})\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n    Sleep(container=container)\n\n    return",
+                        "custom_join": "",
+                        "custom_name": "Save the result to global var",
+                        "description": "Save the result to global var",
+                        "functionBlock": "custom function",
+                        "has_custom": true,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "0e40c7b0-8ef2-4d9c-be3a-5e7782c566a4",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "legacy": true,
+                        "line_end": 461,
+                        "line_start": 426,
+                        "message": "Configuring now",
+                        "name": "custom function",
+                        "notes": "Save the result to global var",
+                        "number": 12,
+                        "order": 16,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "outputVariables": [
+                            {
+                                "position": 0,
+                                "type": "",
+                                "value": ""
+                            }
+                        ],
+                        "parameters": [
+                            {
+                                "position": 0,
+                                "type": "",
+                                "value": "block_ip_6:action_result.parameter.ip"
+                            },
+                            {
+                                "position": 1,
+                                "type": "",
+                                "value": "block_ip_6:action_result.status"
+                            }
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 1080,
+                            "y": 80
+                        },
+                        "previous_function": "",
+                        "previous_name": "Save_the_result_to_global_var",
+                        "show_number": true,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "custom function",
+                        "status": "warn",
+                        "title": "custom function",
+                        "type": "coa.FunctionBlock",
+                        "userGeneratedCode": "\n    # Write your custom code here...\n    global IP_CONTAIN_GLOBAL_RESULTS\n    \n    phantom.debug(IP_CONTAIN_GLOBAL_RESULTS)\n    phantom.debug(\"------------------\")\n    phantom.debug(results_item_1_0)\n    phantom.debug(results_item_1_1)\n    phantom.debug(\"------------------\")\n    \n    result_summary = \"success\"\n\n    for result_per_asset in results_item_1_1:\n        if result_per_asset != \"success\":\n            result_summary = \"failed\"\n                \n    IP_CONTAIN_GLOBAL_RESULTS.append({'ip': results_item_1_0[0], 'status': result_summary})\n\n",
+                        "warn": false,
+                        "z": 542
+                    },
+                    {
                         "action": "no op",
                         "action_type": "investigate",
                         "active": false,
@@ -4336,7 +4423,7 @@
                             },
                             ".background": {
                                 "fill": "#000000",
-                                "stroke": "#5C6773"
+                                "stroke": "#E6984E"
                             },
                             ".color-band": {
                                 "fill": "#3C444D"
@@ -4380,7 +4467,7 @@
                                 "display": "none"
                             },
                             "g.error": {
-                                "opacity": 0
+                                "opacity": 1
                             },
                             "g.error image": {
                                 "xlink:href": "/inc/coa/img/block_icon_warn.svg"
@@ -4405,7 +4492,7 @@
                         "callsback": true,
                         "color": "",
                         "connected_to_start": true,
-                        "connection_name": "Palo Alto Block Dest IP",
+                        "connection_name": "block ip",
                         "connection_type": "action",
                         "custom_callback": "",
                         "custom_code": "",
@@ -4424,8 +4511,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 476,
-                        "line_start": 458,
+                        "line_end": 482,
+                        "line_start": 464,
                         "message": "Configuring now",
                         "name": "no op",
                         "notes": "Sleep",
@@ -4502,90 +4589,11 @@
                             "width": 180
                         },
                         "state": "app_action_assets",
-                        "status": "",
+                        "status": "warn",
                         "title": "Investigate",
                         "type": "coa.Action",
                         "warn": false,
-                        "z": 525
-                    },
-                    {
-                        "attrs": {
-                            ".connection": {
-                                "stroke": "#818D99",
-                                "stroke-width": 2
-                            },
-                            ".marker-target": {
-                                "d": "M 10 0 L 0 5 L 10 10 z",
-                                "fill": "#818D99",
-                                "stroke": "#818D99"
-                            }
-                        },
-                        "connector": {
-                            "args": {
-                                "radius": 5
-                            },
-                            "name": "rounded"
-                        },
-                        "endDirections": [
-                            "left"
-                        ],
-                        "id": "5829b461-5065-4b94-937c-e8f3086b3a88",
-                        "router": {
-                            "name": "metro"
-                        },
-                        "source": {
-                            "id": "97b0706a-b19a-45db-b3ca-4fc5a36057dc",
-                            "port": "out-1",
-                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
-                        },
-                        "startDirections": [
-                            "right"
-                        ],
-                        "target": {
-                            "id": "d21b9a4c-00c6-4764-b5f7-b021e051ae2d",
-                            "selector": ".port-body[type=\"input\"]"
-                        },
-                        "type": "link",
-                        "z": 527
-                    },
-                    {
-                        "attrs": {
-                            ".connection": {
-                                "stroke": "#818D99",
-                                "stroke-width": 2
-                            },
-                            ".marker-target": {
-                                "d": "M 10 0 L 0 5 L 10 10 z",
-                                "fill": "#818D99",
-                                "stroke": "#818D99"
-                            }
-                        },
-                        "connector": {
-                            "args": {
-                                "radius": 5
-                            },
-                            "name": "rounded"
-                        },
-                        "endDirections": [
-                            "left"
-                        ],
-                        "id": "a520db40-0a7a-4e77-bc0c-f11abb60b0a4",
-                        "router": {
-                            "name": "metro"
-                        },
-                        "source": {
-                            "id": "d21b9a4c-00c6-4764-b5f7-b021e051ae2d",
-                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
-                        },
-                        "startDirections": [
-                            "right"
-                        ],
-                        "target": {
-                            "id": "0e40c7b0-8ef2-4d9c-be3a-5e7782c566a4",
-                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
-                        },
-                        "type": "link",
-                        "z": 531
+                        "z": 543
                     },
                     {
                         "active": false,
@@ -4599,7 +4607,7 @@
                                 "fill": "#3C444D"
                             },
                             ".functionBlock": {
-                                "text": "Save the result to global ..."
+                                "text": "Remove the top IP addre..."
                             },
                             ".inPorts>.port-in": {
                                 "ref": ".background",
@@ -4647,26 +4655,26 @@
                                 "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
                             }
                         },
-                        "block_code": "def Save_the_result_to_global_var(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Save_the_result_to_global_var() called')\n    \n    results_data_1 = phantom.collect2(container=container, datapath=['Palo_Alto_Block_Dest_IP:action_result.parameter.ip', 'Palo_Alto_Block_Dest_IP:action_result.status'], action_results=results)\n    results_item_1_0 = [item[0] for item in results_data_1]\n    results_item_1_1 = [item[1] for item in results_data_1]\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    global IP_CONTAIN_GLOBAL_RESULTS\n    \n    phantom.debug(IP_CONTAIN_GLOBAL_RESULTS)\n    phantom.debug(\"------------------\")\n    phantom.debug(results_item_1_0)\n    phantom.debug(results_item_1_1)\n    phantom.debug(\"------------------\")\n    \n    result_summary = \"success\"\n\n    for result_per_asset in results_item_1_1:\n        if result_per_asset != \"success\":\n            result_summary = \"failed\"\n                \n    IP_CONTAIN_GLOBAL_RESULTS.append({'ip': results_item_1_0[0], 'status': result_summary})\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n    Sleep(container=container)\n\n    return",
+                        "block_code": "def Remove_the_top_IP_address_from_the_list(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Remove_the_top_IP_address_from_the_list() called')\n    \n    Get_the_top_IP_address_from_the_list__top_ip_address = json.loads(phantom.get_run_data(key='Get_the_top_IP_address_from_the_list:top_ip_address'))\n\n    Remove_the_top_IP_address_from_the_list__ip_count = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    import ipaddress\n    Remove_the_top_IP_address_from_the_list__ip_count = 0\n    \n    phantom.debug(f\"Popping out IP: {Get_the_top_IP_address_from_the_list__top_ip_address}\")\n    phantom.delete_from_list(list_name=\"PaloAlto - Dest IP to contain\", value=Get_the_top_IP_address_from_the_list__top_ip_address, column=None, remove_all=False, remove_row=False)\n    success, message, iplist = phantom.get_list(list_name='PaloAlto - Dest IP to contain')\n    for ip in iplist:\n        try:\n            ipaddress.ip_address(ip[0])\n            Remove_the_top_IP_address_from_the_list__ip_count += 1\n        except:\n            continue\n\n    phantom.debug(f\"Current number of IP address remaining in the list: {Remove_the_top_IP_address_from_the_list__ip_count}\")\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='Remove_the_top_IP_address_from_the_list:ip_count', value=json.dumps(Remove_the_top_IP_address_from_the_list__ip_count))\n    decision_7(container=container)\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": false,
                         "connected_to_start": true,
-                        "connection_name": "Palo Alto Block Dest IP",
+                        "connection_name": "Sleep",
                         "connection_type": "action",
-                        "customCodeEndLineOffset": 5,
+                        "customCodeEndLineOffset": 7,
                         "customCodeStartLine": 10,
                         "custom_callback": "",
-                        "custom_code": "def Save_the_result_to_global_var(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Save_the_result_to_global_var() called')\n    \n    input_parameter_0 = \"\"\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    global IP_CONTAIN_GLOBAL_RESULTS\n    \n    phantom.debug(IP_CONTAIN_GLOBAL_RESULTS)\n    phantom.debug(\"------------------\")\n    phantom.debug(results_item_1_0)\n    phantom.debug(results_item_1_1)\n    phantom.debug(\"------------------\")\n    \n    result_summary = \"success\"\n\n    for result_per_asset in results_item_1_1:\n        if result_per_asset != \"success\":\n            result_summary = \"failed\"\n                \n    IP_CONTAIN_GLOBAL_RESULTS.append({'ip': results_item_1_0[0], 'status': result_summary})\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n    Sleep(container=container)\n\n    return",
+                        "custom_code": "def Remove_the_top_IP_address_from_the_list(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Remove_the_top_IP_address_from_the_list() called')\n    \n    Get_the_top_IP_address_from_the_list__top_ip_address = json.loads(phantom.get_run_data(key='Get_the_top_IP_address_from_the_list:top_ip_address'))\n\n    Remove_the_top_IP_address_from_the_list__ip_count = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    import ipaddress\n    Remove_the_top_IP_address_from_the_list__ip_count = 0\n    \n    phantom.debug(f\"Popping out IP: {Get_the_top_IP_address_from_the_list__top_ip_address}\")\n    phantom.delete_from_list(list_name=\"PaloAlto - Dest IP to contain\", value=Get_the_top_IP_address_from_the_list__top_ip_address, column=None, remove_all=False, remove_row=False)\n    success, message, iplist = phantom.get_list(list_name='PaloAlto - Dest IP to contain')\n    for ip in iplist:\n        try:\n            ipaddress.ip_address(ip[0])\n            Remove_the_top_IP_address_from_the_list__ip_count += 1\n        except:\n            continue\n\n    phantom.debug(f\"Current number of IP address remaining in the list: {Remove_the_top_IP_address_from_the_list__ip_count}\")\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='Remove_the_top_IP_address_from_the_list:ip_count', value=json.dumps(Remove_the_top_IP_address_from_the_list__ip_count))\n    decision_7(container=container)\n\n    return",
                         "custom_join": "",
-                        "custom_name": "Save the result to global var",
-                        "description": "Save the result to global var",
+                        "custom_name": "Remove the top IP address from the list",
+                        "description": "Remove the top IP address from the list",
                         "functionBlock": "custom function",
                         "has_custom": true,
                         "has_custom_block": false,
                         "has_custom_callback": false,
                         "has_custom_join": false,
-                        "id": "0e40c7b0-8ef2-4d9c-be3a-5e7782c566a4",
+                        "id": "1328a0cd-89bf-4554-837b-4d7d90ea4cec",
                         "inPorts": [
                             "in"
                         ],
@@ -4674,13 +4682,13 @@
                         "join_optional": [],
                         "join_start": 1,
                         "legacy": true,
-                        "line_end": 455,
-                        "line_start": 420,
+                        "line_end": 143,
+                        "line_start": 107,
                         "message": "Configuring now",
                         "name": "custom function",
-                        "notes": "Save the result to global var",
-                        "number": 12,
-                        "order": 16,
+                        "notes": "Remove the top IP address from the list",
+                        "number": 7,
+                        "order": 5,
                         "outPorts": [
                             "out"
                         ],
@@ -4688,19 +4696,14 @@
                             {
                                 "position": 0,
                                 "type": "",
-                                "value": ""
+                                "value": "ip_count"
                             }
                         ],
                         "parameters": [
                             {
                                 "position": 0,
                                 "type": "",
-                                "value": "Palo_Alto_Block_Dest_IP:action_result.parameter.ip"
-                            },
-                            {
-                                "position": 1,
-                                "type": "",
-                                "value": "Palo_Alto_Block_Dest_IP:action_result.status"
+                                "value": "Get_the_top_IP_address_from_the_list:custom_function:top_ip_address"
                             }
                         ],
                         "ports": {
@@ -4756,11 +4759,11 @@
                             }
                         },
                         "position": {
-                            "x": 1080,
+                            "x": 1720,
                             "y": 80
                         },
                         "previous_function": "",
-                        "previous_name": "Save_the_result_to_global_var",
+                        "previous_name": "Remove_the_top_IP_address_from_the_list",
                         "show_number": true,
                         "size": {
                             "height": 100,
@@ -4770,9 +4773,9 @@
                         "status": "deprecating",
                         "title": "custom function",
                         "type": "coa.FunctionBlock",
-                        "userGeneratedCode": "\n    # Write your custom code here...\n    global IP_CONTAIN_GLOBAL_RESULTS\n    \n    phantom.debug(IP_CONTAIN_GLOBAL_RESULTS)\n    phantom.debug(\"------------------\")\n    phantom.debug(results_item_1_0)\n    phantom.debug(results_item_1_1)\n    phantom.debug(\"------------------\")\n    \n    result_summary = \"success\"\n\n    for result_per_asset in results_item_1_1:\n        if result_per_asset != \"success\":\n            result_summary = \"failed\"\n                \n    IP_CONTAIN_GLOBAL_RESULTS.append({'ip': results_item_1_0[0], 'status': result_summary})\n\n",
+                        "userGeneratedCode": "\n    # Write your custom code here...\n    import ipaddress\n    Remove_the_top_IP_address_from_the_list__ip_count = 0\n    \n    phantom.debug(f\"Popping out IP: {Get_the_top_IP_address_from_the_list__top_ip_address}\")\n    phantom.delete_from_list(list_name=\"PaloAlto - Dest IP to contain\", value=Get_the_top_IP_address_from_the_list__top_ip_address, column=None, remove_all=False, remove_row=False)\n    success, message, iplist = phantom.get_list(list_name='PaloAlto - Dest IP to contain')\n    for ip in iplist:\n        try:\n            ipaddress.ip_address(ip[0])\n            Remove_the_top_IP_address_from_the_list__ip_count += 1\n        except:\n            continue\n\n    phantom.debug(f\"Current number of IP address remaining in the list: {Remove_the_top_IP_address_from_the_list__ip_count}\")\n\n",
                         "warn": false,
-                        "z": 534
+                        "z": 544
                     },
                     {
                         "action": "block ip",
@@ -4788,443 +4791,14 @@
                         "app": "CX Palo Alto Networks Firewall",
                         "appid": "e225e4ba-65be-438d-835f-95fe5da6b6d2",
                         "approver": "",
-                        "assets": [
-                            {
-                                "action": "block ip",
-                                "actions": [
-                                    "list applications",
-                                    "unblock ip",
-                                    "block ip",
-                                    "unblock application",
-                                    "block application",
-                                    "unblock url",
-                                    "block url",
-                                    "test connectivity"
-                                ],
-                                "active": true,
-                                "app_name": "CX Palo Alto Networks Firewall",
-                                "app_version": "1.0.1",
-                                "appid": "e225e4ba-65be-438d-835f-95fe5da6b6d2",
-                                "asset_name": "cx_palo-asset",
-                                "config_type": "asset",
-                                "count": 0,
-                                "fields": {
-                                    "ip": "Get_the_top_IP_address_from_the_list:custom_function:top_ip_address",
-                                    "is_source_address": "False",
-                                    "vsys": "vsys1"
-                                },
-                                "has_app": true,
-                                "id": 29,
-                                "loaded": false,
-                                "missing": false,
-                                "name": "cxapp_palo-dc1-asset",
-                                "output": [
-                                    {
-                                        "column_name": "IP",
-                                        "column_order": 0,
-                                        "contains": [
-                                            "ip"
-                                        ],
-                                        "data_path": "action_result.parameter.ip",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "data_path": "action_result.parameter.vsys",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "data_path": "action_result.parameter.is_source_address",
-                                        "data_type": "boolean"
-                                    },
-                                    {
-                                        "column_name": "Status",
-                                        "column_order": 1,
-                                        "data_path": "action_result.status",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "success",
-                                            "failed"
-                                        ]
-                                    },
-                                    {
-                                        "column_name": "Message",
-                                        "column_order": 2,
-                                        "data_path": "action_result.message",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "data_path": "summary.total_objects",
-                                        "data_type": "numeric"
-                                    },
-                                    {
-                                        "data_path": "summary.total_objects_successful",
-                                        "data_type": "numeric"
-                                    }
-                                ],
-                                "parameters": {
-                                    "ip": {
-                                        "contains": [
-                                            "ip"
-                                        ],
-                                        "data_type": "string",
-                                        "default": null,
-                                        "description": "IP to block",
-                                        "key": "ip",
-                                        "order": 0,
-                                        "primary": true,
-                                        "required": true
-                                    },
-                                    "is_source_address": {
-                                        "data_type": "boolean",
-                                        "default": null,
-                                        "description": "Source address",
-                                        "key": "is_source_address",
-                                        "order": 2,
-                                        "required": false
-                                    },
-                                    "vsys": {
-                                        "data_type": "string",
-                                        "default": "vsys1",
-                                        "description": "Virtual system (vsys) to configure",
-                                        "key": "vsys",
-                                        "order": 1,
-                                        "required": false
-                                    }
-                                },
-                                "product_name": "Firewall",
-                                "product_vendor": "CX Palo Alto Networks",
-                                "targets": "29",
-                                "type": "firewall"
-                            },
-                            {
-                                "action": "block ip",
-                                "actions": [
-                                    "list applications",
-                                    "unblock ip",
-                                    "block ip",
-                                    "unblock application",
-                                    "block application",
-                                    "unblock url",
-                                    "block url",
-                                    "test connectivity"
-                                ],
-                                "active": true,
-                                "app_name": "CX Palo Alto Networks Firewall",
-                                "app_version": "1.0.1",
-                                "appid": "e225e4ba-65be-438d-835f-95fe5da6b6d2",
-                                "asset_name": "cxapp_palo-dr1-asset",
-                                "config_type": "asset",
-                                "count": 0,
-                                "fields": {
-                                    "ip": "Get_the_top_IP_address_from_the_list:custom_function:top_ip_address",
-                                    "is_source_address": "False",
-                                    "vsys": "vsys1"
-                                },
-                                "has_app": true,
-                                "id": 132,
-                                "loaded": false,
-                                "missing": false,
-                                "name": "cxapp_palo-dr1-asset",
-                                "output": [
-                                    {
-                                        "column_name": "IP",
-                                        "column_order": 0,
-                                        "contains": [
-                                            "ip"
-                                        ],
-                                        "data_path": "action_result.parameter.ip",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "data_path": "action_result.parameter.vsys",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "data_path": "action_result.parameter.is_source_address",
-                                        "data_type": "boolean"
-                                    },
-                                    {
-                                        "column_name": "Status",
-                                        "column_order": 1,
-                                        "data_path": "action_result.status",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "success",
-                                            "failed"
-                                        ]
-                                    },
-                                    {
-                                        "column_name": "Message",
-                                        "column_order": 2,
-                                        "data_path": "action_result.message",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "data_path": "summary.total_objects",
-                                        "data_type": "numeric"
-                                    },
-                                    {
-                                        "data_path": "summary.total_objects_successful",
-                                        "data_type": "numeric"
-                                    }
-                                ],
-                                "parameters": {
-                                    "ip": {
-                                        "contains": [
-                                            "ip"
-                                        ],
-                                        "data_type": "string",
-                                        "default": null,
-                                        "description": "IP to block",
-                                        "key": "ip",
-                                        "order": 0,
-                                        "primary": true,
-                                        "required": true
-                                    },
-                                    "is_source_address": {
-                                        "data_type": "boolean",
-                                        "default": null,
-                                        "description": "Source address",
-                                        "key": "is_source_address",
-                                        "order": 2,
-                                        "required": false
-                                    },
-                                    "vsys": {
-                                        "data_type": "string",
-                                        "default": "vsys1",
-                                        "description": "Virtual system (vsys) to configure",
-                                        "key": "vsys",
-                                        "order": 1,
-                                        "required": false
-                                    }
-                                },
-                                "product_name": "Firewall",
-                                "product_vendor": "CX Palo Alto Networks",
-                                "targets": "132",
-                                "type": "firewall"
-                            },
-                            {
-                                "action": "block ip",
-                                "actions": [
-                                    "list applications",
-                                    "unblock ip",
-                                    "block ip",
-                                    "unblock application",
-                                    "block application",
-                                    "unblock url",
-                                    "block url",
-                                    "test connectivity"
-                                ],
-                                "active": true,
-                                "app_name": "CX Palo Alto Networks Firewall",
-                                "app_version": "1.0.1",
-                                "appid": "e225e4ba-65be-438d-835f-95fe5da6b6d2",
-                                "asset_name": "cxapp_palo-vpndc-asset",
-                                "config_type": "asset",
-                                "count": 0,
-                                "fields": {
-                                    "ip": "Get_the_top_IP_address_from_the_list:custom_function:top_ip_address",
-                                    "is_source_address": "False",
-                                    "vsys": "vsys1"
-                                },
-                                "has_app": true,
-                                "id": 134,
-                                "loaded": false,
-                                "missing": false,
-                                "name": "cxapp_palo-vpndc-asset",
-                                "output": [
-                                    {
-                                        "column_name": "IP",
-                                        "column_order": 0,
-                                        "contains": [
-                                            "ip"
-                                        ],
-                                        "data_path": "action_result.parameter.ip",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "data_path": "action_result.parameter.vsys",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "data_path": "action_result.parameter.is_source_address",
-                                        "data_type": "boolean"
-                                    },
-                                    {
-                                        "column_name": "Status",
-                                        "column_order": 1,
-                                        "data_path": "action_result.status",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "success",
-                                            "failed"
-                                        ]
-                                    },
-                                    {
-                                        "column_name": "Message",
-                                        "column_order": 2,
-                                        "data_path": "action_result.message",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "data_path": "summary.total_objects",
-                                        "data_type": "numeric"
-                                    },
-                                    {
-                                        "data_path": "summary.total_objects_successful",
-                                        "data_type": "numeric"
-                                    }
-                                ],
-                                "parameters": {
-                                    "ip": {
-                                        "contains": [
-                                            "ip"
-                                        ],
-                                        "data_type": "string",
-                                        "default": null,
-                                        "description": "IP to block",
-                                        "key": "ip",
-                                        "order": 0,
-                                        "primary": true,
-                                        "required": true
-                                    },
-                                    "is_source_address": {
-                                        "data_type": "boolean",
-                                        "default": null,
-                                        "description": "Source address",
-                                        "key": "is_source_address",
-                                        "order": 2,
-                                        "required": false
-                                    },
-                                    "vsys": {
-                                        "data_type": "string",
-                                        "default": "vsys1",
-                                        "description": "Virtual system (vsys) to configure",
-                                        "key": "vsys",
-                                        "order": 1,
-                                        "required": false
-                                    }
-                                },
-                                "product_name": "Firewall",
-                                "product_vendor": "CX Palo Alto Networks",
-                                "targets": "134",
-                                "type": "firewall"
-                            },
-                            {
-                                "action": "block ip",
-                                "actions": [
-                                    "list applications",
-                                    "unblock ip",
-                                    "block ip",
-                                    "unblock application",
-                                    "block application",
-                                    "unblock url",
-                                    "block url",
-                                    "test connectivity"
-                                ],
-                                "active": true,
-                                "app_name": "CX Palo Alto Networks Firewall",
-                                "app_version": "1.0.1",
-                                "appid": "e225e4ba-65be-438d-835f-95fe5da6b6d2",
-                                "asset_name": "cxapp_palo-vpndr-asset",
-                                "config_type": "asset",
-                                "count": 0,
-                                "fields": {
-                                    "ip": "Get_the_top_IP_address_from_the_list:custom_function:top_ip_address",
-                                    "is_source_address": "False",
-                                    "vsys": "vsys1"
-                                },
-                                "has_app": true,
-                                "id": 135,
-                                "loaded": false,
-                                "missing": false,
-                                "name": "cxapp_palo-vpndr-asset",
-                                "output": [
-                                    {
-                                        "column_name": "IP",
-                                        "column_order": 0,
-                                        "contains": [
-                                            "ip"
-                                        ],
-                                        "data_path": "action_result.parameter.ip",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "data_path": "action_result.parameter.vsys",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "data_path": "action_result.parameter.is_source_address",
-                                        "data_type": "boolean"
-                                    },
-                                    {
-                                        "column_name": "Status",
-                                        "column_order": 1,
-                                        "data_path": "action_result.status",
-                                        "data_type": "string",
-                                        "example_values": [
-                                            "success",
-                                            "failed"
-                                        ]
-                                    },
-                                    {
-                                        "column_name": "Message",
-                                        "column_order": 2,
-                                        "data_path": "action_result.message",
-                                        "data_type": "string"
-                                    },
-                                    {
-                                        "data_path": "summary.total_objects",
-                                        "data_type": "numeric"
-                                    },
-                                    {
-                                        "data_path": "summary.total_objects_successful",
-                                        "data_type": "numeric"
-                                    }
-                                ],
-                                "parameters": {
-                                    "ip": {
-                                        "contains": [
-                                            "ip"
-                                        ],
-                                        "data_type": "string",
-                                        "default": null,
-                                        "description": "IP to block",
-                                        "key": "ip",
-                                        "order": 0,
-                                        "primary": true,
-                                        "required": true
-                                    },
-                                    "is_source_address": {
-                                        "data_type": "boolean",
-                                        "default": null,
-                                        "description": "Source address",
-                                        "key": "is_source_address",
-                                        "order": 2,
-                                        "required": false
-                                    },
-                                    "vsys": {
-                                        "data_type": "string",
-                                        "default": "vsys1",
-                                        "description": "Virtual system (vsys) to configure",
-                                        "key": "vsys",
-                                        "order": 1,
-                                        "required": false
-                                    }
-                                },
-                                "product_name": "Firewall",
-                                "product_vendor": "CX Palo Alto Networks",
-                                "targets": "135",
-                                "type": "firewall"
-                            }
-                        ],
+                        "assets": [],
                         "attrs": {
                             ".action": {
-                                "text": "Palo Alto Block Dest IP"
+                                "text": "block ip"
                             },
                             ".background": {
                                 "fill": "#000000",
-                                "stroke": "#5C6773"
+                                "stroke": "#E6984E"
                             },
                             ".color-band": {
                                 "fill": "#3C444D"
@@ -5268,7 +4842,10 @@
                                 "display": "none"
                             },
                             "g.error": {
-                                "opacity": 0
+                                "opacity": 1
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
                             },
                             "g.icon image": {
                                 "xlink:href": "/inc/coa/img/block_icon_contain.svg"
@@ -5283,7 +4860,7 @@
                                 "opacity": 1
                             }
                         },
-                        "block_code": "def Palo_Alto_Block_Dest_IP(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Palo_Alto_Block_Dest_IP() called')\n        \n    #phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))\n    \n    Get_the_top_IP_address_from_the_list__top_ip_address = json.loads(phantom.get_run_data(key='Get_the_top_IP_address_from_the_list:top_ip_address'))\n    # collect data for 'Palo_Alto_Block_Dest_IP' call\n\n    parameters = []\n    \n    # build parameters list for 'Palo_Alto_Block_Dest_IP' call\n    parameters.append({\n        'ip': Get_the_top_IP_address_from_the_list__top_ip_address,\n        'vsys': \"vsys1\",\n        'is_source_address': False,\n    })\n\n    phantom.act(action=\"block ip\", parameters=parameters, assets=['cxapp_palo-dc1-asset','cxapp_palo-dr1-asset','cxapp_palo-vpndc-asset','cxapp_palo-vpndr-asset'], callback=Save_the_result_to_global_var, name=\"Palo_Alto_Block_Dest_IP\")\n\n    return",
+                        "block_code": "def block_ip_6(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('block_ip_6() called')\n        \n    #phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))\n\n    parameters = []\n\n    phantom.act(action=\"block ip\", parameters=parameters, callback=Save_the_result_to_global_var, name=\"block_ip_6\")\n\n    return",
                         "callback_code": "",
                         "callback_start": 1,
                         "callsback": true,
@@ -5294,7 +4871,7 @@
                         "custom_callback": "",
                         "custom_code": "",
                         "custom_join": "",
-                        "custom_name": "Palo Alto Block Dest IP",
+                        "custom_name": "",
                         "delay": "0",
                         "description": "Palo Alto Block Dest IP",
                         "has_custom": false,
@@ -5308,8 +4885,8 @@
                         "join_code": "",
                         "join_optional": [],
                         "join_start": 1,
-                        "line_end": 523,
-                        "line_start": 502,
+                        "line_end": 519,
+                        "line_start": 508,
                         "message": "Configuring now",
                         "name": "block ip",
                         "notes": "",
@@ -5375,10 +4952,8 @@
                             "y": 80
                         },
                         "previous_function": "",
-                        "previous_name": "Palo_Alto_Block_Dest_IP",
-                        "required_params": {
-                            "ip": true
-                        },
+                        "previous_name": "block_ip_6",
+                        "required_params": {},
                         "reviewer": "",
                         "show_number": false,
                         "size": {
@@ -5386,30 +4961,24 @@
                             "width": 180
                         },
                         "state": "app_action_assets",
-                        "status": "",
+                        "status": "warn",
                         "title": "Contain",
                         "type": "coa.Action",
-                        "warn": "",
-                        "z": 535
+                        "warn": false,
+                        "z": 545
                     }
                 ]
             },
-            "notes": "",
-            "origin": {
-                "playbook_id": 157,
-                "playbook_name": "KTB CHILD SCHEDULED CONTAIN EXTERNAL IP - PALOALTO DEST",
-                "playbook_repo_id": 3,
-                "playbook_repo_name": "mfec_csoc_playbook"
-            }
+            "notes": ""
         },
         "input_spec": null,
         "output_spec": null,
         "playbook_type": "automation",
         "python_version": "3",
         "schema": "4",
-        "version": "4.10.7.63984"
+        "version": "6.2.1.305"
     },
-    "create_time": "2025-06-02T08:11:21.681222+00:00",
+    "create_time": "2025-06-02T08:14:08.123137+00:00",
     "draft_mode": false,
     "labels": [
         "*"
